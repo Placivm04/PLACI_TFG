@@ -1,0 +1,111 @@
+% ======================================================================
+\documentclass[12pt,a4paper,twoside,openright]{book}
+
+%───────── Plantilla, portadas y contraportada ─────────────────────────
+\usepackage{template/sty_files/template-TFGspanish-uma}
+
+\usepackage{template/sty_files/cotutor_cover-blueuma}
+\usepackage{template/sty_files/cotutor_cover-whiteuma}
+
+\usepackage{template/sty_files/backcover-umaes}
+
+%───────── Paquetes auxiliares ─────────────────────────────────────────
+\usepackage{blindtext}
+\usepackage{mwe}               
+\usepackage{csquotes}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=nyt
+]{biblatex}
+\addbibresource{references.bib}
+
+%======================================================================
+\begin{document}
+
+%────────────────────── Blue front cover ───────────────────────────────
+\MakeBlueUMACover{
+  degree     = {Grado en Ingeniería ...},
+  mencion    = {Tu mención (si tienes)},
+  titleES    = {Tu título en español},
+  titleEN    = {Tu título en inglés},
+  author     = {Tu nombre},
+  tutor      = {Dr.~Nombre de tu tutor/a},
+  cotutor    = {Dra.~Nombre de tu cotutor/a},
+  dept       = {Departamento de Lenguajes y Ciencias de la Computación},
+  cityDate   = {Málaga, \today},
+  logoLeft   = {template/logos/NEG-uma-logo.png},
+  logoRight  = {template/logos/NEG-etsi-logo.png}
+}
+
+
+%────────────────────── White front cover ──────────────────────────────
+\MakeWhiteUMACover{
+  degree      = {Grado en Ingeniería ...},
+  mencion     = {Tu mención (si tienes)},
+  titleES     = {Tu título en español},
+  titleEN     = {Tu título en inglés},
+  author      = {Tu nombre},
+  tutor       = {Dr.~Nombre de tu tutor/a},
+  cotutor     = {Dra.~Nombre de tu cotutor/a},
+  dept        = {Departamento de Lenguajes y Ciencias de la Computación},
+  cityDate    = {MÁLAGA, \today},
+  defenseDate = {septiembre de 2025},
+  logoLeft    = {template/logos/POS-uma-logo.png},
+  logoRight   = {template/logos/POS-etsi-logo.png}
+}
+\frontmatter
+
+%────────────────────── Resumen / Abstract ─────────────────────────────
+\renewcommand{\abstractname}{Resumen}
+\begin{abstract}
+
+
+\medskip
+\noindent\textbf{Palabras clave:} 
+\end{abstract}
+
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+
+
+\medskip
+\noindent\textbf{Keywords:} 
+\end{abstract}
+
+%──────────────── Agradecimientos ──────────────────────────────────────
+% Sección opcional, si no se quiere usar, borrar el entorno umaacknowledgments
+
+% Descomentar si los vas a escribir en inglés
+% \SetAcknowledgmentsName{Acknowledgments} 
+\begin{umaacknowledgments}
+
+\end{umaacknowledgments}
+
+%────────────────────── Índice y listas ────────────────────────────────
+\clearpage
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+
+%────────────────────── Nomenclatura ───────────────────────────────────
+\nomenclature{}{}
+\printnomenclature
+\clearpage
+
+\mainmatter
+%────────────────────── Cuerpo ─────────────────────────────────────────
+% https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants 
+
+
+
+%────────────────────── Contraportada ──────────────────────────────────
+\backmatter
+\printbibliography[title={Bibliografía}]
+\cleardoublepage
+\MakeUMABackCover
+\end{document}
+% ======================================================================
