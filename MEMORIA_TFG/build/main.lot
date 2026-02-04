@@ -1,5 +1,4 @@
-\contentsline {table}{\numberline {1}{\ignorespaces Archivos principales del dataset CIC-IDS-2017, su contenido y día de actividad}}{12}{table.caption.5}%
-\contentsline {table}{\numberline {2}{\ignorespaces Resumen de los archivos principales y tipos de ataques presentes en UNSW-NB15}}{14}{table.caption.7}%
-\contentsline {table}{\numberline {3}{\ignorespaces Principales tipos de ataques presentes en UNSW-NB15}}{14}{table.caption.8}%
-\contentsline {table}{\numberline {4}{\ignorespaces Resumen del archivo principal y estructura del subconjunto de red de ToN\_IoT}}{15}{table.caption.10}%
-\contentsline {table}{\numberline {5}{\ignorespaces Principales tipos de ataques presentes en el subconjunto de red de ToN\_IoT}}{16}{table.caption.11}%
+\contentsline {table}{\numberline {1}{\ignorespaces Distribución de clases y tipos de ataque en el dataset CIC-IDS-2017}}{12}{table.caption.5}%
+\contentsline {table}{\numberline {2}{\ignorespaces Distribución de clases y tipos de ataque en el dataset UNSW-NB15}}{14}{table.caption.7}%
+\contentsline {table}{\numberline {3}{\ignorespaces Distribución de clases y tipos de ataque en el dataset ToN\_IoT}}{16}{table.caption.9}%
+\contentsline {table}{\numberline {4}{\ignorespaces Distribución de clases y tipos de tráfico en el dataset IoT-23}}{17}{table.caption.10}%
