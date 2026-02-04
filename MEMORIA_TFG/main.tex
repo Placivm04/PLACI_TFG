@@ -18,20 +18,26 @@
   style=numeric,
   sorting=nyt
 ]{biblatex}
+\usepackage{setspace}
+\usepackage{tabularx}
+\onehalfspacing
 \addbibresource{references.bib}
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+
 
 %======================================================================
 \begin{document}
 
 %────────────────────── Blue front cover ───────────────────────────────
 \MakeBlueUMACover{
-  degree     = {Grado en Ingeniería ...},
-  mencion    = {Tu mención (si tienes)},
-  titleES    = {Tu título en español},
-  titleEN    = {Tu título en inglés},
-  author     = {Tu nombre},
-  tutor      = {Dr.~Nombre de tu tutor/a},
-  cotutor    = {Dra.~Nombre de tu cotutor/a},
+  degree     = {Grado en Ingeniería Informática},
+  mencion    = {Mención en Computación},
+  titleES    = {Análisis del rendimiento y consumo de modelos de IA para detección de intrusiones},
+  titleEN    = {Performance and consumption analysis of AI models for intrusion detection},
+  author     = {Plácido Velasco Muñoz},
+  tutor      = {Dr. Rodrigo Román Castro},
+  cotutor    = {Dr. Francisco José Jaime Rodríguez},
   dept       = {Departamento de Lenguajes y Ciencias de la Computación},
   cityDate   = {Málaga, \today},
   logoLeft   = {template/logos/NEG-uma-logo.png},
@@ -41,15 +47,15 @@
 
 %────────────────────── White front cover ──────────────────────────────
 \MakeWhiteUMACover{
-  degree      = {Grado en Ingeniería ...},
-  mencion     = {Tu mención (si tienes)},
-  titleES     = {Tu título en español},
-  titleEN     = {Tu título en inglés},
-  author      = {Tu nombre},
-  tutor       = {Dr.~Nombre de tu tutor/a},
-  cotutor     = {Dra.~Nombre de tu cotutor/a},
-  dept        = {Departamento de Lenguajes y Ciencias de la Computación},
-  cityDate    = {MÁLAGA, \today},
+  degree     = {Grado en Ingeniería Informática},
+  mencion    = {Mención en Computación},
+  titleES    = {Análisis del rendimiento y consumo de modelos de IA para detección de intrusiones},
+  titleEN    = {Performance and consumption analysis of AI models for intrusion detection},
+  author     = {Plácido Velasco Muñoz},
+  tutor      = {Dr. Rodrigo Román Castro},
+  cotutor    = {Dr. Francisco José Jaime Rodríguez},
+  dept       = {Departamento de Lenguajes y Ciencias de la Computación},
+  cityDate   = {Málaga, \today},
   defenseDate = {septiembre de 2025},
   logoLeft    = {template/logos/POS-uma-logo.png},
   logoRight   = {template/logos/POS-etsi-logo.png}
@@ -100,7 +106,7 @@
 %────────────────────── Cuerpo ─────────────────────────────────────────
 % https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants 
 
-
+\input{sections/Estudio_del_arte/dataSets.tex}
 
 %────────────────────── Contraportada ──────────────────────────────────
 \backmatter

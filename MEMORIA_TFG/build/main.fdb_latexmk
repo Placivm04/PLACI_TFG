@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 0 -1
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1770209301.1747 -1
   "main.aux" 0 -1 0 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1769679246.82505 "build/main.xdv" "build/main.pdf" "build/main" 1769679247.29018 0
-  "build/main.xdv" 1769679246.75084 24000 e133fc983ed229532638cdc496369c82 "xelatex"
+["xdvipdfmx"] 1770209300.70172 "build/main.xdv" "build/main.pdf" "build/main" 1770209301.1766 0
+  "build/main.xdv" 1770209300.62226 235940 8dcec3c9e59ab2ca95cdb9a6c4b1202e "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1769679245.19942 "/home/placi/Escritorio/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1769679247.28826 0
+["xelatex"] 1770209299.03457 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1770209301.17476 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/placi/Escritorio/MEMORIA_TFG/main.tex" 1769679003.05383 4341 c0b3bfc4b392fe16c8ddef5cf9411315 ""
+  "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1770207313.0762 4789 72551fec3955721784a91e6fc3c730f5 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -196,10 +196,12 @@
   "/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1601326656 325 f9f16d12354225b7dd52a3321f085955 ""
   "/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657483315 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty" 1670275497 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty" 1706217749 330278 a251dbbaec6ade657fe551be54fa0659 ""
   "/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty" 1698436711 48766 0b93839be28e9744a24c45075c75b2e2 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty" 1578692495 36103 3e78d14f0f4b1a30560fea5e04de805d ""
   "/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty" 1698869629 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty" 1698869629 7147 d45559f8a31b8c53ada0640516660003 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty" 1686341992 4545 9f5ea23ab1c91476c42749893f790666 ""
   "/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl" 1644096163 5588 0c1628daf15f4411ff1f463114c634a3 ""
   "/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty" 1644096163 44247 2188b95d0ee74e31eca4d316263c58a7 ""
@@ -209,16 +211,19 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1769679246.74684 737 fc3478c75fd5e7d240e714df8de3f4c2 "xelatex"
-  "build/main.lof" 1769679246.72684 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "build/main.lot" 1769679246.72984 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "build/main.aux" 1770209300.61826 4791 1111fb004b9d293530c7ef85980d3a00 "xelatex"
+  "build/main.lof" 1770209300.62226 554 43f22bd5dcf678f7ec053f7b1d78da73 "xelatex"
+  "build/main.lot" 1770209300.62226 746 11d25e76091b3c30b991e97d0bb726cd "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1769679246.74784 282 46e62f054d2ba604fac6f003ec0a7f96 "xelatex"
-  "build/main.run.xml" 1769679246.75084 2340 6db8a715c2a4d89a32bb73ebd4fd78a0 "xelatex"
-  "build/main.toc" 1769679246.75084 156 ae476e44c76aef0bb8302f0bc4158f05 "xelatex"
+  "build/main.out" 1770209300.61926 1089 3e070a089928a2d1c6214ea37bbb88b5 "xelatex"
+  "build/main.run.xml" 1770209300.62126 2340 6db8a715c2a4d89a32bb73ebd4fd78a0 "xelatex"
+  "build/main.toc" 1770209300.62226 599 11012e0a2ba50d98f2506bf1ee0d7289 "xelatex"
+  "images/canadian_institute_cybersecurity.jpeg" 1770204568.96013 5899 4736f6d9e7ac0a6d4b4581c000d78fb4 ""
+  "images/university_of_new_south_wales.jpeg" 1770206721.35419 11485 b02b863164ba0309f7fd20d8533bc634 ""
   "main.bbl" 1769679103.76683 466 ee04f40f768daeed26442158e95aba61 "bibtex main"
   "main.nls" 0 -1 0 ""
-  "main.tex" 1769679003.05383 4341 c0b3bfc4b392fe16c8ddef5cf9411315 ""
+  "main.tex" 1770207313.0762 4789 72551fec3955721784a91e6fc3c730f5 ""
+  "sections/Estudio_del_arte/dataSets.tex" 1770209298.80426 20881 3bcccb2e76d0acffb86f6ce40642921a ""
   "template/logos/NEG-etsi-logo.png" 1769674642 28181 46911f38fc53f3286e3ffcd6144950e2 ""
   "template/logos/NEG-logo-umaes.png" 1769674640 138889 4df69ac26274959d972de7f4b01de9b9 ""
   "template/logos/NEG-uma-logo.png" 1769674640 68838 9dc559be1daa1df69c398e91bec18e40 ""

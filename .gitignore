@@ -1,0 +1,28 @@
+# =========================
+# DATASETS (NO subir)
+# =========================
+DATASETS/
+
+# =========================
+# IDS / IoT large files
+# =========================
+*.pcap
+*.pcapng
+*.labeled
+*.log
+*.csv
+
+# =========================
+# Python / notebooks
+# =========================
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# =========================
+# Editor / system
+# =========================
+.vscode/
+.env
+.DS_Store
+Thumbs.db
