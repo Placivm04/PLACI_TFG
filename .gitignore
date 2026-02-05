@@ -3,9 +3,7 @@
 # =========================
 DATASETS/
 
-# =========================
-# IDS / IoT large files
-# =========================
+# Archivos grandes / datos
 *.pcap
 *.pcapng
 *.labeled

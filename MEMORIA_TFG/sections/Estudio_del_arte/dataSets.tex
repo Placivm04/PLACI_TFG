@@ -214,3 +214,58 @@ Como puede observarse, el tráfico malicioso asociado a escaneos horizontales de
     \caption{Logo del Stratosphere Laboratory de la Czech Technical University, entidad responsable de la publicación del dataset IoT-23.}
     \label{fig:stratosphere-logo}
 \end{figure}
+
+\subsection{Relación entre los datasets}
+
+A continuación se muestra una tabla simplificada que resume la correspondencia principal entre las características de CIC-IDS-2017 y UNSW-NB15, facilitando la comparación y el diseño de modelos comunes.
+
+\begin{table}[htbp]
+\centering
+\caption{Correspondencia principal entre características de CIC-IDS-2017 y UNSW-NB15}
+\label{tab:relacion-cic-unsw}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Categoría} & \textbf{CIC-IDS-2017} & \textbf{UNSW-NB15} \\
+\hline
+Duración flujo & Flow.Duration & dur \\
+Intervalo paquetes origen & Fwd.IAT.Mean & sinpkt \\
+Intervalo paquetes destino & Bwd.IAT.Mean & dinpkt \\
+Paquetes origen & Total.Fwd.Packets & spkts \\
+Paquetes destino & Total.Backward.Packets & dpkts \\
+Bytes origen & Total.Length.of.Fwd.Packets & sbytes \\
+Bytes destino & Total.Length.of.Bwd.Packets & dbytes \\
+Tasa paquetes & Flow.Packets.s & rate \\
+Tamaño medio paquetes origen & Fwd.Packet.Length.Mean & smean \\
+Tamaño medio paquetes destino & Bwd.Packet.Length.Mean & dmean \\
+SYN flag & SYN.Flag.Count & synack \\
+ACK flag & ACK.Flag.Count & ackdat \\
+Etiqueta & Label & label / attack\_cat \\
+\hline
+\end{tabular}
+\end{table}
+
+Ahora relacionamos los datasets ToN\_IoT y IoT-23, destacando los features comunes.
+\begin{table}[htbp]
+\centering
+\caption{Correspondencia principal entre características de ToN\_IoT e IoT-23}
+\label{tab:correspondencia-toniot-iot23}
+\begin{tabularx}{\textwidth}{|l|l|l|X|}
+\hline
+\textbf{Categoría} & \textbf{ToN\_IoT} & \textbf{IoT-23} & \textbf{Descripción} \\
+\hline
+IP origen & src\_ip & id.orig\_h & Dirección IP origen \\
+Puerto origen & src\_port & id.orig\_p & Puerto origen \\
+IP destino & dst\_ip & id.resp\_h & Dirección IP destino \\
+Puerto destino & dst\_port & id.resp\_p & Puerto destino \\
+Protocolo & proto & proto & Protocolo de transporte \\
+Duración & duration & duration & Duración de la conexión \\
+Bytes origen & src\_bytes & orig\_bytes & Bytes enviados por el origen \\
+Bytes destino & dst\_bytes & resp\_bytes & Bytes enviados por el destino \\
+Paquetes origen & src\_pkts & orig\_pkts & Paquetes enviados por el origen \\
+Paquetes destino & dst\_pkts & resp\_pkts & Paquetes enviados por el destino \\
+Estado & conn\_state & conn\_state & Estado de la conexión \\
+Etiqueta & label & label & Tráfico benigno o malicioso \\
+Tipo ataque & type & detailed-label & Tipo de ataque \\
+\hline
+\end{tabularx}
+\end{table}
