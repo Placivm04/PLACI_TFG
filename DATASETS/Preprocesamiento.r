@@ -219,3 +219,13 @@ cols_iot23 <- c("id.orig_h", "id.orig_p", "id.resp_h", "id.resp_p", "proto",
 
 datos_IOT_23_1_1_redux <- datos_IOT_23_1_1 %>%
   select(any_of(cols_iot23))
+
+
+datos_IOT_23_1_1_redux <- datos_IOT_23_1_1_redux %>%
+  mutate(`detailed-label` = ifelse(`detailed-label` == "-", "Normal", `detailed-label`))
+
+datos_IOT_23_3_1_redux <- datos_IOT_23_3_1_redux %>%
+  mutate(`detailed-label` = ifelse(`detailed-label` == "-", "Normal", `detailed-label`))
+
+write.csv(datos_IOT_23_1_1_redux, "/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Reducidos/iot-23/datos_IOT_23_1_1_redux.csv")
+write.csv(datos_IOT_23_3_1_redux, "/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Reducidos/iot-23/datos_IOT_23_3_1_redux.csv")
