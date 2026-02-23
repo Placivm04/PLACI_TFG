@@ -1,0 +1,72 @@
+\subsection{Justificación del enfoque en la fase de inferencia}
+
+En el contexto de los Sistemas de Detección de Intrusiones (IDS) basados en inteligencia artificial, resulta fundamental distinguir entre la fase de entrenamiento del modelo y la fase de inferencia. Aunque el entrenamiento puede implicar un coste computacional elevado, este proceso se realiza de manera puntual o con una frecuencia reducida. Por el contrario, la fase de inferencia se ejecuta de forma continua una vez que el modelo está desplegado en un entorno real, analizando de manera permanente el tráfico de red entrante.
+
+El coste asociado a la inferencia es el que determina la viabilidad práctica del sistema. Un modelo con excelente rendimiento predictivo pero con alta latencia o consumo excesivo de CPU y memoria puede resultar inviable para su despliegue en tiempo real. Por este motivo, el presente trabajo centra su análisis experimental en el consumo computacional durante la fase de inferencia.
+
+Desde la perspectiva de la Green AI, esta decisión está alineada con el objetivo de reducir el consumo energético en sistemas de uso continuo. Mientras que el entrenamiento representa un coste energético puntual, la inferencia constituye un coste acumulativo y sostenido en el tiempo. Por tanto, optimizar la eficiencia en esta fase tiene un impacto directo en la sostenibilidad del sistema IDS.
+
+\subsection{Optimización de hiperparámetros estructurales}
+
+Dado que el objetivo principal es analizar el equilibrio entre capacidad de detección y eficiencia computacional en inferencia, el ajuste de hiperparámetros se centra específicamente en aquellos que determinan la estructura del modelo. Los hiperparámetros estructurales influyen directamente en la complejidad computacional, el número de operaciones necesarias para generar una predicción y el tamaño final del modelo.
+
+A diferencia de otros hiperparámetros relacionados con el proceso de entrenamiento (como la tasa de aprendizaje o el optimizador), los hiperparámetros estructurales determinan la arquitectura final del modelo y, por tanto, su coste en tiempo de ejecución una vez desplegado.
+
+A continuación, se describen los hiperparámetros estructurales más relevantes para cada uno de los modelos considerados en este trabajo.
+
+\subsubsection{Random Forest}
+
+En el caso de Random Forest, el coste de inferencia depende principalmente de:
+
+\begin{itemize}
+    \item \textbf{n\_estimators}: número de árboles que componen el bosque. Un mayor número de árboles incrementa linealmente el número de recorridos necesarios para cada predicción.
+    \item \textbf{max\_depth}: profundidad máxima de cada árbol. Árboles más profundos implican más comparaciones por predicción.
+\end{itemize}
+
+\subsection{XGBoost}
+
+En XGBoost, la inferencia consiste en recorrer secuencialmente todos los árboles entrenados y sumar sus contribuciones. Los hiperparámetros estructurales más relevantes son:
+
+\begin{itemize}
+    \item \textbf{n\_estimators}: número total de árboles del modelo.
+    \item \textbf{max\_depth}: profundidad máxima de cada árbol.
+\end{itemize}
+
+\subsection{Support Vector Machine (SVM)}
+
+Para SVM, el coste de inferencia depende principalmente del tipo de kernel utilizado. En este trabajo se prioriza el uso de:
+
+\begin{itemize}
+    \item \textbf{kernel lineal}: permite realizar predicciones mediante un producto escalar, lo que reduce significativamente el coste computacional.
+    \item \textbf{C}: parámetro de regularización que puede influir en la complejidad del modelo, aunque su impacto en la inferencia es menor que el tipo de kernel.
+\end{itemize}
+
+\subsection{Multilayer Perceptron (MLP)}
+
+En redes MLP, el coste de inferencia está directamente relacionado con el número total de pesos del modelo. Los hiperparámetros estructurales clave son:
+
+\begin{itemize}
+    \item \textbf{hidden\_layer\_sizes}: número de capas ocultas y número de neuronas por capa.
+\end{itemize}
+
+\subsection{Long Short-Term Memory (LSTM)}
+
+En las redes LSTM, la complejidad de inferencia depende de:
+
+\begin{itemize}
+    \item \textbf{units}: número de unidades LSTM en la capa recurrente.
+    \item \textbf{longitud de secuencia}: número de pasos temporales procesados.
+\end{itemize}
+
+
+\subsection{Convolutional Neural Networks (CNN 1D)}
+
+En las CNN 1D utilizadas en este trabajo, los hiperparámetros estructurales más relevantes son:
+
+\begin{itemize}
+    \item \textbf{filters}: número de filtros en las capas convolucionales.
+    \item \textbf{kernel\_size}: tamaño del kernel.
+    \item \textbf{número de capas convolucionales}.
+    \item \textbf{Stride}: si aumentas el stride, reduces el número de operaciones de convolución, lo cual acelera drásticamente la inferencia.
+\end{itemize}
+
