@@ -1,12 +1,13 @@
 \contentsline {table}{\numberline {1}{\ignorespaces Principales hiperparámetros de Random Forest y su significado.}}{12}{table.caption.5}%
 \contentsline {table}{\numberline {2}{\ignorespaces Principales hiperparámetros de XGBoost y su significado.}}{13}{table.caption.7}%
-\contentsline {table}{\numberline {3}{\ignorespaces Principales hiperparámetros de SVM y su significado.}}{15}{table.caption.9}%
-\contentsline {table}{\numberline {4}{\ignorespaces Principales hiperparámetros de MLP y su significado.}}{16}{table.caption.11}%
-\contentsline {table}{\numberline {5}{\ignorespaces Principales hiperparámetros de LSTM y su significado.}}{18}{table.caption.13}%
-\contentsline {table}{\numberline {6}{\ignorespaces Principales hiperparámetros de CNN y su significado.}}{19}{table.caption.15}%
-\contentsline {table}{\numberline {7}{\ignorespaces Distribución de clases y tipos de ataque en el dataset CIC-IDS-2017}}{21}{table.caption.17}%
-\contentsline {table}{\numberline {8}{\ignorespaces Distribución de clases y tipos de ataque en el dataset UNSW-NB15}}{23}{table.caption.19}%
-\contentsline {table}{\numberline {9}{\ignorespaces Distribución de clases y tipos de ataque en el dataset ToN\_IoT}}{25}{table.caption.21}%
-\contentsline {table}{\numberline {10}{\ignorespaces Distribución de clases y tipos de tráfico en el dataset IoT-23}}{26}{table.caption.22}%
-\contentsline {table}{\numberline {11}{\ignorespaces Correspondencia principal entre características de CIC-IDS-2017 y UNSW-NB15}}{27}{table.caption.24}%
-\contentsline {table}{\numberline {12}{\ignorespaces Correspondencia principal entre características de ToN\_IoT e IoT-23}}{27}{table.caption.25}%
+\contentsline {table}{\numberline {3}{\ignorespaces Principales hiperparámetros de LightGBM y su significado.}}{14}{table.caption.9}%
+\contentsline {table}{\numberline {4}{\ignorespaces Principales hiperparámetros de SVM y su significado.}}{16}{table.caption.11}%
+\contentsline {table}{\numberline {5}{\ignorespaces Principales hiperparámetros de MLP y su significado.}}{17}{table.caption.13}%
+\contentsline {table}{\numberline {6}{\ignorespaces Principales hiperparámetros de LSTM y su significado.}}{19}{table.caption.15}%
+\contentsline {table}{\numberline {7}{\ignorespaces Principales hiperparámetros de CNN y su significado.}}{20}{table.caption.17}%
+\contentsline {table}{\numberline {8}{\ignorespaces Distribución de clases y tipos de ataque en el dataset CIC-IDS-2017}}{22}{table.caption.19}%
+\contentsline {table}{\numberline {9}{\ignorespaces Distribución de clases y tipos de ataque en el dataset UNSW-NB15}}{24}{table.caption.21}%
+\contentsline {table}{\numberline {10}{\ignorespaces Distribución de clases y tipos de ataque en el dataset ToN\_IoT}}{26}{table.caption.23}%
+\contentsline {table}{\numberline {11}{\ignorespaces Distribución de clases y tipos de tráfico en el dataset IoT-23}}{27}{table.caption.24}%
+\contentsline {table}{\numberline {12}{\ignorespaces Correspondencia principal entre características de CIC-IDS-2017 y UNSW-NB15}}{28}{table.caption.26}%
+\contentsline {table}{\numberline {13}{\ignorespaces Correspondencia principal entre características de ToN\_IoT e IoT-23}}{28}{table.caption.27}%

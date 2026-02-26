@@ -1,9 +1,10 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Esquema representativo del funcionamiento de Random Forest.}}{12}{figure.caption.6}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Esquema representativo del funcionamiento de XGBoost.}}{14}{figure.caption.8}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo de separación óptima de clases mediante SVM y margen máximo.}}{15}{figure.caption.10}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Proceso de retropropagación en una red neuronal MLP.}}{17}{figure.caption.12}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Esquema representativo de una unidad LSTM con sus compuertas internas.}}{18}{figure.caption.14}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Esquema representativo de una arquitectura CNN 1D aplicada a datos tabulares.}}{19}{figure.caption.16}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Logo del Canadian Institute for Cybersecurity, entidad responsable de la publicación del dataset CIC-IDS-2017.}}{22}{figure.caption.18}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Logo de la University of New South Wales, entidad responsable de la publicación del dataset UNSW-NB15.}}{23}{figure.caption.20}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Logo del Stratosphere Laboratory de la Czech Technical University, entidad responsable de la publicación del dataset IoT-23.}}{26}{figure.caption.23}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Esquema representativo del funcionamiento de LightGBM.}}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Ejemplo de separación óptima de clases mediante SVM y margen máximo.}}{16}{figure.caption.12}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Proceso de retropropagación en una red neuronal MLP.}}{18}{figure.caption.14}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Esquema representativo de una unidad LSTM con sus compuertas internas.}}{19}{figure.caption.16}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Esquema representativo de una arquitectura CNN 1D aplicada a datos tabulares.}}{20}{figure.caption.18}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Logo del Canadian Institute for Cybersecurity, entidad responsable de la publicación del dataset CIC-IDS-2017.}}{23}{figure.caption.20}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Logo de la University of New South Wales, entidad responsable de la publicación del dataset UNSW-NB15.}}{24}{figure.caption.22}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Logo del Stratosphere Laboratory de la Czech Technical University, entidad responsable de la publicación del dataset IoT-23.}}{27}{figure.caption.25}%

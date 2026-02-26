@@ -436,6 +436,9 @@ INPUT ./images/random_forest.png
 INPUT ./images/xg_boost.png
 INPUT ./images/xg_boost.png
 INPUT ./images/xg_boost.png
+INPUT ./images/lightGBM.png
+INPUT ./images/lightGBM.png
+INPUT ./images/lightGBM.png
 INPUT ./images/SVM_margin.png
 INPUT ./images/SVM_margin.png
 INPUT ./images/SVM_margin.png

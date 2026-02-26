@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  13 FEB 2026 12:41
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  25 FEB 2026 13:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1396,15 +1396,18 @@ File: images/xg_boost.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13] [14]
-Overfull \hbox (56.36394pt too wide) in paragraph at lines 103--114
+ [13]
+File: images/lightgbm.png Graphic file (type bmp)
+<images/lightgbm.png>
+ [14] [15]
+Overfull \hbox (56.36394pt too wide) in paragraph at lines 134--145
  [][] 
  []
 
 File: images/SVM_margin.png Graphic file (type bmp)
 <images/SVM_margin.png>
-[15]
-Overfull \hbox (25.87195pt too wide) in paragraph at lines 143--157
+[16]
+Overfull \hbox (25.87195pt too wide) in paragraph at lines 174--188
  [][] 
  []
 
@@ -1413,44 +1416,43 @@ File: images/mlp.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-Overfull \hbox (28.54793pt too wide) in paragraph at lines 180--195
+ [18]
+Overfull \hbox (28.54793pt too wide) in paragraph at lines 211--226
  [][] 
  []
 
 File: images/lstm.jpg Graphic file (type bmp)
 <images/lstm.jpg>
-[18]
-Overfull \hbox (35.72392pt too wide) in paragraph at lines 217--231
+[19]
+Overfull \hbox (35.72392pt too wide) in paragraph at lines 248--262
  [][] 
  []
 
 File: images/CNN_1D.jpg Graphic file (type bmp)
 <images/CNN_1D.jpg>
-) (./sections/Estudio_del_arte/dataSets.tex [19] [20] [21]
+) (./sections/Estudio_del_arte/dataSets.tex [20] [21] [22]
 File: images/canadian_institute_cybersecurity.jpeg Graphic file (type bmp)
 <images/canadian_institute_cybersecurity.jpeg>
- [22]
+ [23]
 File: images/university_of_new_south_wales.jpeg Graphic file (type bmp)
 <images/university_of_new_south_wales.jpeg>
- [23]
+ [24]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [24] [25]
+ [25] [26]
 File: images/stratosphere_laboratory_CTU.png Graphic file (type bmp)
 <images/stratosphere_laboratory_CTU.png>
- [26]) [27] [28
-
-]
+ [27]) [28]
 
 LaTeX Warning: Empty bibliography on input line 116.
 
 File: template/logos/NEG-logo-umaes.png Graphic file (type bmp)
 <template/logos/NEG-logo-umaes.png>
 [29
+
 
 
 
@@ -1475,12 +1477,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43425 strings out of 474878
- 920458 string characters out of 5762516
+ 43438 strings out of 474878
+ 920760 string characters out of 5762516
  1934627 words of memory out of 5000000
- 64840 multiletter control sequences out of 15000+600000
+ 64852 multiletter control sequences out of 15000+600000
  562143 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  125i,12n,121p,1178b,984s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (33 pages, 464572 bytes).
+Output written on build/main.xdv (33 pages, 487556 bytes).

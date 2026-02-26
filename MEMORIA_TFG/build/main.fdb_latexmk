@@ -1,16 +1,16 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 1770982898.75531 -1
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1772021343.58405 -1
   "main.aux" 0 -1 0 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1770982897.16721 "build/main.xdv" "build/main.pdf" "build/main" 1770982898.75914 0
-  "build/main.xdv" 1770982897.05879 464572 8a669aa134c4c6043a588ca92d440151 "xelatex"
+["xdvipdfmx"] 1772021342.3089 "build/main.xdv" "build/main.pdf" "build/main" 1772021343.58679 0
+  "build/main.xdv" 1772021342.21691 487556 ba76dbe39982c716815495377384c6a5 "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1770982895.04908 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1770982898.7554 0
+["xelatex"] 1772021340.4436 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1772021343.58411 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1770982892.42979 4913 0a3df5797e2c0f07af5fc55cd3c10cef ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -211,16 +211,17 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1770982897.05279 12827 08386b61709001de454c33465c9090d7 "xelatex"
-  "build/main.lof" 1770982897.05879 1440 23326edbeb34b67bdb11e84567a1f9dd "xelatex"
-  "build/main.lot" 1770982897.05879 1675 6f7ac78ad497ae54c69d14218a58f5ef "xelatex"
+  "build/main.aux" 1772021342.21291 13717 e6006f3284f395707a713cf586c9a7e2 "xelatex"
+  "build/main.lof" 1772021342.21691 1575 ac630009218b08a5e75277a3256b513e "xelatex"
+  "build/main.lot" 1772021342.21691 1812 4c25565b3e660ebb29c55b64380e2d61 "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1770982897.05479 1734 a819036dc5c7fdcce1dac002eba57af7 "xelatex"
-  "build/main.run.xml" 1770982897.05879 2361 be5f2695bda0adeb085e86b4f9cb87da "xelatex"
-  "build/main.toc" 1770982897.05879 2905 0bd1dc50dce97cc22f9db479fdbdb230 "xelatex"
+  "build/main.out" 1772021342.21391 1734 a819036dc5c7fdcce1dac002eba57af7 "xelatex"
+  "build/main.run.xml" 1772021342.21691 2361 be5f2695bda0adeb085e86b4f9cb87da "xelatex"
+  "build/main.toc" 1772021342.21691 3028 b1ae5c12fc472074e2e0afa6043afccb "xelatex"
   "images/CNN_1D.jpg" 1770381111.25669 63724 af5e9cc56a21d1f084000e401b918e49 ""
   "images/SVM_margin.png" 1770377684.74159 281151 4d28ef4250dd7bdd0542da03f7ef621f ""
   "images/canadian_institute_cybersecurity.jpeg" 1770204568.96013 5899 4736f6d9e7ac0a6d4b4581c000d78fb4 ""
+  "images/lightGBM.png" 1772021323.00091 32185 d57588b142a069873a38781869acf964 ""
   "images/lstm.jpg" 1770380651.91468 46849 10a316c9dc3002c28fa383b9bd529f5a ""
   "images/mlp.png" 1770379797.47165 293312 84230d5256350e5e3f812478214fed07 ""
   "images/random_forest.png" 1770377067.97258 39614 3f3cbb7c9a6870591334ed23f668d55b ""
@@ -231,7 +232,7 @@
   "main.nls" 0 -1 0 ""
   "main.tex" 1770982892.42979 4913 0a3df5797e2c0f07af5fc55cd3c10cef ""
   "sections/Estudio_del_arte/dataSets.tex" 1770312910.68361 21386 d196ee61ebc8faa93c310dbce481e4f2 ""
-  "sections/Estudio_del_arte/investigacion_modelos.tex" 1770982760.32979 23359 713460f324bd3792641940fefc76f33c ""
+  "sections/Estudio_del_arte/investigacion_modelos.tex" 1772021340.31291 25920 eeec35da0a03b8c39369190292bb80e7 ""
   "template/logos/NEG-etsi-logo.png" 1769674642 28181 46911f38fc53f3286e3ffcd6144950e2 ""
   "template/logos/NEG-logo-umaes.png" 1769674640 138889 4df69ac26274959d972de7f4b01de9b9 ""
   "template/logos/NEG-uma-logo.png" 1769674640 68838 9dc559be1daa1df69c398e91bec18e40 ""

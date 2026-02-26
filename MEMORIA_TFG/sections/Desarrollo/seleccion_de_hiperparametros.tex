@@ -32,6 +32,15 @@ En XGBoost, la inferencia consiste en recorrer secuencialmente todos los árbole
     \item \textbf{max\_depth}: profundidad máxima de cada árbol.
 \end{itemize}
 
+\subsection{LightGBM}
+
+En LightGBM, el coste de inferencia también está influenciado por:
+\begin{itemize}
+    \item \textbf{n\_estimators}: número de árboles en el modelo.
+    \item \textbf{max\_depth}: profundidad máxima de cada árbol.
+    \item \textbf{num\_leaves}: número máximo de hojas por árbol, que afecta la complejidad del modelo y el número de comparaciones necesarias para cada predicción.
+\end{itemize}
+
 \subsection{Support Vector Machine (SVM)}
 
 Para SVM, el coste de inferencia depende principalmente del tipo de kernel utilizado. En este trabajo se prioriza el uso de:

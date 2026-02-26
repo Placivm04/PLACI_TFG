@@ -80,6 +80,37 @@ En el marco de este trabajo, XGBoost se considera una alternativa sólida no sol
     \label{fig:xgboost}
 \end{figure}
 
+\subsubsection{Light Gradient Boosting Machine (LightGBM)}
+\textbf{Light Gradient Boosting Machine} (LightGBM) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}. A diferencia de otros métodos de boosting, LightGBM utiliza un enfoque de crecimiento de árboles basado en hojas, lo que significa que en cada iteración se expande la hoja con el mayor error en lugar de expandir todos los nodos a un nivel determinado. Esta estrategia permite construir árboles más profundos y complejos sin aumentar significativamente el número de nodos, lo que mejora la capacidad de modelado y reduce el tiempo de entrenamiento.
+
+Respecto a la inferencia, LightGBM ofrece tiempos de predicción muy bajos, ya que la estructura de los árboles es más eficiente y se optimiza para reducir el número de nodos necesarios para realizar una predicción. Además, su implementación está diseñada para aprovechar al máximo los recursos computacionales disponibles, lo que contribuye a minimizar el consumo energético durante la fase de inferencia. En el contexto de la \textit{Green AI}, LightGBM representa una opción atractiva, ya que combina eficiencia computacional con capacidad de modelado. LightGBM es particularmente ventajoso en escenarios donde se requiere minimizar la latencia de inferencia y el consumo energético, características fundamentales para sistemas IDS desplegados en entornos con recursos limitados o dispositivos IoT.
+
+\begin{table}[H]
+    \centering
+    \caption{Principales hiperparámetros de LightGBM y su significado.}
+    \label{tab:lightgbm_hyperparams}
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Hiperparámetro} & \textbf{Significado} \\
+        \midrule
+        \texttt{n\_estimators} & Número de árboles a construir \\
+        \texttt{num\_leaves} & Número máximo de hojas en cada árbol \\
+        \texttt{max\_depth} & Profundidad máxima de cada árbol \\
+        \texttt{learning\_rate} & Tasa de aprendizaje (contribución de cada árbol) \\
+        \texttt{n\_jobs} & Número de threads para el entrenamiento paralelo \\
+        \texttt{random\_state} & Semilla para reproducibilidad \\
+        \texttt{verbosity} & Nivel de detalle en los mensajes de salida \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/lightgbm.png}
+    \caption{Esquema representativo del funcionamiento de LightGBM.}
+    \label{fig:lightgbm}
+\end{figure}
+
 \subsubsection{Support Vector Machine (SVM)}
 
 \textbf{Support Vector Machines} (SVM) es un algoritmo de aprendizaje supervisado cuyo objetivo principal es encontrar una frontera de decisión que separe de forma óptima las distintas clases en el espacio de características. En su formulación básica, SVM busca el hiperplano que maximiza el margen entre las muestras de distintas clases, utilizando únicamente un subconjunto de los datos denominado \textit{vectores soporte}. Esta propiedad permite construir modelos robustos frente al ruido y con buena capacidad de generalización.
