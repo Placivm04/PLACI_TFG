@@ -1,0 +1,18 @@
+\section{Optuna}
+
+Optuna es un framework de optimización de hiperparámetros de código abierto que permite a los desarrolladores y científicos de datos encontrar automáticamente los mejores hiperparámetros para sus modelos de aprendizaje automático. Optuna utiliza técnicas de optimización bayesiana para explorar el espacio de hiperparámetros de manera eficiente, lo que puede mejorar significativamente el rendimiento de los modelos.
+
+A diferencia de Grid Search, que realiza una búsqueda exhaustiva y costosa, o Random Search, que no aprende de iteraciones pasadas, Optuna utiliza un enfoque bayesiano basado en el Tree-structured Parzen Estimator (TPE).
+
+El algoritmo TPE construye un modelo probabilístico de la función objetivo. En lugar de probar combinaciones al azar, predice qué regiones del espacio de búsqueda tienen más probabilidades de mejorar los resultados actuales.
+
+Otra de las ventajas de este framework es que nos permite establecer una optimización multiobjetivo, lo que es especialmente útil cuando se desea optimizar varias métricas al mismo tiempo, como la precisión y eficiencia del modelo.
+
+Optuna identifica un conjunto de soluciones que se encuentran en la frontera de Pareto, lo que significa que no hay otra solución que sea mejor en todas las métricas. Esto permite a los usuarios elegir entre diferentes compromisos según sus necesidades específicas, por lo que no presentamos una única solución.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/sections/Desarrollo/optuna.tex}
+    \caption{Visualización de la optimización con Optuna}
+    \label{fig:optuna}
+\end{figure}
