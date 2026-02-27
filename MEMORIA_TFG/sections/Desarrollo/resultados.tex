@@ -3,24 +3,26 @@
 \subsection{Random Forest}
 
 Para el modelo de Random Forest, utilizando Optuna, se han obtenido los siguientes resultados como frontera de Pareto:
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{../../images/PARETO_RF.png}
+    \includegraphics[width=0.8\textwidth]{images/PARETO_RF.png}
     \caption{Frontera de Pareto - Random Forest}
     \label{fig:pareto_rf}
 \end{figure}
 
-Se observa que configuraciones con un número reducido de árboles (n=50) y elevada profundidad (max_depth≈29) alcanzan valores de F1-macro prácticamente equivalentes a los modelos de mayor tamaño, pero con una latencia aproximadamente seis veces inferior. Este resultado evidencia que el incremento del número de árboles produce rendimientos decrecientes en términos de eficacia, mientras que el coste computacional continúa aumentando de forma significativa.
+Se observa que configuraciones con un número reducido de árboles (n=50) y elevada profundidad (max\_depth≈29) alcanzan valores de F1-macro prácticamente equivalentes a los modelos de mayor tamaño, pero con una latencia aproximadamente seis veces inferior. Este resultado evidencia que el incremento del número de árboles produce rendimientos decrecientes en términos de eficacia, mientras que el coste computacional continúa aumentando de forma significativa.
 
 Hemos visto cómo reaccionan en test los modelos con los siguientes hiperparámetros elegidos:
 
-1. (50, 29) Con solo 50 árboles alcanza un F1 casi idéntico al de modelos mucho más pesados
-2. (100, 25) Es un punto intermedio, duplica los árboles respecto al anterior, pero gana robustez
-3. (300, 28) Es más lento que los 3, pero es el que más F1 tiene
+\begin{enumerate}
+    \item (50, 29) Con solo 50 árboles alcanza un F1 casi idéntico al de modelos mucho más pesados
+    \item (100, 25) Es un punto intermedio, duplica los árboles respecto al anterior, pero gana robustez
+    \item (300, 28) Es más lento que los 3, pero es el que más F1 tiene
+\end{enumerate}
 
 Los resultados son los siguientes:
 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|}
         \hline
@@ -35,4 +37,77 @@ Los resultados son los siguientes:
     \end{tabular}
     \caption{Comparativa final de modelos Random Forest en el set de test}
     \label{tab:rf_comparison}
+\end{table}
+
+\subsection{XGBoost}
+
+En XGBoost primero optamos por un entrenamiento con CPU. Sin embargo, debido a la elevada latencia obtenida en la frontera de Pareto, se decidi\'o realizar un nuevo entrenamiento utilizando GPU, lo que permiti\'o reducir significativamente los tiempos de inferencia. A continuaci\'on se muestran los resultados obtenidos:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/PARETO_XGBOOST.png}
+    \caption{Frontera de Pareto - XGBoost}
+    \label{fig:pareto_xgboost}
+\end{figure}
+
+Hemos selecciondo las 3 combinaciones de la frontera de Pareto para testarlas:
+
+\begin{enumerate}
+    \item (50, 8) Con pocos árboles y poca profundidad, es el más rápido
+    \item (350, 6) Equilibra bien la precisión y la latencia
+    \item (350, 8) Mayor profundidad que el anterior, obtiene mejor F1 pero con más latencia
+\end{enumerate}
+
+Los resultados son los siguientes:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Alta Eficiencia & 50 & 8 & 0.8290 & 0.8394 & 0.00045 \\
+        \hline
+        Equilibrado & 350 & 6 & 0.8584 & 0.8647 & 0.00039 \\
+        \hline
+        Máxima Precisión & 350 & 8 & 0.8579 & 0.8641 & 0.00053 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos XGBoost en el set de test}
+    \label{tab:xgboost_comparison}
+\end{table}
+
+\subsection{LightGBM}
+
+LightGBM ha sido entrenado con CPU, obteniendo la siguiente frontera de Pareto:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/PARETO_LIGHTGBM.png}
+    \caption{Frontera de Pareto - LightGBM}
+    \label{fig:pareto_lightgbm}
+\end{figure}
+
+Entre los diferentes puntos de la frontera de Pareto, se han seleccionado los siguientes para su evaluación en el set de test:
+\begin{enumerate}
+    \item (150, 127, 110) Es un modelo muy equilibrado
+    \item (250, 62, 9) Es el que más F1 tiene, aunque mayor latencia que los demás
+    \item (300, 122, 5) Es un modelo muy equilibrado también, con menos F1 que el primero, pero menor latencia
+\end{enumerate}
+
+Los resultados obtenidos en el set de test son los siguientes:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{num\_leaves} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Equilibrado 1 & 150 & 127 & 110 & 0.8611 & 0.8671 & 0.000244 \\
+        \hline
+        Máxima Precisión & 250 & 62 & 9 & 0.8602 & 0.8663 & 0.000456 \\
+        \hline
+        Equilibrado 2 & 300 & 122 & 5 & 0.8577 & 0.8641 & 0.000414 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos LightGBM en el set de test}
+    \label{tab:lightgbm_comparison}
 \end{table}

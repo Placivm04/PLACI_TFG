@@ -11,3 +11,6 @@
 \contentsline {table}{\numberline {11}{\ignorespaces Distribución de clases y tipos de tráfico en el dataset IoT-23}}{27}{table.caption.24}%
 \contentsline {table}{\numberline {12}{\ignorespaces Correspondencia principal entre características de CIC-IDS-2017 y UNSW-NB15}}{28}{table.caption.26}%
 \contentsline {table}{\numberline {13}{\ignorespaces Correspondencia principal entre características de ToN\_IoT e IoT-23}}{28}{table.caption.27}%
+\contentsline {table}{\numberline {14}{\ignorespaces Comparativa final de modelos Random Forest en el set de test}}{33}{table.caption.30}%
+\contentsline {table}{\numberline {15}{\ignorespaces Comparativa final de modelos XGBoost en el set de test}}{33}{table.caption.32}%
+\contentsline {table}{\numberline {16}{\ignorespaces Comparativa final de modelos LightGBM en el set de test}}{34}{table.caption.34}%

@@ -29,3 +29,17 @@
 \contentsline {subsubsection}{\numberline {0.2.4.2}Estructura del dataset}{26}{subsubsection.0.2.4.2}%
 \contentsline {subsubsection}{\numberline {0.2.4.3}Distribución de ataques}{27}{subsubsection.0.2.4.3}%
 \contentsline {subsection}{\numberline {0.2.5}Relación entre los datasets}{28}{subsection.0.2.5}%
+\contentsline {subsection}{\numberline {0.2.6}Justificación del enfoque en la fase de inferencia}{28}{subsection.0.2.6}%
+\contentsline {subsection}{\numberline {0.2.7}Optimización de hiperparámetros estructurales}{29}{subsection.0.2.7}%
+\contentsline {subsubsection}{\numberline {0.2.7.1}Random Forest}{29}{subsubsection.0.2.7.1}%
+\contentsline {subsection}{\numberline {0.2.8}XGBoost}{30}{subsection.0.2.8}%
+\contentsline {subsection}{\numberline {0.2.9}LightGBM}{30}{subsection.0.2.9}%
+\contentsline {subsection}{\numberline {0.2.10}Support Vector Machine (SVM)}{30}{subsection.0.2.10}%
+\contentsline {subsection}{\numberline {0.2.11}Multilayer Perceptron (MLP)}{30}{subsection.0.2.11}%
+\contentsline {subsection}{\numberline {0.2.12}Long Short-Term Memory (LSTM)}{30}{subsection.0.2.12}%
+\contentsline {subsection}{\numberline {0.2.13}Convolutional Neural Networks (CNN 1D)}{31}{subsection.0.2.13}%
+\contentsline {section}{\numberline {0.3}Optuna}{31}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Resultados}{32}{section.0.4}%
+\contentsline {subsection}{\numberline {0.4.1}Random Forest}{32}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {0.4.2}XGBoost}{32}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {0.4.3}LightGBM}{34}{subsection.0.4.3}%
