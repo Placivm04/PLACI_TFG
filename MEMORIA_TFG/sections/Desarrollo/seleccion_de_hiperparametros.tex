@@ -23,7 +23,7 @@ En el caso de Random Forest, el coste de inferencia depende principalmente de:
     \item \textbf{max\_depth}: profundidad máxima de cada árbol. Árboles más profundos implican más comparaciones por predicción.
 \end{itemize}
 
-\subsection{XGBoost}
+\subsubsection{XGBoost}
 
 En XGBoost, la inferencia consiste en recorrer secuencialmente todos los árboles entrenados y sumar sus contribuciones. Los hiperparámetros estructurales más relevantes son:
 
@@ -32,7 +32,7 @@ En XGBoost, la inferencia consiste en recorrer secuencialmente todos los árbole
     \item \textbf{max\_depth}: profundidad máxima de cada árbol.
 \end{itemize}
 
-\subsection{LightGBM}
+\subsubsection{LightGBM}
 
 En LightGBM, el coste de inferencia también está influenciado por:
 \begin{itemize}
@@ -41,7 +41,17 @@ En LightGBM, el coste de inferencia también está influenciado por:
     \item \textbf{num\_leaves}: número máximo de hojas por árbol, que afecta la complejidad del modelo y el número de comparaciones necesarias para cada predicción.
 \end{itemize}
 
-\subsection{Support Vector Machine (SVM)}
+\subsubsection{CatBoost}
+
+En CatBoost, los hiperparámetros estructurales que afectan el coste de inferencia son:
+
+\begin{itemize}
+    \item \textbf{iterations}: número de árboles a entrenar. Un mayor número de iteraciones incrementa linealmente el coste computacional en inferencia, ya que cada predicción requiere recorrer todos los árboles.
+    \item \textbf{depth}: profundidad máxima de cada árbol. Árboles más profundos implican más comparaciones y operaciones por predicción.
+\end{itemize}
+
+
+\subsubsection{Support Vector Machine (SVM)}
 
 Para SVM, el coste de inferencia depende principalmente del tipo de kernel utilizado. En este trabajo se prioriza el uso de:
 
@@ -50,7 +60,7 @@ Para SVM, el coste de inferencia depende principalmente del tipo de kernel utili
     \item \textbf{C}: parámetro de regularización que puede influir en la complejidad del modelo, aunque su impacto en la inferencia es menor que el tipo de kernel.
 \end{itemize}
 
-\subsection{Multilayer Perceptron (MLP)}
+\subsubsection{Multilayer Perceptron (MLP)}
 
 En redes MLP, el coste de inferencia está directamente relacionado con el número total de pesos del modelo. Los hiperparámetros estructurales clave son:
 
@@ -58,7 +68,7 @@ En redes MLP, el coste de inferencia está directamente relacionado con el núme
     \item \textbf{hidden\_layer\_sizes}: número de capas ocultas y número de neuronas por capa.
 \end{itemize}
 
-\subsection{Long Short-Term Memory (LSTM)}
+\subsubsection{Long Short-Term Memory (LSTM)}
 
 En las redes LSTM, la complejidad de inferencia depende de:
 
@@ -68,7 +78,7 @@ En las redes LSTM, la complejidad de inferencia depende de:
 \end{itemize}
 
 
-\subsection{Convolutional Neural Networks (CNN 1D)}
+\subsubsection{Convolutional Neural Networks (CNN 1D)}
 
 En las CNN 1D utilizadas en este trabajo, los hiperparámetros estructurales más relevantes son:
 

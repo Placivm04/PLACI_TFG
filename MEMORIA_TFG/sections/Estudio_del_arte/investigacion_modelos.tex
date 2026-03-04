@@ -111,6 +111,41 @@ Respecto a la inferencia, LightGBM ofrece tiempos de predicción muy bajos, ya q
     \label{fig:lightgbm}
 \end{figure}
 
+\subsubsection{CatBoost}
+
+\textbf{CatBoost} es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}, desarrollada por Yandex.
+
+Una de las principales características de CatBoost es su capacidad para manejar de manera eficiente variables categóricas sin necesidad de realizar una codificación previa, lo que simplifica el proceso de preparación de datos y mejora el rendimiento del modelo.
+
+Otro punto clave es que a diferencia de otros modelos como XGBoost o LightGBM, CatBoost crea árboles simétricos, lo que nos da una latencia de inferencia muy baja, ya que cada árbol tiene la misma profundidad y se puede recorrer de manera más eficiente. Además, su implementación está optimizada para aprovechar al máximo los recursos computacionales disponibles, lo que contribuye a minimizar el consumo energético durante la fase de inferencia.
+
+CatBoost es particularmente ventajoso en escenarios donde se requiere minimizar la latencia de inferencia y el consumo energético, características fundamentales para sistemas IDS desplegados en entornos con recursos limitados o dispositivos IoT.
+
+\begin{table}[H]
+    \centering
+    \caption{Principales hiperparámetros de CatBoost y su significado.}
+    \label{tab:catboost_hyperparams}
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Hiperparámetro} & \textbf{Significado} \\
+        \midrule
+        \texttt{iterations} & Número de árboles a construir \\
+        \texttt{depth} & Profundidad máxima de cada árbol \\
+        \texttt{learning\_rate} & Tasa de aprendizaje (contribución de cada árbol) \\
+        \texttt{cat\_features} & Índices de características categóricas \\
+        \texttt{loss\_function} & Función de pérdida a optimizar \\
+        \texttt{random\_seed} & Semilla para reproducibilidad \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/catBoost.png}
+    \caption{Esquema representativo del funcionamiento de CatBoost.}
+    \label{fig:catboost}
+\end{figure}
+
 \subsubsection{Support Vector Machine (SVM)}
 
 \textbf{Support Vector Machines} (SVM) es un algoritmo de aprendizaje supervisado cuyo objetivo principal es encontrar una frontera de decisión que separe de forma óptima las distintas clases en el espacio de características. En su formulación básica, SVM busca el hiperplano que maximiza el margen entre las muestras de distintas clases, utilizando únicamente un subconjunto de los datos denominado \textit{vectores soporte}. Esta propiedad permite construir modelos robustos frente al ruido y con buena capacidad de generalización.

@@ -6,40 +6,42 @@
 \contentsline {subsubsection}{\numberline {0.1.1.1}Random Forest (RF)}{11}{subsubsection.0.1.1.1}%
 \contentsline {subsubsection}{\numberline {0.1.1.2}Extreme Gradient Boosting (XGBoost)}{12}{subsubsection.0.1.1.2}%
 \contentsline {subsubsection}{\numberline {0.1.1.3}Light Gradient Boosting Machine (LightGBM)}{14}{subsubsection.0.1.1.3}%
-\contentsline {subsubsection}{\numberline {0.1.1.4}Support Vector Machine (SVM)}{15}{subsubsection.0.1.1.4}%
-\contentsline {subsection}{\numberline {0.1.2}Deep Learning}{16}{subsection.0.1.2}%
-\contentsline {subsubsection}{\numberline {0.1.2.1}Multilayer Perceptron (MLP)}{17}{subsubsection.0.1.2.1}%
-\contentsline {subsubsection}{\numberline {0.1.2.2}Long Short-Term Memory (LSTM)}{18}{subsubsection.0.1.2.2}%
-\contentsline {subsubsection}{\numberline {0.1.2.3}Convolutional Neural Networks (CNN)}{19}{subsubsection.0.1.2.3}%
-\contentsline {section}{\numberline {0.2}Obtención y Análisis de Datos}{21}{section.0.2}%
-\contentsline {subsection}{\numberline {0.2.1}CIC-IDS-2017 DataSet}{21}{subsection.0.2.1}%
-\contentsline {subsubsection}{\numberline {0.2.1.1}Motivación para el uso del dataset}{21}{subsubsection.0.2.1.1}%
-\contentsline {subsubsection}{\numberline {0.2.1.2}Estructura del dataset}{22}{subsubsection.0.2.1.2}%
-\contentsline {subsubsection}{\numberline {0.2.1.3}Distribución de ataques}{22}{subsubsection.0.2.1.3}%
-\contentsline {subsection}{\numberline {0.2.2}UNSW-NB15 DataSet}{23}{subsection.0.2.2}%
-\contentsline {subsubsection}{\numberline {0.2.2.1}Motivación para el uso del dataset}{23}{subsubsection.0.2.2.1}%
-\contentsline {subsubsection}{\numberline {0.2.2.2}Estructura del dataset}{23}{subsubsection.0.2.2.2}%
-\contentsline {subsubsection}{\numberline {0.2.2.3}Distribución de ataques}{24}{subsubsection.0.2.2.3}%
-\contentsline {subsection}{\numberline {0.2.3}ToN\_IoT DataSet}{24}{subsection.0.2.3}%
-\contentsline {subsubsection}{\numberline {0.2.3.1}Motivación para el uso del dataset}{25}{subsubsection.0.2.3.1}%
-\contentsline {subsubsection}{\numberline {0.2.3.2}Estructura del dataset}{25}{subsubsection.0.2.3.2}%
-\contentsline {subsubsection}{\numberline {0.2.3.3}Distribución de ataques}{25}{subsubsection.0.2.3.3}%
-\contentsline {subsection}{\numberline {0.2.4}IoT-23 DataSet}{26}{subsection.0.2.4}%
-\contentsline {subsubsection}{\numberline {0.2.4.1}Motivación para el uso del dataset}{26}{subsubsection.0.2.4.1}%
-\contentsline {subsubsection}{\numberline {0.2.4.2}Estructura del dataset}{26}{subsubsection.0.2.4.2}%
-\contentsline {subsubsection}{\numberline {0.2.4.3}Distribución de ataques}{27}{subsubsection.0.2.4.3}%
-\contentsline {subsection}{\numberline {0.2.5}Relación entre los datasets}{28}{subsection.0.2.5}%
-\contentsline {subsection}{\numberline {0.2.6}Justificación del enfoque en la fase de inferencia}{28}{subsection.0.2.6}%
-\contentsline {subsection}{\numberline {0.2.7}Optimización de hiperparámetros estructurales}{29}{subsection.0.2.7}%
-\contentsline {subsubsection}{\numberline {0.2.7.1}Random Forest}{29}{subsubsection.0.2.7.1}%
-\contentsline {subsection}{\numberline {0.2.8}XGBoost}{30}{subsection.0.2.8}%
-\contentsline {subsection}{\numberline {0.2.9}LightGBM}{30}{subsection.0.2.9}%
-\contentsline {subsection}{\numberline {0.2.10}Support Vector Machine (SVM)}{30}{subsection.0.2.10}%
-\contentsline {subsection}{\numberline {0.2.11}Multilayer Perceptron (MLP)}{30}{subsection.0.2.11}%
-\contentsline {subsection}{\numberline {0.2.12}Long Short-Term Memory (LSTM)}{30}{subsection.0.2.12}%
-\contentsline {subsection}{\numberline {0.2.13}Convolutional Neural Networks (CNN 1D)}{31}{subsection.0.2.13}%
-\contentsline {section}{\numberline {0.3}Optuna}{31}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Resultados}{32}{section.0.4}%
-\contentsline {subsection}{\numberline {0.4.1}Random Forest}{32}{subsection.0.4.1}%
-\contentsline {subsection}{\numberline {0.4.2}XGBoost}{32}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {0.4.3}LightGBM}{34}{subsection.0.4.3}%
+\contentsline {subsubsection}{\numberline {0.1.1.4}CatBoost}{15}{subsubsection.0.1.1.4}%
+\contentsline {subsubsection}{\numberline {0.1.1.5}Support Vector Machine (SVM)}{16}{subsubsection.0.1.1.5}%
+\contentsline {subsection}{\numberline {0.1.2}Deep Learning}{17}{subsection.0.1.2}%
+\contentsline {subsubsection}{\numberline {0.1.2.1}Multilayer Perceptron (MLP)}{18}{subsubsection.0.1.2.1}%
+\contentsline {subsubsection}{\numberline {0.1.2.2}Long Short-Term Memory (LSTM)}{19}{subsubsection.0.1.2.2}%
+\contentsline {subsubsection}{\numberline {0.1.2.3}Convolutional Neural Networks (CNN)}{20}{subsubsection.0.1.2.3}%
+\contentsline {section}{\numberline {0.2}Obtención y Análisis de Datos}{22}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}CIC-IDS-2017 DataSet}{22}{subsection.0.2.1}%
+\contentsline {subsubsection}{\numberline {0.2.1.1}Motivación para el uso del dataset}{22}{subsubsection.0.2.1.1}%
+\contentsline {subsubsection}{\numberline {0.2.1.2}Estructura del dataset}{23}{subsubsection.0.2.1.2}%
+\contentsline {subsubsection}{\numberline {0.2.1.3}Distribución de ataques}{23}{subsubsection.0.2.1.3}%
+\contentsline {subsection}{\numberline {0.2.2}UNSW-NB15 DataSet}{24}{subsection.0.2.2}%
+\contentsline {subsubsection}{\numberline {0.2.2.1}Motivación para el uso del dataset}{24}{subsubsection.0.2.2.1}%
+\contentsline {subsubsection}{\numberline {0.2.2.2}Estructura del dataset}{24}{subsubsection.0.2.2.2}%
+\contentsline {subsubsection}{\numberline {0.2.2.3}Distribución de ataques}{25}{subsubsection.0.2.2.3}%
+\contentsline {subsection}{\numberline {0.2.3}ToN\_IoT DataSet}{25}{subsection.0.2.3}%
+\contentsline {subsubsection}{\numberline {0.2.3.1}Motivación para el uso del dataset}{26}{subsubsection.0.2.3.1}%
+\contentsline {subsubsection}{\numberline {0.2.3.2}Estructura del dataset}{26}{subsubsection.0.2.3.2}%
+\contentsline {subsubsection}{\numberline {0.2.3.3}Distribución de ataques}{26}{subsubsection.0.2.3.3}%
+\contentsline {subsection}{\numberline {0.2.4}IoT-23 DataSet}{27}{subsection.0.2.4}%
+\contentsline {subsubsection}{\numberline {0.2.4.1}Motivación para el uso del dataset}{27}{subsubsection.0.2.4.1}%
+\contentsline {subsubsection}{\numberline {0.2.4.2}Estructura del dataset}{27}{subsubsection.0.2.4.2}%
+\contentsline {subsubsection}{\numberline {0.2.4.3}Distribución de ataques}{28}{subsubsection.0.2.4.3}%
+\contentsline {subsection}{\numberline {0.2.5}Relación entre los datasets}{29}{subsection.0.2.5}%
+\contentsline {subsection}{\numberline {0.2.6}Justificación del enfoque en la fase de inferencia}{29}{subsection.0.2.6}%
+\contentsline {subsection}{\numberline {0.2.7}Optimización de hiperparámetros estructurales}{30}{subsection.0.2.7}%
+\contentsline {subsubsection}{\numberline {0.2.7.1}Random Forest}{30}{subsubsection.0.2.7.1}%
+\contentsline {subsubsection}{\numberline {0.2.7.2}XGBoost}{30}{subsubsection.0.2.7.2}%
+\contentsline {subsubsection}{\numberline {0.2.7.3}LightGBM}{31}{subsubsection.0.2.7.3}%
+\contentsline {subsubsection}{\numberline {0.2.7.4}CatBoost}{31}{subsubsection.0.2.7.4}%
+\contentsline {subsubsection}{\numberline {0.2.7.5}Support Vector Machine (SVM)}{31}{subsubsection.0.2.7.5}%
+\contentsline {subsubsection}{\numberline {0.2.7.6}Multilayer Perceptron (MLP)}{31}{subsubsection.0.2.7.6}%
+\contentsline {subsubsection}{\numberline {0.2.7.7}Long Short-Term Memory (LSTM)}{32}{subsubsection.0.2.7.7}%
+\contentsline {subsubsection}{\numberline {0.2.7.8}Convolutional Neural Networks (CNN 1D)}{32}{subsubsection.0.2.7.8}%
+\contentsline {section}{\numberline {0.3}Optuna}{32}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Resultados}{33}{section.0.4}%
+\contentsline {subsection}{\numberline {0.4.1}Random Forest}{33}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {0.4.2}XGBoost}{34}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {0.4.3}LightGBM}{35}{subsection.0.4.3}%
