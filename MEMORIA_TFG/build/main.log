@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  3 MAR 2026 19:55
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  16 MAR 2026 19:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1046,6 +1046,16 @@ Package biblatex Info: ... file 'blx-compat.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back bibtex backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
@@ -1278,11 +1288,15 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `main.bcf'.
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout5 = `main-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
+ (build/main.bbl)
 Package biblatex Info: Reference section=0 on input line 30.
 Package biblatex Info: Reference segment=0 on input line 30.
 
@@ -1451,64 +1465,79 @@ File: images/stratosphere_laboratory_CTU.png Graphic file (type bmp)
  [28]) (./sections/Desarrollo/seleccion_de_hiperparametros.tex [29] [30] [31]) (./sections/Desarrollo/optuna.tex
 File: images/OPTUNA.png Graphic file (type bmp)
 <images/OPTUNA.png>
-) (./sections/Desarrollo/resultados.tex [32]
+ [32]) (./sections/Desarrollo/resultados.tex
 File: images/PARETO_RF.png Graphic file (type bmp)
 <images/PARETO_RF.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [33]
 File: images/PARETO_XGBOOST.png Graphic file (type bmp)
 <images/PARETO_XGBOOST.png>
  [34]
 File: images/PARETO_LIGHTGBM.png Graphic file (type bmp)
 <images/PARETO_LIGHTGBM.png>
-
-Overfull \hbox (64.08798pt too wide) in paragraph at lines 100--111
+ [35]
+Overfull \hbox (64.08798pt too wide) in paragraph at lines 130--141
  [][] 
  []
 
-) [35] [36]
+File: images/PARETO_CATBOOST.png Graphic file (type bmp)
+<images/PARETO_CATBOOST.png>
+[36]
+File: images/PARETO_SVM.png Graphic file (type bmp)
+<images/PARETO_SVM.png>
 
-LaTeX Warning: Empty bibliography on input line 119.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [37] [38]
+Overfull \hbox (62.84795pt too wide) in paragraph at lines 245--258
+ [][] 
+ []
+
+File: images/ROC_ARBOLES.png Graphic file (type bmp)
+<images/ROC_ARBOLES.png>
+
+Underfull \vbox (badness 4266) has occurred while \output is active []
+
+ [39] [40]
+File: images/MC_ARBOLES.png Graphic file (type bmp)
+<images/MC_ARBOLES.png>
+) [41] [42
+
+]
+Overfull \hbox (19.0838pt too wide) in paragraph at lines 119--119
+\TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
+ []
+
+[43
+
+
+] [44
+
+]
 File: template/logos/NEG-logo-umaes.png Graphic file (type bmp)
 <template/logos/NEG-logo-umaes.png>
-[37
-
-
-
+ [45
 
 ] (build/main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 69669BFDC05B448CE6191A7A12618142;3163
-(rerunfilecheck)             After:  E3E09D21F286D67BE223DEF608722923;2893.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 779499F0841C28A0823DD17671A0CF56;3864.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43524 strings out of 474878
- 923130 string characters out of 5762516
+ 43892 strings out of 474878
+ 932093 string characters out of 5762516
  1936627 words of memory out of 5000000
- 64923 multiletter control sequences out of 15000+600000
- 562143 words of font info for 87 fonts, out of 8000000 for 9000
+ 65281 multiletter control sequences out of 15000+600000
+ 562151 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,12n,121p,1178b,984s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,12n,121p,1920b,5025s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (41 pages, 636008 bytes).
+Output written on build/main.xdv (49 pages, 764240 bytes).

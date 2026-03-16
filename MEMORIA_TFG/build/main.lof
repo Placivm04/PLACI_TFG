@@ -10,6 +10,10 @@
 \contentsline {figure}{\numberline {10}{\ignorespaces Logo de la University of New South Wales, entidad responsable de la publicación del dataset UNSW-NB15.}}{25}{figure.caption.24}%
 \contentsline {figure}{\numberline {11}{\ignorespaces Logo del Stratosphere Laboratory de la Czech Technical University, entidad responsable de la publicación del dataset IoT-23.}}{28}{figure.caption.27}%
 \contentsline {figure}{\numberline {12}{\ignorespaces Visualización de la optimización con Optuna}}{33}{figure.caption.30}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Frontera de Pareto - Random Forest}}{33}{figure.caption.31}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Frontera de Pareto - XGBoost}}{34}{figure.caption.33}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Frontera de Pareto - LightGBM}}{35}{figure.caption.35}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Frontera de Pareto - Random Forest}}{34}{figure.caption.32}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Frontera de Pareto - XGBoost}}{35}{figure.caption.34}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Frontera de Pareto - LightGBM}}{36}{figure.caption.36}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Frontera de Pareto - CatBoost}}{37}{figure.caption.38}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Frontera de Pareto - SVM}}{38}{figure.caption.40}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Curvas ROC - Comparativa de modelos}}{40}{figure.caption.43}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Matriz de Confusión - Comparativa de modelos}}{41}{figure.caption.44}%

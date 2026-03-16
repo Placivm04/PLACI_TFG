@@ -1,0 +1,333 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{alharthi2025comparative}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AA}{%
+         family={Alharthi},
+         familyi={A\bibinitperiod},
+         given={Ayesha},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Alaryani},
+         familyi={A\bibinitperiod},
+         given={Meera},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kaddoura},
+         familyi={K\bibinitperiod},
+         given={Sanaa},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{AAAMKS1}
+    \strng{fullhash}{AAAMKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1016/j.array.2025.100406
+    \endverb
+    \field{pages}{100406}
+    \field{title}{A Comparative Study of Machine Learning and Deep Learning Models in Binary and Multiclass Classification for Intrusion Detection Systems}
+    \field{volume}{26}
+    \field{journaltitle}{Array}
+    \field{year}{2025}
+  \endentry
+
+  \entry{alzaher2025intrusion}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AFJ}{%
+         family={ALzaher},
+         familyi={A\bibinitperiod},
+         given={Fatima\bibnamedelima Jobran},
+         giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={AlJarullah},
+         familyi={A\bibinitperiod},
+         given={Asma},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AFJAA1}
+    \strng{fullhash}{AFJAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{8}
+    \field{pages}{440\bibrangedash 454}
+    \field{title}{Intrusion Detection Using Machine Learning and Deep Learning}
+    \field{volume}{16}
+    \field{journaltitle}{International Journal of Advanced Computer Science and Applications}
+    \field{year}{2025}
+  \endentry
+
+  \entry{Kamruzzaman2025LightweightAI}{article}{}
+    \name{author}{5}{}{%
+      {{hash=KM}{%
+         family={Kamruzzaman},
+         familyi={K\bibinitperiod},
+         given={Md.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SMS}{%
+         family={Siddiki},
+         familyi={S\bibinitperiod},
+         given={Md.\bibnamedelima Shoeb},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MRS}{%
+         family={Mondal},
+         familyi={M\bibinitperiod},
+         given={Rabi\bibnamedelima Sankar},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Saha},
+         familyi={S\bibinitperiod},
+         given={Sujoy},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BMNA}{%
+         family={Bhuiyan},
+         familyi={B\bibinitperiod},
+         given={Md\bibnamedelima Nazmul\bibnamedelima Alam},
+         giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KM+1}
+    \strng{fullhash}{KMSMSMRSSSBMNA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Lightweight AI-Driven intrusion detection for SMEs: Comparative analysis of machine lerning models on Ton\_Iot}
+    \verb{url}
+    \verb https://api.semanticscholar.org/CorpusID:283327148
+    \endverb
+    \field{journaltitle}{Intelligent Decision Technologies}
+    \field{year}{2025}
+  \endentry
+
+  \entry{kasongo2023rnnids}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KSM}{%
+         family={Kasongo},
+         familyi={K\bibinitperiod},
+         given={Sydney\bibnamedelima Mambwe},
+         giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{KSM1}
+    \strng{fullhash}{KSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.1016/j.comcom.2022.10.015
+    \endverb
+    \field{pages}{57\bibrangedash 73}
+    \field{title}{A Deep Learning Technique for Intrusion Detection System Using a Recurrent Neural Networks Based Framework}
+    \field{volume}{196}
+    \field{journaltitle}{Computer Communications}
+    \field{year}{2023}
+  \endentry
+
+  \entry{Manduru2024ALG}{article}{}
+    \name{author}{6}{}{%
+      {{hash=MV}{%
+         family={Manduru},
+         familyi={M\bibinitperiod},
+         given={Vyshnavi},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=KTGR}{%
+         family={Kasireddy},
+         familyi={K\bibinitperiod},
+         given={Tharun Gopi\bibnamedelima Reddy},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Manchina},
+         familyi={M\bibinitperiod},
+         given={Karthik},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=DVS}{%
+         family={Davuluri},
+         familyi={D\bibinitperiod},
+         given={Vijay\bibnamedelima Shanmuk},
+         giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SVPK}{%
+         family={S},
+         familyi={S},
+         given={Venkatrama Phani\bibnamedelima Kumar},
+         giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=KVKK}{%
+         family={K},
+         familyi={K},
+         given={Venkata Krishna\bibnamedelima Kishore},
+         giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MV+1}
+    \strng{fullhash}{MVKTGRMKDVSSVPKKVKK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{A Light Gradient Boosted Model for Network Intrusion Detection}
+    \verb{url}
+    \verb https://api.semanticscholar.org/CorpusID:272372361
+    \endverb
+    \field{journaltitle}{2024 International Conference on Smart Systems for Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)}
+    \field{year}{2024}
+  \endentry
+
+  \entry{10823298}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=PN}{%
+         family={Parekh},
+         familyi={P\bibinitperiod},
+         given={Nishank},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Sen},
+         familyi={S\bibinitperiod},
+         given={Arzob},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Rajasekaran},
+         familyi={R\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JJDD}{%
+         family={Jayaseeli},
+         familyi={J\bibinitperiod},
+         given={J.\bibnamedelima D.\bibnamedelima Dorathi},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Robert},
+         familyi={R\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{Radio frequency;Industries;Adaptation models;Accuracy;Computational modeling;Network intrusion detection;Telecommunication traffic;Real-time systems;Tuning;Optimization;Network Intrusion Detection Systems;Hyperparameter Optimization;Optuna;Machine Learning}
+    \strng{namehash}{PN+1}
+    \strng{fullhash}{PNSARPJJDDRP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{2024 International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS)}
+    \verb{doi}
+    \verb 10.1109/ICICNIS64247.2024.10823298
+    \endverb
+    \field{pages}{312\bibrangedash 318}
+    \field{title}{Network Intrusion Detection System Using Optuna}
+    \field{year}{2024}
+  \endentry
+
+  \entry{singh2023dlidsreview}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SG}{%
+         family={Singh},
+         familyi={S\bibinitperiod},
+         given={Gurbakhsis},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bansal},
+         familyi={B\bibinitperiod},
+         given={Meenakshi},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SGBM1}
+    \strng{fullhash}{SGBM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.48047/qdgj7n28
+    \endverb
+    \field{number}{3}
+    \field{title}{An Analytical Review of Deep Learning Models and Datasets for Anomaly-Based Intrusion Detection Systems}
+    \verb{url}
+    \verb https://doi.org/10.48047/qdgj7n28
+    \endverb
+    \field{volume}{52}
+    \field{journaltitle}{Cuestiones de Fisioterapia}
+    \field{year}{2023}
+  \endentry
+
+  \entry{tripathy2025idsreview}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TSS}{%
+         family={Tripathy},
+         familyi={T\bibinitperiod},
+         given={Sudhanshu\bibnamedelima Sekhar},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=BB}{%
+         family={Behera},
+         familyi={B\bibinitperiod},
+         given={Bichitrananda},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TSSBB1}
+    \strng{fullhash}{TSSBB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.48550/arXiv.2506.02438
+    \endverb
+    \field{title}{Detection System: Advances and Challenges}
+    \verb{url}
+    \verb https://doi.org/10.48550/arXiv.2506.02438
+    \endverb
+    \field{journaltitle}{arXiv preprint arXiv:2506.02438}
+    \field{year}{2025}
+  \endentry
+\enddatalist
+\endinput

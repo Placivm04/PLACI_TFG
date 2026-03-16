@@ -42,6 +42,14 @@
 \contentsline {subsubsection}{\numberline {0.2.7.8}Convolutional Neural Networks (CNN 1D)}{32}{subsubsection.0.2.7.8}%
 \contentsline {section}{\numberline {0.3}Optuna}{32}{section.0.3}%
 \contentsline {section}{\numberline {0.4}Resultados}{33}{section.0.4}%
-\contentsline {subsection}{\numberline {0.4.1}Random Forest}{33}{subsection.0.4.1}%
-\contentsline {subsection}{\numberline {0.4.2}XGBoost}{34}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {0.4.3}LightGBM}{35}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {0.4.1}Entorno de pruebas}{33}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {0.4.2}Random Forest}{33}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {0.4.3}XGBoost}{34}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {0.4.4}LightGBM}{35}{subsection.0.4.4}%
+\contentsline {subsection}{\numberline {0.4.5}CatBoost}{36}{subsection.0.4.5}%
+\contentsline {subsection}{\numberline {0.4.6}Support Vector Machine (SVM)}{37}{subsection.0.4.6}%
+\contentsline {subsection}{\numberline {0.4.7}Multilayer Perceptron (MLP)}{38}{subsection.0.4.7}%
+\contentsline {subsection}{\numberline {0.4.8}Comparativa de Modelos basados en Árboles}{38}{subsection.0.4.8}%
+\contentsline {subsubsection}{\numberline {0.4.8.1}Recursos computacionales}{39}{subsubsection.0.4.8.1}%
+\contentsline {subsubsection}{\numberline {0.4.8.2}AUC}{39}{subsubsection.0.4.8.2}%
+\contentsline {subsubsection}{\numberline {0.4.8.3}Matriz de Confusión}{40}{subsubsection.0.4.8.3}%

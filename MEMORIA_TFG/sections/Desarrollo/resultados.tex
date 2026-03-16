@@ -1,9 +1,39 @@
 \section{Resultados}
 
+\subsection{Entorno de pruebas}
+
+Antes de analizar los resultados obtenidos, es importante describir el entorno de pruebas utilizado para la evaluación de los modelos. Todos los experimentos se han llevado a cabo en un entorno controlado con las siguientes características:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Componente} & \textbf{Especificación Técnica} \\
+        \hline
+        Sistema Operativo & Debian GNU/Linux 12 (bookworm) \\
+        \hline
+        Procesador (CPU) & 2x Intel® Xeon® Gold 5418Y (Arquitectura Dual-Socket) \\
+        \hline
+        Núcleos de CPU & 48 físicos / 96 lógicos (Hilos) \\
+        \hline
+        Memoria RAM (Sistema) & 512 GB (503 GiB disponibles) \\
+        \hline
+        Aceleradores Gráficos (GPU) & 4x NVIDIA L40S \\
+        \hline
+        Memoria VRAM (Total) & 192 GB (48 GB dedicados por cada GPU) \\
+        \hline
+        Plataforma de Cómputo & CUDA Version 13.0 (Driver 580.95.05) \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del entorno experimental}
+    \label{tab:entorno_experimental}
+\end{table}
+
 \subsection{Random Forest}
 
 Para el modelo de Random Forest, utilizando Optuna, se han obtenido los siguientes resultados como frontera de Pareto:
-\begin{figure}[ht]
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/PARETO_RF.png}
     \caption{Frontera de Pareto - Random Forest}
@@ -65,11 +95,11 @@ Los resultados son los siguientes:
         \hline
         \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
         \hline
-        Alta Eficiencia & 50 & 8 & 0.8290 & 0.8394 & 0.00045 \\
+        Alta Eficiencia & 50 & 8 & 0.8290 & 0.8394 & 0.000042 \\
         \hline
-        Equilibrado & 350 & 6 & 0.8584 & 0.8647 & 0.00039 \\
+        Equilibrado & 350 & 6 & 0.8584 & 0.8647 & 0.000106 \\
         \hline
-        Máxima Precisión & 350 & 8 & 0.8579 & 0.8641 & 0.00053 \\
+        Máxima Precisión & 350 & 8 & 0.8579 & 0.8641 & 0.000126 \\
         \hline
     \end{tabular}
     \caption{Comparativa final de modelos XGBoost en el set de test}
@@ -93,9 +123,9 @@ Entre los diferentes puntos de la frontera de Pareto, se han seleccionado los si
     \item (300, 122, 5) Es un modelo muy equilibrado también, con menos F1 que el primero, pero menor latencia
 \end{enumerate}
 
-Los resultados obtenidos en el set de test son los siguientes:
+Los resultados obtenidos en el set de test son los siguientesss:
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|c|}
         \hline
@@ -111,3 +141,161 @@ Los resultados obtenidos en el set de test son los siguientes:
     \caption{Comparativa final de modelos LightGBM en el set de test}
     \label{tab:lightgbm_comparison}
 \end{table}
+
+\subsection{CatBoost}
+
+
+CatBoost ha sido entrenado utilizando GPU, obteniendo la siguiente frontera de Pareto:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/PARETO_CATBOOST.png}
+    \caption{Frontera de Pareto - CatBoost}
+    \label{fig:pareto_catboost}
+\end{figure}
+
+Entre los diferentes puntos de la frontera de Pareto, se han seleccionado los siguientes para su evaluación en el set de test:
+
+\begin{enumerate}
+    \item (100, 3) Es un modelo muy rápido
+    \item (200, 6) Es un modelo muy equilibrado
+    \item (250, 7) Es un modelo muy equilibrado 
+    \item (250, 8) Es un modelo muy equilibrado 
+    \item (250, 10) Es un modelo con excelente F1
+\end{enumerate}
+
+Los resultados obtenidos en el set de test son los siguientes:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Ultrarrápido & 100 & 3 & 0.8093 & 0.8226 & 0.000329 \\
+        \hline
+        Equilibrado 1 & 200 & 6 & 0.8464 & 0.8543 & 0.000339 \\
+        \hline
+        Equilibrado 2 & 250 & 7 & 0.8522 & 0.8593 & 0.000367 \\
+        \hline
+        Equilibrado 3 & 250 & 8 & 0.8539 & 0.8608 & 0.000352 \\
+        \hline
+        Excelente F1 & 400 & 10 & 0.8569 & 0.8634 & 0.000381 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos CatBoost en el set de test}
+    \label{tab:catboost_comparison}
+\end{table}
+
+%------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------
+    
+\subsection{Support Vector Machine (SVM)}
+
+La gráfica de la frontera de Pareto obtenida para SVM:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/PARETO_SVM.png}
+    \caption{Frontera de Pareto - SVM}
+    \label{fig:pareto_svm}
+\end{figure}
+
+Los resultados obtenidos en el set de test para los modelos seleccionados de la frontera de Pareto son los siguientes:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{C} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Mejor F1 en CV & 0.00027 & 0.7086 & 0.7354 & 0.000051 \\
+        \hline
+        Equilibrio F1-Latencia & 0.000115 & 0.6921 & 0.7234 & 0.000018 \\
+        \hline
+        Menor latencia & 0.000153 & 0.7094 & 0.7364 & 0.000023 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos SVM en el set de test}
+    \label{tab:svm_comparison}
+\end{table}
+
+\subsection{Multilayer Perceptron (MLP)}
+
+\subsection{Comparativa de Modelos basados en Árboles}
+
+Para finalizar el estudio de los modelos basados en árboles de decisión, se ha realizado una comparativa analizando las curvas ROC y las matrices de confusión de los cuatro modelos evaluados (Random Forest, XGBoost, LightGBM y CatBoost).
+
+De cada modelo se ha seleccionado unos hiperparámetros concetros. Estos han sido elegidos del conjunto de modelos evaluados en test de la gráfica de Pareto, buscando un equilibrio entre calidad y coste. En concreto, se han seleccionado los siguientes:
+
+\begin{itemize}
+    \item \textbf{Random Forest:} n\_estimators=100 max\_depth=25,
+    \item \textbf{XGBoost:} n\_estimators=350 max\_depth=6,
+    \item \textbf{LightGBM:} n\_estimators=150 max\_depth=127 num\_leaves=110,
+    \item \textbf{CatBoost:} n\_estimators=250 max\_depth=8
+\end{itemize}
+
+Para comparar los modelos, hemos analizado dos aspectos fundamentales: la capacidad de discriminación (medida a través del AUC de las curvas ROC), el perfil de detección (analizando las matrices de confusión) y también algunos parámetros de consumo como la latencia de inferencia, el número de paquetes procesados por segundo, el consumo de memoria RAM, números de núcleos de CPU y porcentaje de uso de CPU. Todo esto solo en la parte de inferencia.
+
+\subsubsection{Recursos computacionales}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Modelo} & \textbf{Latencia (ms)} & \textbf{Throughput (paq/s)} & \textbf{Núcleos CPU} & \textbf{Pico RAM (MB)} & \textbf{Porcentaje CPU} \\
+        \hline
+        Random Forest & 0.00481 & 207,826 & 5.9 & 11.99 & 6.1\% \\
+        \hline
+        XGBoost & 0.0002 & 5,023,662 & 92.5 & 0.0 & 96.4\% \\
+        \hline
+        LightGBM & 0.00054 & 1,851,331 & 88.8 & 0.0 & 92.5\% \\
+        \hline
+        CatBoost & 0.00048 & 2,066,880 & 38.7 & 1.99 & 40.4\% \\
+        \hline
+    \end{tabular}
+    \caption{Consumo de recursos computacionales en inferencia}
+    \label{tab:recursos_computacionales}
+\end{table}
+
+Vemos que a nivel hardware CatBoost podría ser el equilibrio perfecto, ya que ofrece una latencia de inferencia muy baja (0.00048 ms) y un throughput elevado (2 millones de paquetes por segundo) y con un consumo de CPU y RAM mucho más moderado que XGBoost o LightGBM, lo que nos dejaría casi un 60\% del procesador libre para que el firewall/router pueda seguir haciendo sus tareas de red sin colapsar.
+Modelos como XGBoost o LightGBM, aunque ofrecen latencias de inferencia aún más bajas, consumen prácticamente toda la CPU disponible, lo que podría ser problemático en un entorno de producción donde el sistema también debe manejar otras tareas críticas de red.
+
+\subsubsection{AUC}
+Al analizar el \textbf{Área Bajo la Curva (AUC) de las curvas ROC}, podemos observar que el rendimiento general de los cuatro modelos es excelente y muy parejo. Todos alcanzan un AUC superior a 0.97, lo que demuestra una alta capacidad para discriminar entre tráfico normal y ataques. Destaca ligeramente \textbf{LightGBM} con el mayor AUC (0.9789), seguido de cerca por XGBoost (0.9784) y CatBoost (0.9776), quedando Random Forest con el menor (0.9745).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/ROC_ARBOLES.png}
+    \caption{Curvas ROC - Comparativa de modelos}
+    \label{fig:roc_comparison}
+\end{figure}
+
+\subsubsection{Matriz de Confusión}
+Al profundizar en las \textbf{matrices de confusión}, es fundamental considerar el contexto de un Sistema de Detección de Intrusiones (IDS). En este escenario, los \textit{Falsos Negativos} (tráfico anómalo clasificado como normal) representan el riesgo más crítico, ya que suponen ataques que logran evadir el sistema. Por otro lado, los \textit{Falsos Positivos} (tráfico normal clasificado como ataque) generan fatiga de alertas (\textit{alert fatigue}) en los analistas, lo cual es indeseable pero menos peligroso que una intrusión exitosa.
+
+Las matrices de confusión revelan los siguientes perfiles:
+\begin{itemize}
+    \item \textbf{Random Forest:} Es el modelo más conservador frente a los ataques, obteniendo la menor cantidad de falsos negativos (9.764) y detectando la mayor cantidad de intrusiones verdaderas (27.236). Como contrapartida, genera la mayor cantidad de falsos positivos (1.228).
+    \item \textbf{CatBoost:} Presenta el comportamiento opuesto. Minimiza excelentemente las falsas alarmas (903 falsos positivos), pero a costa de dejar pasar la mayor cantidad de ataques (10.555 falsos negativos).
+    \item \textbf{XGBoost:} Se sitúa en un punto intermedio, equilibrando tanto los falsos positivos (1.079) como los falsos negativos (10.058).
+    \item \textbf{LightGBM:} Logra un excelente balance, posicionándose como el segundo modelo que menos ataques deja pasar (9.846 falsos negativos, muy cerca de Random Forest) pero generando menos falsas alarmas que este (1.098 falsos positivos).
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/MC_ARBOLES.png}
+    \caption{Matriz de Confusión - Comparativa de modelos}
+    \label{fig:matriz_confusion_comparison}
+\end{figure}
+
+\subsubsection*{Mejor modelo en relación Calidad/Coste}
+Considerando la \textbf{relación calidad/coste} (donde la calidad equivale a la capacidad predictiva y el coste se traduce en latencia de inferencia y consumo de recursos), \textbf{LightGBM es el claro ganador}. 
+
+Por un lado, en cuanto a calidad, LightGBM ofrece el mejor AUC (0.9789) y un perfil de detecciones extremadamente sólido, penalizando mínimamente los ataques no detectados en comparación con Random Forest, pero mejorando la tasa de falsas alarmas. 
+
+Por otro lado, en cuanto al coste computacional, como se ha evidenciado en las tablas de latencia anteriores, LightGBM logra tiempos de inferencia significativamente más bajos (en torno a 0.0002 ms - 0.0004 ms) frente a modelos más pesados como Random Forest (hasta 0.0055 ms) o XGBoost. Efectivamente, LightGBM tiende a monopolizar los recursos por su paralelización masiva. Sin embargo, en un entorno de producción real, esto se soluciona trivialmente limitando el parámetro n\_jobs (por ejemplo, a 30 o 40 hilos). 
+Al hacerlo, reduciremos ligeramente su Throughput (que ya de por sí es exageradamente alto con 1.85 millones paquetes por segundo), pero mantendremos intacta su superioridad predictiva, logrando el IDS más seguro e inteligente de la comparativa.
+
+
