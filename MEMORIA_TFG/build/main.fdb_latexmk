@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/main"] 1773687490.1604 "build/main.aux" "build/main.bbl" "build/main" 1773771807.83008 0
+["bibtex build/main"] 1773687490.1604 "build/main.aux" "build/main.bbl" "build/main" 1773857867.19592 0
   "./sections/Referencias/references.bib" 1773691145.03872 3992 793e760ad68e3449c10f44c3952aa0a8 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1678141846 65484 b7949c47a88ed6dca66ebc7a04577312 ""
-  "build/main-blx.bib" 1773771805.80792 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
-  "build/main.aux" 1773771805.80192 23954 45efc97216d002c1271f106f301d6a01 "xelatex"
+  "build/main-blx.bib" 1773857865.00432 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
+  "build/main.aux" 1773857864.99932 23954 45efc97216d002c1271f106f301d6a01 "xelatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1773771806.16175 "build/main.xdv" "build/main.pdf" "build/main" 1773771807.83211 0
-  "build/main.xdv" 1773771805.80892 764260 71e0b0b3f34932da8a9d56081fa5c18e "xelatex"
+["xdvipdfmx"] 1773857865.49242 "build/main.xdv" "build/main.pdf" "build/main" 1773857867.19823 0
+  "build/main.xdv" 1773857865.00532 764260 b5889eb3b7d75e899689147323e6b906 "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1773771803.93249 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1773771807.83018 0
+["xelatex"] 1773857863.01362 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1773857867.19603 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1773691145.03872 5075 dfee53c238712dbc353abb2fcb0c0610 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -215,14 +215,14 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1773771805.80192 23954 45efc97216d002c1271f106f301d6a01 "xelatex"
+  "build/main.aux" 1773857864.99932 23954 45efc97216d002c1271f106f301d6a01 "xelatex"
   "build/main.bbl" 1773691145.02572 10319 d7f367df0cdb41fb74e26ee83e021cdd "bibtex build/main"
-  "build/main.lof" 1773771805.80892 2627 0154d5afa8961fe2be9b73b7fcf47698 "xelatex"
-  "build/main.lot" 1773771805.80892 2866 1b0efef9d2309dd6d047f07de7ded88d "xelatex"
+  "build/main.lof" 1773857865.00532 2627 0154d5afa8961fe2be9b73b7fcf47698 "xelatex"
+  "build/main.lot" 1773857865.00532 2866 1b0efef9d2309dd6d047f07de7ded88d "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1773771805.80392 3864 779499f0841c28a0823dd17671a0cf56 "xelatex"
-  "build/main.run.xml" 1773771805.80892 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
-  "build/main.toc" 1773771805.80892 5310 cd305c71e38bcb3f7965fce1e0a89e74 "xelatex"
+  "build/main.out" 1773857865.00132 3864 779499f0841c28a0823dd17671a0cf56 "xelatex"
+  "build/main.run.xml" 1773857865.00532 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
+  "build/main.toc" 1773857865.00532 5310 cd305c71e38bcb3f7965fce1e0a89e74 "xelatex"
   "images/CNN_1D.jpg" 1770381111.25669 63724 af5e9cc56a21d1f084000e401b918e49 ""
   "images/MC_ARBOLES.png" 1773691145.03772 99123 651236e86a10df6b39581fddfe882c68 ""
   "images/PARETO_CATBOOST.png" 1773691145.03772 36617 5a57a1b01a6bce881243357802ee1f35 ""
@@ -246,7 +246,7 @@
   "main.tex" 1773691145.03872 5075 dfee53c238712dbc353abb2fcb0c0610 ""
   "sections/Desarrollo/optuna.tex" 1772196605.92137 1645 c6dd0986b6514c4389e8dbf2b9a5fab6 ""
   "sections/Desarrollo/resultados.tex" 1773691145.03872 15348 a26347c04e59aeb993594fd9fbee5f7f ""
-  "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1773771803.68392 5800 2b1b6ecac128f228637ddd84f4d65005 ""
+  "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1773857862.20232 5801 1da3b1167365f132e309062cea144119 ""
   "sections/Estudio_del_arte/dataSets.tex" 1770312910.68361 21386 d196ee61ebc8faa93c310dbce481e4f2 ""
   "sections/Estudio_del_arte/investigacion_modelos.tex" 1772563898.31493 28052 99a96cd72b5a98f401d89da8f594f3f3 ""
   "template/logos/NEG-etsi-logo.png" 1769674642 28181 46911f38fc53f3286e3ffcd6144950e2 ""
