@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/main"] 1773687490.1604 "build/main.aux" "build/main.bbl" "build/main" 1773857867.19592 0
+["bibtex build/main"] 1774466801.61175 "build/main.aux" "build/main.bbl" "build/main" 1774466842.78193 0
   "./sections/Referencias/references.bib" 1773691145.03872 3992 793e760ad68e3449c10f44c3952aa0a8 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1678141846 65484 b7949c47a88ed6dca66ebc7a04577312 ""
-  "build/main-blx.bib" 1773857865.00432 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
-  "build/main.aux" 1773857864.99932 23954 45efc97216d002c1271f106f301d6a01 "xelatex"
+  "build/main-blx.bib" 1774466840.42706 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
+  "build/main.aux" 1774466840.42206 26133 709e958070043df87361920b5a325e98 "xelatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1773857865.49242 "build/main.xdv" "build/main.pdf" "build/main" 1773857867.19823 0
-  "build/main.xdv" 1773857865.00532 764260 b5889eb3b7d75e899689147323e6b906 "xelatex"
+["xdvipdfmx"] 1774466840.88892 "build/main.xdv" "build/main.pdf" "build/main" 1774466842.78416 0
+  "build/main.xdv" 1774466840.42806 838252 68f4022eacc21ba66fc66ffeeedbe5ca "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1773857863.01362 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1773857867.19603 0
+["xelatex"] 1774466838.43769 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1774466842.78205 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1773691145.03872 5075 dfee53c238712dbc353abb2fcb0c0610 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -215,21 +215,24 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1773857864.99932 23954 45efc97216d002c1271f106f301d6a01 "xelatex"
-  "build/main.bbl" 1773691145.02572 10319 d7f367df0cdb41fb74e26ee83e021cdd "bibtex build/main"
-  "build/main.lof" 1773857865.00532 2627 0154d5afa8961fe2be9b73b7fcf47698 "xelatex"
-  "build/main.lot" 1773857865.00532 2866 1b0efef9d2309dd6d047f07de7ded88d "xelatex"
+  "build/main.aux" 1774466840.42206 26133 709e958070043df87361920b5a325e98 "xelatex"
+  "build/main.bbl" 1774466801.73505 10319 d7f367df0cdb41fb74e26ee83e021cdd "bibtex build/main"
+  "build/main.lof" 1774466840.42806 2943 4b32da52b291e60d192e06ba408788a3 "xelatex"
+  "build/main.lot" 1774466840.42806 3254 bf753e48a5ca05b44fa01893c0a461cc "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1773857865.00132 3864 779499f0841c28a0823dd17671a0cf56 "xelatex"
-  "build/main.run.xml" 1773857865.00532 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
-  "build/main.toc" 1773857865.00532 5310 cd305c71e38bcb3f7965fce1e0a89e74 "xelatex"
+  "build/main.out" 1774466840.42406 4024 c8c2dbf3113d91d9497ad45b8082affc "xelatex"
+  "build/main.run.xml" 1774466840.42806 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
+  "build/main.toc" 1774466840.42806 5467 366b86277bfabd614d5138f9913b1557 "xelatex"
   "images/CNN_1D.jpg" 1770381111.25669 63724 af5e9cc56a21d1f084000e401b918e49 ""
   "images/MC_ARBOLES.png" 1773691145.03772 99123 651236e86a10df6b39581fddfe882c68 ""
-  "images/PARETO_CATBOOST.png" 1773691145.03772 36617 5a57a1b01a6bce881243357802ee1f35 ""
-  "images/PARETO_LIGHTGBM.png" 1772196605.92037 43227 6fdbc88732bc6388fb7fa783c97f56c9 ""
-  "images/PARETO_RF.png" 1772133574.88199 39485 a99d8e63c3266f29c23842534b111fbe ""
-  "images/PARETO_SVM.png" 1773691145.03772 32406 da6f050b1d68914e7e66b69aeab9de69 ""
-  "images/PARETO_XGBOOST.png" 1772196605.92137 33132 10af8073b35fbfe29db701026245b7ba ""
+  "images/PARETO_CATBOOST.png" 1774386717.94447 35357 b9805bfaeaf55bf37b85dd0df246a670 ""
+  "images/PARETO_CNN.png" 1774465382.37801 57177 80af740bd5d5f8276807823169cf9581 ""
+  "images/PARETO_LIGHTGBM.png" 1774374514.28113 43970 0e45b5100e69d81f5ac1d1c93c7990f1 ""
+  "images/PARETO_LSTM.png" 1774466447.34504 35837 67284efa789776fa2d28767472c2b972 ""
+  "images/PARETO_MLP.png" 1774461290.84121 47513 ce02553b0d0e3b8bb92582866a414aa7 ""
+  "images/PARETO_RF.png" 1774372957.80308 38694 98068237e179d6f14695e80491b2c604 ""
+  "images/PARETO_SVM.png" 1774388750.30453 40239 e162ca8f977df1392acaf3bee9624e42 ""
+  "images/PARETO_XGBOOST.png" 1774373767.88511 43114 880fbc9dbd48ac05d1863f8906278e83 ""
   "images/ROC_ARBOLES.png" 1773691145.03872 66850 89883f49b295ffd524ecad272843e9d2 ""
   "images/SVM_margin.png" 1770377684.74159 281151 4d28ef4250dd7bdd0542da03f7ef621f ""
   "images/canadian_institute_cybersecurity.jpeg" 1770204568.96013 5899 4736f6d9e7ac0a6d4b4581c000d78fb4 ""
@@ -245,8 +248,8 @@
   "main.nls" 0 -1 0 ""
   "main.tex" 1773691145.03872 5075 dfee53c238712dbc353abb2fcb0c0610 ""
   "sections/Desarrollo/optuna.tex" 1772196605.92137 1645 c6dd0986b6514c4389e8dbf2b9a5fab6 ""
-  "sections/Desarrollo/resultados.tex" 1773691145.03872 15348 a26347c04e59aeb993594fd9fbee5f7f ""
-  "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1773857862.20232 5801 1da3b1167365f132e309062cea144119 ""
+  "sections/Desarrollo/resultados.tex" 1774466837.54906 23043 acb17faefe7c332ac2fa75b119d1a1b8 ""
+  "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1774175826.42457 5743 02ddab441c91fa80ff41ca8006b3b8e9 ""
   "sections/Estudio_del_arte/dataSets.tex" 1770312910.68361 21386 d196ee61ebc8faa93c310dbce481e4f2 ""
   "sections/Estudio_del_arte/investigacion_modelos.tex" 1772563898.31493 28052 99a96cd72b5a98f401d89da8f594f3f3 ""
   "template/logos/NEG-etsi-logo.png" 1769674642 28181 46911f38fc53f3286e3ffcd6144950e2 ""

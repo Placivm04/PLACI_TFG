@@ -496,6 +496,15 @@ INPUT ./images/PARETO_CATBOOST.png
 INPUT ./images/PARETO_SVM.png
 INPUT ./images/PARETO_SVM.png
 INPUT ./images/PARETO_SVM.png
+INPUT ./images/PARETO_MLP.png
+INPUT ./images/PARETO_MLP.png
+INPUT ./images/PARETO_MLP.png
+INPUT ./images/PARETO_LSTM.png
+INPUT ./images/PARETO_LSTM.png
+INPUT ./images/PARETO_LSTM.png
+INPUT ./images/PARETO_CNN.png
+INPUT ./images/PARETO_CNN.png
+INPUT ./images/PARETO_CNN.png
 INPUT ./images/ROC_ARBOLES.png
 INPUT ./images/ROC_ARBOLES.png
 INPUT ./images/ROC_ARBOLES.png

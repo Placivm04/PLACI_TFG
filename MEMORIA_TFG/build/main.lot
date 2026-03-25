@@ -14,8 +14,11 @@
 \contentsline {table}{\numberline {14}{\ignorespaces Correspondencia principal entre características de ToN\_IoT e IoT-23}}{29}{table.caption.29}%
 \contentsline {table}{\numberline {15}{\ignorespaces Especificaciones del entorno experimental}}{33}{table.caption.31}%
 \contentsline {table}{\numberline {16}{\ignorespaces Comparativa final de modelos Random Forest en el set de test}}{34}{table.caption.33}%
-\contentsline {table}{\numberline {17}{\ignorespaces Comparativa final de modelos XGBoost en el set de test}}{35}{table.caption.35}%
-\contentsline {table}{\numberline {18}{\ignorespaces Comparativa final de modelos LightGBM en el set de test}}{36}{table.caption.37}%
-\contentsline {table}{\numberline {19}{\ignorespaces Comparativa final de modelos CatBoost en el set de test}}{37}{table.caption.39}%
-\contentsline {table}{\numberline {20}{\ignorespaces Comparativa final de modelos SVM en el set de test}}{38}{table.caption.41}%
-\contentsline {table}{\numberline {21}{\ignorespaces Consumo de recursos computacionales en inferencia}}{39}{table.caption.42}%
+\contentsline {table}{\numberline {17}{\ignorespaces Comparativa final de modelos XGBoost en el set de test}}{36}{table.caption.35}%
+\contentsline {table}{\numberline {18}{\ignorespaces Comparativa final de modelos LightGBM en el set de test}}{37}{table.caption.37}%
+\contentsline {table}{\numberline {19}{\ignorespaces Comparativa final de modelos CatBoost en el set de test}}{38}{table.caption.39}%
+\contentsline {table}{\numberline {20}{\ignorespaces Comparativa final de modelos SVM en el set de test}}{39}{table.caption.41}%
+\contentsline {table}{\numberline {21}{\ignorespaces Comparativa final de modelos MLP en el set de test}}{40}{table.caption.43}%
+\contentsline {table}{\numberline {22}{\ignorespaces Comparativa final de modelos LSTM en el set de test}}{41}{table.caption.45}%
+\contentsline {table}{\numberline {23}{\ignorespaces Comparativa final de modelos CNN en el set de test}}{42}{table.caption.47}%
+\contentsline {table}{\numberline {24}{\ignorespaces Consumo de recursos computacionales en inferencia}}{43}{table.caption.48}%

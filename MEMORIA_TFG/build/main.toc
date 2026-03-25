@@ -44,12 +44,14 @@
 \contentsline {section}{\numberline {0.4}Resultados}{33}{section.0.4}%
 \contentsline {subsection}{\numberline {0.4.1}Entorno de pruebas}{33}{subsection.0.4.1}%
 \contentsline {subsection}{\numberline {0.4.2}Random Forest}{33}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {0.4.3}XGBoost}{34}{subsection.0.4.3}%
-\contentsline {subsection}{\numberline {0.4.4}LightGBM}{35}{subsection.0.4.4}%
-\contentsline {subsection}{\numberline {0.4.5}CatBoost}{36}{subsection.0.4.5}%
-\contentsline {subsection}{\numberline {0.4.6}Support Vector Machine (SVM)}{37}{subsection.0.4.6}%
-\contentsline {subsection}{\numberline {0.4.7}Multilayer Perceptron (MLP)}{38}{subsection.0.4.7}%
-\contentsline {subsection}{\numberline {0.4.8}Comparativa de Modelos basados en Árboles}{38}{subsection.0.4.8}%
-\contentsline {subsubsection}{\numberline {0.4.8.1}Recursos computacionales}{39}{subsubsection.0.4.8.1}%
-\contentsline {subsubsection}{\numberline {0.4.8.2}AUC}{39}{subsubsection.0.4.8.2}%
-\contentsline {subsubsection}{\numberline {0.4.8.3}Matriz de Confusión}{40}{subsubsection.0.4.8.3}%
+\contentsline {subsection}{\numberline {0.4.3}XGBoost}{35}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {0.4.4}LightGBM}{36}{subsection.0.4.4}%
+\contentsline {subsection}{\numberline {0.4.5}CatBoost}{37}{subsection.0.4.5}%
+\contentsline {subsection}{\numberline {0.4.6}Support Vector Machine (SVM)}{38}{subsection.0.4.6}%
+\contentsline {subsection}{\numberline {0.4.7}Multilayer Perceptron (MLP)}{40}{subsection.0.4.7}%
+\contentsline {subsection}{\numberline {0.4.8}LSTM}{40}{subsection.0.4.8}%
+\contentsline {subsection}{\numberline {0.4.9}CNN}{41}{subsection.0.4.9}%
+\contentsline {subsection}{\numberline {0.4.10}Comparativa de Modelos basados en Árboles}{42}{subsection.0.4.10}%
+\contentsline {subsubsection}{\numberline {0.4.10.1}Recursos computacionales}{43}{subsubsection.0.4.10.1}%
+\contentsline {subsubsection}{\numberline {0.4.10.2}AUC}{43}{subsubsection.0.4.10.2}%
+\contentsline {subsubsection}{\numberline {0.4.10.3}Matriz de Confusión}{44}{subsubsection.0.4.10.3}%
