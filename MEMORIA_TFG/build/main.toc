@@ -51,7 +51,4 @@
 \contentsline {subsection}{\numberline {0.4.7}Multilayer Perceptron (MLP)}{40}{subsection.0.4.7}%
 \contentsline {subsection}{\numberline {0.4.8}LSTM}{40}{subsection.0.4.8}%
 \contentsline {subsection}{\numberline {0.4.9}CNN}{41}{subsection.0.4.9}%
-\contentsline {subsection}{\numberline {0.4.10}Comparativa de Modelos basados en Árboles}{42}{subsection.0.4.10}%
-\contentsline {subsubsection}{\numberline {0.4.10.1}Recursos computacionales}{43}{subsubsection.0.4.10.1}%
-\contentsline {subsubsection}{\numberline {0.4.10.2}AUC}{43}{subsubsection.0.4.10.2}%
-\contentsline {subsubsection}{\numberline {0.4.10.3}Matriz de Confusión}{44}{subsubsection.0.4.10.3}%
+\contentsline {subsection}{\numberline {0.4.10}Comparativa Modelos con Dataset UNSW-NB15}{42}{subsection.0.4.10}%

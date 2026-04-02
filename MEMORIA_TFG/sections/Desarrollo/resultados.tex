@@ -271,6 +271,7 @@ Ahora mostramos los resultados obtenidos en el set de test para los modelos sele
 
 \begin{table}[H]
     \centering
+    \resizebox{\textwidth}{!}{
     \begin{tabular}{|l|c|c|c|c|c|c|c|}
         \hline
         \textbf{Perfil} & \textbf{n\_layers} & \textbf{n\_units\_l0} & \textbf{n\_units\_l1} & \textbf{n\_units\_l2} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
@@ -284,6 +285,7 @@ Ahora mostramos los resultados obtenidos en el set de test para los modelos sele
         Candidato 4 & 3 & 96 & 32 & 64 & 0.786982 & 0.804147 & 0.001421 \\
         \hline
     \end{tabular}
+    }
     \caption{Comparativa final de modelos MLP en el set de test}
     \label{tab:mlp_comparison}
 \end{table}
@@ -343,6 +345,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
 
 \begin{table}[H]
     \centering
+    \resizebox{\textwidth}{!}{% <-- Ajusta al ancho del texto
     \begin{tabular}{|l|c|c|c|c|c|c|c|}
         \hline
         \textbf{Perfil} & \textbf{time\_steps} & \textbf{n\_filters} & \textbf{kernel\_size} & \textbf{dense\_units} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
@@ -357,7 +360,8 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
         \hline
         Candidato 5 & 9 & 64 & 3 & 64 & 0.892452 & 0.912091 & 0.008549 \\
         \hline
-    \end{tabular}
+    \end{tabular}% <-- Importante cerrar la llave aquí
+    }
     \caption{Comparativa final de modelos CNN en el set de test}
     \label{tab:cnn_comparison}
 \end{table}
@@ -365,79 +369,35 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
 El \textbf{Candidato 1} es el modelo ganador, con un F1-Score de 0.9193 y una latencia de inferencia de 0.009589 ms.
 Aunque su rendimiento es excelente, su latencia es significativamente mayor que la de los modelos basados en árboles, lo que podría limitar su aplicabilidad en entornos de producción donde la velocidad de detección es crítica.
 
-\subsection{Comparativa de Modelos basados en Árboles}
+\subsection{Comparativa Modelos con Dataset UNSW-NB15}
 
-Para finalizar el estudio de los modelos basados en árboles de decisión, se ha realizado una comparativa analizando las curvas ROC y las matrices de confusión de los cuatro modelos evaluados (Random Forest, XGBoost, LightGBM y CatBoost).
+Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
-De cada modelo se ha seleccionado unos hiperparámetros concetros. Estos han sido elegidos del conjunto de modelos evaluados en test de la gráfica de Pareto, buscando un equilibrio entre calidad y coste. En concreto, se han seleccionado los siguientes:
-
-\begin{itemize}
-    \item \textbf{Random Forest:} n\_estimators=100 max\_depth=25,
-    \item \textbf{XGBoost:} n\_estimators=350 max\_depth=6,
-    \item \textbf{LightGBM:} n\_estimators=150 max\_depth=127 num\_leaves=110,
-    \item \textbf{CatBoost:} n\_estimators=250 max\_depth=8
-\end{itemize}
-
-Para comparar los modelos, hemos analizado dos aspectos fundamentales: la capacidad de discriminación (medida a través del AUC de las curvas ROC), el perfil de detección (analizando las matrices de confusión) y también algunos parámetros de consumo como la latencia de inferencia, el número de paquetes procesados por segundo, el consumo de memoria RAM, números de núcleos de CPU y porcentaje de uso de CPU. Todo esto solo en la parte de inferencia.
-
-\subsubsection{Recursos computacionales}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|l|c|c|c|c|c|}
-        \hline
-        \textbf{Modelo} & \textbf{Latencia (ms)} & \textbf{Throughput (paq/s)} & \textbf{Núcleos CPU} & \textbf{Pico RAM (MB)} & \textbf{Porcentaje CPU} \\
-        \hline
-        Random Forest & 0.00481 & 207,826 & 5.9 & 11.99 & 6.1\% \\
-        \hline
-        XGBoost & 0.0002 & 5,023,662 & 92.5 & 0.0 & 96.4\% \\
-        \hline
-        LightGBM & 0.00054 & 1,851,331 & 88.8 & 0.0 & 92.5\% \\
-        \hline
-        CatBoost & 0.00048 & 2,066,880 & 38.7 & 1.99 & 40.4\% \\
-        \hline
-    \end{tabular}
-    \caption{Consumo de recursos computacionales en inferencia}
-    \label{tab:recursos_computacionales}
+\begin{table}[h]
+\centering
+\small
+\caption{Tabla global de rendimiento de hardware}
+\label{tab:hardware_benchmark_global}
+\begin{tabular}{lrrrrr}
+\toprule
+Modelo & Latencia (ms) & Troughput (paq/s) & Núcleos CPU & Pico RAM (MB) & Porcentaje CPU (\%) \\
+\midrule
+Linear SVM     & 0.00014 & $7.18206 \times 10^{6}$ & 1.2  & 0.00   & 1.2   \\
+LightGBM       & 0.00064 & $1.574704 \times 10^{6}$ & 95.3 & 0.02   & 99.3  \\
+XGBoost        & 0.00066 & $1.522112 \times 10^{6}$ & 96.8 & 0.00   & 100.8 \\
+CatBoost       & 0.00150 & 664638                      & 48.3 & 0.20   & 50.3  \\
+Random Forest  & 0.00893 & 112034                      & 1.5  & 7.18   & 1.6   \\
+TensorFlow MLP & 0.02541 & 39352                       & 1.4  & 6.08   & 1.5   \\
+CNN-1D         & 0.05279 & 18943                       & 2.0  & 189.15 & 2.1   \\
+LSTM           & 0.05521 & 18113                       & 1.5  & 7.91   & 1.6   \\
+\bottomrule
+\end{tabular}
 \end{table}
 
-Vemos que a nivel hardware CatBoost podría ser el equilibrio perfecto, ya que ofrece una latencia de inferencia muy baja (0.00048 ms) y un throughput elevado (2 millones de paquetes por segundo) y con un consumo de CPU y RAM mucho más moderado que XGBoost o LightGBM, lo que nos dejaría casi un 60\% del procesador libre para que el firewall/router pueda seguir haciendo sus tareas de red sin colapsar.
-Modelos como XGBoost o LightGBM, aunque ofrecen latencias de inferencia aún más bajas, consumen prácticamente toda la CPU disponible, lo que podría ser problemático en un entorno de producción donde el sistema también debe manejar otras tareas críticas de red.
-
-\subsubsection{AUC}
-Al analizar el \textbf{Área Bajo la Curva (AUC) de las curvas ROC}, podemos observar que el rendimiento general de los cuatro modelos es excelente y muy parejo. Todos alcanzan un AUC superior a 0.97, lo que demuestra una alta capacidad para discriminar entre tráfico normal y ataques. Destaca ligeramente \textbf{LightGBM} con el mayor AUC (0.9789), seguido de cerca por XGBoost (0.9784) y CatBoost (0.9776), quedando Random Forest con el menor (0.9745).
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ROC_ARBOLES.png}
-    \caption{Curvas ROC - Comparativa de modelos}
-    \label{fig:roc_comparison}
+    \includegraphics[width=0.8\textwidth]{images/ROC_MODELOS.png}
+    \caption{Curva ROC - Modelos}
+    \label{fig:roc_modelos}
 \end{figure}
-
-\subsubsection{Matriz de Confusión}
-Al profundizar en las \textbf{matrices de confusión}, es fundamental considerar el contexto de un Sistema de Detección de Intrusiones (IDS). En este escenario, los \textit{Falsos Negativos} (tráfico anómalo clasificado como normal) representan el riesgo más crítico, ya que suponen ataques que logran evadir el sistema. Por otro lado, los \textit{Falsos Positivos} (tráfico normal clasificado como ataque) generan fatiga de alertas (\textit{alert fatigue}) en los analistas, lo cual es indeseable pero menos peligroso que una intrusión exitosa.
-
-Las matrices de confusión revelan los siguientes perfiles:
-\begin{itemize}
-    \item \textbf{Random Forest:} Es el modelo más conservador frente a los ataques, obteniendo la menor cantidad de falsos negativos (9.764) y detectando la mayor cantidad de intrusiones verdaderas (27.236). Como contrapartida, genera la mayor cantidad de falsos positivos (1.228).
-    \item \textbf{CatBoost:} Presenta el comportamiento opuesto. Minimiza excelentemente las falsas alarmas (903 falsos positivos), pero a costa de dejar pasar la mayor cantidad de ataques (10.555 falsos negativos).
-    \item \textbf{XGBoost:} Se sitúa en un punto intermedio, equilibrando tanto los falsos positivos (1.079) como los falsos negativos (10.058).
-    \item \textbf{LightGBM:} Logra un excelente balance, posicionándose como el segundo modelo que menos ataques deja pasar (9.846 falsos negativos, muy cerca de Random Forest) pero generando menos falsas alarmas que este (1.098 falsos positivos).
-\end{itemize}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/MC_ARBOLES.png}
-    \caption{Matriz de Confusión - Comparativa de modelos}
-    \label{fig:matriz_confusion_comparison}
-\end{figure}
-
-\subsubsection*{Mejor modelo en relación Calidad/Coste}
-Considerando la \textbf{relación calidad/coste} (donde la calidad equivale a la capacidad predictiva y el coste se traduce en latencia de inferencia y consumo de recursos), \textbf{LightGBM es el claro ganador}. 
-
-Por un lado, en cuanto a calidad, LightGBM ofrece el mejor AUC (0.9789) y un perfil de detecciones extremadamente sólido, penalizando mínimamente los ataques no detectados en comparación con Random Forest, pero mejorando la tasa de falsas alarmas. 
-
-Por otro lado, en cuanto al coste computacional, como se ha evidenciado en las tablas de latencia anteriores, LightGBM logra tiempos de inferencia significativamente más bajos (en torno a 0.0002 ms - 0.0004 ms) frente a modelos más pesados como Random Forest (hasta 0.0055 ms) o XGBoost. Efectivamente, LightGBM tiende a monopolizar los recursos por su paralelización masiva. Sin embargo, en un entorno de producción real, esto se soluciona trivialmente limitando el parámetro n\_jobs (por ejemplo, a 30 o 40 hilos). 
-Al hacerlo, reduciremos ligeramente su Throughput (que ya de por sí es exageradamente alto con 1.85 millones paquetes por segundo), pero mantendremos intacta su superioridad predictiva, logrando el IDS más seguro e inteligente de la comparativa.
-
-

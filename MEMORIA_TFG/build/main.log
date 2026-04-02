@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  25 MAR 2026 20:27
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  30 MAR 2026 17:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1495,46 +1495,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/PARETO_MLP.png Graphic file (type bmp)
 <images/PARETO_MLP.png>
  [39]
-Overfull \hbox (82.71599pt too wide) in paragraph at lines 274--287
- [][] 
- []
-
 File: images/PARETO_LSTM.png Graphic file (type bmp)
 <images/PARETO_LSTM.png>
-[40]
+ [40]
 File: images/PARETO_CNN.png Graphic file (type bmp)
 <images/PARETO_CNN.png>
  [41]
-Overfull \hbox (91.35597pt too wide) in paragraph at lines 346--361
+Overfull \hbox (19.77068pt too wide) in paragraph at lines 381--395
  [][] 
  []
 
-[42]
-Overfull \hbox (62.84795pt too wide) in paragraph at lines 387--400
- [][] 
- []
 
-File: images/ROC_ARBOLES.png Graphic file (type bmp)
-<images/ROC_ARBOLES.png>
-[43] [44]
-File: images/MC_ARBOLES.png Graphic file (type bmp)
-<images/MC_ARBOLES.png>
-) [45] [46
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: images/ROC_MODELOS.png Graphic file (type bmp)
+<images/ROC_MODELOS.png>
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42] [43] [44
 
 ]
 Overfull \hbox (19.0838pt too wide) in paragraph at lines 119--119
 \TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
  []
 
-[47
+[45
 
 
-] [48
+] [46
 
 ]
 File: template/logos/NEG-logo-umaes.png Graphic file (type bmp)
 <template/logos/NEG-logo-umaes.png>
- [49
+ [47
 
 ] (build/main.aux)
  ***********
@@ -1542,18 +1536,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C8C2DBF3113D91D9497AD45B8082AFFC;4024.
+(rerunfilecheck)             Checksum: 31D00A47D9661AD781F956439B66C8D7;4018.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  43934 strings out of 474878
- 933218 string characters out of 5762516
+ 933269 string characters out of 5762516
  1936627 words of memory out of 5000000
  65319 multiletter control sequences out of 15000+600000
- 562159 words of font info for 89 fonts, out of 8000000 for 9000
+ 563307 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,12n,121p,1920b,5025s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,12n,121p,1920b,5056s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (53 pages, 838252 bytes).
+Output written on build/main.xdv (51 pages, 788016 bytes).
