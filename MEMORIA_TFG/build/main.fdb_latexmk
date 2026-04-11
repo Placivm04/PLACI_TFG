@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/main"] 1774885061.90035 "build/main.aux" "build/main.bbl" "build/main" 1774885066.06116 0
-  "./sections/Referencias/references.bib" 1773691145.03872 3992 793e760ad68e3449c10f44c3952aa0a8 ""
+["bibtex build/main"] 1775906994.31928 "build/main.aux" "build/main.bbl" "build/main" 1775907001.47355 0
+  "./sections/Referencias/references.bib" 1775906991.00123 5939 e87f020b4b50fc2d04cd2cc36485d925 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1678141846 65484 b7949c47a88ed6dca66ebc7a04577312 ""
-  "build/main-blx.bib" 1774885063.9313 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
-  "build/main.aux" 1774885063.9263 25287 e33c3e73e1ee0bd16024798fcc9d72ea "xelatex"
+  "build/main-blx.bib" 1775906999.10423 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
+  "build/main.aux" 1775906999.10023 28467 248d3a1b164b250fc21e7ee5ada9d65c "xelatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1774885064.33617 "build/main.xdv" "build/main.pdf" "build/main" 1774885066.06338 0
-  "build/main.xdv" 1774885063.9333 788016 dec91f25c6664a262b6b1ff0a6e34161 "xelatex"
+["xdvipdfmx"] 1775906999.5461 "build/main.xdv" "build/main.pdf" "build/main" 1775907001.47636 0
+  "build/main.xdv" 1775906999.10523 857764 4978c6e75d9cf0505e34f264bf960cb2 "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1774885062.03014 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1774885066.06128 0
+["xelatex"] 1775906997.06351 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1775907001.47376 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1773691145.03872 5075 dfee53c238712dbc353abb2fcb0c0610 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -217,15 +217,23 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1774885063.9263 25287 e33c3e73e1ee0bd16024798fcc9d72ea "xelatex"
-  "build/main.bbl" 1774885062.0233 10319 d7f367df0cdb41fb74e26ee83e021cdd "bibtex build/main"
-  "build/main.lof" 1774885063.9333 2801 91b5d822d1e61a427817c45b49c6e2e2 "xelatex"
-  "build/main.lot" 1774885063.9333 3244 a9f4adb3d7e1c642dde313c67cb2d92b "xelatex"
+  "build/main.aux" 1775906999.10023 28467 248d3a1b164b250fc21e7ee5ada9d65c "xelatex"
+  "build/main.bbl" 1775906994.44823 13872 e9d69d0035670c9ae086fb1a53574851 "bibtex build/main"
+  "build/main.lof" 1775906999.10523 3538 2a5f1bd21386bf21201a8265cb44ceec "xelatex"
+  "build/main.lot" 1775906999.10523 3514 d747e06ce994bdfcf6b99fb7237d8431 "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1774885063.9283 4018 31d00a47d9661ad781f956439b66c8d7 "xelatex"
-  "build/main.run.xml" 1774885063.9333 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
-  "build/main.toc" 1774885063.9333 5170 098e9b8bbd1ff19ffa5b785fe8912ee4 "xelatex"
+  "build/main.out" 1775906999.10123 4018 31d00a47d9661ad781f956439b66c8d7 "xelatex"
+  "build/main.run.xml" 1775906999.10523 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
+  "build/main.toc" 1775906999.10523 5170 098e9b8bbd1ff19ffa5b785fe8912ee4 "xelatex"
   "images/CNN_1D.jpg" 1770381111.25669 63724 af5e9cc56a21d1f084000e401b918e49 ""
+  "images/MC/MC_CATBOOST.png" 1775572744.27767 24196 0064ccf4020372c067f1e488d7e222d4 ""
+  "images/MC/MC_CNN.png" 1775572744.32867 23276 1ad25595389e3b9dc58b046da034ae62 ""
+  "images/MC/MC_LIGHTGBM.png" 1775572744.34967 24055 4b982fdd4a2b0730407b178a1f81ba0d ""
+  "images/MC/MC_LSTM.png" 1775572744.35767 23357 23466d182b8bae94db75c203842c13cb ""
+  "images/MC/MC_MLP.png" 1775572744.37967 23933 a0c69898c24e0e3416e433e39c84e6fe ""
+  "images/MC/MC_RF.png" 1775572744.40667 23573 fbb14ec430150e14f6a9fc2d3e489341 ""
+  "images/MC/MC_SVM.png" 1775572744.42667 24023 012d4e84c6db2f9f30747197223ba593 ""
+  "images/MC/MC_XGBOOST.png" 1775572744.44567 23767 3931467b2429628ce58fafbda66bf7fd ""
   "images/PARETO_CATBOOST.png" 1774386717.94447 35357 b9805bfaeaf55bf37b85dd0df246a670 ""
   "images/PARETO_CNN.png" 1774465382.37801 57177 80af740bd5d5f8276807823169cf9581 ""
   "images/PARETO_LIGHTGBM.png" 1774374514.28113 43970 0e45b5100e69d81f5ac1d1c93c7990f1 ""
@@ -249,7 +257,7 @@
   "main.nls" 0 -1 0 ""
   "main.tex" 1773691145.03872 5075 dfee53c238712dbc353abb2fcb0c0610 ""
   "sections/Desarrollo/optuna.tex" 1772196605.92137 1645 c6dd0986b6514c4389e8dbf2b9a5fab6 ""
-  "sections/Desarrollo/resultados.tex" 1774885056.9653 17997 ede4dabdbd2c21ccf49c28cce29895ee ""
+  "sections/Desarrollo/resultados.tex" 1775904594.98416 24474 db4f803d1c46c8b1ee99cbbca35fa26d ""
   "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1774175826.42457 5743 02ddab441c91fa80ff41ca8006b3b8e9 ""
   "sections/Estudio_del_arte/dataSets.tex" 1770312910.68361 21386 d196ee61ebc8faa93c310dbce481e4f2 ""
   "sections/Estudio_del_arte/investigacion_modelos.tex" 1772563898.31493 28052 99a96cd72b5a98f401d89da8f594f3f3 ""

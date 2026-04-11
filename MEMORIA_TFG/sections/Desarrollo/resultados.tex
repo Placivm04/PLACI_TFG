@@ -371,6 +371,51 @@ Aunque su rendimiento es excelente, su latencia es significativamente mayor que 
 
 \subsection{Comparativa Modelos con Dataset UNSW-NB15}
 
+No solo hemos comparado los modelos a través de su F1-Score y latencia, sino que también hemos realizado una evaluación global de su rendimiento en términos de latencia, throughput, uso de CPU y RAM. Para calcular las métricas de rendimiento, hemos usado los siguientes conceptos:
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|p{2.5cm}|p{4.5cm}|p{5cm}|}
+        \hline
+        \textbf{Métrica} & \textbf{Descripción} & \textbf{Metodología} \\
+        \hline
+        \textbf{Tiempo de Muro} & Tiempo físico y real que transcurre desde el inicio hasta la finalización. Métrica definitiva de la latencia percibida por el usuario o la red. Independientemente de cuántos núcleos trabaje el servidor, es el tiempo exacto que un paquete debe esperar para ser clasificado. & Obtenido utilizando \texttt{time.perf\_counter()}, que proporciona el reloj de mayor resolución disponible en el hardware, inmune a actualizaciones automáticas de la hora del sistema. \\
+        \hline
+        \textbf{Tiempo de CPU} & Suma total del tiempo que la Unidad Central de Procesamiento ejecuta activamente instrucciones. Acumula el esfuerzo de \textbf{todos los hilos simultáneamente}. Si el Tiempo de Muro es 1 segundo pero Tiempo de CPU es 95 segundos, indica que 95 hilos lógicos trabajaron en paralelo a máxima capacidad. & Obtenido mediante \texttt{psutil.Process().cpu\_times()}, sumando tiempo de usuario y llamadas al sistema. Se calcula la diferencia (delta) entre inicio y fin del lote. \\
+        \hline
+        \textbf{Pico de RAM} & Porción de memoria física (RAM) asignada de manera exclusiva al proceso y residente activamente en memoria. Algoritmos como CNN generan tensores intermedios masivos que requieren picos muy elevados, pudiendo inviabilizar despliegue en hardware de frontera con memoria limitada. & Sondeo iterativo mediante \texttt{psutil.Process().memory\_info().rss}. Se captura la memoria base antes de comenzar y se resta al valor máximo registrado durante procesamiento de lotes. \\
+        \hline
+    \end{tabular}
+    \caption{Definición técnica de métricas de monitoreo de recursos}
+    \label{tab:metricas_monitoreo}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|p{2cm}|p{5cm}|p{5cm}|}
+        \hline
+        \textbf{Métrica} & \textbf{Significado Técnico} & \textbf{Metodología de Código} \\
+        \hline
+        \textbf{F1-Score} & Métrica de eficacia predictiva. Es la media armónica entre Precisión y Sensibilidad (Recall). Representa la capacidad del modelo para detectar ataques reales minimizando las falsas alarmas, siendo ideal para tráfico desbalanceado. & Calculada mediante \texttt{scikit-learn} (\texttt{f1\_score}), cruzando las etiquetas reales del dataset de test frente a las predicciones generadas por el modelo. \\
+        \hline
+        \textbf{Latencia (ms)} & Tiempo de respuesta unitario. Representa los milisegundos que tarda el sistema en procesar y clasificar un único paquete desde entrada hasta veredicto. & Medida mediante \texttt{time.perf\_counter()} al procesar el set de test por lotes, dividido entre el número total de paquetes procesados. \\
+        \hline
+        \textbf{Throughput (paq/s)} & Caudal de procesamiento. Representa el volumen de tráfico (paquetes por segundo) que el modelo puede soportar sin cuellos de botella. & Dividiendo el número total de paquetes del conjunto de test entre el tiempo físico total (Wall Time en segundos). \\
+        \hline
+        \textbf{Núcleos CPU} & Nivel de concurrencia y paralelismo. Representa la cantidad de hilos simultáneos que el modelo ha instanciado a nivel del sistema operativo. & Dividiendo el Tiempo Total de CPU (obtenido vía \texttt{psutil}) entre el tiempo físico real transcurrido (Wall Time). \\
+        \hline
+        \textbf{Pico RAM (MB)} & Huella máxima de memoria volátil. Representa la cantidad de memoria física extra que el sistema operativo cedió al proceso durante la predicción. & Monitorizando el proceso con \texttt{psutil.memory\_info().rss}, restando la memoria base al pico máximo alcanzado. \\
+        \hline
+        \textbf{Porcentaje CPU (\%)} & Carga computacional global. Representa qué porcentaje de la capacidad total del hardware está siendo utilizado por el IDS. & Dividiendo los Núcleos CPU utilizados entre el número total de hilos lógicos disponibles en el servidor. \\
+        \hline
+    \end{tabular}
+    \caption{Definición de métricas de evaluación de rendimiento}
+    \label{tab:metricas_definicion}
+\end{table}
+
 Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
 \begin{table}[h]
@@ -400,4 +445,74 @@ LSTM           & 0.05521 & 18113                       & 1.5  & 7.91   & 1.6   \
     \includegraphics[width=0.8\textwidth]{images/ROC_MODELOS.png}
     \caption{Curva ROC - Modelos}
     \label{fig:roc_modelos}
+\end{figure}
+
+Las matrices de confusión de cada modelo se muestran a continuación:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MC/MC_RF.png}
+        \caption{MC - Random Forest}
+        \label{fig:mc_rf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MC/MC_XGBOOST.png}
+        \caption{MC - XGBoost}
+        \label{fig:mc_xgboost}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MC/MC_LIGHTGBM.png}
+        \caption{MC - LightGBM}
+        \label{fig:mc_lightgbm}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MC/MC_CATBOOST.png}
+        \caption{MC - CatBoost}
+        \label{fig:mc_catboost}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MC/MC_SVM.png}
+        \caption{MC - SVM}
+        \label{fig:mc_svm}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MC/MC_MLP.png}
+        \caption{MC - MLP}
+        \label{fig:mc_mlp}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MC/MC_LSTM.png}
+        \caption{MC - LSTM}
+        \label{fig:mc_lstm}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MC/MC_CNN.png}
+        \caption{MC - CNN}
+        \label{fig:mc_cnn}
+    \end{minipage}
 \end{figure}

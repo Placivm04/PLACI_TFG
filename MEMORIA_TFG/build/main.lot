@@ -21,4 +21,6 @@
 \contentsline {table}{\numberline {21}{\ignorespaces Comparativa final de modelos MLP en el set de test}}{40}{table.caption.43}%
 \contentsline {table}{\numberline {22}{\ignorespaces Comparativa final de modelos LSTM en el set de test}}{41}{table.caption.45}%
 \contentsline {table}{\numberline {23}{\ignorespaces Comparativa final de modelos CNN en el set de test}}{42}{table.caption.47}%
-\contentsline {table}{\numberline {24}{\ignorespaces Tabla global de rendimiento de hardware}}{43}{table.caption.48}%
+\contentsline {table}{\numberline {24}{\ignorespaces Definición técnica de métricas de monitoreo de recursos}}{43}{table.caption.48}%
+\contentsline {table}{\numberline {25}{\ignorespaces Definición de métricas de evaluación de rendimiento}}{44}{table.caption.49}%
+\contentsline {table}{\numberline {26}{\ignorespaces Tabla global de rendimiento de hardware}}{44}{table.caption.50}%

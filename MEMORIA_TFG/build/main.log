@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  30 MAR 2026 17:37
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  11 APR 2026 13:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1501,34 +1501,208 @@ File: images/PARETO_LSTM.png Graphic file (type bmp)
 File: images/PARETO_CNN.png Graphic file (type bmp)
 <images/PARETO_CNN.png>
  [41]
-Overfull \hbox (19.77068pt too wide) in paragraph at lines 381--395
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Obtenido utilizando
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+\TU/lmtt/m/n/10.95 time.perf_counter()\TU/Malacitana-Sans(0)/m/n/10.95 , que
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+\TU/Malacitana-Sans(0)/m/n/10.95 inmune a actualizaciones au-
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 385--385
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Suma total del tiempo que
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 385--385
+\TU/Malacitana-Sans(0)/m/n/10.95 la Unidad Central de Proce-
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 385--385
+\TU/Malacitana-Sans(0)/m/n/10.95 de Muro es 1 segundo pero
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Obtenido mediante
+ []
+
+
+Overfull \hbox (19.43483pt too wide) in paragraph at lines 385--386
+\TU/lmtt/m/n/10.95 psutil.Process().cpu_times()\TU/Malacitana-Sans(0)/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Porción de memoria física
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 387--387
+\TU/Malacitana-Sans(0)/m/n/10.95 (RAM) asignada de manera
+ []
+
+
+Underfull \hbox (badness 2418) in paragraph at lines 387--387
+\TU/Malacitana-Sans(0)/m/n/10.95 que requieren picos muy el-
+ []
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 387--387
+\TU/Malacitana-Sans(0)/m/n/10.95 evados, pudiendo inviabilizar
+ []
+
+
+Underfull \hbox (badness 8170) in paragraph at lines 387--387
+\TU/Malacitana-Sans(0)/m/n/10.95 despliegue en hardware de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Sondeo iterativo mediante
+ []
+
+
+Overfull \hbox (53.63168pt too wide) in paragraph at lines 387--388
+\TU/lmtt/m/n/10.95 psutil.Process().memory_info().rss\TU/Malacitana-Sans(0)/m/n/10.95 .
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Underfull \hbox (badness 1331) in paragraph at lines 402--402
+\TU/Malacitana-Sans(0)/m/n/10.95 las falsas alarmas, siendo ideal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Calculada mediante
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+\TU/lmtt/m/n/10.95 scikit-learn \TU/Malacitana-Sans(0)/m/n/10.95 (\TU/lmtt/m/n/10.95 f1_score\TU/Malacitana-Sans(0)/m/n/10.95 ),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+\TU/Malacitana-Sans(0)/m/n/10.95 cruzando las etiquetas reales
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+\TU/Malacitana-Sans(0)/m/n/10.95 predicciones generadas por el
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--404
+[]|\TU/Malacitana-Sans(0)/b/n/10.95 Latencia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Medida mediante
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+\TU/lmtt/m/n/10.95 time.perf_counter() \TU/Malacitana-Sans(0)/m/n/10.95 al
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
+[]|\TU/Malacitana-Sans(0)/b/n/10.95 Throughput
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--408
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Nivel de concurrencia y par-
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 408--409
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Dividiendo el Tiempo Total de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
+[]|\TU/Malacitana-Sans(0)/b/n/10.95 Pico RAM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
+[]|\TU/Malacitana-Sans(0)/m/n/10.95 Monitorizando el proceso con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
+\TU/lmtt/m/n/10.95 psutil.memory_info().rss\TU/Malacitana-Sans(0)/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
+[]|\TU/Malacitana-Sans(0)/b/n/10.95 Porcentaje
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 412--412
+\TU/Malacitana-Sans(0)/m/n/10.95 pacidad total del hardware está
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+Overfull \hbox (19.77068pt too wide) in paragraph at lines 426--440
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: images/ROC_MODELOS.png Graphic file (type bmp)
 <images/ROC_MODELOS.png>
-)
+[44]
+File: images/MC/MC_RF.png Graphic file (type bmp)
+<images/MC/MC_RF.png>
+File: images/MC/MC_XGBOOST.png Graphic file (type bmp)
+<images/MC/MC_XGBOOST.png>
+File: images/MC/MC_LIGHTGBM.png Graphic file (type bmp)
+<images/MC/MC_LIGHTGBM.png>
+File: images/MC/MC_CATBOOST.png Graphic file (type bmp)
+<images/MC/MC_CATBOOST.png>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42] [43] [44
-
-]
-Overfull \hbox (19.0838pt too wide) in paragraph at lines 119--119
+ [45]
+File: images/MC/MC_SVM.png Graphic file (type bmp)
+<images/MC/MC_SVM.png>
+File: images/MC/MC_MLP.png Graphic file (type bmp)
+<images/MC/MC_MLP.png>
+File: images/MC/MC_LSTM.png Graphic file (type bmp)
+<images/MC/MC_LSTM.png>
+File: images/MC/MC_CNN.png Graphic file (type bmp)
+<images/MC/MC_CNN.png>
+) [46]
+Overfull \hbox (24.4958pt too wide) in paragraph at lines 119--119
 \TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
  []
 
-[45
+[47
 
 
-] [46
 
-]
+] [48]
 File: template/logos/NEG-logo-umaes.png Graphic file (type bmp)
 <template/logos/NEG-logo-umaes.png>
- [47
+ [49
+
 
 ] (build/main.aux)
  ***********
@@ -1542,12 +1716,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43934 strings out of 474878
- 933269 string characters out of 5762516
- 1936627 words of memory out of 5000000
- 65319 multiletter control sequences out of 15000+600000
- 563307 words of font info for 94 fonts, out of 8000000 for 9000
+ 44050 strings out of 474878
+ 936759 string characters out of 5762516
+ 1937627 words of memory out of 5000000
+ 65423 multiletter control sequences out of 15000+600000
+ 563323 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,12n,121p,1920b,5056s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,12n,121p,1920b,5578s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (51 pages, 788016 bytes).
+Output written on build/main.xdv (53 pages, 857764 bytes).

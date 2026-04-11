@@ -86,6 +86,43 @@
     \field{year}{2025}
   \endentry
 
+  \entry{10913549}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=HB}{%
+         family={Hafid},
+         familyi={H\bibinitperiod},
+         given={Bouchra},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=EA}{%
+         family={Ezzouhairi},
+         familyi={E\bibinitperiod},
+         given={Abdellatif},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={Haddouch},
+         familyi={H\bibinitperiod},
+         given={Khalid},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{Privacy;Image edge detection;Intrusion detection;Boosting;Internet of Things;Security;Resource management;Protection;Random forests;Edge computing;Internet of Things;Intrusion Detection System;Edge computing;Machine Learning;IoT Security}
+    \strng{namehash}{HBEAHK1}
+    \strng{fullhash}{HBEAHK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{booktitle}{2024 3rd International Conference on Embedded Systems and Artificial Intelligence (ESAI)}
+    \verb{doi}
+    \verb 10.1109/ESAI62891.2024.10913549
+    \endverb
+    \field{pages}{1\bibrangedash 9}
+    \field{title}{Strengthening Security in the Internet of Things (IoT): Integrated Approach of Intrusion Detection Systems (IDS) and Edge Computing}
+    \field{year}{2024}
+  \endentry
+
   \entry{Kamruzzaman2025LightweightAI}{article}{}
     \name{author}{5}{}{%
       {{hash=KM}{%
@@ -215,6 +252,44 @@
     \field{year}{2024}
   \endentry
 
+  \entry{article}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MA}{%
+         family={Mohammed},
+         familyi={M\bibinitperiod},
+         given={Abdulrahman},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Arif},
+         familyi={A\bibinitperiod},
+         given={Muhanad},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Ali},
+         familyi={A\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MAAMAA1}
+    \strng{fullhash}{MAAMAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.11591/ijai.v9.i4.pp609-615
+    \endverb
+    \field{pages}{609}
+    \field{title}{A multilayer perceptron artificial neural network approach for improving the accuracy of intrusion detection systems}
+    \field{volume}{9}
+    \field{journaltitle}{IAES International Journal of Artificial Intelligence (IJ-AI)}
+    \field{month}{12}
+    \field{year}{2020}
+  \endentry
+
   \entry{10823298}{inproceedings}{}
     \name{author}{5}{}{%
       {{hash=PN}{%
@@ -261,6 +336,37 @@
     \endverb
     \field{pages}{312\bibrangedash 318}
     \field{title}{Network Intrusion Detection System Using Optuna}
+    \field{year}{2024}
+  \endentry
+
+  \entry{10627334}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=SA}{%
+         family={Sharma},
+         familyi={S\bibinitperiod},
+         given={Anshika},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BH}{%
+         family={Babbar},
+         familyi={B\bibinitperiod},
+         given={Himanshi},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \keyw{Radio frequency;Training;Accuracy;Biological system modeling;Telecommunication traffic;Nearest neighbor methods;Data models;Cybersecurity;IoT attacks;Intrusion Detection Systems;IoT devices;Machine Learning}
+    \strng{namehash}{SABH1}
+    \strng{fullhash}{SABH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{2024 4th International Conference on Intelligent Technologies (CONIT)}
+    \verb{doi}
+    \verb 10.1109/CONIT61985.2024.10627334
+    \endverb
+    \field{pages}{1\bibrangedash 5}
+    \field{title}{Understanding IoT-23 Dataset: A Benchmark for IoT Security Analysis}
     \field{year}{2024}
   \endentry
 

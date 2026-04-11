@@ -18,4 +18,12 @@
 \contentsline {figure}{\numberline {18}{\ignorespaces Frontera de Pareto - MLP}}{40}{figure.caption.42}%
 \contentsline {figure}{\numberline {19}{\ignorespaces Frontera de Pareto - LSTM}}{41}{figure.caption.44}%
 \contentsline {figure}{\numberline {20}{\ignorespaces Frontera de Pareto - CNN}}{42}{figure.caption.46}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Curva ROC - Modelos}}{43}{figure.caption.49}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Curva ROC - Modelos}}{45}{figure.caption.51}%
+\contentsline {figure}{\numberline {22}{\ignorespaces MC - Random Forest}}{45}{figure.caption.52}%
+\contentsline {figure}{\numberline {23}{\ignorespaces MC - XGBoost}}{45}{figure.caption.52}%
+\contentsline {figure}{\numberline {24}{\ignorespaces MC - LightGBM}}{46}{figure.caption.53}%
+\contentsline {figure}{\numberline {25}{\ignorespaces MC - CatBoost}}{46}{figure.caption.53}%
+\contentsline {figure}{\numberline {26}{\ignorespaces MC - SVM}}{46}{figure.caption.54}%
+\contentsline {figure}{\numberline {27}{\ignorespaces MC - MLP}}{46}{figure.caption.54}%
+\contentsline {figure}{\numberline {28}{\ignorespaces MC - LSTM}}{46}{figure.caption.55}%
+\contentsline {figure}{\numberline {29}{\ignorespaces MC - CNN}}{46}{figure.caption.55}%
