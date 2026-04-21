@@ -24,3 +24,9 @@
 \contentsline {table}{\numberline {24}{\ignorespaces Definición técnica de métricas de monitoreo de recursos}}{43}{table.caption.48}%
 \contentsline {table}{\numberline {25}{\ignorespaces Definición de métricas de evaluación de rendimiento}}{44}{table.caption.49}%
 \contentsline {table}{\numberline {26}{\ignorespaces Tabla global de rendimiento de hardware}}{44}{table.caption.50}%
+\contentsline {table}{\numberline {27}{\ignorespaces Comparativa final de modelos Random Forest en el set de test (IOT-23)}}{48}{table.caption.57}%
+\contentsline {table}{\numberline {28}{\ignorespaces Comparativa final de modelos XGBoost en el set de test (IOT-23)}}{49}{table.caption.59}%
+\contentsline {table}{\numberline {29}{\ignorespaces Comparativa final de modelos LightGBM en el set de test (IOT-23)}}{50}{table.caption.61}%
+\contentsline {table}{\numberline {30}{\ignorespaces Comparativa final de modelos CatBoost en el set de test (IOT-23)}}{51}{table.caption.63}%
+\contentsline {table}{\numberline {31}{\ignorespaces Comparativa final de modelos SVM en el set de test (IOT-23)}}{52}{table.caption.65}%
+\contentsline {table}{\numberline {32}{\ignorespaces Comparativa final de modelos MLP en el set de test (IOT-23)}}{53}{table.caption.67}%

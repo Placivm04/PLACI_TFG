@@ -29,7 +29,8 @@ Antes de analizar los resultados obtenidos, es importante describir el entorno d
     \label{tab:entorno_experimental}
 \end{table}
 
-\subsection{Random Forest}
+\subsection{Modelos entrenados con UNSW-NB15}
+\subsubsection{Random Forest}
 
 Para el modelo de Random Forest, utilizando Optuna, se han obtenido los siguientes resultados como frontera de Pareto:
 
@@ -72,7 +73,7 @@ Los resultados son los siguientes:
 
 El \textbf{Candidato 1} no solo es el más preciso, sino también uno de los más rápidos, con una latencia de 0,0015 ms por muestra. Con esto podemos ver que modelos más sencillos de árboles ofrecen hasta mayor rendimiento que modelos más complejos, lo que es un resultado muy interesante para el desarrollo de un IDS eficiente y sostenible.
 
-\subsection{XGBoost}
+\subsubsection{XGBoost}
 
 En XGBoost primero optamos por un entrenamiento con CPU. Sin embargo, debido a la elevada latencia obtenida en la frontera de Pareto, se decidi\'o realizar un nuevo entrenamiento utilizando GPU, lo que permiti\'o reducir significativamente los tiempos de inferencia. A continuaci\'on se muestran los resultados obtenidos:
 \begin{figure}[ht]
@@ -118,7 +119,7 @@ Los resultados son los siguientes:
 Un hallazgo fundamental de este experimento es la diferencia de topología requerida entre algoritmos. Mientras que Random Forest necesitaba árboles extremadamente profundos (profundidades de 23 a 29) para capturar las anomalías, XGBoost alcanza su máximo rendimiento con profundidades mucho menores (d=11 o d=12). Esto demuestra teóricamente la eficiencia del Gradient Boosting: al construir árboles de forma secuencial (donde cada árbol corrige los errores del anterior), el modelo no necesita que cada árbol individual sea excesivamente complejo y profundo.
 Nos quedamos con el \textbf{Candidato 2}, que ofrece un excelente equilibrio entre calidad y coste.
 
-\subsection{LightGBM}
+\subsubsection{LightGBM}
 
 LightGBM ha sido entrenado con GPU, obteniendo la siguiente frontera de Pareto:
 \begin{figure}[ht]
@@ -164,7 +165,7 @@ Los resultados obtenidos en el set de test son los siguientesss:
 Si tuviéramos que quedarnos con un único modelo, nos quedamos con el \textbf{Candidato 4}. 
 Al permitir 145 hojas, el algoritmo puede modelar reglas muy complejas del tráfico de red en cada iteración, lo que le permite necesitar solo 100 árboles para aprender casi lo mismo que el Candidato 1 aprende en 350. Esto se traduce en un F1-Score del 85.95\% (reteniendo el 99.7\% de la máxima eficacia posible) pero con una latencia de 0.000159 ms.
 
-\subsection{CatBoost}
+\subsubsection{CatBoost}
 
 
 CatBoost ha sido entrenado utilizando GPU, obteniendo la siguiente frontera de Pareto:
@@ -217,7 +218,7 @@ En inferencia, evaluar estos árboles se reduce a simples operaciones de bits a 
 %------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------
     
-\subsection{Support Vector Machine (SVM)}
+\subsubsection{Support Vector Machine (SVM)}
 
 La gráfica de la frontera de Pareto obtenida para SVM:
 
@@ -256,7 +257,7 @@ Un simple hiperplano multidimensional es insuficiente para trazar la frontera de
 
 Dentro de las limitaciones del enfoque lineal, el \textbf{Candidato 3} (C=0.000187) es el ganador absoluto e indiscutible.
 
-\subsection{Multilayer Perceptron (MLP)}
+\subsubsection{Multilayer Perceptron (MLP)}
 
 La gráfica de la frontera de Pareto obtenida para MLP es la siguiente:
 
@@ -293,7 +294,7 @@ Ahora mostramos los resultados obtenidos en el set de test para los modelos sele
 Nos quedamos con el \textbf{Candidato 4}, que ofrece el mejor rendimiento (F1-Score de 0.7869) y una latencia de inferencia de 0.001421 ms, lo que lo posiciona como un modelo competitivo dentro de los modelos no lineales, aunque aún por debajo de los basados en árboles.
 Además hemos visto que menos neuronas en las capas tienen menor tiempo de inferencia, lo que es un resultado lógico, ya que a menor número de unidades, menor cantidad de operaciones matemáticas se deben realizar para obtener la predicción, lo que se traduce en una reducción de la latencia.
 
-\subsection{LSTM}
+\subsubsection{LSTM}
 
 Con LSTM, la gráfica de la frontera de Pareto obtenida es la siguiente:
 
@@ -330,7 +331,7 @@ Los modelos con TS: 10 (Candidatos 1 y 4) superan holgadamente la barrera del 0.
 Los modelos con TS: 5 (Candidatos 2 y 3) se quedan en el rango de 0.88 - 0.89.
 Incluso si le das 128 unidades a un modelo con TS:5 (Candidato 2), no logra alcanzar el rendimiento de un modelo con solo 32 unidades pero con TS:10. Conclusión: El modelo necesita "ver" más atrás en el tiempo (TS:10) para entender correctamente el patrón, y añadir más "neuronas" (unidades) no compensa la falta de contexto temporal.
 
-\subsection{CNN}
+\subsubsection{CNN}
 
 Aunque CNN se suele asociar principalmente a datos con estructura espacial (como imágenes), también se ha explorado su aplicación en la detección de intrusiones. Esta es la gráfica de la frontera de Pareto obtenida para CNN:
 
@@ -369,7 +370,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
 El \textbf{Candidato 1} es el modelo ganador, con un F1-Score de 0.9193 y una latencia de inferencia de 0.009589 ms.
 Aunque su rendimiento es excelente, su latencia es significativamente mayor que la de los modelos basados en árboles, lo que podría limitar su aplicabilidad en entornos de producción donde la velocidad de detección es crítica.
 
-\subsection{Comparativa Modelos con Dataset UNSW-NB15}
+\subsubsection{Comparativa Modelos con Dataset UNSW-NB15}
 
 No solo hemos comparado los modelos a través de su F1-Score y latencia, sino que también hemos realizado una evaluación global de su rendimiento en términos de latencia, throughput, uso de CPU y RAM. Para calcular las métricas de rendimiento, hemos usado los siguientes conceptos:
 
@@ -516,3 +517,279 @@ Las matrices de confusión de cada modelo se muestran a continuación:
         \label{fig:mc_cnn}
     \end{minipage}
 \end{figure}
+
+\subsection{Modelos entrenados con IOT-23}
+
+Para completar el análisis y las comparaciones, es interesante ver cómo se comportan los modelos con un dataset adaptado a un entorno de Internet de las Cosas (IoT), que suele presentar características muy diferentes a los datasets tradicionales de tráfico de red.
+En este caso, se han entrenado los mismos modelos que el apartado anterior, pero usando este dataset.
+
+\subsubsection{Random Forest}
+
+Para el modelo de Random Forest, utilizando Optuna, se han obtenido los siguientes resultados como frontera de Pareto:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/IOT/PARETO_RF_IOT.png}
+    \caption{Frontera de Pareto - Random Forest (IOT-23)}
+    \label{fig:pareto_rf_iot}
+\end{figure}
+
+Hemos visto cómo reaccionan en test los modelos con los siguientes hiperparámetros elegidos:
+
+\begin{enumerate}
+    \item (50, 21) 
+    \item (100, 22) 
+    \item (100, 28) 
+    \item (100, 27)
+\end{enumerate}
+
+Los resultados son los siguientes:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 50 & 21 & 0.999675 & 0.999614 & 0.001496 \\
+        \hline
+        Candidato 2 & 100 & 22 & 0.999855 & 0.999828 & 0.002252 \\
+        \hline
+        Candidato 3 & 100 & 28 & 0.999906 & 0.999888 & 0.002363 \\
+        \hline
+        Candidato 4 & 100 & 27 & 0.999913 & 0.999897 & 0.00223 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos Random Forest en el set de test (IOT-23)}
+    \label{tab:rf_comparison_iot}
+\end{table}
+
+En este caso, el \textbf{Candidato 1} es el modelo más eficiente, con un F1-Score de 0.999675 y una latencia de inferencia de 0.001496 ms, lo que lo posiciona como un modelo extremadamente preciso y rápido para este dataset específico de IoT.
+
+\subsubsection{XGBoost}
+
+Para XGBoost, la frontera de Pareto obtenida es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/IOT/PARETO_XGBOOST_IOT.png}
+    \caption{Frontera de Pareto - XGBoost (IOT-23)}
+    \label{fig:pareto_xgboost_iot}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+
+\begin{enumerate}
+    \item (50, 8) 
+    \item (50, 6) 
+    \item (200, 4) 
+    \item (200, 9) 
+    \item (150, 12)
+\end{enumerate}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 50 & 8 & 0.999114 & 0.998948 & 0.000028 \\
+        \hline
+        Candidato 2 & 50 & 6 & 0.999122 & 0.998957 & 0.000027 \\
+        \hline
+        Candidato 3 & 200 & 4 & 0.999122 & 0.998957 & 0.000047 \\
+        \hline
+        Candidato 4 & 200 & 9 & 0.999132 & 0.998970 & 0.000080 \\
+        \hline
+        Candidato 5 & 150 & 12 & 0.999132 & 0.998970 & 0.000080 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos XGBoost en el set de test (IOT-23)}
+    \label{tab:xgboost_comparison_iot}
+\end{table}
+
+En este caso, el \textbf{Candidato 2} es el modelo más eficiente, con un F1-Score de 0.999122 y una latencia de inferencia de 0.000027 ms, lo que lo posiciona como un modelo extremadamente preciso y rápido en este dataset de IoT, superando incluso a los modelos de Random Forest en términos de latencia.
+
+\subsubsection{LightGBM}
+
+La frontera de Pareto obtenida para LightGBM es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/IOT/PARETO_LIGHTGBM_IOT.png}
+    \caption{Frontera de Pareto - LightGBM (IOT-23)}
+    \label{fig:pareto_lightgbm_iot}
+\end{figure}
+
+Para este modelo, se han seleccionado los siguientes puntos de la frontera de Pareto para su evaluación en el set de test:
+
+\begin{enumerate}
+    \item (50, 15, 6) 
+    \item (100, 65, 12) 
+    \item (200, 99, 4) 
+    \item (50, 61, 4) 
+    \item (300, 210, 6) 
+\end{enumerate}
+
+Los resultados obtenidos en el set de test son los siguientes:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{num\_leaves} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 50 & 15 & 6 & 0.999813 & 0.99982 & 0.000057 \\
+        \hline
+        Candidato 2 & 100 & 65 & 12 & 0.999831 & 0.999837 & 0.000099 \\
+        \hline
+        Candidato 3 & 200 & 99 & 4 & 0.999795 & 0.999803 & 0.000170 \\
+        \hline
+        Candidato 4 & 50 & 61 & 4 & 0.999631 & 0.999644 & 0.000058 \\
+        \hline
+        Candidato 5 & 300 & 210 & 6 & 0.881924 & 0.882891 & 0.000261 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos LightGBM en el set de test (IOT-23)}
+    \label{tab:lightgbm_comparison_iot}
+\end{table}
+
+En este caso, el \textbf{Candidato 1} es el mejor modelo, con un F1-Score de 0.999813 y una latencia de inferencia de 0.000057 ms, lo que lo posiciona como un modelo bastante bueno.
+
+\subsubsection{CatBoost}
+
+Este es el gráfico de la frontera de Pareto obtenida para CatBoost:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/IOT/PARETO_CATBOOST_IOT.png}
+    \caption{Frontera de Pareto - CatBoost (IOT-23)}
+    \label{fig:pareto_catboost_iot}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+
+\begin{enumerate}
+    \item (100, 8) 
+    \item (350, 3) 
+    \item (200, 7) 
+    \item (300, 7) 
+    \item (100, 9) 
+    \item (350, 10) 
+\end{enumerate}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 100 & 8 & 0.999947 & 0.999948 & 0.000242 \\
+        \hline
+        Candidato 2 & 350 & 3 & 0.999960 & 0.999961 & 0.000256 \\
+        \hline
+        Candidato 3 & 200 & 7 & 0.999951 & 0.999953 & 0.000263 \\
+        \hline
+        Candidato 4 & 300 & 7 & 0.999951 & 0.999953 & 0.000250 \\
+        \hline
+        Candidato 5 & 100 & 9 & 0.999951 & 0.999953 & 0.000259 \\
+        \hline
+        Candidato 6 & 350 & 10 & 0.999951 & 0.999953 & 0.000269 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos CatBoost en el set de test (IOT-23)}
+    \label{tab:catboost_comparison_iot}
+\end{table}
+
+En este caso, el \textbf{Candidato 2} es el modelo más eficiente, con un F1-Score de 0.999960 y una latencia de inferencia de 0.000256 ms, lo que lo posiciona como un modelo extremadamente bueno.
+
+\subsubsection{SVM}
+
+La gráfica de la frontera de Pareto obtenida para SVM es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/IOT/PARETO_SVM_IOT.png}
+    \caption{Frontera de Pareto - SVM (IOT-23)}
+    \label{fig:pareto_svm_iot}
+\end{figure}
+
+Se han seleccionado los siguientes puntos de la frontera de Pareto para su evaluación en el set de test:
+
+\begin{enumerate}
+    \item (48.498258) 
+    \item (0.801714) 
+    \item (0.721883) 
+\end{enumerate}
+
+Los resultados obtenidos en el set de test para los modelos seleccionados de la frontera de Pareto son los siguientes:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{C} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 48.498258 & 0.943691 & 0.945963 & 0.000027 \\
+        \hline
+        Candidato 2 & 0.801714 & 0.943695 & 0.945968 & 0.000025 \\
+        \hline
+        Candidato 3 & 0.721883 & 0.943691 & 0.945963 & 0.000023 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos SVM en el set de test (IOT-23)}
+    \label{tab:svm_comparison_iot}
+\end{table}
+
+En este caso, el \textbf{Candidato 2} es el modelo más eficiente, con un F1-Score de 0.943695 y una latencia de inferencia de 0.000025 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento es significativamente inferior al de los modelos basados en árboles.
+
+\subsubsection{Multilayer Perceptron (MLP)}
+
+La gráfica de la frontera de Pareto obtenida para MLP es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/IOT/PARETO_MLP_IOT.png}
+    \caption{Frontera de Pareto - MLP (IOT-23)}
+    \label{fig:pareto_mlp_iot}
+\end{figure}
+
+La combinación de hiperparámetros seleccionada para su evaluación en el set de test es la siguiente:
+
+\begin{enumerate}
+    \item (3, 32, 48, 48) 
+    \item (1, 32, 0, 0) 
+    \item (2, 16, 80, 0) 
+    \item (2, 128, 48, 0) 
+    \item (3, 32, 80, 112) 
+    \item (3, 48, 128, 80) 
+\end{enumerate}
+
+Los resultados obtenidos en el set de test para los modelos seleccionados de la frontera de Pareto son los siguientes:
+
+\begin{table}[ht]
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|l|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_layers} & \textbf{n\_units\_l0} & \textbf{n\_units\_l1} & \textbf{n\_units\_l2} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 3 & 32 & 48 & 48 & 0.994819 & 0.995004 & 0.000717 \\
+        \hline
+        Candidato 2 & 1 & 32 & 0 & 0 & 0.985158 & 0.985741 & 0.000621 \\
+        \hline
+        Candidato 3 & 2 & 16 & 80 & 0 & 0.990610 & 0.990969 & 0.000719 \\
+        \hline
+        Candidato 4 & 2 & 128 & 48 & 0 & 0.993502 & 0.993737 & 0.000772 \\
+        \hline
+        Candidato 5 & 3 & 32 & 80 & 112 & 0.995042 & 0.995223 & 0.000919 \\
+        \hline
+        Candidato 6 & 3 & 48 & 128 & 80 & 0.996544 & 0.996665 & 0.000906 \\
+        \hline
+    \end{tabular}
+    }
+    \caption{Comparativa final de modelos MLP en el set de test (IOT-23)}
+    \label{tab:mlp_comparison_iot}
+\end{table}
+
+En este caso, nos quedamos con el \textbf{Candidato 1}, que ofrece un excelente rendimiento (F1-Score de 0.994819) y una latencia de inferencia de 0.000717 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.

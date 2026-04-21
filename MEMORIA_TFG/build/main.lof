@@ -27,3 +27,9 @@
 \contentsline {figure}{\numberline {27}{\ignorespaces MC - MLP}}{46}{figure.caption.54}%
 \contentsline {figure}{\numberline {28}{\ignorespaces MC - LSTM}}{46}{figure.caption.55}%
 \contentsline {figure}{\numberline {29}{\ignorespaces MC - CNN}}{46}{figure.caption.55}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Frontera de Pareto - Random Forest (IOT-23)}}{47}{figure.caption.56}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Frontera de Pareto - XGBoost (IOT-23)}}{48}{figure.caption.58}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Frontera de Pareto - LightGBM (IOT-23)}}{49}{figure.caption.60}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Frontera de Pareto - CatBoost (IOT-23)}}{50}{figure.caption.62}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Frontera de Pareto - SVM (IOT-23)}}{51}{figure.caption.64}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Frontera de Pareto - MLP (IOT-23)}}{52}{figure.caption.66}%
