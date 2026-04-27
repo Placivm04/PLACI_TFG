@@ -1,8 +1,8 @@
 # # =========================
 # # DATASETS (NO subir)
 # # =========================
-# DATASETS/dataSets_Raw/
-# DATASETS/dataSets_Reducidos/
+DATASETS/dataSets_Raw/
+DATASETS/dataSets_Reducidos/
 
 # Archivos grandes / datos
 *.pcap
