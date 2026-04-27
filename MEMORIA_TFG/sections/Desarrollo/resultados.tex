@@ -333,7 +333,11 @@ Incluso si le das 128 unidades a un modelo con TS:5 (Candidato 2), no logra alca
 
 \subsubsection{CNN}
 
-Aunque CNN se suele asociar principalmente a datos con estructura espacial (como imágenes), también se ha explorado su aplicación en la detección de intrusiones. Esta es la gráfica de la frontera de Pareto obtenida para CNN:
+Aunque CNN se suele asociar principalmente a datos con estructura espacial (como imágenes), también se ha explorado su aplicación en la detección de intrusiones. 
+Para su implementación, se descartó el uso de secuencias temporales (time steps) asociadas a arquitecturas como LSTM. Los conjuntos de datos empleados proporcionan información ya agregada en flujos de red independientes (formato tabular). Agrupar estas filas de forma secuencial introduciría dependencias temporales ficticias y violaría la asunción de independencia (i.i.d.) de los datos, invalidando la robustez de la evaluación mediante validación cruzada.
+
+En su lugar, se implementó una arquitectura CNN-1D adaptando el vector de características de cada flujo mediante un redimensionamiento (reshape) a un tensor de la forma (muestras, características, 1). Bajo este enfoque, la convolución actúa exclusivamente como un extractor automático de características latentes, descubriendo correlaciones locales no lineales entre las variables tabulares sin asumir una jerarquía temporal estricta.
+Esta es la gráfica de la frontera de Pareto obtenida para CNN:
 
 \begin{figure}[H]
     \centering
@@ -793,3 +797,44 @@ Los resultados obtenidos en el set de test para los modelos seleccionados de la 
 \end{table}
 
 En este caso, nos quedamos con el \textbf{Candidato 1}, que ofrece un excelente rendimiento (F1-Score de 0.994819) y una latencia de inferencia de 0.000717 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.
+
+\subsubsection{CNN-1D}
+
+La gráfica de la frontera de Pareto obtenida para CNN-1D es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/IOT/PARETO_CNN_IOT.png}
+    \caption{Frontera de Pareto - CNN-1D (IOT-23)}
+    \label{fig:pareto_cnn_iot}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+
+\begin{enumerate}
+    \item (32, 4, 16) 
+    \item (32, 3, 80) 
+    \item (64, 4, 80) 
+    \item (128, 5, 64) 
+\end{enumerate} 
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_filters} & \textbf{kernel\_size} & \textbf{dense\_units} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 32 & 4 & 16 & 0.992844 & 0.991467 & 0.008293 \\
+        \hline
+        Candidato 2 & 32 & 3 & 80 & 0.988798 & 0.986561 & 0.008442 \\
+        \hline
+        Candidato 3 & 64 & 4 & 80 & 0.995359 & 0.99448 & 0.00892 \\
+        \hline
+        Candidato 4 & 128 & 5 & 64 & 0.99583 & 0.995042 & 0.009345 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos CNN-1D en el set de test (IOT-23)}
+    \label{tab:cnn_comparison_iot}
+\end{table}
+
+En este caso, el \textbf{Candidato 3} es el modelo más eficiente, con un F1-Score de 0.995359 y una latencia de inferencia de 0.00892 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.

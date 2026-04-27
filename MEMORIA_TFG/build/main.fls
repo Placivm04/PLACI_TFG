@@ -554,6 +554,9 @@ INPUT ./images/IOT/PARETO_SVM_IOT.png
 INPUT ./images/IOT/PARETO_MLP_IOT.png
 INPUT ./images/IOT/PARETO_MLP_IOT.png
 INPUT ./images/IOT/PARETO_MLP_IOT.png
+INPUT ./images/IOT/PARETO_CNN_IOT.png
+INPUT ./images/IOT/PARETO_CNN_IOT.png
+INPUT ./images/IOT/PARETO_CNN_IOT.png
 INPUT ./template/logos/NEG-logo-umaes.png
 INPUT ./template/logos/NEG-logo-umaes.png
 INPUT ./template/logos/NEG-logo-umaes.png
