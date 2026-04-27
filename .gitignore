@@ -9,7 +9,6 @@
 *.pcapng
 *.labeled
 *.log
-*.csv
 
 # =========================
 # Python / notebooks
