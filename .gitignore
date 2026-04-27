@@ -3,6 +3,7 @@
 # # =========================
 DATASETS/dataSets_Raw/
 DATASETS/dataSets_Reducidos/
+DATASETS/dataSets_Reducidos/iot-23/datos_IOT_23_1_1_redux.csv
 
 # Archivos grandes / datos
 *.pcap
