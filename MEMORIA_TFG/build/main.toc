@@ -45,19 +45,19 @@
 \contentsline {subsection}{\numberline {0.4.1}Entorno de pruebas}{33}{subsection.0.4.1}%
 \contentsline {subsection}{\numberline {0.4.2}Modelos entrenados con UNSW-NB15}{33}{subsection.0.4.2}%
 \contentsline {subsubsection}{\numberline {0.4.2.1}Random Forest}{33}{subsubsection.0.4.2.1}%
-\contentsline {subsubsection}{\numberline {0.4.2.2}XGBoost}{35}{subsubsection.0.4.2.2}%
+\contentsline {subsubsection}{\numberline {0.4.2.2}XGBoost}{34}{subsubsection.0.4.2.2}%
 \contentsline {subsubsection}{\numberline {0.4.2.3}LightGBM}{36}{subsubsection.0.4.2.3}%
 \contentsline {subsubsection}{\numberline {0.4.2.4}CatBoost}{37}{subsubsection.0.4.2.4}%
 \contentsline {subsubsection}{\numberline {0.4.2.5}Support Vector Machine (SVM)}{38}{subsubsection.0.4.2.5}%
-\contentsline {subsubsection}{\numberline {0.4.2.6}Multilayer Perceptron (MLP)}{40}{subsubsection.0.4.2.6}%
-\contentsline {subsubsection}{\numberline {0.4.2.7}LSTM}{40}{subsubsection.0.4.2.7}%
-\contentsline {subsubsection}{\numberline {0.4.2.8}CNN}{41}{subsubsection.0.4.2.8}%
-\contentsline {subsubsection}{\numberline {0.4.2.9}Comparativa Modelos con Dataset UNSW-NB15}{43}{subsubsection.0.4.2.9}%
-\contentsline {subsection}{\numberline {0.4.3}Modelos entrenados con IOT-23}{47}{subsection.0.4.3}%
-\contentsline {subsubsection}{\numberline {0.4.3.1}Random Forest}{47}{subsubsection.0.4.3.1}%
-\contentsline {subsubsection}{\numberline {0.4.3.2}XGBoost}{48}{subsubsection.0.4.3.2}%
-\contentsline {subsubsection}{\numberline {0.4.3.3}LightGBM}{49}{subsubsection.0.4.3.3}%
-\contentsline {subsubsection}{\numberline {0.4.3.4}CatBoost}{50}{subsubsection.0.4.3.4}%
-\contentsline {subsubsection}{\numberline {0.4.3.5}SVM}{51}{subsubsection.0.4.3.5}%
-\contentsline {subsubsection}{\numberline {0.4.3.6}Multilayer Perceptron (MLP)}{52}{subsubsection.0.4.3.6}%
-\contentsline {subsubsection}{\numberline {0.4.3.7}CNN-1D}{53}{subsubsection.0.4.3.7}%
+\contentsline {subsubsection}{\numberline {0.4.2.6}Multilayer Perceptron (MLP)}{39}{subsubsection.0.4.2.6}%
+\contentsline {subsubsection}{\numberline {0.4.2.7}CNN}{40}{subsubsection.0.4.2.7}%
+\contentsline {subsubsection}{\numberline {0.4.2.8}Comparativa Modelos con Dataset UNSW-NB15}{41}{subsubsection.0.4.2.8}%
+\contentsline {subsection}{\numberline {0.4.3}Modelos entrenados con IOT-23}{44}{subsection.0.4.3}%
+\contentsline {subsubsection}{\numberline {0.4.3.1}Random Forest}{44}{subsubsection.0.4.3.1}%
+\contentsline {subsubsection}{\numberline {0.4.3.2}XGBoost}{45}{subsubsection.0.4.3.2}%
+\contentsline {subsubsection}{\numberline {0.4.3.3}LightGBM}{46}{subsubsection.0.4.3.3}%
+\contentsline {subsubsection}{\numberline {0.4.3.4}CatBoost}{47}{subsubsection.0.4.3.4}%
+\contentsline {subsubsection}{\numberline {0.4.3.5}SVM}{48}{subsubsection.0.4.3.5}%
+\contentsline {subsubsection}{\numberline {0.4.3.6}Multilayer Perceptron (MLP)}{49}{subsubsection.0.4.3.6}%
+\contentsline {subsubsection}{\numberline {0.4.3.7}CNN-1D}{50}{subsubsection.0.4.3.7}%
+\contentsline {subsubsection}{\numberline {0.4.3.8}Comparativa Modelos con Dataset IOT-23}{51}{subsubsection.0.4.3.8}%
