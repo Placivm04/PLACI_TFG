@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  27 APR 2026 23:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  28 APR 2026 21:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -882,71 +882,79 @@ Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
  (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-)) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip111
+\enit@outerparindent=\dimen313
+\enit@toks=\toks53
+\enit@inbox=\box83
+\enit@count@id=\count400
+\enitdp@description=\count401
+) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count400
+\lrq@indent=\count402
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count401
-\c@listtotal=\count402
-\c@listcount=\count403
-\c@liststart=\count404
-\c@liststop=\count405
-\c@citecount=\count406
-\c@citetotal=\count407
-\c@multicitecount=\count408
-\c@multicitetotal=\count409
-\c@instcount=\count410
-\c@maxnames=\count411
-\c@minnames=\count412
-\c@maxitems=\count413
-\c@minitems=\count414
-\c@citecounter=\count415
-\c@maxcitecounter=\count416
-\c@savedcitecounter=\count417
-\c@uniquelist=\count418
-\c@uniquename=\count419
-\c@refsection=\count420
-\c@refsegment=\count421
-\c@maxextratitle=\count422
-\c@maxextratitleyear=\count423
-\c@maxextraname=\count424
-\c@maxextradate=\count425
-\c@maxextraalpha=\count426
-\c@abbrvpenalty=\count427
-\c@highnamepenalty=\count428
-\c@lownamepenalty=\count429
-\c@maxparens=\count430
-\c@parenlevel=\count431
-\blx@tempcnta=\count432
-\blx@tempcntb=\count433
-\blx@tempcntc=\count434
-\c@blx@maxsection=\count435
-\blx@maxsegment@0=\count436
-\blx@notetype=\count437
-\blx@parenlevel@text=\count438
-\blx@parenlevel@foot=\count439
-\blx@sectionciteorder@0=\count440
-\blx@sectionciteorderinternal@0=\count441
-\blx@entrysetcounter=\count442
-\blx@biblioinstance=\count443
-\labelnumberwidth=\skip111
-\labelalphawidth=\skip112
-\biblabelsep=\skip113
-\bibitemsep=\skip114
-\bibnamesep=\skip115
-\bibinitsep=\skip116
-\bibparsep=\skip117
-\bibhang=\skip118
+\c@tabx@nest=\count403
+\c@listtotal=\count404
+\c@listcount=\count405
+\c@liststart=\count406
+\c@liststop=\count407
+\c@citecount=\count408
+\c@citetotal=\count409
+\c@multicitecount=\count410
+\c@multicitetotal=\count411
+\c@instcount=\count412
+\c@maxnames=\count413
+\c@minnames=\count414
+\c@maxitems=\count415
+\c@minitems=\count416
+\c@citecounter=\count417
+\c@maxcitecounter=\count418
+\c@savedcitecounter=\count419
+\c@uniquelist=\count420
+\c@uniquename=\count421
+\c@refsection=\count422
+\c@refsegment=\count423
+\c@maxextratitle=\count424
+\c@maxextratitleyear=\count425
+\c@maxextraname=\count426
+\c@maxextradate=\count427
+\c@maxextraalpha=\count428
+\c@abbrvpenalty=\count429
+\c@highnamepenalty=\count430
+\c@lownamepenalty=\count431
+\c@maxparens=\count432
+\c@parenlevel=\count433
+\blx@tempcnta=\count434
+\blx@tempcntb=\count435
+\blx@tempcntc=\count436
+\c@blx@maxsection=\count437
+\blx@maxsegment@0=\count438
+\blx@notetype=\count439
+\blx@parenlevel@text=\count440
+\blx@parenlevel@foot=\count441
+\blx@sectionciteorder@0=\count442
+\blx@sectionciteorderinternal@0=\count443
+\blx@entrysetcounter=\count444
+\blx@biblioinstance=\count445
+\labelnumberwidth=\skip112
+\labelalphawidth=\skip113
+\biblabelsep=\skip114
+\bibitemsep=\skip115
+\bibnamesep=\skip116
+\bibinitsep=\skip117
+\bibparsep=\skip118
+\bibhang=\skip119
 \blx@bcfin=\read3
 \blx@bcfout=\write5
 \blx@langwohyphens=\language89
-\c@mincomprange=\count444
-\c@maxcomprange=\count445
-\c@mincompwidth=\count446
+\c@mincomprange=\count446
+\c@maxcomprange=\count447
+\c@mincompwidth=\count448
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -956,88 +964,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count447
-\c@savedafterword=\count448
-\c@annotator=\count449
-\c@savedannotator=\count450
-\c@author=\count451
-\c@savedauthor=\count452
-\c@bookauthor=\count453
-\c@savedbookauthor=\count454
-\c@commentator=\count455
-\c@savedcommentator=\count456
-\c@editor=\count457
-\c@savededitor=\count458
-\c@editora=\count459
-\c@savededitora=\count460
-\c@editorb=\count461
-\c@savededitorb=\count462
-\c@editorc=\count463
-\c@savededitorc=\count464
-\c@foreword=\count465
-\c@savedforeword=\count466
-\c@holder=\count467
-\c@savedholder=\count468
-\c@introduction=\count469
-\c@savedintroduction=\count470
-\c@namea=\count471
-\c@savednamea=\count472
-\c@nameb=\count473
-\c@savednameb=\count474
-\c@namec=\count475
-\c@savednamec=\count476
-\c@translator=\count477
-\c@savedtranslator=\count478
-\c@shortauthor=\count479
-\c@savedshortauthor=\count480
-\c@shorteditor=\count481
-\c@savedshorteditor=\count482
-\c@labelname=\count483
-\c@savedlabelname=\count484
-\c@institution=\count485
-\c@savedinstitution=\count486
-\c@lista=\count487
-\c@savedlista=\count488
-\c@listb=\count489
-\c@savedlistb=\count490
-\c@listc=\count491
-\c@savedlistc=\count492
-\c@listd=\count493
-\c@savedlistd=\count494
-\c@liste=\count495
-\c@savedliste=\count496
-\c@listf=\count497
-\c@savedlistf=\count498
-\c@location=\count499
-\c@savedlocation=\count500
-\c@organization=\count501
-\c@savedorganization=\count502
-\c@origlocation=\count503
-\c@savedoriglocation=\count504
-\c@origpublisher=\count505
-\c@savedorigpublisher=\count506
-\c@publisher=\count507
-\c@savedpublisher=\count508
-\c@language=\count509
-\c@savedlanguage=\count510
-\c@origlanguage=\count511
-\c@savedoriglanguage=\count512
-\c@pageref=\count513
-\c@savedpageref=\count514
-\shorthandwidth=\skip119
-\shortjournalwidth=\skip120
-\shortserieswidth=\skip121
-\shorttitlewidth=\skip122
-\shortauthorwidth=\skip123
-\shorteditorwidth=\skip124
-\locallabelnumberwidth=\skip125
-\locallabelalphawidth=\skip126
-\localshorthandwidth=\skip127
-\localshortjournalwidth=\skip128
-\localshortserieswidth=\skip129
-\localshorttitlewidth=\skip130
-\localshortauthorwidth=\skip131
-\localshorteditorwidth=\skip132
+\c@afterword=\count449
+\c@savedafterword=\count450
+\c@annotator=\count451
+\c@savedannotator=\count452
+\c@author=\count453
+\c@savedauthor=\count454
+\c@bookauthor=\count455
+\c@savedbookauthor=\count456
+\c@commentator=\count457
+\c@savedcommentator=\count458
+\c@editor=\count459
+\c@savededitor=\count460
+\c@editora=\count461
+\c@savededitora=\count462
+\c@editorb=\count463
+\c@savededitorb=\count464
+\c@editorc=\count465
+\c@savededitorc=\count466
+\c@foreword=\count467
+\c@savedforeword=\count468
+\c@holder=\count469
+\c@savedholder=\count470
+\c@introduction=\count471
+\c@savedintroduction=\count472
+\c@namea=\count473
+\c@savednamea=\count474
+\c@nameb=\count475
+\c@savednameb=\count476
+\c@namec=\count477
+\c@savednamec=\count478
+\c@translator=\count479
+\c@savedtranslator=\count480
+\c@shortauthor=\count481
+\c@savedshortauthor=\count482
+\c@shorteditor=\count483
+\c@savedshorteditor=\count484
+\c@labelname=\count485
+\c@savedlabelname=\count486
+\c@institution=\count487
+\c@savedinstitution=\count488
+\c@lista=\count489
+\c@savedlista=\count490
+\c@listb=\count491
+\c@savedlistb=\count492
+\c@listc=\count493
+\c@savedlistc=\count494
+\c@listd=\count495
+\c@savedlistd=\count496
+\c@liste=\count497
+\c@savedliste=\count498
+\c@listf=\count499
+\c@savedlistf=\count500
+\c@location=\count501
+\c@savedlocation=\count502
+\c@organization=\count503
+\c@savedorganization=\count504
+\c@origlocation=\count505
+\c@savedoriglocation=\count506
+\c@origpublisher=\count507
+\c@savedorigpublisher=\count508
+\c@publisher=\count509
+\c@savedpublisher=\count510
+\c@language=\count511
+\c@savedlanguage=\count512
+\c@origlanguage=\count513
+\c@savedoriglanguage=\count514
+\c@pageref=\count515
+\c@savedpageref=\count516
+\shorthandwidth=\skip120
+\shortjournalwidth=\skip121
+\shortserieswidth=\skip122
+\shorttitlewidth=\skip123
+\shortauthorwidth=\skip124
+\shorteditorwidth=\skip125
+\locallabelnumberwidth=\skip126
+\locallabelalphawidth=\skip127
+\localshorthandwidth=\skip128
+\localshortjournalwidth=\skip129
+\localshortserieswidth=\skip130
+\localshorttitlewidth=\skip131
+\localshortauthorwidth=\skip132
+\localshorteditorwidth=\skip133
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-unicode.def)
@@ -1060,19 +1068,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count515
-\c@textcitetotal=\count516
-\c@textcitemaxnames=\count517
-\c@biburlbigbreakpenalty=\count518
-\c@biburlbreakpenalty=\count519
-\c@biburlnumpenalty=\count520
-\c@biburlucpenalty=\count521
-\c@biburllcpenalty=\count522
+\c@textcitecount=\count517
+\c@textcitetotal=\count518
+\c@textcitemaxnames=\count519
+\c@biburlbigbreakpenalty=\count520
+\c@biburlbreakpenalty=\count521
+\c@biburlnumpenalty=\count522
+\c@biburlucpenalty=\count523
+\c@biburllcpenalty=\count524
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count523
+\c@smartand=\count525
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1082,8 +1090,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count524
-\c@bbx:relatedtotal=\count525
+\c@bbx:relatedcount=\count526
+\c@bbx:relatedtotal=\count527
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1119,109 +1127,109 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen313
-\TX@old@table=\dimen314
-\TX@old@col=\dimen315
-\TX@target=\dimen316
-\TX@delta=\dimen317
-\TX@cols=\count526
-\TX@ftn=\toks53
+\TX@col@width=\dimen314
+\TX@old@table=\dimen315
+\TX@old@col=\dimen316
+\TX@target=\dimen317
+\TX@delta=\dimen318
+\TX@cols=\count528
+\TX@ftn=\toks54
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 30.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 32.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
  (build/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 30.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 30.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 30.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 30.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 30.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 30.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 30.
-LaTeX Font Info:    Redeclaring math accent \check on input line 30.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 30.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 30.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 30.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 30.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 32.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 32.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 32.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 32.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 32.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 32.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 32.
+LaTeX Font Info:    Redeclaring math accent \check on input line 32.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 32.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 32.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 32.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 32.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 30.
+(Font)              `operators' in the math version `normal' on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Malacitana-Sans(0)/m/n on input line 30.
+(Font)                  OT1/cmr/m/n --> TU/Malacitana-Sans(0)/m/n on input line 32.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 30.
+(Font)              `operators' in the math version `bold' on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Malacitana-Sans(0)/m/n on input line 30.
+(Font)                  OT1/cmr/bx/n --> TU/Malacitana-Sans(0)/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Malacitana-Sans(0)/m/n --> TU/Malacitana-Sans(0)/m/n on input line 30.
+(Font)                  TU/Malacitana-Sans(0)/m/n --> TU/Malacitana-Sans(0)/m/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Malacitana-Sans(0)/m/it on input line 30.
+(Font)                  OT1/cmr/m/it --> TU/Malacitana-Sans(0)/m/it on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Malacitana-Sans(0)/b/n on input line 30.
+(Font)                  OT1/cmr/bx/n --> TU/Malacitana-Sans(0)/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 30.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 30.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Malacitana-Sans(0)/m/n --> TU/Malacitana-Sans(0)/b/n on input line 30.
+(Font)                  TU/Malacitana-Sans(0)/m/n --> TU/Malacitana-Sans(0)/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Malacitana-Sans(0)/b/it on input line 30.
+(Font)                  OT1/cmr/bx/it --> TU/Malacitana-Sans(0)/b/it on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 30.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 30.
-LaTeX Info: Redefining \microtypecontext on input line 30.
-Package microtype Info: Applying patch `item' on input line 30.
-Package microtype Info: Applying patch `toc' on input line 30.
-Package microtype Info: Applying patch `eqnum' on input line 30.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 32.
+LaTeX Info: Redefining \microtypecontext on input line 32.
+Package microtype Info: Applying patch `item' on input line 32.
+Package microtype Info: Applying patch `toc' on input line 32.
+Package microtype Info: Applying patch `eqnum' on input line 32.
 
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 30.
+Package microtype Warning: Unable to apply patch `footnote' on input line 32.
 
-Package microtype Info: Applying patch `verbatim' on input line 30.
+Package microtype Info: Applying patch `verbatim' on input line 32.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1265,7 +1273,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 30.
+Package hyperref Info: Link coloring ON on input line 32.
 (build/main.out) (build/main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -1277,8 +1285,8 @@ Package caption Info: End \AtBeginDocument code.
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 30.
-\c@lstlisting=\count527
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 32.
+\c@lstlisting=\count529
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -1297,8 +1305,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (build/main.bbl)
-Package biblatex Info: Reference section=0 on input line 30.
-Package biblatex Info: Reference segment=0 on input line 30.
+Package biblatex Info: Reference section=0 on input line 32.
+Package biblatex Info: Reference segment=0 on input line 32.
 
 Package fontspec Info: Font family 'Malacitana(1)' created for font
 (fontspec)             'Malacitana' with options [Ligatures=TeX,Path =
@@ -1473,10 +1481,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [33]
 File: images/PARETO_XGBOOST.png Graphic file (type bmp)
 <images/PARETO_XGBOOST.png>
- [34]
+ [34] [35]
 File: images/PARETO_LIGHTGBM.png Graphic file (type bmp)
 <images/PARETO_LIGHTGBM.png>
- [35]
+
 Overfull \hbox (45.81198pt too wide) in paragraph at lines 145--161
  [][] 
  []
@@ -1487,97 +1495,16 @@ File: images/PARETO_CATBOOST.png Graphic file (type bmp)
  [37]
 File: images/PARETO_SVM.png Graphic file (type bmp)
 <images/PARETO_SVM.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [38]
 File: images/PARETO_MLP.png Graphic file (type bmp)
 <images/PARETO_MLP.png>
  [39]
-File: images/PARETO_LSTM.png Graphic file (type bmp)
-<images/PARETO_LSTM.png>
-
-Underfull \vbox (badness 3108) has occurred while \output is active []
-
- [40] [41]
 File: images/PARETO_CNN.png Graphic file (type bmp)
 <images/PARETO_CNN.png>
- [42]
-Underfull \hbox (badness 10000) in paragraph at lines 388--389
-[]|\TU/Malacitana-Sans(0)/m/n/10.95 Obtenido utilizando
- []
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--389
-\TU/lmtt/m/n/10.95 time.perf_counter()\TU/Malacitana-Sans(0)/m/n/10.95 , que
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--389
-\TU/Malacitana-Sans(0)/m/n/10.95 inmune a actualizaciones au-
- []
-
-
-Underfull \hbox (badness 4060) in paragraph at lines 390--390
-[]|\TU/Malacitana-Sans(0)/m/n/10.95 Suma total del tiempo que
- []
-
-
-Underfull \hbox (badness 2538) in paragraph at lines 390--390
-\TU/Malacitana-Sans(0)/m/n/10.95 la Unidad Central de Proce-
- []
-
-
-Underfull \hbox (badness 1308) in paragraph at lines 390--390
-\TU/Malacitana-Sans(0)/m/n/10.95 de Muro es 1 segundo pero
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
-[]|\TU/Malacitana-Sans(0)/m/n/10.95 Obtenido mediante
- []
-
-
-Overfull \hbox (19.43483pt too wide) in paragraph at lines 390--391
-\TU/lmtt/m/n/10.95 psutil.Process().cpu_times()\TU/Malacitana-Sans(0)/m/n/10.95 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--392
-[]|\TU/Malacitana-Sans(0)/m/n/10.95 Porción de memoria física
- []
-
-
-Underfull \hbox (badness 3323) in paragraph at lines 392--392
-\TU/Malacitana-Sans(0)/m/n/10.95 (RAM) asignada de manera
- []
-
-
-Underfull \hbox (badness 2418) in paragraph at lines 392--392
-\TU/Malacitana-Sans(0)/m/n/10.95 que requieren picos muy el-
- []
-
-
-Underfull \hbox (badness 4341) in paragraph at lines 392--392
-\TU/Malacitana-Sans(0)/m/n/10.95 evados, pudiendo inviabilizar
- []
-
-
-Underfull \hbox (badness 8170) in paragraph at lines 392--392
-\TU/Malacitana-Sans(0)/m/n/10.95 despliegue en hardware de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
-[]|\TU/Malacitana-Sans(0)/m/n/10.95 Sondeo iterativo mediante
- []
-
-
-Overfull \hbox (53.63168pt too wide) in paragraph at lines 392--393
-\TU/lmtt/m/n/10.95 psutil.Process().memory_info().rss\TU/Malacitana-Sans(0)/m/n/10.95 .
- []
-
-
+ [40]
 Underfull \hbox (badness 1331) in paragraph at lines 407--407
 \TU/Malacitana-Sans(0)/m/n/10.95 las falsas alarmas, siendo ideal
  []
@@ -1624,50 +1551,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--411
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 413--413
-[]|\TU/Malacitana-Sans(0)/m/n/10.95 Nivel de concurrencia y par-
- []
-
-
-Underfull \hbox (badness 5607) in paragraph at lines 413--414
-[]|\TU/Malacitana-Sans(0)/m/n/10.95 Dividiendo el Tiempo Total de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 415--415
 []|\TU/Malacitana-Sans(0)/b/n/10.95 Pico RAM
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
 []|\TU/Malacitana-Sans(0)/m/n/10.95 Monitorizando el proceso con
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
 \TU/lmtt/m/n/10.95 psutil.memory_info().rss\TU/Malacitana-Sans(0)/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--417
-[]|\TU/Malacitana-Sans(0)/b/n/10.95 Porcentaje
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 417--417
-\TU/Malacitana-Sans(0)/m/n/10.95 pacidad total del hardware está
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43]
-Overfull \hbox (19.77068pt too wide) in paragraph at lines 431--445
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 425--444
  [][] 
  []
 
+[41]
 File: images/ROC_MODELOS.png Graphic file (type bmp)
 <images/ROC_MODELOS.png>
-[44]
 File: images/MC/MC_RF.png Graphic file (type bmp)
 <images/MC/MC_RF.png>
 File: images/MC/MC_XGBOOST.png Graphic file (type bmp)
@@ -1676,56 +1580,77 @@ File: images/MC/MC_LIGHTGBM.png Graphic file (type bmp)
 <images/MC/MC_LIGHTGBM.png>
 File: images/MC/MC_CATBOOST.png Graphic file (type bmp)
 <images/MC/MC_CATBOOST.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [45]
+ [42]
 File: images/MC/MC_SVM.png Graphic file (type bmp)
 <images/MC/MC_SVM.png>
 File: images/MC/MC_MLP.png Graphic file (type bmp)
 <images/MC/MC_MLP.png>
-File: images/MC/MC_LSTM.png Graphic file (type bmp)
-<images/MC/MC_LSTM.png>
 File: images/MC/MC_CNN.png Graphic file (type bmp)
 <images/MC/MC_CNN.png>
 
-Underfull \vbox (badness 1082) has occurred while \output is active []
+Underfull \vbox (badness 4819) has occurred while \output is active []
 
- [46]
+ [43]
 File: images/IOT/PARETO_RF_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_RF_IOT.png>
+ [44]
 File: images/IOT/PARETO_XGBOOST_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_XGBOOST_IOT.png>
- [47] [48]
+ [45]
 File: images/IOT/PARETO_LIGHTGBM_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_LIGHTGBM_IOT.png>
-
-Overfull \hbox (45.48798pt too wide) in paragraph at lines 642--657
+ [46]
+Overfull \hbox (45.48798pt too wide) in paragraph at lines 669--684
  [][] 
  []
 
-[49]
 File: images/IOT/PARETO_CATBOOST_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_CATBOOST_IOT.png>
- [50]
+[47]
 File: images/IOT/PARETO_SVM_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_SVM_IOT.png>
- [51]
+ [48]
 File: images/IOT/PARETO_MLP_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_MLP_IOT.png>
- [52]
+ [49]
 File: images/IOT/PARETO_CNN_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_CNN_IOT.png>
+ [50]
+Overfull \hbox (25.97597pt too wide) in paragraph at lines 850--863
+ [][] 
+ []
+
+
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 876--895
+ [][] 
+ []
+
+File: images/IOT/ROC_MODELOS.png Graphic file (type bmp)
+<images/IOT/ROC_MODELOS.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
-Overfull \hbox (25.97597pt too wide) in paragraph at lines 823--836
- [][] 
- []
+ [51]
+File: images/IOT/MC/MC_RF_IOT.png Graphic file (type bmp)
+<images/IOT/MC/MC_RF_IOT.png>
+File: images/IOT/MC/MC_XGBOOST_IOT.png Graphic file (type bmp)
+<images/IOT/MC/MC_XGBOOST_IOT.png>
+File: images/IOT/MC/MC_LIGHTGBM_IOT.png Graphic file (type bmp)
+<images/IOT/MC/MC_LIGHTGBM_IOT.png>
+File: images/IOT/MC/MC_CATBOOST_IOT.png Graphic file (type bmp)
+<images/IOT/MC/MC_CATBOOST_IOT.png>
 
-) [54]
-Overfull \hbox (24.4958pt too wide) in paragraph at lines 119--119
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+File: images/IOT/MC/MC_SVM_IOT.png Graphic file (type bmp)
+<images/IOT/MC/MC_SVM_IOT.png>
+File: images/IOT/MC/MC_MLP_IOT.png Graphic file (type bmp)
+<images/IOT/MC/MC_MLP_IOT.png>
+File: images/IOT/MC/MC_CNN_IOT.png Graphic file (type bmp)
+<images/IOT/MC/MC_CNN_IOT.png>
+) [53] [54]
+Overfull \hbox (24.4958pt too wide) in paragraph at lines 121--121
 \TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
  []
 
@@ -1751,12 +1676,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44139 strings out of 474878
- 939535 string characters out of 5762516
- 1937627 words of memory out of 5000000
- 65505 multiletter control sequences out of 15000+600000
+ 44544 strings out of 474878
+ 947775 string characters out of 5762516
+ 1939627 words of memory out of 5000000
+ 65900 multiletter control sequences out of 15000+600000
  563315 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,12n,121p,1920b,5578s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,12n,121p,1920b,5582s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (61 pages, 964056 bytes).
+Output written on build/main.xdv (61 pages, 964616 bytes).

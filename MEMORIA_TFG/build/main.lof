@@ -14,23 +14,29 @@
 \contentsline {figure}{\numberline {14}{\ignorespaces Frontera de Pareto - XGBoost}}{35}{figure.caption.34}%
 \contentsline {figure}{\numberline {15}{\ignorespaces Frontera de Pareto - LightGBM}}{36}{figure.caption.36}%
 \contentsline {figure}{\numberline {16}{\ignorespaces Frontera de Pareto - CatBoost}}{37}{figure.caption.38}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Frontera de Pareto - SVM}}{39}{figure.caption.40}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Frontera de Pareto - MLP}}{40}{figure.caption.42}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Frontera de Pareto - LSTM}}{41}{figure.caption.44}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Frontera de Pareto - CNN}}{42}{figure.caption.46}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Curva ROC - Modelos}}{45}{figure.caption.51}%
-\contentsline {figure}{\numberline {22}{\ignorespaces MC - Random Forest}}{45}{figure.caption.52}%
-\contentsline {figure}{\numberline {23}{\ignorespaces MC - XGBoost}}{45}{figure.caption.52}%
-\contentsline {figure}{\numberline {24}{\ignorespaces MC - LightGBM}}{46}{figure.caption.53}%
-\contentsline {figure}{\numberline {25}{\ignorespaces MC - CatBoost}}{46}{figure.caption.53}%
-\contentsline {figure}{\numberline {26}{\ignorespaces MC - SVM}}{46}{figure.caption.54}%
-\contentsline {figure}{\numberline {27}{\ignorespaces MC - MLP}}{46}{figure.caption.54}%
-\contentsline {figure}{\numberline {28}{\ignorespaces MC - LSTM}}{46}{figure.caption.55}%
-\contentsline {figure}{\numberline {29}{\ignorespaces MC - CNN}}{46}{figure.caption.55}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Frontera de Pareto - Random Forest (IOT-23)}}{47}{figure.caption.56}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Frontera de Pareto - XGBoost (IOT-23)}}{48}{figure.caption.58}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Frontera de Pareto - LightGBM (IOT-23)}}{49}{figure.caption.60}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Frontera de Pareto - CatBoost (IOT-23)}}{50}{figure.caption.62}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Frontera de Pareto - SVM (IOT-23)}}{51}{figure.caption.64}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Frontera de Pareto - MLP (IOT-23)}}{52}{figure.caption.66}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Frontera de Pareto - CNN-1D (IOT-23)}}{54}{figure.caption.68}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Frontera de Pareto - SVM}}{38}{figure.caption.40}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Frontera de Pareto - MLP}}{39}{figure.caption.42}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Frontera de Pareto - CNN}}{40}{figure.caption.44}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Curva ROC - Modelos}}{42}{figure.caption.48}%
+\contentsline {figure}{\numberline {21}{\ignorespaces MC - Random Forest}}{42}{figure.caption.49}%
+\contentsline {figure}{\numberline {22}{\ignorespaces MC - XGBoost}}{42}{figure.caption.49}%
+\contentsline {figure}{\numberline {23}{\ignorespaces MC - LightGBM}}{43}{figure.caption.50}%
+\contentsline {figure}{\numberline {24}{\ignorespaces MC - CatBoost}}{43}{figure.caption.50}%
+\contentsline {figure}{\numberline {25}{\ignorespaces MC - SVM}}{43}{figure.caption.51}%
+\contentsline {figure}{\numberline {26}{\ignorespaces MC - MLP}}{43}{figure.caption.51}%
+\contentsline {figure}{\numberline {27}{\ignorespaces MC - CNN}}{43}{figure.caption.52}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Frontera de Pareto - Random Forest (IOT-23)}}{44}{figure.caption.54}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Frontera de Pareto - XGBoost (IOT-23)}}{45}{figure.caption.56}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Frontera de Pareto - LightGBM (IOT-23)}}{46}{figure.caption.58}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Frontera de Pareto - CatBoost (IOT-23)}}{47}{figure.caption.60}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Frontera de Pareto - SVM (IOT-23)}}{48}{figure.caption.62}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Frontera de Pareto - MLP (IOT-23)}}{49}{figure.caption.64}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Frontera de Pareto - CNN-1D (IOT-23)}}{50}{figure.caption.66}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Curva ROC - Modelos (IOT-23)}}{52}{figure.caption.69}%
+\contentsline {figure}{\numberline {36}{\ignorespaces MC - Random Forest (IOT-23)}}{52}{figure.caption.70}%
+\contentsline {figure}{\numberline {37}{\ignorespaces MC - XGBoost (IOT-23)}}{52}{figure.caption.70}%
+\contentsline {figure}{\numberline {38}{\ignorespaces MC - LightGBM (IOT-23)}}{53}{figure.caption.71}%
+\contentsline {figure}{\numberline {39}{\ignorespaces MC - CatBoost (IOT-23)}}{53}{figure.caption.71}%
+\contentsline {figure}{\numberline {40}{\ignorespaces MC - SVM (IOT-23)}}{53}{figure.caption.72}%
+\contentsline {figure}{\numberline {41}{\ignorespaces MC - MLP (IOT-23)}}{53}{figure.caption.72}%
+\contentsline {figure}{\numberline {42}{\ignorespaces MC - CNN (IOT-23)}}{53}{figure.caption.73}%

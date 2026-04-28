@@ -4,7 +4,7 @@
 
 Antes de analizar los resultados obtenidos, es importante describir el entorno de pruebas utilizado para la evaluación de los modelos. Todos los experimentos se han llevado a cabo en un entorno controlado con las siguientes características:
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|l|}
         \hline
@@ -52,7 +52,7 @@ Hemos visto cómo reaccionan en test los modelos con los siguientes hiperparáme
 
 Los resultados son los siguientes:
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|}
         \hline
@@ -76,7 +76,7 @@ El \textbf{Candidato 1} no solo es el más preciso, sino también uno de los má
 \subsubsection{XGBoost}
 
 En XGBoost primero optamos por un entrenamiento con CPU. Sin embargo, debido a la elevada latencia obtenida en la frontera de Pareto, se decidi\'o realizar un nuevo entrenamiento utilizando GPU, lo que permiti\'o reducir significativamente los tiempos de inferencia. A continuaci\'on se muestran los resultados obtenidos:
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/PARETO_XGBOOST.png}
     \caption{Frontera de Pareto - XGBoost}
@@ -95,7 +95,7 @@ Hemos selecciondo las 3 combinaciones de la frontera de Pareto para testarlas:
 
 Los resultados son los siguientes:
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|}
         \hline
@@ -122,7 +122,7 @@ Nos quedamos con el \textbf{Candidato 2}, que ofrece un excelente equilibrio ent
 \subsubsection{LightGBM}
 
 LightGBM ha sido entrenado con GPU, obteniendo la siguiente frontera de Pareto:
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/PARETO_LIGHTGBM.png}
     \caption{Frontera de Pareto - LightGBM}
@@ -170,7 +170,7 @@ Al permitir 145 hojas, el algoritmo puede modelar reglas muy complejas del tráf
 
 CatBoost ha sido entrenado utilizando GPU, obteniendo la siguiente frontera de Pareto:
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/PARETO_CATBOOST.png}
     \caption{Frontera de Pareto - CatBoost}
@@ -179,13 +179,15 @@ CatBoost ha sido entrenado utilizando GPU, obteniendo la siguiente frontera de P
 
 Entre los diferentes puntos de la frontera de Pareto, se han seleccionado los siguientes para su evaluación en el set de test:
 
-\begin{enumerate}
-    \item (200, 4) 
-    \item (350, 7) 
-    \item (200, 9) 
-    \item (350, 8) 
-    \item (500, 10) 
+\begin{samepage}
+\begin{enumerate}[nosep]
+    \item (200, 4)
+    \item (350, 7)
+    \item (200, 9)
+    \item (350, 8)
+    \item (500, 10)
 \end{enumerate}
+\end{samepage}
 
 Los resultados obtenidos en el set de test son los siguientes:
 
@@ -294,42 +296,42 @@ Ahora mostramos los resultados obtenidos en el set de test para los modelos sele
 Nos quedamos con el \textbf{Candidato 4}, que ofrece el mejor rendimiento (F1-Score de 0.7869) y una latencia de inferencia de 0.001421 ms, lo que lo posiciona como un modelo competitivo dentro de los modelos no lineales, aunque aún por debajo de los basados en árboles.
 Además hemos visto que menos neuronas en las capas tienen menor tiempo de inferencia, lo que es un resultado lógico, ya que a menor número de unidades, menor cantidad de operaciones matemáticas se deben realizar para obtener la predicción, lo que se traduce en una reducción de la latencia.
 
-\subsubsection{LSTM}
+% \subsubsection{LSTM}
 
-Con LSTM, la gráfica de la frontera de Pareto obtenida es la siguiente:
+% Con LSTM, la gráfica de la frontera de Pareto obtenida es la siguiente:
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/PARETO_LSTM.png}
-    \caption{Frontera de Pareto - LSTM}
-    \label{fig:pareto_lstm}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/PARETO_LSTM.png}
+%     \caption{Frontera de Pareto - LSTM}
+%     \label{fig:pareto_lstm}
+% \end{figure}
 
-Los resultados obtenidos en el set de test para los modelos seleccionados de la frontera de Pareto son los siguientes:
+% Los resultados obtenidos en el set de test para los modelos seleccionados de la frontera de Pareto son los siguientes:
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|l|c|c|c|c|c|c|c|}
-        \hline
-        \textbf{Perfil} & \textbf{TS} & \textbf{Units} & \textbf{Layers}  & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
-        \hline
-        Candidato 1 & 10 & 32 & 1 & 0.918214 & 0.920569 & 0.008549 \\
-        \hline
-        Candidato 2 & 5 & 128 & 1 & 0.893188 & 0.897131 & 0.007129 \\
-        \hline
-        Candidato 3 & 5 & 32 & 1 & 0.886394 & 0.890766 & 0.004702 \\
-        \hline
-        Candidato 4 & 10 & 64 & 1 & 0.913959 & 0.916597 & 0.014846 \\
-        \hline
-    \end{tabular}
-    \caption{Comparativa final de modelos LSTM en el set de test}
-    \label{tab:lstm_comparison}
-\end{table}
+% \begin{table}[H]
+%     \centering
+%     \begin{tabular}{|l|c|c|c|c|c|c|c|}
+%         \hline
+%         \textbf{Perfil} & \textbf{TS} & \textbf{Units} & \textbf{Layers}  & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+%         \hline
+%         Candidato 1 & 10 & 32 & 1 & 0.918214 & 0.920569 & 0.008549 \\
+%         \hline
+%         Candidato 2 & 5 & 128 & 1 & 0.893188 & 0.897131 & 0.007129 \\
+%         \hline
+%         Candidato 3 & 5 & 32 & 1 & 0.886394 & 0.890766 & 0.004702 \\
+%         \hline
+%         Candidato 4 & 10 & 64 & 1 & 0.913959 & 0.916597 & 0.014846 \\
+%         \hline
+%     \end{tabular}
+%     \caption{Comparativa final de modelos LSTM en el set de test}
+%     \label{tab:lstm_comparison}
+% \end{table}
 
-Nos quedamos con el \textbf{Candidato 1}, que ofrece un excelente rendimiento (F1-Score de 0.9182) pero con una latencia de inferencia de 0.008549 ms, lo que lo posiciona como un modelo muy preciso pero con un coste computacional elevado si lo comparamos con los modelos de árboles.
-Los modelos con TS: 10 (Candidatos 1 y 4) superan holgadamente la barrera del 0.91 de F1.
-Los modelos con TS: 5 (Candidatos 2 y 3) se quedan en el rango de 0.88 - 0.89.
-Incluso si le das 128 unidades a un modelo con TS:5 (Candidato 2), no logra alcanzar el rendimiento de un modelo con solo 32 unidades pero con TS:10. Conclusión: El modelo necesita "ver" más atrás en el tiempo (TS:10) para entender correctamente el patrón, y añadir más "neuronas" (unidades) no compensa la falta de contexto temporal.
+% Nos quedamos con el \textbf{Candidato 1}, que ofrece un excelente rendimiento (F1-Score de 0.9182) pero con una latencia de inferencia de 0.008549 ms, lo que lo posiciona como un modelo muy preciso pero con un coste computacional elevado si lo comparamos con los modelos de árboles.
+% Los modelos con TS: 10 (Candidatos 1 y 4) superan holgadamente la barrera del 0.91 de F1.
+% Los modelos con TS: 5 (Candidatos 2 y 3) se quedan en el rango de 0.88 - 0.89.
+% Incluso si le das 128 unidades a un modelo con TS:5 (Candidato 2), no logra alcanzar el rendimiento de un modelo con solo 32 unidades pero con TS:10. Conclusión: El modelo necesita "ver" más atrás en el tiempo (TS:10) para entender correctamente el patrón, y añadir más "neuronas" (unidades) no compensa la falta de contexto temporal.
 
 \subsubsection{CNN}
 
@@ -353,48 +355,46 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \resizebox{\textwidth}{!}{% <-- Ajusta al ancho del texto
     \begin{tabular}{|l|c|c|c|c|c|c|c|}
         \hline
-        \textbf{Perfil} & \textbf{time\_steps} & \textbf{n\_filters} & \textbf{kernel\_size} & \textbf{dense\_units} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \textbf{Perfil} & \textbf{n\_filters} & \textbf{kernel\_size} & \textbf{dense\_units} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
         \hline
-        Candidato 1 & 15 & 96 & 3 & 32 & 0.919338 & 0.932591 & 0.009589 \\
+        Candidato 1 & 64 & 5 & 48 & 0.773052 & 0.793045 & 0.00888 \\
         \hline
-        Candidato 2 & 15 & 32 & 4 & 96 & 0.907723 & 0.923553 & 0.009057 \\
+        Candidato 2 & 128 & 5 & 64 & 0.761881 & 0.784118 & 0.009398 \\
         \hline
-        Candidato 3 & 12 & 96 & 3 & 80 & 0.905609 & 0.921806 & 0.009613 \\
+        Candidato 3 & 96 & 2 & 96 & 0.749724 & 0.77445 & 0.008625 \\
         \hline
-        Candidato 4 & 7 & 64 & 4 & 80 & 0.897475 & 0.915069 & 0.008658 \\
+        Candidato 4 & 32 & 5 & 16 & 0.738305 & 0.76551 & 0.008725 \\
         \hline
-        Candidato 5 & 9 & 64 & 3 & 64 & 0.892452 & 0.912091 & 0.008549 \\
-        \hline
-    \end{tabular}% <-- Importante cerrar la llave aquí
+    \end{tabular}
     }
     \caption{Comparativa final de modelos CNN en el set de test}
     \label{tab:cnn_comparison}
 \end{table}
 
-El \textbf{Candidato 1} es el modelo ganador, con un F1-Score de 0.9193 y una latencia de inferencia de 0.009589 ms.
+El \textbf{Candidato 1} es el modelo ganador, con un F1-Score de 0.773052 y una latencia de inferencia de 0.00888 ms.
 Aunque su rendimiento es excelente, su latencia es significativamente mayor que la de los modelos basados en árboles, lo que podría limitar su aplicabilidad en entornos de producción donde la velocidad de detección es crítica.
 
 \subsubsection{Comparativa Modelos con Dataset UNSW-NB15}
 
 No solo hemos comparado los modelos a través de su F1-Score y latencia, sino que también hemos realizado una evaluación global de su rendimiento en términos de latencia, throughput, uso de CPU y RAM. Para calcular las métricas de rendimiento, hemos usado los siguientes conceptos:
 
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabular}{|p{2.5cm}|p{4.5cm}|p{5cm}|}
-        \hline
-        \textbf{Métrica} & \textbf{Descripción} & \textbf{Metodología} \\
-        \hline
-        \textbf{Tiempo de Muro} & Tiempo físico y real que transcurre desde el inicio hasta la finalización. Métrica definitiva de la latencia percibida por el usuario o la red. Independientemente de cuántos núcleos trabaje el servidor, es el tiempo exacto que un paquete debe esperar para ser clasificado. & Obtenido utilizando \texttt{time.perf\_counter()}, que proporciona el reloj de mayor resolución disponible en el hardware, inmune a actualizaciones automáticas de la hora del sistema. \\
-        \hline
-        \textbf{Tiempo de CPU} & Suma total del tiempo que la Unidad Central de Procesamiento ejecuta activamente instrucciones. Acumula el esfuerzo de \textbf{todos los hilos simultáneamente}. Si el Tiempo de Muro es 1 segundo pero Tiempo de CPU es 95 segundos, indica que 95 hilos lógicos trabajaron en paralelo a máxima capacidad. & Obtenido mediante \texttt{psutil.Process().cpu\_times()}, sumando tiempo de usuario y llamadas al sistema. Se calcula la diferencia (delta) entre inicio y fin del lote. \\
-        \hline
-        \textbf{Pico de RAM} & Porción de memoria física (RAM) asignada de manera exclusiva al proceso y residente activamente en memoria. Algoritmos como CNN generan tensores intermedios masivos que requieren picos muy elevados, pudiendo inviabilizar despliegue en hardware de frontera con memoria limitada. & Sondeo iterativo mediante \texttt{psutil.Process().memory\_info().rss}. Se captura la memoria base antes de comenzar y se resta al valor máximo registrado durante procesamiento de lotes. \\
-        \hline
-    \end{tabular}
-    \caption{Definición técnica de métricas de monitoreo de recursos}
-    \label{tab:metricas_monitoreo}
-\end{table}
+% \begin{table}[H]
+%     \centering
+%     \small
+%     \begin{tabular}{|p{2.5cm}|p{4.5cm}|p{5cm}|}
+%         \hline
+%         \textbf{Métrica} & \textbf{Descripción} & \textbf{Metodología} \\
+%         \hline
+%         \textbf{Tiempo de Muro} & Tiempo físico y real que transcurre desde el inicio hasta la finalización. Métrica definitiva de la latencia percibida por el usuario o la red. Independientemente de cuántos núcleos trabaje el servidor, es el tiempo exacto que un paquete debe esperar para ser clasificado. & Obtenido utilizando \texttt{time.perf\_counter()}, que proporciona el reloj de mayor resolución disponible en el hardware, inmune a actualizaciones automáticas de la hora del sistema. \\
+%         \hline
+%         \textbf{Tiempo de CPU} & Suma total del tiempo que la Unidad Central de Procesamiento ejecuta activamente instrucciones. Acumula el esfuerzo de \textbf{todos los hilos simultáneamente}. Si el Tiempo de Muro es 1 segundo pero Tiempo de CPU es 95 segundos, indica que 95 hilos lógicos trabajaron en paralelo a máxima capacidad. & Obtenido mediante \texttt{psutil.Process().cpu\_times()}, sumando tiempo de usuario y llamadas al sistema. Se calcula la diferencia (delta) entre inicio y fin del lote. \\
+%         \hline
+%         \textbf{Pico de RAM} & Porción de memoria física (RAM) asignada de manera exclusiva al proceso y residente activamente en memoria. Algoritmos como CNN generan tensores intermedios masivos que requieren picos muy elevados, pudiendo inviabilizar despliegue en hardware de frontera con memoria limitada. & Sondeo iterativo mediante \texttt{psutil.Process().memory\_info().rss}. Se captura la memoria base antes de comenzar y se resta al valor máximo registrado durante procesamiento de lotes. \\
+%         \hline
+%     \end{tabular}
+%     \caption{Definición técnica de métricas de monitoreo de recursos}
+%     \label{tab:metricas_monitoreo}
+% \end{table}
 
 
 \begin{table}[H]
@@ -410,11 +410,7 @@ No solo hemos comparado los modelos a través de su F1-Score y latencia, sino qu
         \hline
         \textbf{Throughput (paq/s)} & Caudal de procesamiento. Representa el volumen de tráfico (paquetes por segundo) que el modelo puede soportar sin cuellos de botella. & Dividiendo el número total de paquetes del conjunto de test entre el tiempo físico total (Wall Time en segundos). \\
         \hline
-        \textbf{Núcleos CPU} & Nivel de concurrencia y paralelismo. Representa la cantidad de hilos simultáneos que el modelo ha instanciado a nivel del sistema operativo. & Dividiendo el Tiempo Total de CPU (obtenido vía \texttt{psutil}) entre el tiempo físico real transcurrido (Wall Time). \\
-        \hline
         \textbf{Pico RAM (MB)} & Huella máxima de memoria volátil. Representa la cantidad de memoria física extra que el sistema operativo cedió al proceso durante la predicción. & Monitorizando el proceso con \texttt{psutil.memory\_info().rss}, restando la memoria base al pico máximo alcanzado. \\
-        \hline
-        \textbf{Porcentaje CPU (\%)} & Carga computacional global. Representa qué porcentaje de la capacidad total del hardware está siendo utilizado por el IDS. & Dividiendo los Núcleos CPU utilizados entre el número total de hilos lógicos disponibles en el servidor. \\
         \hline
     \end{tabular}
     \caption{Definición de métricas de evaluación de rendimiento}
@@ -423,25 +419,30 @@ No solo hemos comparado los modelos a través de su F1-Score y latencia, sino qu
 
 Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
-\begin{table}[h]
-\centering
-\small
-\caption{Tabla global de rendimiento de hardware}
-\label{tab:hardware_benchmark_global}
-\begin{tabular}{lrrrrr}
-\toprule
-Modelo & Latencia (ms) & Troughput (paq/s) & Núcleos CPU & Pico RAM (MB) & Porcentaje CPU (\%) \\
-\midrule
-Linear SVM     & 0.00014 & $7.18206 \times 10^{6}$ & 1.2  & 0.00   & 1.2   \\
-LightGBM       & 0.00064 & $1.574704 \times 10^{6}$ & 95.3 & 0.02   & 99.3  \\
-XGBoost        & 0.00066 & $1.522112 \times 10^{6}$ & 96.8 & 0.00   & 100.8 \\
-CatBoost       & 0.00150 & 664638                      & 48.3 & 0.20   & 50.3  \\
-Random Forest  & 0.00893 & 112034                      & 1.5  & 7.18   & 1.6   \\
-TensorFlow MLP & 0.02541 & 39352                       & 1.4  & 6.08   & 1.5   \\
-CNN-1D         & 0.05279 & 18943                       & 2.0  & 189.15 & 2.1   \\
-LSTM           & 0.05521 & 18113                       & 1.5  & 7.91   & 1.6   \\
-\bottomrule
-\end{tabular}
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Modelo} & \textbf{Latencia (ms)} & \textbf{Throughput (paq/s)} & \textbf{Incremento RAM (MB)} & \textbf{CPU Efectiva (\%)} & \textbf{F1-Score} \\
+        \hline
+        Linear SVM & 0.00014 & $7.315991 \times 10^{6}$ & 0.09 & 0.9 & 0.7092 \\
+        \hline
+        LightGBM & 0.00064 & $1.551954 \times 10^{6}$ & 0.13 & 100.5 & 0.8592 \\
+        \hline
+        XGBoost & 0.00067 & $1.492419 \times 10^{6}$ & 0.0 & 101.5 & 0.8579 \\
+        \hline
+        CatBoost & 0.00156 & 641453.0 & 1.0 & 50.1 & 0.8570 \\
+        \hline
+        Random Forest & 0.00889 & 112423.0 & 9.04 & 1.6 & 0.8606 \\
+        \hline
+        TensorFlow MLP & 0.02443 & 40930.0 & 13.14 & 1.5 & 0.7862 \\
+        \hline
+        CNN-1D & 0.04931 & 20281.0 & 45.61 & 1.7 & 0.7665 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa global de rendimiento de modelos - UNSW-NB15}
+    \label{tab:hardware_benchmark_global}
 \end{table}
 
 
@@ -507,12 +508,12 @@ Las matrices de confusión de cada modelo se muestran a continuación:
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/MC/MC_LSTM.png}
-        \caption{MC - LSTM}
-        \label{fig:mc_lstm}
-    \end{minipage}
+    % \begin{minipage}{0.48\textwidth}
+    %     \centering
+    %     \includegraphics[width=\textwidth]{images/MC/MC_LSTM.png}
+    %     \caption{MC - LSTM}
+    %     \label{fig:mc_lstm}
+    % \end{minipage}
     \hfill
     \begin{minipage}{0.48\textwidth}
         \centering
@@ -521,6 +522,32 @@ Las matrices de confusión de cada modelo se muestran a continuación:
         \label{fig:mc_cnn}
     \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|l|p{8.5cm}|}
+        \hline
+        \textbf{Modelo} & \textbf{Hiperparámetros ganadores (UNSW-NB15)} \\
+        \hline
+        Random Forest & n\_estimators = 50, max\_depth = 23 \\
+        \hline
+        XGBoost & n\_estimators = 200, max\_depth = 11 \\
+        \hline
+        LightGBM & n\_estimators = 100, num\_leaves = 145, max\_depth = 12 \\
+        \hline
+        CatBoost & n\_estimators = 500, max\_depth = 10 \\
+        \hline
+        SVM & C = 0.000187 \\
+        \hline
+        MLP & n\_layers = 3, unidades = [96, 32, 64] \\
+        \hline
+        CNN-1D & n\_filters = 64, kernel\_size = 5, dense\_units = 48 \\
+        \hline
+    \end{tabular}
+    \caption{Hiperparámetros ganadores de los modelos evaluados con UNSW-NB15}
+    \label{tab:unsw_best_hyperparams}
+\end{table}
 
 \subsection{Modelos entrenados con IOT-23}
 
@@ -549,7 +576,7 @@ Hemos visto cómo reaccionan en test los modelos con los siguientes hiperparáme
 
 Los resultados son los siguientes:
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|}
         \hline
@@ -591,7 +618,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \item (150, 12)
 \end{enumerate}
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|}
         \hline
@@ -637,7 +664,7 @@ Para este modelo, se han seleccionado los siguientes puntos de la frontera de Pa
 
 Los resultados obtenidos en el set de test son los siguientes:
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|c|}
         \hline
@@ -682,7 +709,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \item (350, 10) 
 \end{enumerate}
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|}
         \hline
@@ -728,7 +755,7 @@ Se han seleccionado los siguientes puntos de la frontera de Pareto para su evalu
 
 Los resultados obtenidos en el set de test para los modelos seleccionados de la frontera de Pareto son los siguientes:
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|}
         \hline
@@ -771,7 +798,7 @@ La combinación de hiperparámetros seleccionada para su evaluación en el set d
 
 Los resultados obtenidos en el set de test para los modelos seleccionados de la frontera de Pareto son los siguientes:
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{
     \begin{tabular}{|l|c|c|c|c|c|c|c|}
@@ -818,7 +845,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \item (128, 5, 64) 
 \end{enumerate} 
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c|c|c|c|}
         \hline
@@ -838,3 +865,139 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
 \end{table}
 
 En este caso, el \textbf{Candidato 3} es el modelo más eficiente, con un F1-Score de 0.995359 y una latencia de inferencia de 0.00892 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.
+
+\subsubsection{Comparativa Modelos con Dataset IOT-23}
+
+Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Modelo} & \textbf{Latencia (ms)} & \textbf{Throughput (paq/s)} & \textbf{Incremento RAM (MB)} & \textbf{CPU Efectiva (\%)} & \textbf{F1-Score} \\
+        \hline
+        Linear SVM & 0.00018 & $5.684672 \times 10^{6}$ & 2.01 & 1.1 & 0.955 \\
+        \hline
+        LightGBM & 0.00047 & $2.144772 \times 10^{6}$ & 0.11 & 100.6 & 0.9998 \\
+        \hline
+        XGBoost & 0.00584 & 171225 & 0.31 & 96.2 & 0.9991 \\
+        \hline
+        CatBoost & 0.00102 & 982856 & 0.02 & 69.2 & 0.9999 \\
+        \hline
+        Random Forest & 0.00892 & 112103 & 13.39 & 1.4 & 0.9997 \\
+        \hline
+        TensorFlow MLP & 0.02377 & 42079 & 0.72 & 1.5 & 0.9956 \\
+        \hline
+        CNN-1D & 0.04959 & 20153 & 8.25 & 1.8 & 0.9952 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa global de rendimiento de modelos - IOT-23}
+    \label{tab:hardware_benchmark_global_iot23}
+\end{table}
+
+La curva ROC de los modelos evaluados con el dataset IOT-23 es la siguiente:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/IOT/ROC_MODELOS.png}
+    \caption{Curva ROC - Modelos (IOT-23)}
+    \label{fig:roc_modelos_iot}
+\end{figure}
+
+Las matrices de confusión de cada modelo se muestran a continuación:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/IOT/MC/MC_RF_IOT.png}
+        \caption{MC - Random Forest (IOT-23)}
+        \label{fig:mc_rf_iot}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/IOT/MC/MC_XGBOOST_IOT.png}
+        \caption{MC - XGBoost (IOT-23)}
+        \label{fig:mc_xgboost_iot}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/IOT/MC/MC_LIGHTGBM_IOT.png}
+        \caption{MC - LightGBM (IOT-23)}
+        \label{fig:mc_lightgbm_iot}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/IOT/MC/MC_CATBOOST_IOT.png}
+        \caption{MC - CatBoost (IOT-23)}
+        \label{fig:mc_catboost_iot}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/IOT/MC/MC_SVM_IOT.png}
+        \caption{MC - SVM (IOT-23)}
+        \label{fig:mc_svm_iot}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/IOT/MC/MC_MLP_IOT.png}
+        \caption{MC - MLP (IOT-23)}
+        \label{fig:mc_mlp_iot}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % \begin{minipage}{0.48\textwidth}
+    %     \centering
+    %     \includegraphics[width=\textwidth]{images/IOT/MC/MC_LSTM_IOT.png}
+    %     \caption{MC - LSTM (IOT-23)}
+    %     \label{fig:mc_lstm_iot}
+    % \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/IOT/MC/MC_CNN_IOT.png}
+        \caption{MC - CNN (IOT-23)}
+        \label{fig:mc_cnn_iot}
+    \end{minipage}
+\end{figure}
+
+La tabla de los mejores hiperparámetros obtenidos para cada modelo con el dataset IOT-23 es la siguiente:
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|l|p{8.5cm}|}
+        \hline
+        \textbf{Modelo} & \textbf{Hiperparámetros ganadores (IOT-23)} \\
+        \hline
+        Random Forest & n\_estimators = 50, max\_depth = 21 \\
+        \hline
+        XGBoost & n\_estimators = 50, max\_depth = 8 \\
+        \hline
+        LightGBM & n\_estimators = 50, num\_leaves = 15, max\_depth = 6 \\
+        \hline
+        CatBoost & n\_estimators = 100, max\_depth = 8 \\
+        \hline
+        SVM & C = 0.801714 \\
+        \hline
+        MLP & n\_layers = 3, unidades = [32, 48, 48] \\
+        \hline
+        CNN-1D & n\_filters = 64, kernel\_size = 4, dense\_units = 80 \\
+        \hline
+    \end{tabular}
+    \caption{Hiperparámetros ganadores de los modelos evaluados con IOT-23}
+    \label{tab:iot_best_hyperparams}
+\end{table}

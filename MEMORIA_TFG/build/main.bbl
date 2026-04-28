@@ -17,6 +17,51 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
+  \entry{akiba2019optuna}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=AT}{%
+         family={Akiba},
+         familyi={A\bibinitperiod},
+         given={Takuya},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sano},
+         familyi={S\bibinitperiod},
+         given={Shotaro},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=YT}{%
+         family={Yanase},
+         familyi={Y\bibinitperiod},
+         given={Toshihiko},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=OT}{%
+         family={Ohta},
+         familyi={O\bibinitperiod},
+         given={Takeru},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Koyama},
+         familyi={K\bibinitperiod},
+         given={Masanori},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AT+1}
+    \strng{fullhash}{ATSSYTOTKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{booktitle}{The 25th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining}
+    \field{pages}{2623\bibrangedash 2631}
+    \field{title}{{O}ptuna: A Next-Generation Hyperparameter Optimization Framework}
+    \field{year}{2019}
+  \endentry
+
   \entry{alharthi2025comparative}{article}{}
     \name{author}{3}{}{%
       {{hash=AA}{%
