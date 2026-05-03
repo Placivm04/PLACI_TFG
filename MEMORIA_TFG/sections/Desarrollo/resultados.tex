@@ -1001,3 +1001,480 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el datas
     \caption{Hiperparámetros ganadores de los modelos evaluados con IOT-23}
     \label{tab:iot_best_hyperparams}
 \end{table}
+
+\subsection{Modelos entrenados con ToN-IoT}
+
+Una de las sospechas de los grandísimos resultados obtenidos con el dataset IOT-23 es que este dataset es que la mayoría de muestras de ataque son de escaneos horizontales de puertos, lo que hace que el modelo pueda aprender a detectar ataques simplemente con la información de los puertos, sin necesidad de aprender patrones más complejos. Para comprobar esta hipótesis, se ha entrenado el mismo proceso de entrenamiento y benchmarking con el dataset ToN-IoT, que es un dataset de IoT con una mayor variedad de ataques y características.
+
+\subsubsection{Random Forest}
+
+La frontera de Pareto obtenida para Random Forest con el dataset ToN-IoT es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TON/PARETO_RF_TON.png}
+    \caption{Frontera de Pareto - Random Forest (ToN-IoT)}
+    \label{fig:pareto_rf_ton}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+\begin{enumerate}
+    \item (50, 13) 
+    \item (50, 18) 
+    \item (150, 18) 
+    \item (200, 21)
+    \item (300, 20)
+    \item (450, 20)
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 50 & 13 & 0.995912 & 0.997039 & 0.001468 \\
+        \hline
+        Candidato 2 & 50 & 18 & 0.996434 & 0.997418 & 0.001459 \\
+        \hline
+        Candidato 3 & 150 & 18 & 0.996369 & 0.99737 & 0.002886 \\
+        \hline
+        Candidato 4 & 200 & 21 & 0.996598 & 0.997536 & 0.004955 \\
+        \hline
+        Candidato 5 & 300 & 20 & 0.996271 & 0.997299 & 0.004452 \\
+        \hline
+        Candidato 6 & 450 & 20 & 0.996369 & 0.99737 & 0.00759 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos Random Forest en el set de test (ToN-IoT)}
+    \label{tab:rf_comparison_ton}
+\end{table}
+
+El \textbf{Candidato 2} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional.
+
+\subsubsection{XGBoost}
+
+La frontera de Pareto obtenida para XGBoost con el dataset ToN-IoT es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TON/PARETO_XGBOOST_TON.png}
+    \caption{Frontera de Pareto - XGBoost (ToN-IoT)}
+    \label{fig:pareto_xgboost_ton}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+
+\begin{enumerate}
+    \item (50, 4) 
+    \item (50, 5) 
+    \item (50, 7) 
+    \item (50, 12) 
+    \item (150, 7) 
+    \item (150, 11) 
+    \item (350, 6)
+    \item (550, 6)
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 50 & 4 & 0.995979 & 0.993864 & 0.00005 \\
+        \hline
+        Candidato 2 & 50 & 5 & 0.99713 & 0.995617 & 0.000039 \\
+        \hline
+        Candidato 3 & 50 & 7 & 0.997734 & 0.996541 & 0.000042 \\
+        \hline
+        Candidato 4 & 50 & 12 & 0.998168 & 0.997204 & 0.000071 \\
+        \hline
+        Candidato 5 & 150 & 7 & 0.998231 & 0.997299 & 0.000071 \\
+        \hline
+        Candidato 6 & 150 & 11 & 0.998246 & 0.997323 & 0.000096 \\
+        \hline
+        Candidato 7 & 350 & 6 & 0.998261 & 0.997347 & 0.000116 \\
+        \hline
+        Candidato 8 & 550 & 6 & 0.99823 & 0.997299 & 0.000167 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos XGBoost en el set de test (ToN-IoT)}
+    \label{tab:xgboost_comparison_ton}
+\end{table}
+
+Vamos a seleccionar al \textbf{Candidato 3} ya que representa un compromiso perfecto entre capacidad de detección y coste computacional, con un F1-Score de 0.997734 y una latencia de inferencia de 0.000042 ms.
+
+\subsubsection{LightGBM}
+
+La frontera de Pareto obtenida para LightGBM con el dataset ToN-IoT es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TON/PARETO_LIGHTGBM_TON.png}
+    \caption{Frontera de Pareto - LightGBM (ToN-IoT)}
+    \label{fig:pareto_lightgbm_ton}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+
+\begin{enumerate}
+    \item (50, 127, 5) 
+    \item (50, 113, 8) 
+    \item (50, 117, 10) 
+    \item (100, 210, 7) 
+    \item (100, 238, 10) 
+    \item (100, 233, 11)
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{num\_leaves} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 50 & 127 & 5 & 0.99456 & 0.996067 & 0.00011 \\
+        \hline
+        Candidato 2 & 50 & 113 & 8 & 0.996134 & 0.997204 & 0.000113 \\
+        \hline
+        Candidato 3 & 50 & 117 & 10 & 0.996299 & 0.997323 & 0.000298 \\
+        \hline
+        Candidato 4 & 100 & 210 & 7 & 0.996594 & 0.997536 & 0.000181 \\
+        \hline
+        Candidato 5 & 100 & 238 & 10 & 0.996955 & 0.997797 & 0.000191 \\
+        \hline
+        Candidato 6 & 100 & 233 & 11 & 0.997085 & 0.997891 & 0.000202 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos LightGBM en el set de test (ToN-IoT)}
+    \label{tab:lightgbm_comparison_ton}
+\end{table}
+
+Nos quedamos con el \textbf{Candidato 6} que ofrece un excelente rendimiento (F1-Score de 0.997085) y una latencia de inferencia de 0.000202 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.
+
+\subsubsection{CatBoost}
+
+Para CatBoost, la frontera de Pareto obtenida con el dataset ToN-IoT es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TON/PARETO_CATBOOST_TON.png}
+    \caption{Frontera de Pareto - CatBoost (ToN-IoT)}
+    \label{fig:pareto_catboost_ton}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+
+\begin{enumerate}
+    \item (50, 3) 
+    \item (150, 3) 
+    \item (150, 7) 
+    \item (250, 9) 
+    \item (400, 8) 
+    \item (450, 8) 
+    \item (550, 10) 
+    \item (600, 7) 
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_estimators} & \textbf{max\_depth} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 50 & 3 & 0.98919 & 0.992205 & 0.000274 \\
+        \hline
+        Candidato 2 & 150 & 3 & 0.992427 & 0.994527 & 0.00031 \\
+        \hline
+        Candidato 3 & 150 & 7 & 0.995842 & 0.996991 & 0.00033 \\
+        \hline
+        Candidato 4 & 250 & 9 & 0.996628 & 0.99756 & 0.000354 \\
+        \hline
+        Candidato 5 & 400 & 8 & 0.996726 & 0.997631 & 0.000456 \\
+        \hline
+        Candidato 6 & 450 & 8 & 0.996758 & 0.997655 & 0.00057 \\
+        \hline
+        Candidato 7 & 550 & 10 & 0.996759 & 0.997655 & 0.000461 \\
+        \hline
+        Candidato 8 & 600 & 7 & 0.996792 & 0.997678 & 0.000419 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos CatBoost en el set de test (ToN-IoT)}
+    \label{tab:catboost_comparison_ton}
+\end{table}
+
+El \textbf{Candidato 4} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional, con un F1-Score de 0.996628 y una latencia de inferencia de 0.000354 ms.
+
+\subsubsection{SVM}
+
+La frontera de Pareto obtenida para SVM con el dataset ToN-IoT es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TON/PARETO_SVM_TON.png}
+    \caption{Frontera de Pareto - SVM (ToN-IoT)}
+    \label{fig:pareto_svm_ton}
+\end{figure}
+
+Los candidatos seleccionados de la frontera de Pareto son:
+
+\begin{enumerate}
+    \item (0.024697) 
+    \item (0.977892) 
+    \item (0.326653) 
+    \item (2.870875) 
+    \item (2.552291) 
+    \item (36.274336) 
+\end{enumerate}
+
+Los resultados obtenidos en el set de test para los modelos seleccionados de la frontera de Pareto son los siguientes:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{C} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 0.024697 & 0.897624 & 0.926603 & 0.000027 \\
+        \hline
+        Candidato 2 & 0.977892 & 0.897712 & 0.926674 & 0.000051 \\
+        \hline
+        Candidato 3 & 0.326653 & 0.897712 & 0.926674 & 0.000029 \\
+        \hline
+        Candidato 4 & 2.870875 & 0.897815 & 0.926745 & 0.000031 \\
+        \hline
+        Candidato 5 & 2.552291 & 0.897712 & 0.926674 & 0.000047 \\
+        \hline
+        Candidato 6 & 36.274336 & 0.897785 & 0.926722 & 0.000029 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos SVM en el set de test (ToN-IoT)}
+    \label{tab:svm_comparison_ton}
+\end{table}
+
+El \textbf{Candidato 4} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional, con un F1-Score de 0.897815 y una latencia de inferencia de 0.000031 ms, lo que lo posiciona como un modelo bastante bueno para este dataset de IoT, aunque su rendimiento es significativamente inferior al de los modelos basados en árboles.
+
+\subsubsection{Multilayer Perceptron (MLP)}
+
+La frontera de Pareto obtenida para MLP con el dataset ToN-IoT es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TON/PARETO_MLP_TON.png}
+    \caption{Frontera de Pareto - MLP (ToN-IoT)}
+    \label{fig:pareto_mlp_ton}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+
+\begin{enumerate}
+    \item (2, 32, 80, 0) 
+    \item (2, 64, 80, 0) 
+    \item (2, 32, 128, 0) 
+    \item (3, 64, 16, 64) 
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_layers} & \textbf{n\_units\_l0} & \textbf{n\_units\_l1} & \textbf{n\_units\_l2} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 2 & 32 & 80 & 0 & 0.961973 & 0.9733 & 0.002257 \\
+        \hline
+        Candidato 2 & 2 & 64 & 80 & 0 & 0.962048 & 0.973418 & 0.002328 \\
+        \hline
+        Candidato 3 & 2 & 32 & 128 & 0 & 0.96124 & 0.972873 & 0.00237 \\
+        \hline
+        Candidato 4 & 3 & 64 & 16 & 64 & 0.963034 & 0.97401 & 0.002268 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos MLP en el set de test (ToN-IoT)}
+    \label{tab:mlp_comparison_ton}
+\end{table}
+
+El \textbf{Candidato 4} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional, con un F1-Score de 0.963034 y una latencia de inferencia de 0.002268 ms, lo que lo posiciona como un modelo bastante bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.
+
+\subsubsection{CNN-1D}
+
+La frontera de Pareto obtenida para CNN-1D con el dataset ToN-IoT es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TON/PARETO_CNN_TON.png}
+    \caption{Frontera de Pareto - CNN-1D (ToN-IoT)}
+    \label{fig:pareto_cnn_ton}
+\end{figure}
+
+Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de test son los siguientes:
+
+\begin{enumerate}
+    \item (32, 4, 64) 
+    \item (32, 4, 80) 
+    \item (96, 4, 80) 
+    \item (64, 5, 64) 
+    \item (96, 5, 96) 
+    \item (128, 5, 96) 
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Perfil} & \textbf{n\_filters} & \textbf{kernel\_size} & \textbf{dense\_units} & \textbf{F1\_Test} & \textbf{Accuracy\_Test} & \textbf{Latencia (ms)} \\
+        \hline
+        Candidato 1 & 32 & 4 & 64 & 0.977894 & 0.96586 & 0.008596 \\
+        \hline
+        Candidato 2 & 32 & 4 & 80 & 0.974993 & 0.96124 & 0.009421 \\
+        \hline
+        Candidato 3 & 96 & 4 & 80 & 0.978447 & 0.966737 & 0.009012 \\
+        \hline
+        Candidato 4 & 64 & 5 & 64 & 0.981183 & 0.970836 & 0.009133 \\
+        \hline
+        Candidato 5 & 96 & 5 & 96 & 0.981769 & 0.97176 & 0.008953 \\
+        \hline
+        Candidato 6 & 128 & 5 & 96 & 0.981696 & 0.971641 & 0.009564 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa final de modelos CNN-1D en el set de test (ToN-IoT)}
+    \label{tab:cnn_comparison_ton}
+\end{table}
+
+El ganador es el \textbf{Candidato 5} que ofrece el rendimiento más alto (F1-Score de 0.981769) y una latencia de inferencia de 0.008953 ms.
+
+\subsubsection{Comparativa Modelos con Dataset ToN-IoT}
+
+Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Modelo} & \textbf{Latencia (ms)} & \textbf{Throughput (paq/s)} & \textbf{Incremento RAM (MB)} & \textbf{CPU Efectiva (\%)} & \textbf{F1-Score} \\
+        \hline
+        Linear SVM & 0.00019 & $5.185815 \times 10^{6}$ & 0.02 & 1.3 & 0.9522 \\
+        \hline
+        LightGBM & 0.0003 & $3.333129 \times 10^{6}$ & 0.0 & 105.3 & 0.9977 \\
+        \hline
+        XGBoost & 0.00065 & $1.536528 \times 10^{6}$ & 0.2 & 101.8 & 0.9986 \\
+        \hline
+        CatBoost & 0.00129 & 773537.0 & 0.03 & 57.3 & 0.9985 \\
+        \hline
+        Random Forest & 0.00886 & 112889.0 & 8.04 & 1.5 & 0.9983 \\
+        \hline
+        TensorFlow MLP & 0.02633 & 37985.0 & 1.92 & 1.5 & 0.9829 \\
+        \hline
+        CNN-1D & 0.0531 & 18831.0 & 89.74 & 2.4 & 0.9826 \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa global de rendimiento de modelos - IOT-23}
+    \label{tab:hardware_benchmark_global_ton}
+\end{table}
+
+La curva ROC de los modelos evaluados con el dataset ToN-IoT es la siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TON/ROC_MODELOS_TON.png}
+    \caption{Curva ROC - Modelos (ToN-IoT)}
+    \label{fig:roc_modelos_ton}
+\end{figure}
+
+Las matrices de confusión de cada modelo se muestran a continuación:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/TON/MC/MC_RF_TON.png}
+        \caption{MC - Random Forest (ToN-IoT)}
+        \label{fig:mc_rf_ton}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/TON/MC/MC_XGBOOST_TON.png}
+        \caption{MC - XGBoost (ToN-IoT)}
+        \label{fig:mc_xgboost_ton}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/TON/MC/MC_LIGHTGBM_TON.png}
+        \caption{MC - LightGBM (ToN-IoT)}
+        \label{fig:mc_lightgbm_ton}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/TON/MC/MC_CATBOOST_TON.png}
+        \caption{MC - CatBoost (ToN-IoT)}
+        \label{fig:mc_catboost_ton}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/TON/MC/MC_SVM_TON.png}
+        \caption{MC - SVM (ToN-IoT)}
+        \label{fig:mc_svm_ton}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/TON/MC/MC_MLP_TON.png}
+        \caption{MC - MLP (ToN-IoT)}
+        \label{fig:mc_mlp_ton}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % \begin{minipage}{0.48\textwidth}
+    %     \centering
+    %     \includegraphics[width=\textwidth]{images/TON/MC/MC_LSTM_TON.png}
+    %     \caption{MC - LSTM (ToN-IoT)}
+    %     \label{fig:mc_lstm_ton}
+    % \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/TON/MC/MC_CNN_TON.png}
+        \caption{MC - CNN (ToN-IoT)}
+        \label{fig:mc_cnn_ton}
+    \end{minipage}
+\end{figure}
+
+La tabla de los mejores hiperparámetros obtenidos para cada modelo con el dataset ToN-IoT es la siguiente:
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|l|p{8.5cm}|}
+        \hline
+        \textbf{Modelo} & \textbf{Hiperparámetros ganadores (ToN-IoT)} \\
+        \hline
+        Random Forest & n\_estimators = 50, max\_depth = 18 \\
+        \hline
+        XGBoost & n\_estimators = 50, max\_depth = 7 \\
+        \hline
+        LightGBM & n\_estimators = 100, num\_leaves = 233, max\_depth = 11 \\
+        \hline
+        CatBoost & n\_estimators = 250, max\_depth = 9 \\
+        \hline
+        SVM & C = 2.870875 \\
+        \hline
+        MLP & n\_layers = 3, unidades = [64, 16, 64] \\
+        \hline
+        CNN-1D & n\_filters = 96, kernel\_size = 5, dense\_units = 96 \\
+        \hline
+    \end{tabular}
+    \caption{Hiperparámetros ganadores de los modelos evaluados con ToN-IoT}
+    \label{tab:ton_best_hyperparams}
+\end{table}

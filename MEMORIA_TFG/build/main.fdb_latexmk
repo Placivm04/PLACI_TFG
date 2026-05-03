@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/main"] 1777406118.75564 "build/main.aux" "build/main.bbl" "build/main" 1777406124.2192 0
+["bibtex build/main"] 1777837864.23681 "build/main.aux" "build/main.bbl" "build/main" 1777837870.40529 0
   "./sections/Referencias/references.bib" 1777403655.90813 6343 4e9c73644e03752eda92b6ccea565ffd ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1678141846 65484 b7949c47a88ed6dca66ebc7a04577312 ""
-  "build/main-blx.bib" 1777406121.2842 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
-  "build/main.aux" 1777406121.2802 37222 04b6fb8c1f327c3045142cc7f1bf178d "xelatex"
+  "build/main-blx.bib" 1777837866.68811 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
+  "build/main.aux" 1777837866.68311 46647 8950185d9a9f68335c63acb961a3c637 "xelatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1777406121.79669 "build/main.xdv" "build/main.pdf" "build/main" 1777406124.22173 0
-  "build/main.xdv" 1777406121.2852 964616 fe171ef4c18fb4a5a44af818908ff8f5 "xelatex"
+["xdvipdfmx"] 1777837867.28251 "build/main.xdv" "build/main.pdf" "build/main" 1777837870.40844 0
+  "build/main.xdv" 1777837866.68911 1120448 dbcd689e2bbf81013d34e9b1f74595cf "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1777406118.9057 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1777406124.2193 0
+["xelatex"] 1777837864.37417 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1777837870.40539 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1777406115.5542 5124 6bb2a352f427e21c52c64feb37ad8d69 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -218,14 +218,14 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1777406121.2802 37222 04b6fb8c1f327c3045142cc7f1bf178d "xelatex"
-  "build/main.bbl" 1777406118.8972 15156 941819b122c6894dd16feb3a4b4ec668 "bibtex build/main"
-  "build/main.lof" 1777406121.2852 4986 2afe4103b3dbe36d86998c3c4ebe6a50 "xelatex"
-  "build/main.lot" 1777406121.2852 4674 528c89bf30a1793bc967c8d71153354a "xelatex"
+  "build/main.aux" 1777837866.68311 46647 8950185d9a9f68335c63acb961a3c637 "xelatex"
+  "build/main.bbl" 1777837864.36711 15156 941819b122c6894dd16feb3a4b4ec668 "bibtex build/main"
+  "build/main.lof" 1777837866.68911 6645 b4d23ecff8a0d9f8a08ba7d28a40dd00 "xelatex"
+  "build/main.lot" 1777837866.68911 5948 d3531ba55796cea2a60abe7565d93697 "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1777406121.2822 3169 4de4a6db48fdce9a899ff06f782d24bb "xelatex"
-  "build/main.run.xml" 1777406121.2852 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
-  "build/main.toc" 1777406121.2852 6134 f7b0ebb73a1801f989c55fedf2b00861 "xelatex"
+  "build/main.out" 1777837866.68511 3390 31a8b66aef84dc04c5f6a46c1275a33a "xelatex"
+  "build/main.run.xml" 1777837866.68911 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
+  "build/main.toc" 1777837866.68911 6994 6dad98e857a05eca0aa7338929358165 "xelatex"
   "images/CNN_1D.jpg" 1770381111.25669 63724 af5e9cc56a21d1f084000e401b918e49 ""
   "images/IOT/MC/MC_CATBOOST_IOT.png" 1777404800.01917 23518 324dded8e6f454295ed3b024401f08e5 ""
   "images/IOT/MC/MC_CNN_IOT.png" 1777404800.02217 24017 e2250cc638c628df52faa7f46f81009b ""
@@ -258,6 +258,21 @@
   "images/PARETO_XGBOOST.png" 1774373767.88511 43114 880fbc9dbd48ac05d1863f8906278e83 ""
   "images/ROC_MODELOS.png" 1777400408.95504 106506 777aca7b6ec5c9dba7cf20fe5b8d2294 ""
   "images/SVM_margin.png" 1770377684.74159 281151 4d28ef4250dd7bdd0542da03f7ef621f ""
+  "images/TON/MC/MC_CATBOOST_TON.png" 1777837743.70411 23621 8e4434eba8ffe141c148435fe7aa975e ""
+  "images/TON/MC/MC_CNN_TON.png" 1777837743.72411 23540 44cf82340883586b6d60deeda786a441 ""
+  "images/TON/MC/MC_LIGHTGBM_TON.png" 1777837743.73811 23614 f5e6a83df2f8dbac3eb6c7b6bc4bbd91 ""
+  "images/TON/MC/MC_MLP_TON.png" 1777837743.75411 24206 76a9b5da85a1c533bbd2959d2b23d912 ""
+  "images/TON/MC/MC_RF_TON.png" 1777837743.77211 23856 72ade7adfcd9f75721743af711cfa35d ""
+  "images/TON/MC/MC_SVM_TON.png" 1777837743.79211 24086 cfd0f7d394f0734d6379a8c52c9de996 ""
+  "images/TON/MC/MC_XGBOOST_TON.png" 1777837743.81611 23540 bf818aba55a5d112db39ad2a7215c55d ""
+  "images/TON/PARETO_CATBOOST_TON.png" 1777830786.81491 47838 9525cde82f3ed0a7120540491c598279 ""
+  "images/TON/PARETO_CNN_TON.png" 1777830786.82191 47245 2ff34ab23a7efb67b1a86da17e9b0acf ""
+  "images/TON/PARETO_LIGHTGBM_TON.png" 1777830786.83391 52323 ef33470d32c634117a1d59160f42a03e ""
+  "images/TON/PARETO_MLP_TON.png" 1777830786.85091 46056 ca7f8f7e65647ddd07aae5dbf59b4886 ""
+  "images/TON/PARETO_RF_TON.png" 1777830786.86091 47578 b5e08939c5ad42405a5cb6ee2095fbce ""
+  "images/TON/PARETO_SVM_TON.png" 1777830786.87691 51066 a52525c9d71d3ffe167d5609fef9e601 ""
+  "images/TON/PARETO_XGBOOST_TON.png" 1777830786.90491 48139 70b083d1a183a721d08e10a3cc42c877 ""
+  "images/TON/ROC_MODELOS_TON.png" 1777837728.29811 79408 e64893517bfc313d469502eeea594b4b ""
   "images/canadian_institute_cybersecurity.jpeg" 1770204568.96013 5899 4736f6d9e7ac0a6d4b4581c000d78fb4 ""
   "images/catBoost.png" 1772563858.12193 5509 f3b803e110dc7c64e6a89fa30514e9c6 ""
   "images/lightGBM.png" 1772021323.00091 32185 d57588b142a069873a38781869acf964 ""
@@ -271,7 +286,7 @@
   "main.nls" 0 -1 0 ""
   "main.tex" 1777406115.5542 5124 6bb2a352f427e21c52c64feb37ad8d69 ""
   "sections/Desarrollo/optuna.tex" 1772196605.92137 1645 c6dd0986b6514c4389e8dbf2b9a5fab6 ""
-  "sections/Desarrollo/resultados.tex" 1777405980.2942 42352 d8a081f956ed72bc5c8400508ed9ed62 ""
+  "sections/Desarrollo/resultados.tex" 1777837859.99211 59966 ce2310f88991c9c23f850da011914eea ""
   "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1774175826.42457 5743 02ddab441c91fa80ff41ca8006b3b8e9 ""
   "sections/Estudio_del_arte/dataSets.tex" 1770312910.68361 21386 d196ee61ebc8faa93c310dbce481e4f2 ""
   "sections/Estudio_del_arte/investigacion_modelos.tex" 1772563898.31493 28052 99a96cd72b5a98f401d89da8f594f3f3 ""

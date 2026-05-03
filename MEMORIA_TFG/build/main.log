@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  28 APR 2026 21:55
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  3 MAY 2026 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1385,11 +1385,14 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [9] (build/main.lot)
+ [9] (build/main.lot [10
+
+])
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [10
+ [11] [12
+
 
 ]
 No file main.nls.
@@ -1403,34 +1406,32 @@ Overfull \hbox (7.17593pt too wide) in paragraph at lines 21--34
  [][] 
  []
 
-[11
-
-
+[13
 
 
 ]
 File: images/random_forest.png Graphic file (type bmp)
 <images/random_forest.png>
- [12]
+ [14]
 File: images/xg_boost.png Graphic file (type bmp)
 <images/xg_boost.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [15]
 File: images/lightgbm.png Graphic file (type bmp)
 <images/lightgbm.png>
- [14]
+ [16]
 File: images/catBoost.png Graphic file (type bmp)
 <images/catBoost.png>
- [15] [16]
+ [17] [18]
 Overfull \hbox (56.36394pt too wide) in paragraph at lines 169--180
  [][] 
  []
 
 File: images/SVM_margin.png Graphic file (type bmp)
 <images/SVM_margin.png>
-[17]
+[19]
 Overfull \hbox (25.87195pt too wide) in paragraph at lines 209--223
  [][] 
  []
@@ -1440,48 +1441,48 @@ File: images/mlp.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
+ [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [21]
 Overfull \hbox (28.54793pt too wide) in paragraph at lines 246--261
  [][] 
  []
 
 File: images/lstm.jpg Graphic file (type bmp)
 <images/lstm.jpg>
-[20]
+[22]
 Overfull \hbox (35.72392pt too wide) in paragraph at lines 283--297
  [][] 
  []
 
 File: images/CNN_1D.jpg Graphic file (type bmp)
 <images/CNN_1D.jpg>
-) (./sections/Estudio_del_arte/dataSets.tex [21] [22] [23]
+) (./sections/Estudio_del_arte/dataSets.tex [23] [24] [25]
 File: images/canadian_institute_cybersecurity.jpeg Graphic file (type bmp)
 <images/canadian_institute_cybersecurity.jpeg>
- [24]
+ [26]
 File: images/university_of_new_south_wales.jpeg Graphic file (type bmp)
 <images/university_of_new_south_wales.jpeg>
- [25]
+ [27]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [26] [27]
+ [28] [29]
 File: images/stratosphere_laboratory_CTU.png Graphic file (type bmp)
 <images/stratosphere_laboratory_CTU.png>
- [28]) (./sections/Desarrollo/seleccion_de_hiperparametros.tex [29] [30] [31]) (./sections/Desarrollo/optuna.tex
+ [30]) (./sections/Desarrollo/seleccion_de_hiperparametros.tex [31] [32] [33]) (./sections/Desarrollo/optuna.tex
 File: images/OPTUNA.png Graphic file (type bmp)
 <images/OPTUNA.png>
-) (./sections/Desarrollo/resultados.tex [32]
+) (./sections/Desarrollo/resultados.tex [34]
 File: images/PARETO_RF.png Graphic file (type bmp)
 <images/PARETO_RF.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
+ [35]
 File: images/PARETO_XGBOOST.png Graphic file (type bmp)
 <images/PARETO_XGBOOST.png>
- [34] [35]
+ [36] [37]
 File: images/PARETO_LIGHTGBM.png Graphic file (type bmp)
 <images/PARETO_LIGHTGBM.png>
 
@@ -1489,22 +1490,22 @@ Overfull \hbox (45.81198pt too wide) in paragraph at lines 145--161
  [][] 
  []
 
-[36]
+[38]
 File: images/PARETO_CATBOOST.png Graphic file (type bmp)
 <images/PARETO_CATBOOST.png>
- [37]
+ [39]
 File: images/PARETO_SVM.png Graphic file (type bmp)
 <images/PARETO_SVM.png>
- [38]
+ [40]
 File: images/PARETO_MLP.png Graphic file (type bmp)
 <images/PARETO_MLP.png>
- [39]
+ [41]
 File: images/PARETO_CNN.png Graphic file (type bmp)
 <images/PARETO_CNN.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
+ [42]
 Underfull \hbox (badness 1331) in paragraph at lines 407--407
 \TU/Malacitana-Sans(0)/m/n/10.95 las falsas alarmas, siendo ideal
  []
@@ -1569,7 +1570,7 @@ Overfull \hbox (55.01546pt too wide) in paragraph at lines 425--444
  [][] 
  []
 
-[41]
+[43]
 File: images/ROC_MODELOS.png Graphic file (type bmp)
 <images/ROC_MODELOS.png>
 File: images/MC/MC_RF.png Graphic file (type bmp)
@@ -1580,7 +1581,7 @@ File: images/MC/MC_LIGHTGBM.png Graphic file (type bmp)
 <images/MC/MC_LIGHTGBM.png>
 File: images/MC/MC_CATBOOST.png Graphic file (type bmp)
 <images/MC/MC_CATBOOST.png>
- [42]
+ [44]
 File: images/MC/MC_SVM.png Graphic file (type bmp)
 <images/MC/MC_SVM.png>
 File: images/MC/MC_MLP.png Graphic file (type bmp)
@@ -1590,32 +1591,32 @@ File: images/MC/MC_CNN.png Graphic file (type bmp)
 
 Underfull \vbox (badness 4819) has occurred while \output is active []
 
- [43]
+ [45]
 File: images/IOT/PARETO_RF_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_RF_IOT.png>
- [44]
+ [46]
 File: images/IOT/PARETO_XGBOOST_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_XGBOOST_IOT.png>
- [45]
+ [47]
 File: images/IOT/PARETO_LIGHTGBM_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_LIGHTGBM_IOT.png>
- [46]
+ [48]
 Overfull \hbox (45.48798pt too wide) in paragraph at lines 669--684
  [][] 
  []
 
 File: images/IOT/PARETO_CATBOOST_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_CATBOOST_IOT.png>
-[47]
+[49]
 File: images/IOT/PARETO_SVM_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_SVM_IOT.png>
- [48]
+ [50]
 File: images/IOT/PARETO_MLP_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_MLP_IOT.png>
- [49]
+ [51]
 File: images/IOT/PARETO_CNN_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_CNN_IOT.png>
- [50]
+ [52]
 Overfull \hbox (25.97597pt too wide) in paragraph at lines 850--863
  [][] 
  []
@@ -1630,7 +1631,7 @@ File: images/IOT/ROC_MODELOS.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [53]
 File: images/IOT/MC/MC_RF_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_RF_IOT.png>
 File: images/IOT/MC/MC_XGBOOST_IOT.png Graphic file (type bmp)
@@ -1642,26 +1643,103 @@ File: images/IOT/MC/MC_CATBOOST_IOT.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
+ [54]
 File: images/IOT/MC/MC_SVM_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_SVM_IOT.png>
 File: images/IOT/MC/MC_MLP_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_MLP_IOT.png>
 File: images/IOT/MC/MC_CNN_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_CNN_IOT.png>
-) [53] [54]
+ [55]
+File: images/TON/PARETO_RF_TON.png Graphic file (type bmp)
+<images/TON/PARETO_RF_TON.png>
+ [56]
+File: images/TON/PARETO_XGBOOST_TON.png Graphic file (type bmp)
+<images/TON/PARETO_XGBOOST_TON.png>
+ [57]
+File: images/TON/PARETO_LIGHTGBM_TON.png Graphic file (type bmp)
+<images/TON/PARETO_LIGHTGBM_TON.png>
+ [58]
+Overfull \hbox (45.31998pt too wide) in paragraph at lines 1132--1149
+ [][] 
+ []
+
+File: images/TON/PARETO_CATBOOST_TON.png Graphic file (type bmp)
+<images/TON/PARETO_CATBOOST_TON.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Underfull \vbox (badness 1742) has occurred while \output is active []
+
+ [60]
+File: images/TON/PARETO_SVM_TON.png Graphic file (type bmp)
+<images/TON/PARETO_SVM_TON.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+File: images/TON/PARETO_MLP_TON.png Graphic file (type bmp)
+<images/TON/PARETO_MLP_TON.png>
+
+Overfull \hbox (82.96799pt too wide) in paragraph at lines 1279--1292
+ [][] 
+ []
+
+
+Underfull \vbox (badness 3525) has occurred while \output is active []
+
+ [62]
+File: images/TON/PARETO_CNN_TON.png Graphic file (type bmp)
+<images/TON/PARETO_CNN_TON.png>
+
+Overfull \hbox (24.99196pt too wide) in paragraph at lines 1322--1339
+ [][] 
+ []
+
+[63]
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 1352--1371
+ [][] 
+ []
+
+File: images/TON/ROC_MODELOS_TON.png Graphic file (type bmp)
+<images/TON/ROC_MODELOS_TON.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+File: images/TON/MC/MC_RF_TON.png Graphic file (type bmp)
+<images/TON/MC/MC_RF_TON.png>
+File: images/TON/MC/MC_XGBOOST_TON.png Graphic file (type bmp)
+<images/TON/MC/MC_XGBOOST_TON.png>
+File: images/TON/MC/MC_LIGHTGBM_TON.png Graphic file (type bmp)
+<images/TON/MC/MC_LIGHTGBM_TON.png>
+File: images/TON/MC/MC_CATBOOST_TON.png Graphic file (type bmp)
+<images/TON/MC/MC_CATBOOST_TON.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
+File: images/TON/MC/MC_SVM_TON.png Graphic file (type bmp)
+<images/TON/MC/MC_SVM_TON.png>
+File: images/TON/MC/MC_MLP_TON.png Graphic file (type bmp)
+<images/TON/MC/MC_MLP_TON.png>
+File: images/TON/MC/MC_CNN_TON.png Graphic file (type bmp)
+<images/TON/MC/MC_CNN_TON.png>
+) [66] [67] [68
+
+]
 Overfull \hbox (24.4958pt too wide) in paragraph at lines 121--121
 \TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
  []
 
-[55
+[69
 
 
-
-] [56]
+] [70]
 File: template/logos/NEG-logo-umaes.png Graphic file (type bmp)
 <template/logos/NEG-logo-umaes.png>
- [57
+ [71
 
 
 ] (build/main.aux)
@@ -1670,18 +1748,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4DE4A6DB48FDCE9A899FF06F782D24BB;3169.
+(rerunfilecheck)             Checksum: 31A8B66AEF84DC04C5F6A46C1275A33A;3390.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44544 strings out of 474878
- 947775 string characters out of 5762516
+ 44729 strings out of 474878
+ 953631 string characters out of 5762516
  1939627 words of memory out of 5000000
- 65900 multiletter control sequences out of 15000+600000
+ 66068 multiletter control sequences out of 15000+600000
  563315 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  125i,12n,121p,1920b,5582s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (61 pages, 964616 bytes).
+Output written on build/main.xdv (75 pages, 1120448 bytes).
