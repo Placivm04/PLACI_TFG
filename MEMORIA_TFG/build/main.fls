@@ -622,6 +622,9 @@ INPUT ./images/TON/MC/MC_MLP_TON.png
 INPUT ./images/TON/MC/MC_CNN_TON.png
 INPUT ./images/TON/MC/MC_CNN_TON.png
 INPUT ./images/TON/MC/MC_CNN_TON.png
+INPUT ./sections/Desarrollo/ataques_de_evasion.tex
+INPUT ./sections/Desarrollo/ataques_de_evasion.tex
+INPUT sections/Desarrollo/ataques_de_evasion.tex
 INPUT ./template/logos/NEG-logo-umaes.png
 INPUT ./template/logos/NEG-logo-umaes.png
 INPUT ./template/logos/NEG-logo-umaes.png

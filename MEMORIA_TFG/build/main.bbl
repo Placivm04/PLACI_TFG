@@ -335,6 +335,35 @@
     \field{year}{2020}
   \endentry
 
+  \entry{mukhef2025adversarial}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MHA}{%
+         family={Mukhef},
+         familyi={M\bibinitperiod},
+         given={Haedar\bibnamedelima Ahmed},
+         giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MHA1}
+    \strng{fullhash}{MHA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.29304/jqcsm.2025.17.42554
+    \endverb
+    \field{number}{4}
+    \field{pages}{Comp 209\bibrangedash 224}
+    \field{title}{Adversarial Robustness of Network IDS (Structured Data)}
+    \verb{url}
+    \verb https://jqcsm.qu.edu.iq/index.php/journalcm/article/view/2554
+    \endverb
+    \field{volume}{17}
+    \field{journaltitle}{Journal of Al-Qadisiyah for Computer Science and Mathematics}
+    \field{year}{2025}
+  \endentry
+
   \entry{10823298}{inproceedings}{}
     \name{author}{5}{}{%
       {{hash=PN}{%

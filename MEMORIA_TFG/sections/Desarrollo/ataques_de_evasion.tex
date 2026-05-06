@@ -14,31 +14,22 @@ La herramienta principal empleada para esta evaluación será \textit{Adversaria
 
 La elección de ART frente a otras alternativas, como CleverHans o Torchattacks, se debe principalmente a su carácter generalista y a su integración con distintos tipos de modelos. En el contexto de este trabajo, esta característica resulta especialmente útil, ya que el conjunto de modelos evaluados es heterogéneo e incluye tanto arquitecturas neuronales como clasificadores clásicos y métodos de ensamble.
 
-No obstante, es importante matizar que los ataques basados en gradiente se aplican de forma más natural sobre modelos diferenciables, como MLP y CNN-1D. Por ello, en este trabajo ART se empleará principalmente para generar ejemplos adversarios a partir de los modelos neuronales, mientras que el impacto sobre modelos como Random Forest, XGBoost, LightGBM, CatBoost y SVM se analizará mediante transferencia adversaria. Este enfoque permite estudiar si las perturbaciones generadas contra una arquitectura concreta son capaces de degradar también el rendimiento de otros clasificadores.
+La evaluación de robustez de los distintos clasificadores NIDS propuestos en este trabajo exige adaptar la estrategia de ataque a la naturaleza matemática subyacente de cada algoritmo. Por este motivo, se ha diseñado una metodología en dos fases, basada en ataques directos y en la transferencia de vulnerabilidades.
 
-Otro aspecto relevante es la adaptación de los ataques al dominio tabular. A diferencia de los ataques adversarios sobre imágenes, donde pequeñas modificaciones en los píxeles suelen mantener la validez visual de la muestra, en tráfico de red no todas las características pueden modificarse libremente. Los datasets empleados en este trabajo, IoT-23, UNSW-NB15 y TON-IoT, están formados por datos tabulares derivados de tráfico de red, por lo que alterar variables categóricas, identificadores, protocolos, puertos, marcas temporales o etiquetas puede generar muestras incoherentes o imposibles desde el punto de vista semántico.
+\subsubsection{1. Ataques de Caja Blanca basados en Gradiente (MLP y CNN-1D)}
 
-Por este motivo, el uso de ART se complementará con restricciones específicas para datos tabulares. En concreto, los ataques se restringirán a un subconjunto de características numéricas modificables mediante una máscara de características. Además, los valores generados se mantendrán dentro de rangos válidos, calculados a partir del conjunto de entrenamiento, mediante límites mínimos y máximos por variable. De esta forma, se busca que las muestras adversarias generadas sean más coherentes con la naturaleza de los flujos de red analizados.
+Los algoritmos de evasión empleados en este estudio, como \textit{Projected Gradient Descent} (PGD) o \textit{Fast Gradient Sign Method} (FGSM), requieren de un requisito matemático indispensable: \textbf{el modelo objetivo debe ser continuo y diferenciable}. 
 
-\subsection{Diseño experimental de la evaluación adversaria}
+En arquitecturas de aprendizaje profundo como el Perceptrón Multicapa (MLP) y las Redes Neuronales Convolucionales (CNN-1D), el atacante emplea la retropropagación (\textit{backpropagation}) para calcular el gradiente de la función de pérdida con respecto a las características de entrada. Esto permite identificar la dirección matemática exacta para alterar el tráfico de red original e inducir a una clasificación errónea (falsos negativos). Además, durante este proceso iterativo, se aplican estrictas restricciones de dominio (\textit{Domain Constraints}) para garantizar que las características categóricas y los límites físicos de los protocolos de red se mantengan inalterados, preservando la viabilidad del ataque en un entorno real.
 
-\subsection{Estrategia de transferencia adversaria}
+\subsubsection{2. Transferencia Adversaria para Modelos Discretos (Ensambles y SVM)}
 
-La evaluación adversaria se realizará mediante una estrategia de transferencia. Esta aproximación consiste en generar ejemplos adversarios utilizando modelos diferenciables, en este caso MLP y CNN-1D, y posteriormente evaluar esas mismas muestras perturbadas sobre el resto de modelos entrenados. De esta forma, los modelos neuronales actuarán como generadores de adversarios, mientras que todos los clasificadores del estudio actuarán como modelos evaluados.
+A diferencia de las redes neuronales, los modelos que fundamentan sus decisiones en particiones del espacio paramétrico, como los ensambles de árboles de decisión (Random Forest, XGBoost, LightGBM, CatBoost) o las Máquinas de Vectores de Soporte (SVM), presentan fronteras lógicas abruptas que inutilizan la aplicación directa del cálculo de gradientes.
 
-El motivo de esta decisión es que los ataques basados en gradiente, como FGSM, BIM, PGD o MIFGSM, requieren calcular derivadas de la función de pérdida respecto a las variables de entrada. Esta operación es directa en modelos neuronales, pero no resulta natural en modelos basados en árboles de decisión o ensambles, como Random Forest, XGBoost, LightGBM y CatBoost. Por ello, estos modelos no se utilizarán para generar las perturbaciones, sino para comprobar si dichas perturbaciones son capaces de transferirse y degradar también su rendimiento.
-
-El procedimiento seguido será el siguiente:
+Para solventar esta limitación e incorporar estos algoritmos a la evaluación de seguridad, se explota la técnica de \textbf{Transferencia Adversaria} (\textit{Adversarial Transferability}). Esta estrategia asume que las perturbaciones diseñadas para engañar a un modelo específico suelen evadir con éxito clasificadores con arquitecturas completamente distintas. El procedimiento aplicado es el siguiente:
 
 \begin{enumerate}
-    \item Se partirá de los modelos finales ya optimizados en las fases anteriores del trabajo.
-    \item Se evaluará cada modelo sobre el conjunto de prueba original, obteniendo las métricas de referencia en condiciones limpias.
-    \item Se generarán versiones adversarias del conjunto de prueba utilizando MLP y CNN-1D como modelos generadores.
-    \item Las perturbaciones se aplicarán únicamente sobre un subconjunto de características numéricas modificables, respetando los límites mínimos y máximos observados en el conjunto de entrenamiento.
-    \item Los conjuntos adversarios generados se evaluarán sobre todos los modelos: Random Forest, XGBoost, LightGBM, CatBoost, SVM, MLP y CNN-1D.
-    \item Finalmente, se compararán las métricas obtenidas sobre datos limpios y adversarios para medir la degradación del rendimiento.
+    \item \textbf{Generación (\textit{White-box}):} Los modelos diferenciables (MLP y CNN-1D) actúan como modelos sustitutos (\textit{surrogate models}) para la generación algorítmica del nuevo conjunto de tráfico de red evadido, denominado \textit{Dataset Adversario}.
+    \item \textbf{Evaluación Cruzada (\textit{Black-box}):} El \textit{Dataset Adversario} se introduce directamente en la fase de inferencia de los clasificadores basados en árboles y SVM.
+    \item \textbf{Cuantificación del Impacto:} Se mide la degradación de las métricas de rendimiento frente al estado basal.
 \end{enumerate}
-
-Este enfoque permite estudiar la transferibilidad de los ataques adversarios, es decir, comprobar si una muestra diseñada para engañar a un modelo neuronal también afecta a modelos con arquitecturas diferentes. Además, permite mantener una metodología homogénea para todos los clasificadores, ya que todos son evaluados frente a los mismos conjuntos de prueba adversarios.
-
-Las métricas principales de comparación serán accuracy, precision, recall y F1-score, prestando especial atención a la caída del recall de la clase maliciosa y al aumento de falsos negativos. En el contexto de un sistema de detección de intrusiones, estos falsos negativos son especialmente críticos, ya que representan ataques que el modelo clasifica erróneamente como tráfico benigno.
