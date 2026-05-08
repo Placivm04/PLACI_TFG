@@ -55,3 +55,21 @@
 \contentsline {figure}{\numberline {55}{\ignorespaces MC - SVM (ToN-IoT)}}{66}{figure.caption.93}%
 \contentsline {figure}{\numberline {56}{\ignorespaces MC - MLP (ToN-IoT)}}{66}{figure.caption.93}%
 \contentsline {figure}{\numberline {57}{\ignorespaces MC - CNN (ToN-IoT)}}{66}{figure.caption.94}%
+\contentsline {figure}{\numberline {58}{\ignorespaces F1-PGD-UNSW-NB15}}{70}{figure.caption.96}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Accuracy-PGD-UNSW-NB15}}{71}{figure.caption.97}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Recall-PGD-UNSW-NB15}}{71}{figure.caption.98}%
+\contentsline {figure}{\numberline {61}{\ignorespaces F1-FGSM-UNSW-NB15}}{72}{figure.caption.99}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Accuracy-FGSM-UNSW-NB15}}{72}{figure.caption.100}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Recall-FGSM-UNSW-NB15}}{73}{figure.caption.101}%
+\contentsline {figure}{\numberline {64}{\ignorespaces F1-PGD-IOT-23}}{74}{figure.caption.102}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Accuracy-PGD-IOT-23}}{74}{figure.caption.103}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Recall-PGD-IOT-23}}{74}{figure.caption.104}%
+\contentsline {figure}{\numberline {67}{\ignorespaces F1-FGSM-IOT-23}}{76}{figure.caption.105}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Accuracy-FGSM-IOT-23}}{76}{figure.caption.106}%
+\contentsline {figure}{\numberline {69}{\ignorespaces Recall-FGSM-IOT-23}}{76}{figure.caption.107}%
+\contentsline {figure}{\numberline {70}{\ignorespaces F1-PGD-TON-IOT}}{77}{figure.caption.108}%
+\contentsline {figure}{\numberline {71}{\ignorespaces Accuracy-PGD-TON-IOT}}{78}{figure.caption.109}%
+\contentsline {figure}{\numberline {72}{\ignorespaces Recall-PGD-TON-IOT}}{78}{figure.caption.110}%
+\contentsline {figure}{\numberline {73}{\ignorespaces F1-FGSM-TON-IOT}}{79}{figure.caption.111}%
+\contentsline {figure}{\numberline {74}{\ignorespaces Accuracy-FGSM-TON-IOT}}{79}{figure.caption.112}%
+\contentsline {figure}{\numberline {75}{\ignorespaces Recall-FGSM-TON-IOT}}{80}{figure.caption.113}%
