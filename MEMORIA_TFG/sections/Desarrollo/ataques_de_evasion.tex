@@ -2,17 +2,15 @@
 
 Hasta este punto del trabajo, los modelos de detección de intrusiones desarrollados han mostrado un rendimiento muy elevado sobre los conjuntos de prueba originales. En particular, las arquitecturas profundas, como MLP y CNN-1D, han alcanzado valores de F1-score superiores al 96\%, mientras que los modelos basados en ensambles de árboles de decisión, como Random Forest, XGBoost, LightGBM y CatBoost, han obtenido resultados cercanos al 99\%. Estos resultados indican que los modelos son capaces de aprender patrones relevantes en los datasets empleados y ofrecen una alta capacidad de clasificación en condiciones normales de evaluación.
 
-Sin embargo, en el ámbito de la ciberseguridad, un buen rendimiento sobre datos estáticos no garantiza por sí solo que un sistema sea robusto en escenarios reales. Los atacantes pueden conocer o inferir el funcionamiento de los sistemas de detección y adaptar su comportamiento para evadirlos. En este contexto surge el aprendizaje automático adversario, cuyo objetivo es estudiar cómo pequeñas modificaciones en las entradas pueden provocar errores de clasificación en modelos de inteligencia artificial.
+Sin embargo, en el ámbito de la ciberseguridad, un buen rendimiento sobre datos estáticos no garantiza por sí solo que un sistema sea robusto en escenarios reales. Los atacantes pueden conocer o inferir el funcionamiento de los sistemas de detección y adaptar su comportamiento para evadirlos. En este contexto surge el \textbf{aprendizaje automático adversario}, cuyo objetivo es estudiar cómo pequeñas modificaciones en las entradas pueden provocar errores de clasificación en modelos de inteligencia artificial.
 
 En el caso de los sistemas de detección de intrusiones en red, los ataques de evasión se producen durante la fase de inferencia. En este tipo de ataques, una muestra maliciosa se modifica de forma controlada para intentar que el modelo la clasifique como tráfico benigno. Por ejemplo, un flujo asociado a un ataque de denegación de servicio, un escaneo de puertos o una comunicación maliciosa podría ser alterado ligeramente con el objetivo de desplazarlo al lado benigno de la frontera de decisión del clasificador. Si el ataque tiene éxito, el sistema dejaría de generar una alerta, reduciendo así su utilidad en un entorno operativo.
 
-Para analizar esta problemática, en esta fase del proyecto se evaluará la robustez adversaria de los modelos finales seleccionados en las etapas anteriores. Es importante destacar que no se realizará una nueva optimización de hiperparámetros, sino que se partirá de las configuraciones ya elegidas para cada modelo. De este modo, la evaluación adversaria se plantea como una prueba adicional de resistencia sobre los modelos previamente considerados como mejores bajo condiciones limpias.
+Para analizar esta problemática, en esta fase del proyecto se evaluará la \textbf{robustez adversaria de los modelos finales seleccionados en las etapas anteriores}. Es importante destacar que no se realizará una nueva optimización de hiperparámetros, sino que se partirá de las configuraciones ya elegidas para cada modelo. De este modo, la evaluación adversaria se plantea como una prueba adicional de resistencia sobre los modelos previamente considerados como mejores bajo condiciones limpias.
 
 \subsection{Uso de Adversarial Robustness Toolbox}
 
 La herramienta principal empleada para esta evaluación será \textbf{\textit{Adversarial Robustness Toolbox}} (ART), una librería orientada al análisis de seguridad y robustez de modelos de aprendizaje automático. ART proporciona implementaciones estandarizadas de ataques adversarios utilizados habitualmente en la literatura, como FGSM, BIM o PGD, y permite integrarlos con modelos desarrollados en distintos entornos de aprendizaje automático y aprendizaje profundo.
-
-La elección de ART frente a otras alternativas, como CleverHans o Torchattacks, se debe principalmente a su carácter generalista y a su integración con distintos tipos de modelos. En el contexto de este trabajo, esta característica resulta especialmente útil, ya que el conjunto de modelos evaluados es heterogéneo e incluye tanto arquitecturas neuronales como clasificadores clásicos y métodos de ensamble.
 
 La evaluación de robustez de los distintos clasificadores NIDS propuestos en este trabajo exige adaptar la estrategia de ataque a la naturaleza matemática subyacente de cada algoritmo. Por este motivo, se ha diseñado una metodología en dos fases, basada en ataques directos y en la transferencia de vulnerabilidades.
 
@@ -29,7 +27,7 @@ En esta evaluación se han empleado dos ataques de evasión ampliamente reconoci
 
 Los algoritmos de evasión empleados en este estudio, como \textit{Projected Gradient Descent} (PGD) o \textit{Fast Gradient Sign Method} (FGSM), requieren de un requisito matemático indispensable: \textbf{el modelo objetivo debe ser continuo y diferenciable}. 
 
-En arquitecturas de aprendizaje profundo como el Perceptrón Multicapa (MLP) y las Redes Neuronales Convolucionales (CNN-1D), el atacante emplea la retropropagación (\textit{backpropagation}) para calcular el gradiente de la función de pérdida con respecto a las características de entrada. Esto permite identificar la dirección matemática exacta para alterar el tráfico de red original e inducir a una clasificación errónea (falsos negativos). Además, durante este proceso iterativo, se aplican estrictas restricciones de dominio (\textit{Domain Constraints}) para garantizar que las características categóricas y los límites físicos de los protocolos de red se mantengan inalterados, preservando la viabilidad del ataque en un entorno real.
+En arquitecturas de aprendizaje profundo como el Perceptrón Multicapa (MLP) y las Redes Neuronales Convolucionales (CNN-1D), el atacante emplea la retropropagación (\textit{backpropagation}) para calcular el gradiente de la función de pérdida con respecto a las características de entrada. Esto permite identificar la dirección matemática exacta para alterar el tráfico de red original e inducir a una clasificación errónea (falsos negativos).
 
 \subsubsection{Transferencia Adversaria para Modelos Discretos (Ensambles y SVM)}
 
@@ -41,7 +39,7 @@ Es decir, el veneno que fabricas para matar a un modelo específico, suele ser l
 El procedimiento aplicado es el siguiente:
 
 \begin{enumerate}
-    \item \textbf{Generación (\textit{White-box}):} Los modelos diferenciables (MLP y CNN-1D) actúan como modelos sustitutos (\textit{surrogate models}) para la generación algorítmica del nuevo conjunto de tráfico de red evadido, denominado \textit{Dataset Adversario}.
+    \item \textbf{Generación (\textit{White-box}):} Los modelos diferenciables (MLP y CNN-1D) actúan como modelos sustitutos (\textit{surrogate models}) para la generación algorítmica del nuevo conjunto de tráfico de red evadido.
     \item \textbf{Evaluación Cruzada (\textit{Black-box}):} El \textit{Dataset Adversario} se introduce directamente en la fase de inferencia de los clasificadores basados en árboles y SVM.
     \item \textbf{Cuantificación del Impacto:} Se mide la degradación de las métricas de rendimiento frente al estado basal.
 \end{enumerate}

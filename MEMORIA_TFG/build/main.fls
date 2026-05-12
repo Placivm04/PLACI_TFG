@@ -453,9 +453,6 @@ INPUT ./images/SVM_margin.png
 INPUT ./images/mlp.png
 INPUT ./images/mlp.png
 INPUT ./images/mlp.png
-INPUT ./images/lstm.jpg
-INPUT ./images/lstm.jpg
-INPUT ./images/lstm.jpg
 INPUT ./images/CNN_1D.jpg
 INPUT ./images/CNN_1D.jpg
 INPUT ./images/CNN_1D.jpg
