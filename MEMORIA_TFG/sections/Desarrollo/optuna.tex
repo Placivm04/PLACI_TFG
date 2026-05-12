@@ -16,3 +16,44 @@ Optuna identifica un conjunto de soluciones que se encuentran en la frontera de 
     \caption{Visualización de la optimización con Optuna}
     \label{fig:optuna}
 \end{figure}
+
+El procedimiento general aplicado a cada modelo se resume en el Algoritmo~\ref{alg:optuna_cv_multiobjetivo}. Aunque cada arquitectura tiene un espacio de hiperparámetros específico, la estrategia de evaluación se mantiene constante: cada configuración se evalúa mediante validación cruzada estratificada y se optimiza simultáneamente el rendimiento predictivo y el coste de inferencia.
+
+\begin{algorithm}[H]
+\caption{Optimización multiobjetivo con validación cruzada estratificada}
+\label{alg:optuna_cv_multiobjetivo}
+\begin{algorithmic}[1]
+\Require Conjunto de entrenamiento completo $D_{train} = (X, y)$, modelo base $M$, espacio de hiperparámetros $\mathcal{H}$, número de ensayos $N$
+\Ensure Conjunto de configuraciones evaluadas y frontera de Pareto
+
+\State Crear un estudio de Optuna con dos objetivos:
+\Statex \hspace{\algorithmicindent} \textbf{maximizar $F1$ y minimizar la latencia media de inferencia}
+\State Definir una validación cruzada estratificada con $K=3$ particiones
+
+\For{cada ensayo $t = 1, \dots, N$}
+    \State Seleccionar una configuración de hiperparámetros $h_t \in \mathcal{H}$
+    \State Inicializar las listas $F1\_scores$ y $Latencias$
+
+    \For{cada partición $(D_{train}^{(k)}, D_{val}^{(k)})$ de la validación cruzada}
+        \State Instanciar el modelo $M_t$ con los hiperparámetros $h_t$
+        \State Entrenar $M_t$ sobre $D_{train}^{(k)}$
+        \State Obtener las predicciones sobre $D_{val}^{(k)}$
+        \State Calcular el $F1$ binario de la clase maliciosa
+        \State Añadir el valor obtenido a $F1\_scores$
+
+        \State Seleccionar un subconjunto de validación para medir latencia
+        \State Realizar una predicción inicial de calentamiento
+        \State Medir varias repeticiones del tiempo de inferencia
+        \State Calcular la latencia media por muestra en milisegundos
+        \State Añadir la latencia obtenida a $Latencias$
+    \EndFor
+
+    \State Calcular $F1_{medio}$ como la media de $F1\_scores$
+    \State Calcular $Latencia_{media}$ como la media de $Latencias$
+    \State Devolver a Optuna el par $(F1_{medio}, Latencia_{media})$
+\EndFor
+
+\State Obtener la frontera de Pareto a partir de todos los ensayos evaluados
+
+\end{algorithmic}
+\end{algorithm}

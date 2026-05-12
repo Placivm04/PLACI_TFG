@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/main"] 1778607485.54966 "build/main.aux" "build/main.bbl" "build/main" 1778607491.78839 0
+["bibtex build/main"] 1778608966.59923 "build/main.aux" "build/main.bbl" "build/main" 1778609116.0708 0
   "./sections/Referencias/references.bib" 1777996335.11352 6916 2cd6fac29986b1b01d4f2e9881a9068c ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1678141846 65484 b7949c47a88ed6dca66ebc7a04577312 ""
-  "build/main-blx.bib" 1778607487.94193 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
-  "build/main.aux" 1778607487.93693 53548 fd4bbc4ac12fbcf27f45f3bc74591ba1 "xelatex"
+  "build/main-blx.bib" 1778609112.22697 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
+  "build/main.aux" 1778609112.22197 53939 232114c9e695e0579552c3da4a2d9493 "xelatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1778607488.29693 "build/main.xdv" "build/main.pdf" "build/main" 1778607491.79179 0
-  "build/main.xdv" 1778607487.94293 1350424 cb43dce942b777df88028b2d8a50a002 "xelatex"
+["xdvipdfmx"] 1778609112.59233 "build/main.xdv" "build/main.pdf" "build/main" 1778609116.07355 0
+  "build/main.xdv" 1778609112.22797 1369448 218761b297d336b682be3afee5eae8c9 "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1778607485.70392 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1778607491.78865 0
+["xelatex"] 1778609110.08754 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1778609116.0709 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1778606035.66189 5189 82d25b1c669fec018495c35afdb84f84 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -218,14 +218,14 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1778607487.93693 53548 fd4bbc4ac12fbcf27f45f3bc74591ba1 "xelatex"
-  "build/main.bbl" 1778607485.69293 16064 a603fb55ffb8526665dea1fc01f0f2a6 "bibtex build/main"
-  "build/main.lof" 1778607487.94293 8470 297d6a42928246daba4e126495dbd412 "xelatex"
-  "build/main.lot" 1778607487.94293 5933 c2068891f5080e37aa1112eabe6e8f26 "xelatex"
+  "build/main.aux" 1778609112.22197 53939 232114c9e695e0579552c3da4a2d9493 "xelatex"
+  "build/main.bbl" 1778608966.68397 16064 a603fb55ffb8526665dea1fc01f0f2a6 "bibtex build/main"
+  "build/main.lof" 1778609112.22797 8470 297d6a42928246daba4e126495dbd412 "xelatex"
+  "build/main.lot" 1778609112.22797 5933 c2068891f5080e37aa1112eabe6e8f26 "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1778607487.93893 9493 df2515f482eddd940315b081206a1d30 "xelatex"
-  "build/main.run.xml" 1778607487.94193 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
-  "build/main.toc" 1778607487.94293 7889 c8919508b368fa7249c2b04eb0204a32 "xelatex"
+  "build/main.out" 1778609112.22397 9493 df2515f482eddd940315b081206a1d30 "xelatex"
+  "build/main.run.xml" 1778609112.22797 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
+  "build/main.toc" 1778609112.22797 7889 c8919508b368fa7249c2b04eb0204a32 "xelatex"
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-ACCURACY.png" 1778259416.22206 38123 ca947891f92c369cd71490d5e5abb4c5 ""
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-F1.png" 1778259416.22706 37262 9a544498c806c06a8318cb742b742371 ""
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-RECALL.png" 1778259416.23206 37062 2afb3c675707a4dbe6893e5c4b0f1d53 ""
@@ -303,7 +303,7 @@
   "main.nls" 0 -1 0 ""
   "main.tex" 1778606035.66189 5189 82d25b1c669fec018495c35afdb84f84 ""
   "sections/Desarrollo/ataques_de_evasion.tex" 1778604015.30283 23467 1a1294d9902571db861472bbc9839c64 ""
-  "sections/Desarrollo/optuna.tex" 1772196605.92137 1645 c6dd0986b6514c4389e8dbf2b9a5fab6 ""
+  "sections/Desarrollo/optuna.tex" 1778609109.89397 3894 5fc323c54032fdc087b6bad7b79b3b97 ""
   "sections/Desarrollo/resultados.tex" 1778607482.20993 57632 d1a355cb901abd02a33c86ea0050218d ""
   "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1778607030.58191 5646 f7c85c880f3e4035ff8b97ca126d79ea ""
   "sections/Estudio_del_arte/dataSets.tex" 1770312910.68361 21386 d196ee61ebc8faa93c310dbce481e4f2 ""
