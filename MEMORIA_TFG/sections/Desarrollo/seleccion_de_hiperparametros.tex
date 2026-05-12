@@ -2,15 +2,15 @@
 
 En el contexto de los Sistemas de Detección de Intrusiones (IDS) basados en inteligencia artificial, resulta fundamental distinguir entre la fase de entrenamiento del modelo y la fase de inferencia. Aunque el entrenamiento puede implicar un coste computacional elevado, este proceso se realiza de manera puntual o con una frecuencia reducida. Por el contrario, la fase de inferencia se ejecuta de forma continua una vez que el modelo está desplegado en un entorno real, analizando de manera permanente el tráfico de red entrante.
 
-El coste asociado a la inferencia es el que determina la viabilidad práctica del sistema. Un modelo con excelente rendimiento predictivo pero con alta latencia o consumo excesivo de CPU y memoria puede resultar inviable para su despliegue en tiempo real. Por este motivo, el presente trabajo centra su análisis experimental en el consumo computacional durante la fase de inferencia.
+\textbf{El coste asociado a la inferencia es el que determina la viabilidad práctica del sistema}. Un modelo con excelente rendimiento predictivo pero con alta latencia o consumo excesivo de CPU y memoria puede resultar inviable para su despliegue en tiempo real. Por este motivo, el presente trabajo centra su análisis experimental en el consumo computacional durante la fase de inferencia.
 
 Desde la perspectiva de la Green AI, esta decisión está alineada con el objetivo de reducir el consumo energético en sistemas de uso continuo. Mientras que el entrenamiento representa un coste energético puntual, la inferencia constituye un coste acumulativo y sostenido en el tiempo. Por tanto, optimizar la eficiencia en esta fase tiene un impacto directo en la sostenibilidad del sistema IDS.
 
 \subsection{Optimización de hiperparámetros estructurales}
 
-Dado que el objetivo principal es analizar el equilibrio entre capacidad de detección y eficiencia computacional en inferencia, el ajuste de hiperparámetros se centra específicamente en aquellos que determinan la estructura del modelo. Los hiperparámetros estructurales influyen directamente en la complejidad computacional, el número de operaciones necesarias para generar una predicción y el tamaño final del modelo.
+El ajuste de hiperparámetros se centra específicamente en aquellos que determinan la estructura del modelo. Los hiperparámetros estructurales influyen directamente en la complejidad computacional, el número de operaciones necesarias para generar una predicción y el tamaño final del modelo.
 
-A diferencia de otros hiperparámetros relacionados con el proceso de entrenamiento (como la tasa de aprendizaje o el optimizador), los hiperparámetros estructurales determinan la arquitectura final del modelo y, por tanto, su coste en tiempo de ejecución una vez desplegado.
+A diferencia de otros hiperparámetros relacionados con el proceso de entrenamiento (como la tasa de aprendizaje o el optimizador), los \textbf{hiperparámetros estructurales determinan la arquitectura final del modelo} y, por tanto, su coste en tiempo de ejecución una vez desplegado.
 
 A continuación, se describen los hiperparámetros estructurales más relevantes para cada uno de los modelos considerados en este trabajo.
 
@@ -68,15 +68,15 @@ En redes MLP, el coste de inferencia está directamente relacionado con el núme
     \item \textbf{hidden\_layer\_sizes}: número de capas ocultas y número de neuronas por capa.
 \end{itemize}
 
-\subsubsection{Long Short-Term Memory (LSTM)}
+% \subsubsection{Long Short-Term Memory (LSTM)}
 
-En las redes LSTM, la complejidad de inferencia depende de:
+% En las redes LSTM, la complejidad de inferencia depende de:
 
-\begin{itemize}
-    \item \textbf{lstm\_units}: número de unidades LSTM en la capa recurrente.
-    \item \textbf{time\_steps}: número de pasos temporales procesados.
-    \item \textbf{num\_layers}: número de capas en la red.
-\end{itemize}
+% \begin{itemize}
+%     \item \textbf{lstm\_units}: número de unidades LSTM en la capa recurrente.
+%     \item \textbf{time\_steps}: número de pasos temporales procesados.
+%     \item \textbf{num\_layers}: número de capas en la red.
+% \end{itemize}
 
 
 \subsubsection{Convolutional Neural Networks (CNN 1D)}

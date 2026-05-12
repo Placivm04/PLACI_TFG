@@ -1,10 +1,10 @@
-\subsection{Machine Learning}
+\section{Machine Learning}
 
 El \textit{Machine Learning} (aprendizaje automático) es una rama de la inteligencia artificial que permite a los sistemas aprender y mejorar automáticamente a partir de la experiencia, sin ser programados explícitamente para cada tarea. Utiliza algoritmos que identifican patrones en grandes volúmenes de datos y toman decisiones o realizan predicciones basadas en esos patrones.
 
 En el contexto de los Sistemas de Detección de Intrusos (IDS), el \textit{Machine Learning} se emplea para analizar el tráfico de red y detectar comportamientos anómalos o maliciosos de manera más eficiente y precisa que los métodos tradicionales basados en firmas. Además, la relación con la \textit{Green AI} surge porque el uso de técnicas de aprendizaje automático más eficientes puede reducir el consumo energético, promoviendo soluciones más sostenibles.
 
-\subsubsection{Random Forest (RF)}
+\subsection{Random Forest (RF)}
 
 \textbf{Random Forest} es un modelo de aprendizaje supervisado que combina múltiples árboles de decisión para obtener una predicción más robusta que la de un único árbol. En lugar de entrenar todos los árboles con exactamente los mismos datos, cada uno se construye a partir de una muestra diferente del conjunto de entrenamiento, generada mediante \textit{bootstrap sampling}. Además, en cada división se selecciona un subconjunto aleatorio de características. Esta combinación de aleatoriedad en los datos y en las variables es clave para que el modelo generalice mejor.
 
@@ -40,7 +40,7 @@ Si se analiza desde la perspectiva de la \textit{Green AI}, Random Forest ofrece
     \label{fig:randomforest}
 \end{figure}
 
-\subsubsection{Extreme Gradient Boosting (XGBoost)}
+\subsection{Extreme Gradient Boosting (XGBoost)}
 
 \textbf{XGBoost} (\textit{Extreme Gradient Boosting}) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa de forma altamente optimizada el principio de \textit{gradient boosting}. A diferencia de otros métodos basados en ensamblados de árboles, XGBoost construye el modelo de manera secuencial, añadiendo nuevos árboles que se centran en corregir los errores cometidos por los árboles previamente entrenados. Este proceso se basa en la optimización iterativa de una función objetivo que combina el error de clasificación con términos explícitos de regularización, lo que permite controlar la complejidad del modelo y reducir el sobreajuste.
 
@@ -80,7 +80,7 @@ En el marco de este trabajo, XGBoost se considera una alternativa sólida no sol
     \label{fig:xgboost}
 \end{figure}
 
-\subsubsection{Light Gradient Boosting Machine (LightGBM)}
+\subsection{Light Gradient Boosting Machine (LightGBM)}
 \textbf{Light Gradient Boosting Machine} (LightGBM) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}. A diferencia de otros métodos de boosting, LightGBM utiliza un enfoque de crecimiento de árboles basado en hojas, lo que significa que en cada iteración se expande la hoja con el mayor error en lugar de expandir todos los nodos a un nivel determinado. Esta estrategia permite construir árboles más profundos y complejos sin aumentar significativamente el número de nodos, lo que mejora la capacidad de modelado y reduce el tiempo de entrenamiento.
 
 Respecto a la inferencia, LightGBM ofrece tiempos de predicción muy bajos, ya que la estructura de los árboles es más eficiente y se optimiza para reducir el número de nodos necesarios para realizar una predicción. Además, su implementación está diseñada para aprovechar al máximo los recursos computacionales disponibles, lo que contribuye a minimizar el consumo energético durante la fase de inferencia. En el contexto de la \textit{Green AI}, LightGBM representa una opción atractiva, ya que combina eficiencia computacional con capacidad de modelado. LightGBM es particularmente ventajoso en escenarios donde se requiere minimizar la latencia de inferencia y el consumo energético, características fundamentales para sistemas IDS desplegados en entornos con recursos limitados o dispositivos IoT.
@@ -111,7 +111,7 @@ Respecto a la inferencia, LightGBM ofrece tiempos de predicción muy bajos, ya q
     \label{fig:lightgbm}
 \end{figure}
 
-\subsubsection{CatBoost}
+\subsection{CatBoost}
 
 \textbf{CatBoost} es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}, desarrollada por Yandex.
 
@@ -146,7 +146,7 @@ CatBoost es particularmente ventajoso en escenarios donde se requiere minimizar 
     \label{fig:catboost}
 \end{figure}
 
-\subsubsection{Support Vector Machine (SVM)}
+\subsection{Support Vector Machine (SVM)}
 
 \textbf{Support Vector Machines} (SVM) es un algoritmo de aprendizaje supervisado cuyo objetivo principal es encontrar una frontera de decisión que separe de forma óptima las distintas clases en el espacio de características. En su formulación básica, SVM busca el hiperplano que maximiza el margen entre las muestras de distintas clases, utilizando únicamente un subconjunto de los datos denominado \textit{vectores soporte}. Esta propiedad permite construir modelos robustos frente al ruido y con buena capacidad de generalización.
 
@@ -186,13 +186,13 @@ En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante
     \label{fig:svm_margin}
 \end{figure}
 
-\subsection{Deep Learning}
+\section{Deep Learning}
 
 El \textit{Deep Learning} (aprendizaje profundo) es una subárea del aprendizaje automático que se basa en redes neuronales artificiales con múltiples capas (redes neuronales profundas). Estas redes son capaces de aprender representaciones jerárquicas de los datos, lo que les permite capturar patrones complejos y realizar tareas como clasificación, reconocimiento de imágenes y procesamiento del lenguaje natural.
 
 En el ámbito de los IDS, el \textit{Deep Learning} se utiliza para mejorar la detección de intrusiones mediante la capacidad de aprender características complejas del tráfico de red. Sin embargo, es importante considerar que los modelos de aprendizaje profundo suelen requerir una gran cantidad de datos y recursos computacionales, lo que puede aumentar el consumo energético. Por lo tanto, es crucial buscar enfoques que optimicen el rendimiento sin comprometer la eficiencia energética.
 
-\subsubsection{Multilayer Perceptron (MLP)}
+\subsection{Multilayer Perceptron (MLP)}
 
 El \textbf{Multi-Layer Perceptron} (MLP) es una red neuronal artificial de tipo \textit{feed-forward} compuesta por una capa de entrada, una o varias capas ocultas y una capa de salida. Cada capa está formada por neuronas completamente conectadas, donde cada neurona realiza una combinación lineal de sus entradas seguida de una función de activación no lineal. Este tipo de arquitectura permite aproximar funciones no lineales complejas y es uno de los modelos más utilizados como punto de partida en problemas de aprendizaje profundo.
 
@@ -229,46 +229,10 @@ MLP representa una alternativa intermedia entre los modelos de aprendizaje autom
     \label{fig:mlp_backpropagation}
 \end{figure}
 
-\subsubsection{Long Short-Term Memory (LSTM)}
-
-Las redes \textbf{Long Short-Term Memory} (LSTM) son un tipo de red neuronal recurrente diseñada para modelar dependencias temporales en secuencias de datos. A diferencia de las redes neuronales recurrentes tradicionales, las LSTM incorporan un conjunto de compuertas internas (entrada, olvido y salida) que regulan el flujo de información a lo largo del tiempo, permitiendo conservar o descartar información relevante durante secuencias largas y mitigando el problema del desvanecimiento del gradiente (común en redes recurrentes cuya consecuencia es la dificultad de recordar información lejana).
-
-En el ámbito de la detección de intrusiones, las LSTM resultan especialmente interesantes cuando el comportamiento malicioso no se manifiesta en observaciones aisladas, sino en patrones temporales que evolucionan a lo largo del tiempo. Aunque los datasets empleados en este trabajo se describen mediante características agregadas a nivel de flujo, el uso de LSTM permite analizar si la introducción de mecanismos de memoria aporta ventajas frente a modelos puramente estáticos, capturando posibles dependencias internas entre características o secuencias de flujos consecutivos.
-
-Desde el punto de vista computacional, las LSTM presentan un coste superior al de modelos \textit{feed-forward} como el MLP, ya que cada unidad recurrente realiza múltiples operaciones internas en cada paso temporal. El número de unidades LSTM y la longitud de las secuencias influyen directamente en el tiempo de entrenamiento y en el consumo de memoria. Por este motivo, en este trabajo se emplean arquitecturas LSTM ligeras, con un número reducido de unidades, evitando configuraciones profundas que resultarían inviables para escenarios con recursos limitados.
-
-En términos de \textit{Green AI}, las LSTM representan un compromiso entre capacidad de modelado y eficiencia. Si bien su entrenamiento e inferencia son más costosos que los de modelos clásicos y MLP sencillos, el uso de configuraciones compactas permite evaluar de forma controlada el impacto de la modelización temporal en el rendimiento del sistema IDS. De este modo, las LSTM se incluyen como un modelo de referencia para analizar el beneficio potencial de incorporar memoria temporal frente al incremento del coste computacional asociado.
-
-\begin{table}[H]
-    \centering
-    \caption{Principales hiperparámetros de LSTM y su significado.}
-    \label{tab:lstm_hyperparams}
-    \begin{tabular}{ll}
-        \toprule
-        \textbf{Hiperparámetro} & \textbf{Significado} \\
-        \midrule
-        \texttt{units} & Número de unidades LSTM en la capa recurrente \\
-        \texttt{return\_sequences} & Si la capa devuelve la secuencia completa o solo el último estado \\
-        \texttt{dropout} & Tasa de abandono para regularización durante el entrenamiento \\
-        \texttt{recurrent\_dropout} & Tasa de abandono aplicada a las conexiones recurrentes \\
-        \texttt{activation} & Función de activación utilizada en las unidades LSTM (por ejemplo, \textit{tanh}) \\
-        \texttt{recurrent\_activation} & Función de activación para las compuertas internas (por ejemplo, \textit{sigmoid}) \\
-        \texttt{learning\_rate\_init} & Tasa de aprendizaje inicial para el optimizador \\
-        \texttt{batch\_size} & Tamaño del lote de muestras para cada actualización de los pesos \\
-        \texttt{max\_iter} & Número máximo de iteraciones de entrenamiento \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.45\textwidth,clip,trim=0cm 1.2cm 0cm 1.2cm]{images/lstm.jpg}
-    \caption{Esquema representativo de una unidad LSTM con sus compuertas internas.}
-    \label{fig:lstm_unit}
-\end{figure}
 
 
-\subsubsection{Convolutional Neural Networks (CNN)}
+
+\subsection{Convolutional Neural Networks (CNN)}
 
 Las \textbf{Convolutional Neural Networks} (CNN) son un tipo de red neuronal profunda diseñadas originalmente para el procesamiento de datos con estructura espacial, como imágenes o señales. Su principal característica es el uso de capas convolucionales, que aplican filtros locales sobre los datos de entrada para extraer patrones relevantes de forma jerárquica, reduciendo al mismo tiempo el número de parámetros respecto a redes completamente conectadas.
 
@@ -278,20 +242,20 @@ Desde el punto de vista computacional, el coste de una CNN depende principalment
 
 \begin{table}[H]
     \centering
-    \caption{Principales hiperparámetros de CNN y su significado.}
+    \caption{Principales hiperparámetros de CNN 1D y su significado.}
     \label{tab:cnn_hyperparams}
     \begin{tabular}{ll}
         \toprule
         \textbf{Hiperparámetro} & \textbf{Significado} \\
         \midrule
-        \texttt{filters} & Número de filtros en la capa convolucional \\
-        \texttt{kernel\_size} & Tamaño del kernel de convolución (por ejemplo, 3) \\
-        \texttt{strides} & Paso de la convolución sobre la entrada \\
-        \texttt{padding} & Tipo de relleno aplicado a los bordes (por ejemplo, \textit{same}, \textit{valid}) \\
-        \texttt{activation} & Función de activación utilizada en las capas convolucionales (por ejemplo, \textit{relu}) \\
-        \texttt{learning\_rate\_init} & Tasa de aprendizaje inicial para el optimizador \\
-        \texttt{batch\_size} & Tamaño del lote de muestras para cada actualización de los pesos \\
-        \texttt{max\_iter} & Número máximo de iteraciones de entrenamiento \\
+        \texttt{n\_filters} & Número de filtros en las capas convolucionales \\
+        \texttt{kernel\_size} & Tamaño del kernel de convolución \\
+        \texttt{dense\_units} & Número de neuronas en la capa densa final \\
+        \texttt{time\_steps} & Número de pasos temporales considerados por la red \\
+        \texttt{activation} & Función de activación utilizada en las capas de la red \\
+        \texttt{learning\_rate} & Tasa de aprendizaje del optimizador \\
+        \texttt{batch\_size} & Tamaño del lote de muestras utilizado durante el entrenamiento \\
+        \texttt{epochs} & Número de épocas de entrenamiento \\
         \bottomrule
     \end{tabular}
 \end{table}
