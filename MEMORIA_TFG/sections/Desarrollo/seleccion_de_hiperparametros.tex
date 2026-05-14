@@ -1,14 +1,12 @@
 \subsection{Justificación del enfoque en la fase de inferencia}
 
-En el contexto de los Sistemas de Detección de Intrusiones (IDS) basados en inteligencia artificial, resulta fundamental distinguir entre la fase de entrenamiento del modelo y la fase de inferencia. Aunque el entrenamiento puede implicar un coste computacional elevado, este proceso se realiza de manera puntual o con una frecuencia reducida. Por el contrario, la fase de inferencia se ejecuta de forma continua una vez que el modelo está desplegado en un entorno real, analizando de manera permanente el tráfico de red entrante.
+En el contexto de los Sistemas de Detección de Intrusiones (IDS), resulta fundamental distinguir entre la fase de entrenamiento del modelo y la fase de inferencia. Aunque el entrenamiento puede implicar un coste computacional elevado, este proceso se realiza de manera puntual o con una frecuencia reducida. Por el contrario, la fase de inferencia se \textbf{ejecuta de forma continua} una vez que el modelo está desplegado en un entorno real, analizando de manera permanente el tráfico de red entrante.
 
-\textbf{El coste asociado a la inferencia es el que determina la viabilidad práctica del sistema}. Un modelo con excelente rendimiento predictivo pero con alta latencia o consumo excesivo de CPU y memoria puede resultar inviable para su despliegue en tiempo real. Por este motivo, el presente trabajo centra su análisis experimental en el consumo computacional durante la fase de inferencia.
-
-Desde la perspectiva de la Green AI, esta decisión está alineada con el objetivo de reducir el consumo energético en sistemas de uso continuo. Mientras que el entrenamiento representa un coste energético puntual, la inferencia constituye un coste acumulativo y sostenido en el tiempo. Por tanto, optimizar la eficiencia en esta fase tiene un impacto directo en la sostenibilidad del sistema IDS.
+\textbf{El coste asociado a la inferencia es el que determina la viabilidad práctica del sistema}. Un modelo con excelente rendimiento predictivo pero con alta latencia o consumo excesivo de CPU y memoria puede resultar inviable para su despliegue en tiempo real. Por este motivo, el presente trabajo \textbf{centra su análisis experimental en el consumo computacional durante la fase de inferencia}.
 
 \subsection{Optimización de hiperparámetros estructurales}
 
-El ajuste de hiperparámetros se centra específicamente en aquellos que determinan la estructura del modelo. Los hiperparámetros estructurales influyen directamente en la complejidad computacional, el número de operaciones necesarias para generar una predicción y el tamaño final del modelo.
+El ajuste de hiperparámetros se centra específicamente en aquellos que determinan la \textbf{estructura del modelo}. Los hiperparámetros estructurales influyen directamente en la complejidad computacional, el número de operaciones necesarias para generar una predicción y el tamaño final del modelo.
 
 A diferencia de otros hiperparámetros relacionados con el proceso de entrenamiento (como la tasa de aprendizaje o el optimizador), los \textbf{hiperparámetros estructurales determinan la arquitectura final del modelo} y, por tanto, su coste en tiempo de ejecución una vez desplegado.
 

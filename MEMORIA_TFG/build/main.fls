@@ -459,9 +459,6 @@ INPUT ./images/CNN_1D.jpg
 INPUT ./sections/Estudio_del_arte/dataSets.tex
 INPUT ./sections/Estudio_del_arte/dataSets.tex
 INPUT sections/Estudio_del_arte/dataSets.tex
-INPUT ./images/canadian_institute_cybersecurity.jpeg
-INPUT ./images/canadian_institute_cybersecurity.jpeg
-INPUT ./images/canadian_institute_cybersecurity.jpeg
 INPUT ./images/university_of_new_south_wales.jpeg
 INPUT ./images/university_of_new_south_wales.jpeg
 INPUT ./images/university_of_new_south_wales.jpeg

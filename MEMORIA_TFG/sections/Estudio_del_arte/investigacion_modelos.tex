@@ -10,10 +10,6 @@ En el contexto de los Sistemas de Detección de Intrusos (IDS), el \textit{Machi
 
 A diferencia de los métodos de \textit{boosting}, como XGBoost, los árboles que componen un Random Forest no se entrenan de manera secuencial ni dependen unos de otros. Cada árbol aprende por su cuenta y aporta su propia “opinión”, que posteriormente se integra con la del resto, normalmente mediante votación mayoritaria en clasificación. Esta independencia reduce la varianza del modelo y lo hace menos sensible al ruido o a pequeñas variaciones en los datos, algo especialmente útil en escenarios como la detección de intrusiones.
 
-Desde el punto de vista de la inferencia, Random Forest presenta una latencia muy reducida, ya que la predicción consiste únicamente en recorrer un número limitado de árboles poco profundos y agregar sus decisiones. Además, al no requerir cálculos iterativos complejos ni funciones de activación costosas, su consumo computacional durante la fase de operación es bajo, lo que lo convierte en una opción adecuada para despliegues en entornos con recursos limitados.
-
-Si se analiza desde la perspectiva de la \textit{Green AI}, Random Forest ofrece un compromiso razonable entre capacidad predictiva y coste computacional. Aunque el entrenamiento implica construir varios árboles y puede resultar más pesado que el de un modelo simple, este proceso se realiza una sola vez. En contraste, la fase de inferencia es altamente eficiente, lo que resulta especialmente relevante en sistemas de detección de intrusiones.
-
 \begin{table}[H]
     \centering
     \caption{Principales hiperparámetros de Random Forest y su significado.}
@@ -48,9 +44,6 @@ En cada iteración, XGBoost utiliza información de primer (dirección) y segund
 
 En XGBoost, la predicción final del modelo no corresponde a la salida de un único árbol de decisión, sino que se obtiene como la combinación aditiva de las salidas de todos los árboles entrenados. Cada árbol aporta una contribución parcial a la predicción, y el resultado final se calcula sumando dichas contribuciones.
 El proceso de entrenamiento es secuencial: cada nuevo árbol se entrena para corregir los errores residuales cometidos por el conjunto de árboles previamente construidos. Como consecuencia, el último árbol no contiene una decisión completa por sí mismo, sino que únicamente modela aquellos patrones que aún no han sido correctamente capturados por los árboles anteriores, actuando como un ajuste fino del modelo global.
-De este modo, XGBoost se centra en la reducción del sesgo, lo que suele traducirse en un mayor rendimiento predictivo cuando se dispone de un número limitado de características relevantes.
-
-En el marco de este trabajo, XGBoost se considera una alternativa sólida no solo por su capacidad de detección, sino también por su relación entre rendimiento y coste computacional. Es cierto que el entrenamiento puede resultar exigente, especialmente si se ajustan múltiples hiperparámetros. Sin embargo, este proceso se realiza de manera puntual. Una vez entrenado, el modelo ofrece tiempos de inferencia bajos, ya que la predicción se limita a recorrer un conjunto de árboles relativamente pequeños y sumar sus salidas. Esta característica facilita su uso en escenarios IoT. En consecuencia, XGBoost encaja razonablemente bien dentro de los principios de \textit{Green AI}, al permitir un buen nivel de detección sin penalizar en exceso el consumo durante la operación continua del IDS.
 
 \begin{table}[H]
     \centering
@@ -82,8 +75,6 @@ En el marco de este trabajo, XGBoost se considera una alternativa sólida no sol
 
 \subsection{Light Gradient Boosting Machine (LightGBM)}
 \textbf{Light Gradient Boosting Machine} (LightGBM) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}. A diferencia de otros métodos de boosting, LightGBM utiliza un enfoque de crecimiento de árboles basado en hojas, lo que significa que en cada iteración se expande la hoja con el mayor error en lugar de expandir todos los nodos a un nivel determinado. Esta estrategia permite construir árboles más profundos y complejos sin aumentar significativamente el número de nodos, lo que mejora la capacidad de modelado y reduce el tiempo de entrenamiento.
-
-Respecto a la inferencia, LightGBM ofrece tiempos de predicción muy bajos, ya que la estructura de los árboles es más eficiente y se optimiza para reducir el número de nodos necesarios para realizar una predicción. Además, su implementación está diseñada para aprovechar al máximo los recursos computacionales disponibles, lo que contribuye a minimizar el consumo energético durante la fase de inferencia. En el contexto de la \textit{Green AI}, LightGBM representa una opción atractiva, ya que combina eficiencia computacional con capacidad de modelado. LightGBM es particularmente ventajoso en escenarios donde se requiere minimizar la latencia de inferencia y el consumo energético, características fundamentales para sistemas IDS desplegados en entornos con recursos limitados o dispositivos IoT.
 
 \begin{table}[H]
     \centering
@@ -117,9 +108,7 @@ Respecto a la inferencia, LightGBM ofrece tiempos de predicción muy bajos, ya q
 
 Una de las principales características de CatBoost es su capacidad para manejar de manera eficiente variables categóricas sin necesidad de realizar una codificación previa, lo que simplifica el proceso de preparación de datos y mejora el rendimiento del modelo.
 
-Otro punto clave es que a diferencia de otros modelos como XGBoost o LightGBM, CatBoost crea árboles simétricos, lo que nos da una latencia de inferencia muy baja, ya que cada árbol tiene la misma profundidad y se puede recorrer de manera más eficiente. Además, su implementación está optimizada para aprovechar al máximo los recursos computacionales disponibles, lo que contribuye a minimizar el consumo energético durante la fase de inferencia.
-
-CatBoost es particularmente ventajoso en escenarios donde se requiere minimizar la latencia de inferencia y el consumo energético, características fundamentales para sistemas IDS desplegados en entornos con recursos limitados o dispositivos IoT.
+Otro punto clave es que a diferencia de otros modelos como XGBoost o LightGBM, CatBoost crea árboles simétricos, lo que nos da una latencia de inferencia muy baja, ya que cada árbol tiene la misma profundidad y se puede recorrer de manera más eficiente.
 
 \begin{table}[H]
     \centering
@@ -196,11 +185,7 @@ En el ámbito de los IDS, el \textit{Deep Learning} se utiliza para mejorar la d
 
 El \textbf{Multi-Layer Perceptron} (MLP) es una red neuronal artificial de tipo \textit{feed-forward} compuesta por una capa de entrada, una o varias capas ocultas y una capa de salida. Cada capa está formada por neuronas completamente conectadas, donde cada neurona realiza una combinación lineal de sus entradas seguida de una función de activación no lineal. Este tipo de arquitectura permite aproximar funciones no lineales complejas y es uno de los modelos más utilizados como punto de partida en problemas de aprendizaje profundo.
 
-En el contexto de datasets tabulares, como los empleados en este trabajo, el MLP actúa como un modelo de referencia dentro del aprendizaje profundo, permitiendo evaluar si la introducción de capas no lineales aporta mejoras significativas frente a modelos clásicos como Random Forest o XGBoost. A diferencia de estos últimos, el rendimiento de un MLP depende en gran medida del diseño de la arquitectura y de la correcta selección de hiperparámetros.
-
-Desde el punto de vista computacional, su coste está directamente relacionado con el número de capas ocultas y el número de neuronas por capa. Arquitecturas profundas o excesivamente anchas incrementan de forma notable el tiempo de entrenamiento y el consumo de memoria, sin garantizar necesariamente mejoras en el rendimiento para datos tabulares. Por este motivo, en este trabajo se utilizan arquitecturas MLP compactas, con un número reducido de capas y neuronas, priorizando un equilibrio adecuado entre capacidad de modelado y eficiencia computacional.
-
-MLP representa una alternativa intermedia entre los modelos de aprendizaje automático clásico y redes neuronales más complejas como LSTM o CNN. Aunque su entrenamiento es más costoso que el de modelos basados en árboles, la fase de inferencia sigue siendo relativamente eficiente cuando se emplean arquitecturas ligeras, lo que permite analizar el compromiso entre rendimiento y coste computacional en escenarios de detección de intrusiones.
+Desde el punto de vista computacional, su coste está directamente relacionado con el número de capas ocultas y el número de neuronas por capa. Arquitecturas profundas o excesivamente anchas incrementan de forma notable el tiempo de entrenamiento y el consumo de memoria, sin garantizar necesariamente mejoras en el rendimiento para datos tabulares. Por este motivo, en este trabajo se utilizan arquitecturas MLP, con un número reducido de capas y neuronas, priorizando un equilibrio adecuado entre capacidad de modelado y eficiencia computacional.
 
 \begin{table}[H]
     \centering
@@ -229,16 +214,13 @@ MLP representa una alternativa intermedia entre los modelos de aprendizaje autom
     \label{fig:mlp_backpropagation}
 \end{figure}
 
-
-
-
 \subsection{Convolutional Neural Networks (CNN)}
 
 Las \textbf{Convolutional Neural Networks} (CNN) son un tipo de red neuronal profunda diseñadas originalmente para el procesamiento de datos con estructura espacial, como imágenes o señales. Su principal característica es el uso de capas convolucionales, que aplican filtros locales sobre los datos de entrada para extraer patrones relevantes de forma jerárquica, reduciendo al mismo tiempo el número de parámetros respecto a redes completamente conectadas.
 
-En el contexto de este trabajo, las CNN se emplean en su variante \textit{1D}, donde las convoluciones se aplican sobre el vector de características de cada flujo de red, tratado como una señal unidimensional. Este enfoque permite capturar relaciones locales entre características adyacentes, modelando interacciones de corto alcance entre variables sin necesidad de introducir arquitecturas excesivamente complejas. De este modo, la CNN 1D actúa como una alternativa intermedia entre el MLP y las redes recurrentes, explorando si la extracción local de patrones aporta mejoras en la detección de intrusiones.
+En el contexto de este trabajo, las CNN se emplean en su variante \textit{1D}, donde las convoluciones se aplican sobre el vector de características de cada flujo de red, tratado como una señal unidimensional. Este enfoque permite capturar relaciones locales entre características adyacentes, modelando interacciones de corto alcance entre variables sin necesidad de introducir arquitecturas excesivamente complejas.
 
-Desde el punto de vista computacional, el coste de una CNN depende principalmente del número de filtros, el tamaño del kernel y la profundidad de la red. Aunque las CNN suelen ser más eficientes que otras arquitecturas profundas al compartir pesos, un número elevado de filtros o capas puede incrementar significativamente el tiempo de entrenamiento y la latencia de inferencia. Por esta razón, en este trabajo se utilizan arquitecturas CNN poco profundas y con un número reducido de filtros, priorizando configuraciones compactas y eficientes.
+Desde el punto de vista computacional, el coste de una CNN depende principalmente del número de filtros, el tamaño del kernel y la profundidad de la red. Aunque las CNN suelen ser más eficientes que otras arquitecturas profundas al compartir pesos, un número elevado de filtros o capas puede incrementar significativamente el tiempo de entrenamiento y la latencia de inferencia.
 
 \begin{table}[H]
     \centering
@@ -267,4 +249,4 @@ Desde el punto de vista computacional, el coste de una CNN depende principalment
     \label{fig:cnn_1d}
 \end{figure}
 
-En resumen, la selección de modelos de aprendizaje automático y profundo para la detección de intrusiones debe considerar no solo el rendimiento predictivo, sino también el coste computacional asociado. Modelos como Random Forest y XGBoost ofrecen un buen equilibrio entre capacidad de modelado y eficiencia, mientras que las redes neuronales, aunque potencialmente más potentes, requieren un diseño cuidadoso para evitar un consumo energético excesivo.
+En resumen, la selección de modelos de aprendizaje automático y profundo para la detección de intrusiones debe considerar no solo el rendimiento predictivo, sino también el coste computacional asociado.

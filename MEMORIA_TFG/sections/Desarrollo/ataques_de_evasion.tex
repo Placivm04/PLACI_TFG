@@ -1,18 +1,18 @@
 \section{Evaluación de robustez frente a ataques adversarios}
 
 Hasta este punto del trabajo, los modelos de detección de intrusiones desarrollados han mostrado un rendimiento muy elevado sobre los conjuntos de prueba originales. En particular, las arquitecturas profundas, como MLP y CNN-1D, han alcanzado valores de F1-score superiores al 96\%, mientras que los modelos basados en ensambles de árboles de decisión, como Random Forest, XGBoost, LightGBM y CatBoost, han obtenido resultados cercanos al 99\%. Estos resultados indican que los modelos son capaces de aprender patrones relevantes en los datasets empleados y ofrecen una alta capacidad de clasificación en condiciones normales de evaluación.
-
+ 
 Sin embargo, en el ámbito de la ciberseguridad, un buen rendimiento sobre datos estáticos no garantiza por sí solo que un sistema sea robusto en escenarios reales. Los atacantes pueden conocer o inferir el funcionamiento de los sistemas de detección y adaptar su comportamiento para evadirlos. En este contexto surge el \textbf{aprendizaje automático adversario}, cuyo objetivo es estudiar cómo pequeñas modificaciones en las entradas pueden provocar errores de clasificación en modelos de inteligencia artificial.
 
-En el caso de los sistemas de detección de intrusiones en red, los ataques de evasión se producen durante la fase de inferencia. En este tipo de ataques, una muestra maliciosa se modifica de forma controlada para intentar que el modelo la clasifique como tráfico benigno. Por ejemplo, un flujo asociado a un ataque de denegación de servicio, un escaneo de puertos o una comunicación maliciosa podría ser alterado ligeramente con el objetivo de desplazarlo al lado benigno de la frontera de decisión del clasificador. Si el ataque tiene éxito, el sistema dejaría de generar una alerta, reduciendo así su utilidad en un entorno operativo.
+En el caso de los sistemas de detección de intrusiones en red, los ataques de evasión se producen durante la fase de inferencia. En este tipo de ataques, una muestra maliciosa se modifica de forma controlada para intentar que el modelo la clasifique como tráfico benigno.
 
-Para analizar esta problemática, en esta fase del proyecto se evaluará la \textbf{robustez adversaria de los modelos finales seleccionados en las etapas anteriores}. Es importante destacar que no se realizará una nueva optimización de hiperparámetros, sino que se partirá de las configuraciones ya elegidas para cada modelo. De este modo, la evaluación adversaria se plantea como una prueba adicional de resistencia sobre los modelos previamente considerados como mejores bajo condiciones limpias.
+Para analizar esta problemática, en esta fase del proyecto se evaluará la \textbf{robustez adversaria de los modelos finales seleccionados en las etapas anteriores}. Es importante destacar que no se realizará una nueva optimización de hiperparámetros, sino que se partirá de las \textbf{configuraciones ya elegidas para cada modelo}. De este modo, la evaluación adversaria se plantea como una prueba adicional de resistencia sobre los modelos previamente considerados como mejores bajo condiciones limpias.
 
 \subsection{Uso de Adversarial Robustness Toolbox}
 
 La herramienta principal empleada para esta evaluación será \textbf{\textit{Adversarial Robustness Toolbox}} (ART), una librería orientada al análisis de seguridad y robustez de modelos de aprendizaje automático. ART proporciona implementaciones estandarizadas de ataques adversarios utilizados habitualmente en la literatura, como FGSM, BIM o PGD, y permite integrarlos con modelos desarrollados en distintos entornos de aprendizaje automático y aprendizaje profundo.
 
-La evaluación de robustez de los distintos clasificadores NIDS propuestos en este trabajo exige adaptar la estrategia de ataque a la naturaleza matemática subyacente de cada algoritmo. Por este motivo, se ha diseñado una metodología en dos fases, basada en ataques directos y en la transferencia de vulnerabilidades.
+La evaluación de robustez de los distintos clasificadores NIDS propuestos en este trabajo exige adaptar la estrategia de ataque a la naturaleza matemática subyacente de cada algoritmo. Por este motivo, se ha diseñado una metodología en dos fases, \textbf{basada en ataques directos y en la transferencia de vulnerabilidades}.
 
 \subsubsection{Ataques Empleados}
 
@@ -85,11 +85,10 @@ La evaluación de los clasificadores frente a los conjuntos de datos adversarios
 \begin{itemize}
     \item Los resultados confirman que las arquitecturas neuronales (MLP y CNN-1D) son extremadamente vulnerables cuando el atacante posee conocimiento del gradiente del modelo. En ambos casos, el \textit{Recall} de la clase maliciosa se reduce a niveles cercanos a cero, lo que implica una evasión técnica total del sistema de detección.
     
-    \item Se ha demostrado que los ataques diseñados para redes neuronales poseen una alta capacidad de transferencia hacia modelos de distinta naturaleza. Los ensambles de árboles, especialmente \textbf{CatBoost} y \textbf{Random Forest}, sufren un colapso casi total en su capacidad de detección. Este hallazgo es de especial relevancia, ya que estos modelos suelen considerarse robustos en entornos estáticos, pero se muestran indefensos ante el tráfico hostil generado mediante modelos sustitutos (\textit{surrogate models}).
+    \item Se ha demostrado que los ataques diseñados para redes neuronales poseen una alta capacidad de transferencia hacia modelos de distinta naturaleza. Los ensambles de árboles, especialmente \textbf{CatBoost} y \textbf{Random Forest}, sufren un colapso casi total en su capacidad de detección.
 
     \item Un hallazgo inesperado es el comportamiento del MLP frente al ataque diseñado para la CNN (PGD-CNN). Se observa que el \textit{Recall} del MLP no disminuye, sino que aumenta ligeramente. Este fenómeno, lejos de ser una inconsistencia, evidencia la \textbf{ortogonalidad de las fronteras de decisión} entre ambas arquitecturas. Las perturbaciones espaciales calculadas para engañar a los filtros convolucionales de la CNN desplazaron las muestras hacia regiones del espacio latente que el MLP asocia de manera más unívoca con la clase maliciosa. Este resultado subraya que la transferencia adversaria no es siempre bidireccional ni simétrica.
 \end{itemize}
-
 
 
 \subsubsection{Resultados FGSM}
@@ -159,19 +158,17 @@ El análisis del rendimiento de los clasificadores frente al ataque \textit{Fast
     \label{fig:PGD-RECALL-IOT-23}
 \end{figure}
 
-La evaluación de los ataques de evasión (PGD) sobre el conjunto de datos IoT-23 revela un panorama de vulnerabilidades diametralmente opuesto al observado en UNSW-NB15, destacando fenómenos complejos de transferencia y geometría de modelos. En condiciones limpias (estado basal), la totalidad de los clasificadores exhibe un rendimiento casi perfecto, con métricas de \textit{F1-score} y \textit{Recall} próximas a 1.0, lo que demuestra la separabilidad inicial del tráfico en este dominio.
+En condiciones limpias (estado basal), la totalidad de los clasificadores exhibe un rendimiento casi perfecto, con métricas de \textit{F1-score} y \textit{Recall} próximas a 1.0, lo que demuestra la separabilidad inicial del tráfico en este dominio.
 
 Sin embargo, la inyección de tráfico adversario destapa las siguientes conclusiones críticas:
 
 \begin{itemize}
     \item El ataque generado a través del Perceptrón Multicapa (PGD-MLP) anula por completo al propio modelo generador. Además, demuestra una transferencia altamente efectiva hacia Random Forest y SVM, cuyas capacidades de detección se desploman de igual manera. No obstante, algoritmos de \textit{Boosting} como XGBoost y LightGBM muestran una resistencia moderada frente a este vector específico, logrando retener un \textit{Recall} cercano al 0.7.
 
-    \item El hallazgo empírico más fascinante recae en el ataque PGD-CNN. Al evaluar la propia CNN frente al tráfico adversario generado con sus gradientes, el modelo mantiene un \textit{Recall} superior al 0.95. Este fallo aparente del ataque de caja blanca sugiere la presencia de un fenómeno conocido en la literatura como \textbf{Enmascaramiento de Gradiente} (\textit{Gradient Masking} u \textit{Obfuscated Gradients}). La red convolucional ha trazado fronteras de decisión tan abruptas o no lineales en el espacio del IoT-23 que el algoritmo iterativo PGD es incapaz de encontrar una dirección de descenso válida para alterar la clasificación dentro del límite $\epsilon$ permitido.
+    \item El hallazgo empírico más fascinante recae en el ataque PGD-CNN. Al evaluar la propia CNN frente al tráfico adversario generado con sus gradientes, el modelo mantiene un \textit{Recall} superior al 0.95. Esto nos viene a decir que la red convolucional ha trazado fronteras de decisión tan abruptas o no lineales en el espacio del IoT-23 que el algoritmo iterativo PGD es incapaz de encontrar una dirección de descenso válida para alterar la clasificación dentro del límite $\epsilon$ permitido.
 
     \item De manera paradójica, aunque las perturbaciones del PGD-CNN fueron ineficaces contra su modelo origen, resultaron ser catastróficas al transferirse a modelos de caja negra. Como se observa en las gráficas de \textit{F1-score} y \textit{Recall}, la barra correspondiente al ataque PGD-CNN desaparece por completo (\textit{Recall} $= 0.0$) para \textbf{XGBoost, LightGBM y CatBoost}.
-    
-    \item Se hace evidente que la transferencia de ataques no es bidireccional. Mientras que la CNN es completamente inmune al ataque PGD-MLP, el MLP colapsa totalmente frente al ataque PGD-CNN.
-\end{itemize}
+    \end{itemize}
 
 \subsubsection{Resultados FGSM}
 
@@ -203,7 +200,7 @@ La aplicación del ataque \textit{Fast Gradient Sign Method} (FGSM) sobre el dat
 
     \item Se repite de manera exacta el fenómeno anómalo detectado con PGD. El ataque de caja blanca generado contra la CNN (FGSM-CNN) resulta ineficaz contra la propia red, la cual mantiene un \textit{Recall} superior al 0.95. Esto confirma empíricamente que la arquitectura convolucional ha generado fronteras que ocultan los gradientes útiles en IoT-23. Paradójicamente, este ataque que "falla" localmente resulta ser una perturbación maestra al transferirse, aniquilando a casi todos los modelos de caja negra.
     
-    \item Las métricas evidencian una clara relación de vulnerabilidad unidireccional. Mientras que la CNN muestra una alta resistencia frente al ataque transferido desde el MLP (FGSM-MLP), reteniendo un \textit{Recall} superior a 0.8; el escenario inverso resulta catastrófico: el \textbf{MLP es aniquilado} (\textit{Recall} $\sim 0.0$) por el tráfico generado desde la CNN (FGSM-CNN). Esta profunda asimetría subraya que la extracción de características espaciales de la CNN construye una representación semántica mucho más robusta que las proyecciones densas del MLP.
+    \item Las métricas evidencian una clara relación de vulnerabilidad unidireccional. Mientras que la CNN muestra una alta resistencia frente al ataque transferido desde el MLP (FGSM-MLP), reteniendo un \textit{Recall} superior a 0.8; el escenario inverso resulta catastrófico: el \textbf{MLP es aniquilado} (\textit{Recall} $\sim 0.0$) por el tráfico generado desde la CNN (FGSM-CNN).
 \end{itemize}
 
 % ======================================================================
@@ -241,8 +238,6 @@ La evaluación final del ataque \textit{Projected Gradient Descent} (PGD) sobre 
     \item El ataque de caja blanca generado desde el Perceptrón Multicapa (PGD-MLP) se revela como el vector más devastador en este dominio. No solo aniquila la capacidad de detección de su propio modelo (\textit{Recall} de $0.0$ para el MLP), sino que demuestra una transferencia masiva hacia los ensambles de árboles.
 
     \item En contraposición al MLP, el ataque generado por la red convolucional (PGD-CNN) exhibe una pobre capacidad de transferencia. Aunque logra engañar parcialmente a la propia CNN, fracasa al intentar engañar a modelos como \textbf{XGBoost, LightGBM y SVM}.
-
-    \item A diferencia de sus homólogos basados en gradiente (\textit{Gradient Boosting}), \textbf{CatBoost} demuestra ser el eslabón más débil de la comparativa en ToN-IoT. Independientemente de si la perturbación se origina en el MLP o en la CNN, el modelo sufre una degradación severa y constante.
     
     \item Destaca positivamente el comportamiento del modelo SVM, el cual se erige como la arquitectura más estable de este dataset.
 \end{itemize}
