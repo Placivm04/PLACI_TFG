@@ -327,7 +327,7 @@ Nos quedamos con el \textbf{Candidato 4}, que ofrece el mejor rendimiento (F1-Sc
 % Los modelos con TS: 5 (Candidatos 2 y 3) se quedan en el rango de 0.88 - 0.89.
 % Incluso si le das 128 unidades a un modelo con TS:5 (Candidato 2), no logra alcanzar el rendimiento de un modelo con solo 32 unidades pero con TS:10. Conclusión: El modelo necesita "ver" más atrás en el tiempo (TS:10) para entender correctamente el patrón, y añadir más "neuronas" (unidades) no compensa la falta de contexto temporal.
 
-\subsection{CNN}
+\subsection{CNN-1D}
 
 Aunque CNN se suele asociar principalmente a datos con estructura espacial (como imágenes), también se ha explorado su aplicación en la detección de intrusiones. 
 Para su implementación, se descartó el uso de secuencias temporales (time steps) asociadas a arquitecturas como LSTM. Los conjuntos de datos empleados proporcionan información ya agregada en flujos de red independientes (formato tabular). Agrupar estas filas de forma secuencial introduciría dependencias temporales ficticias y violaría la asunción de independencia (i.i.d.) de los datos, invalidando la robustez de la evaluación mediante validación cruzada.

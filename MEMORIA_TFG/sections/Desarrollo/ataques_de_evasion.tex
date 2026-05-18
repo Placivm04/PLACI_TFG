@@ -53,7 +53,7 @@ El procedimiento que se siguió fue entrenar cada modelo nuevamente con la confi
 
 Es fundamental destacar que estos ataques se han configurado con un límite de perturbación extremadamente restrictivo \textbf{($\epsilon = 0.05$)}. Esto implica que el algoritmo de evasión solo ha modificado, como máximo, un 5\% el valor original de las características numéricas continuas, garantizando que el tráfico malicioso generado sea prácticamente indistinguible del tráfico original a nivel de red.
 
-Finalmente, se introdujeron estos datos adversarios en la fase de inferencia de todos los modelos y se extrayeron las métricas de rendimiento: F1-score, Accuracy y Recall. De esta forma, se pudo cuantificar la degradación de cada modelo frente a los ataques de evasión.
+Finalmente, los datos adversarios generados se introdujeron en la fase de inferencia de los distintos clasificadores para extraer sus respectivas métricas de rendimiento. El análisis se fundamentó en métricas estándar como el Accuracy, el F1-Score y el Recall, priorizando en todo momento la \textbf{evaluación sobre la clase maliciosa}. Esta decisión metodológica se basa en que el objetivo crítico del estudio es medir la degradación en la capacidad de detección de ataques del sistema.
 
 \subsubsection{Resultados PGD}
 
@@ -61,34 +61,34 @@ Presentamos los resultados de la aplicación del ataque PGD sobre los modelos en
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-F1.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-F1.png}
     \caption{F1-PGD-UNSW-NB15}
     \label{fig:PGD-F1-UNSW-NB15}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-ACCURACY.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-ACCURACY.png}
     \caption{Accuracy-PGD-UNSW-NB15}
     \label{fig:PGD-ACC-UNSW-NB15}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-RECALL.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-RECALL.png}
     \caption{Recall-PGD-UNSW-NB15}
     \label{fig:PGD-RECALL-UNSW-NB15}
 \end{figure}
 
-La evaluación de los clasificadores frente a los conjuntos de datos adversarios generados sobre el conjunto UNSW-NB15 revela vulnerabilidades críticas en las arquitecturas evaluadas. Se extraen las siguientes conclusiones principales:
+% La evaluación de los clasificadores frente a los conjuntos de datos adversarios generados sobre el conjunto UNSW-NB15 revela vulnerabilidades críticas en las arquitecturas evaluadas. Se extraen las siguientes conclusiones principales:
 
-\begin{itemize}
-    \item Los resultados confirman que las arquitecturas neuronales (MLP y CNN-1D) son extremadamente vulnerables cuando el atacante posee conocimiento del gradiente del modelo. En ambos casos, el \textit{Recall} de la clase maliciosa se reduce a niveles cercanos a cero, lo que implica una evasión técnica total del sistema de detección.
+% \begin{itemize}
+%     \item Los resultados confirman que las arquitecturas neuronales (MLP y CNN-1D) son extremadamente vulnerables cuando el atacante posee conocimiento del gradiente del modelo. En ambos casos, el \textit{Recall} de la clase maliciosa se reduce a niveles cercanos a cero, lo que implica una evasión técnica total del sistema de detección.
     
-    \item Se ha demostrado que los ataques diseñados para redes neuronales poseen una alta capacidad de transferencia hacia modelos de distinta naturaleza. Los ensambles de árboles, especialmente \textbf{CatBoost} y \textbf{Random Forest}, sufren un colapso casi total en su capacidad de detección.
+%     \item Se ha demostrado que los ataques diseñados para redes neuronales poseen una alta capacidad de transferencia hacia modelos de distinta naturaleza. Los ensambles de árboles, especialmente \textbf{CatBoost} y \textbf{Random Forest}, sufren un colapso casi total en su capacidad de detección.
 
-    \item Un hallazgo inesperado es el comportamiento del MLP frente al ataque diseñado para la CNN (PGD-CNN). Se observa que el \textit{Recall} del MLP no disminuye, sino que aumenta ligeramente. Este fenómeno, lejos de ser una inconsistencia, evidencia la \textbf{ortogonalidad de las fronteras de decisión} entre ambas arquitecturas. Las perturbaciones espaciales calculadas para engañar a los filtros convolucionales de la CNN desplazaron las muestras hacia regiones del espacio latente que el MLP asocia de manera más unívoca con la clase maliciosa. Este resultado subraya que la transferencia adversaria no es siempre bidireccional ni simétrica.
-\end{itemize}
+%     \item Un hallazgo inesperado es el comportamiento del MLP frente al ataque diseñado para la CNN (PGD-CNN). Se observa que el \textit{Recall} del MLP no disminuye, sino que aumenta ligeramente. Este fenómeno, lejos de ser una inconsistencia, evidencia la \textbf{ortogonalidad de las fronteras de decisión} entre ambas arquitecturas. Las perturbaciones espaciales calculadas para engañar a los filtros convolucionales de la CNN desplazaron las muestras hacia regiones del espacio latente que el MLP asocia de manera más unívoca con la clase maliciosa. Este resultado subraya que la transferencia adversaria no es siempre bidireccional ni simétrica.
+% \end{itemize}
 
 
 \subsubsection{Resultados FGSM}
@@ -97,37 +97,37 @@ Estos son los resultados de la aplicación del ataque FGSM:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-F1.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-F1.png}
     \caption{F1-FGSM-UNSW-NB15}
     \label{fig:FGSM-F1-UNSW-NB15}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-ACCURACY.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-ACCURACY.png}
     \caption{Accuracy-FGSM-UNSW-NB15}
     \label{fig:FGSM-ACC-UNSW-NB15}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-RECALL.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-RECALL.png}
     \caption{Recall-FGSM-UNSW-NB15}
     \label{fig:FGSM-RECALL-UNSW-NB15}
 \end{figure}
 
-El análisis del rendimiento de los clasificadores frente al ataque \textit{Fast Gradient Sign Method} (FGSM) revela tres conclusiones directas y fundamentales sobre la robustez arquitectónica de los modelos:
+% El análisis del rendimiento de los clasificadores frente al ataque \textit{Fast Gradient Sign Method} (FGSM) revela tres conclusiones directas y fundamentales sobre la robustez arquitectónica de los modelos:
 
-\begin{itemize}
-    \item A pesar de ser un algoritmo de un solo paso (\textit{single-step}) y computacionalmente más sencillo que PGD, FGSM logra una degradación severa en casi todos los modelos. En escenarios de caja blanca, anula por completo la capacidad de detección (el \textit{Recall} de MLP y CNN cae por debajo del 0.1). Además, demuestra una letal transferencia adversaria hacia los árboles de decisión, provocando el colapso casi total de \textbf{CatBoost} y reduciendo drásticamente la eficacia de \textbf{Random Forest} y \textbf{XGBoost}.
+% \begin{itemize}
+%     \item A pesar de ser un algoritmo de un solo paso (\textit{single-step}) y computacionalmente más sencillo que PGD, FGSM logra una degradación severa en casi todos los modelos. En escenarios de caja blanca, anula por completo la capacidad de detección (el \textit{Recall} de MLP y CNN cae por debajo del 0.1). Además, demuestra una letal transferencia adversaria hacia los árboles de decisión, provocando el colapso casi total de \textbf{CatBoost} y reduciendo drásticamente la eficacia de \textbf{Random Forest} y \textbf{XGBoost}.
     
-    \item El comportamiento de \textbf{LightGBM} frente a FGSM es excepcional. Como se observa en las gráficas, frente al ataque transferido desde el MLP (FGSM-MLP), su rendimiento apenas sufre variaciones respecto a los datos limpios.
+%     \item El comportamiento de \textbf{LightGBM} frente a FGSM es excepcional. Como se observa en las gráficas, frente al ataque transferido desde el MLP (FGSM-MLP), su rendimiento apenas sufre variaciones respecto a los datos limpios.
     
-    \item Al igual que ocurrió con iteraciones más complejas, FGSM vuelve a evidenciar el fenómeno de la transferencia asimétrica o negativa.
-\end{itemize}
+%     \item Al igual que ocurrió con iteraciones más complejas, FGSM vuelve a evidenciar el fenómeno de la transferencia asimétrica o negativa.
+% \end{itemize}
 
 
-\textbf{Valoración Final de Seguridad:} Los resultados obtenidos evidencian que el uso de métricas tradicionales como el \textit{Accuracy} es insuficiente para garantizar la seguridad de un NIDS. La caída drástica del \textit{Recall} bajo ataques con perturbaciones mínimas del 5\% demuestra que la robustez frente a ejemplos adversarios debe ser un requisito de diseño desde las fases iniciales, siendo necesario considerar técnicas de \textit{Adversarial Training} o el uso de algoritmos con defensas naturales como LightGBM.
+% \textbf{Valoración Final de Seguridad:} Los resultados obtenidos evidencian que el uso de métricas tradicionales como el \textit{Accuracy} es insuficiente para garantizar la seguridad de un NIDS. La caída drástica del \textit{Recall} bajo ataques con perturbaciones mínimas del 5\% demuestra que la robustez frente a ejemplos adversarios debe ser un requisito de diseño desde las fases iniciales, siendo necesario considerar técnicas de \textit{Adversarial Training} o el uso de algoritmos con defensas naturales como LightGBM.
 
 % ======================================================================
 % ======================================================================
@@ -274,3 +274,19 @@ El análisis final de los clasificadores sometidos al ataque FGSM sobre el conju
 
     \item \textbf{Fracaso en la transferencia del ataque convolucional:} La transferencia asimétrica vuelve a manifestarse con extrema claridad. El tráfico adversario generado a partir de la red convolucional (FGSM-CNN) resulta ser altamente ineficaz contra modelos como \textbf{XGBoost y SVM}, los cuales actúan casi como si el tráfico estuviera limpio. Curiosamente, este mismo ataque sí logra evadir significativamente al \textbf{MLP}.
 \end{itemize}
+
+\section{Análisis Límite de Perturbación}
+
+Los datasets perturbados con PGD y FGSM se generaron con un límite de perturbación de $\epsilon = 0.05$. Esto implica que cada característica numérica continua del tráfico de red original fue alterada, como máximo, en un 5\% de su valor original. Aunque el límite de perturbación era bastante pequeño, vimos que en algunos modelos esta pequeña alteración era suficiente para provocar una caída drástica en el rendimiento.
+
+Sin embargo, puede ser interesante analizar cómo varía la robustez de los modelos a medida que se incrementa el límite de perturbación. Para ello, se ha realizado un análisis adicional sobre los datasets probando diferentes valores de $\epsilon$: 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.2, 0.3, 0.4 y 0.5, viendo su F1-Score. De esta forma, se puede observar la relación entre la magnitud de la perturbación y la degradación del F1-Score de los modelos.
+
+La idea es probar estos diferentes valores de límites de perturbación y ver a partir de qué valor los modelos bajan su F1-Score por debajo de un umbral, en este caso va a ser 0.5, que es un valor bastante bajo y que indicaría que el modelo ya no es capaz de detectar correctamente la clase maliciosa.
+
+\subsection{Análisis de Resultados de UNSW-NB15}
+
+
+\subsection{Análisis de Resultados de IOT-23}
+
+
+\subsection{Análisis de Resultados de TON-IOT}
