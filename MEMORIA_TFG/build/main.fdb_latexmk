@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/main"] 1778778770.67192 "build/main.aux" "build/main.bbl" "build/main" 1778778945.93775 0
+["bibtex build/main"] 1779103745.94429 "build/main.aux" "build/main.bbl" "build/main" 1779103754.08865 0
   "./sections/Referencias/references.bib" 1777996335.11352 6916 2cd6fac29986b1b01d4f2e9881a9068c ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1678141846 65484 b7949c47a88ed6dca66ebc7a04577312 ""
-  "build/main-blx.bib" 1778778941.84164 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
-  "build/main.aux" 1778778941.83664 52481 811ec49f0e8bd465edf1280b2ebe544a "xelatex"
+  "build/main-blx.bib" 1779103749.12906 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
+  "build/main.aux" 1779103749.12206 53059 1e87919fc5e4c0bd5316e5f309f6f364 "xelatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1778778942.26541 "build/main.xdv" "build/main.pdf" "build/main" 1778778945.94178 0
-  "build/main.xdv" 1778778941.84264 1219076 2a7e6fdaaead6ccb306c7e60292a8dc3 "xelatex"
+["xdvipdfmx"] 1779103749.61086 "build/main.xdv" "build/main.pdf" "build/main" 1779103754.0916 0
+  "build/main.xdv" 1779103749.12906 1212076 dae57a9dbd21fcef6ec58b4d3a4d8b18 "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1778778939.55197 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1778778945.9379 0
+["xelatex"] 1779103746.10331 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1779103754.08876 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1778610714.79902 5189 82d25b1c669fec018495c35afdb84f84 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -218,14 +218,14 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1778778941.83664 52481 811ec49f0e8bd465edf1280b2ebe544a "xelatex"
-  "build/main.bbl" 1778778770.79364 16064 a603fb55ffb8526665dea1fc01f0f2a6 "bibtex build/main"
-  "build/main.lof" 1778778941.84264 8274 385f5880615ee94d2e5a6d3f40292d2e "xelatex"
-  "build/main.lot" 1778778941.84264 5784 fd5c596e2c6e308a2f306f8461c6b0a3 "xelatex"
+  "build/main.aux" 1779103749.12206 53059 1e87919fc5e4c0bd5316e5f309f6f364 "xelatex"
+  "build/main.bbl" 1779103746.09206 16064 a603fb55ffb8526665dea1fc01f0f2a6 "bibtex build/main"
+  "build/main.lof" 1779103749.12906 8274 af16f9f11e18b089059b3fefb846327c "xelatex"
+  "build/main.lot" 1779103749.12906 5784 fd5c596e2c6e308a2f306f8461c6b0a3 "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1778778941.83864 9328 b55394f12d4a5fbb25e9b85d094a2166 "xelatex"
-  "build/main.run.xml" 1778778941.84264 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
-  "build/main.toc" 1778778941.84264 7474 19d9e46653fde872c97e908727ca898d "xelatex"
+  "build/main.out" 1779103749.12506 10302 a982764007643d3c6d70c2d3723881b3 "xelatex"
+  "build/main.run.xml" 1779103749.12906 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
+  "build/main.toc" 1779103749.12906 7888 8bfcfa0cfa8495479286a6a57bcd2e55 "xelatex"
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-ACCURACY.png" 1778259416.22206 38123 ca947891f92c369cd71490d5e5abb4c5 ""
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-F1.png" 1778259416.22706 37262 9a544498c806c06a8318cb742b742371 ""
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-RECALL.png" 1778259416.23206 37062 2afb3c675707a4dbe6893e5c4b0f1d53 ""
@@ -238,12 +238,12 @@
   "images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-ACCURACY.png" 1778259424.82706 38437 1661ceabb7c9b25362c23d9316f113de ""
   "images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-F1.png" 1778259424.83206 37490 d63210cff8ca2bf3c513bd1790f3cbd7 ""
   "images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-RECALL.png" 1778259424.84406 37380 fb37fa0af9986c516a6e01cf223f9e5c ""
-  "images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-ACCURACY.png" 1778261442.17912 35802 dea74638452c8d6781416c2b5d85d151 ""
-  "images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-F1.png" 1778261442.19112 35210 a0399cff78e8142d35f8517095f93a14 ""
-  "images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-RECALL.png" 1778261442.19712 34803 555ca478bc950c1e36b190b5c0fef6be ""
-  "images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-ACCURACY.png" 1778261442.21112 35326 e6ff07a34a89ea6f2b919ff4272df5c0 ""
-  "images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-F1.png" 1778261442.21512 34688 c3e95746d4597215b73246fd715010e7 ""
-  "images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-RECALL.png" 1778261442.23012 34305 ec38876553b25af9794c70fee0df3c1a ""
+  "images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-ACCURACY.png" 1779102758.01503 35812 63a9e12e7482306f2ed3e6847ffef860 ""
+  "images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-F1.png" 1779102758.02903 35270 5eebc023f2fe7af64e408373a3c506a2 ""
+  "images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-RECALL.png" 1779102758.04503 35125 9ac9c8eacdecfa04a2d1aa1b981fb18c ""
+  "images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-ACCURACY.png" 1779102758.06103 35338 5b2f20f968d2409936d1e5fd2c704b10 ""
+  "images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-F1.png" 1779102758.07703 34754 9d62719c48f062a59becf110c0403026 ""
+  "images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-RECALL.png" 1779102758.08203 34894 a1ef7f1c78b67e2a72057d270fc189e7 ""
   "images/CNN_1D.jpg" 1770381111.25669 63724 af5e9cc56a21d1f084000e401b918e49 ""
   "images/IOT/MC/MC_CATBOOST_IOT.png" 1777404800.01917 23518 324dded8e6f454295ed3b024401f08e5 ""
   "images/IOT/MC/MC_CNN_IOT.png" 1777404800.02217 24017 e2250cc638c628df52faa7f46f81009b ""
@@ -301,9 +301,9 @@
   "images/xg_boost.png" 1770376660.40056 42948 3bf5b930db0df76434d838d9f6a6cceb ""
   "main.nls" 0 -1 0 ""
   "main.tex" 1778610714.79902 5189 82d25b1c669fec018495c35afdb84f84 ""
-  "sections/Desarrollo/ataques_de_evasion.tex" 1778778939.33564 21755 517256cf5784b5f8f108a7eaf145f095 ""
+  "sections/Desarrollo/ataques_de_evasion.tex" 1779102875.35003 23442 e7eee9cf8d1d680e89fe4f0107eb6f6a ""
   "sections/Desarrollo/optuna.tex" 1778778236.21562 3912 1596bcc9df575e4810f774c2841c3e16 ""
-  "sections/Desarrollo/resultados.tex" 1778607482.20993 57632 d1a355cb901abd02a33c86ea0050218d ""
+  "sections/Desarrollo/resultados.tex" 1779103743.71806 57635 eb015c8b2575c581da4e944cce8c17d6 ""
   "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1778778176.86762 5237 2377646208d9c573917416fdcaf6e864 ""
   "sections/Estudio_del_arte/dataSets.tex" 1778777993.73662 17371 eb06290072c53ff825ccf56eeddc4738 ""
   "sections/Estudio_del_arte/investigacion_modelos.tex" 1778777244.6096 19411 a9f92f11155487e784ce63edbab4ed9d ""

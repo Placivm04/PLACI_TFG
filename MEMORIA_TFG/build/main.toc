@@ -44,7 +44,7 @@
 \contentsline {subsection}{\numberline {2.2.4}CatBoost}{36}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Support Vector Machine (SVM)}{37}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}Multilayer Perceptron (MLP)}{38}{subsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.2.7}CNN}{39}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.7}CNN-1D}{39}{subsection.2.2.7}%
 \contentsline {subsection}{\numberline {2.2.8}Comparativa Modelos con Dataset UNSW-NB15}{40}{subsection.2.2.8}%
 \contentsline {section}{\numberline {2.3}Modelos entrenados con IOT-23}{44}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Random Forest}{44}{subsection.2.3.1}%
@@ -72,9 +72,13 @@
 \contentsline {subsection}{\numberline {2.5.2}Análisis de Resultados en UNSW-NB15}{67}{subsection.2.5.2}%
 \contentsline {subsubsection}{\numberline {2.5.2.1}Resultados PGD}{68}{subsubsection.2.5.2.1}%
 \contentsline {subsubsection}{\numberline {2.5.2.2}Resultados FGSM}{69}{subsubsection.2.5.2.2}%
-\contentsline {subsection}{\numberline {2.5.3}Análisis de Resultados en IOT-23}{71}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.3}Análisis de Resultados en IOT-23}{70}{subsection.2.5.3}%
 \contentsline {subsubsection}{\numberline {2.5.3.1}Resultados PGD}{71}{subsubsection.2.5.3.1}%
-\contentsline {subsubsection}{\numberline {2.5.3.2}Resultados FGSM}{73}{subsubsection.2.5.3.2}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}Resultados FGSM}{72}{subsubsection.2.5.3.2}%
 \contentsline {subsection}{\numberline {2.5.4}Análisis de Resultados en TON-IOT}{74}{subsection.2.5.4}%
-\contentsline {subsubsection}{\numberline {2.5.4.1}Resultados PGD}{75}{subsubsection.2.5.4.1}%
+\contentsline {subsubsection}{\numberline {2.5.4.1}Resultados PGD}{74}{subsubsection.2.5.4.1}%
 \contentsline {subsubsection}{\numberline {2.5.4.2}Resultados FGSM}{76}{subsubsection.2.5.4.2}%
+\contentsline {section}{\numberline {2.6}Análisis Límite de Perturbación}{77}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Análisis de Resultados de UNSW-NB15}{77}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Análisis de Resultados de IOT-23}{77}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Análisis de Resultados de TON-IOT}{77}{subsection.2.6.3}%

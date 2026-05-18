@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  14 MAY 2026 19:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  18 MAY 2026 13:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1668,52 +1668,51 @@ File: images/TON/MC/MC_MLP_TON.png Graphic file (type bmp)
 File: images/TON/MC/MC_CNN_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_CNN_TON.png>
 ) (./sections/Desarrollo/ataques_de_evasion.tex [64] [65] [66] [67]
-File: images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-F1.png Graphic file (type bmp)
-<images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-F1.png>
-File: images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-ACCURACY.png Graphic file (type bmp)
-<images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-ACCURACY.png>
-File: images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-RECALL.png Graphic file (type bmp)
-<images/ATAQUES_ADVERSARIOS/UNSW-NB15/PGD-RECALL.png>
+File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-F1.png Graphic file (type bmp)
+<images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-F1.png>
+File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-ACCURACY.png Graphic file (type bmp)
+<images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-ACCURACY.png>
+File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-RECALL.png Graphic file (type bmp)
+<images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-RECALL.png>
  [68]
-File: images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-F1.png Graphic file (type bmp)
-<images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-F1.png>
+File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-F1.png Graphic file (type bmp)
+<images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-F1.png>
+File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-ACCURACY.png Graphic file (type bmp)
+<images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-ACCURACY.png>
  [69]
-File: images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-ACCURACY.png Graphic file (type bmp)
-<images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-ACCURACY.png>
-File: images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-RECALL.png Graphic file (type bmp)
-<images/ATAQUES_ADVERSARIOS/UNSW-NB15/FGSM-RECALL.png>
- [70]
+File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-RECALL.png Graphic file (type bmp)
+<images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-RECALL.png>
 File: images/ATAQUES_ADVERSARIOS/IOT-23/PGD-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/IOT-23/PGD-F1.png>
+ [70]
 File: images/ATAQUES_ADVERSARIOS/IOT-23/PGD-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/IOT-23/PGD-ACCURACY.png>
- [71]
 File: images/ATAQUES_ADVERSARIOS/IOT-23/PGD-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/IOT-23/PGD-RECALL.png>
- [72]
+ [71]
 File: images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-F1.png>
 File: images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-ACCURACY.png>
+ [72]
 File: images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-RECALL.png>
  [73]
 File: images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-F1.png>
- [74]
 File: images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-ACCURACY.png>
 File: images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-RECALL.png>
- [75]
+ [74]
 File: images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-F1.png>
+ [75]
 File: images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-ACCURACY.png>
- [76]
 File: images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-RECALL.png>
-) [77] [78
+ [76]) [77] [78
 
 ]
 Overfull \hbox (24.4958pt too wide) in paragraph at lines 123--123
@@ -1735,18 +1734,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B55394F12D4A5FBB25E9B85D094A2166;9328.
+(rerunfilecheck)             Checksum: A982764007643D3C6D70C2D3723881B3;10302.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44947 strings out of 474878
- 963547 string characters out of 5762516
+ 44948 strings out of 474878
+ 963658 string characters out of 5762516
  1938627 words of memory out of 5000000
- 66273 multiletter control sequences out of 15000+600000
+ 66274 multiletter control sequences out of 15000+600000
  563339 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  125i,12n,121p,1920b,5581s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (85 pages, 1219076 bytes).
+Output written on build/main.xdv (85 pages, 1212076 bytes).
