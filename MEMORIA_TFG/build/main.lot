@@ -41,3 +41,11 @@
 \contentsline {table}{\numberline {2.27}{\ignorespaces Comparativa final de modelos CNN-1D en el set de test (ToN-IoT)}}{62}{table.caption.84}%
 \contentsline {table}{\numberline {2.28}{\ignorespaces Comparativa global de rendimiento de modelos - IOT-23}}{62}{table.caption.85}%
 \contentsline {table}{\numberline {2.29}{\ignorespaces Hiperparámetros ganadores de los modelos evaluados con ToN-IoT}}{65}{table.caption.91}%
+\contentsline {table}{\numberline {2.30}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo MLP en UNSW-NB15}}{78}{table.caption.110}%
+\contentsline {table}{\numberline {2.31}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo CNN en UNSW-NB15}}{78}{table.caption.111}%
+\contentsline {table}{\numberline {2.32}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP en UNSW-NB15}}{78}{table.caption.112}%
+\contentsline {table}{\numberline {2.33}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN en UNSW-NB15}}{79}{table.caption.113}%
+\contentsline {table}{\numberline {2.34}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{79}{table.caption.114}%
+\contentsline {table}{\numberline {2.35}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{79}{table.caption.115}%
+\contentsline {table}{\numberline {2.36}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{80}{table.caption.116}%
+\contentsline {table}{\numberline {2.37}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{80}{table.caption.117}%

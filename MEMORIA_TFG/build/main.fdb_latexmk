@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex build/main"] 1779103745.94429 "build/main.aux" "build/main.bbl" "build/main" 1779103754.08865 0
+["bibtex build/main"] 1779209460.93216 "build/main.aux" "build/main.bbl" "build/main" 1779209471.41518 0
   "./sections/Referencias/references.bib" 1777996335.11352 6916 2cd6fac29986b1b01d4f2e9881a9068c ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1678141846 65484 b7949c47a88ed6dca66ebc7a04577312 ""
-  "build/main-blx.bib" 1779103749.12906 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
-  "build/main.aux" 1779103749.12206 53059 1e87919fc5e4c0bd5316e5f309f6f364 "xelatex"
+  "build/main-blx.bib" 1779209465.00091 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
+  "build/main.aux" 1779209464.99191 56476 2b22ef276d6716b3d13a491b34207746 "xelatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1779103749.61086 "build/main.xdv" "build/main.pdf" "build/main" 1779103754.0916 0
-  "build/main.xdv" 1779103749.12906 1212076 dae57a9dbd21fcef6ec58b4d3a4d8b18 "xelatex"
+["xdvipdfmx"] 1779209465.67519 "build/main.xdv" "build/main.pdf" "build/main" 1779209471.42069 0
+  "build/main.xdv" 1779209465.00191 1262996 b1597cdf9f8c0ce4f3c1f3b3f7490d0f "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1779103746.10331 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1779103754.08876 0
+["xelatex"] 1779209461.11482 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1779209471.41557 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1778610714.79902 5189 82d25b1c669fec018495c35afdb84f84 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -218,14 +218,14 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
-  "build/main.aux" 1779103749.12206 53059 1e87919fc5e4c0bd5316e5f309f6f364 "xelatex"
-  "build/main.bbl" 1779103746.09206 16064 a603fb55ffb8526665dea1fc01f0f2a6 "bibtex build/main"
-  "build/main.lof" 1779103749.12906 8274 af16f9f11e18b089059b3fefb846327c "xelatex"
-  "build/main.lot" 1779103749.12906 5784 fd5c596e2c6e308a2f306f8461c6b0a3 "xelatex"
+  "build/main.aux" 1779209464.99191 56476 2b22ef276d6716b3d13a491b34207746 "xelatex"
+  "build/main.bbl" 1779209461.10591 16064 a603fb55ffb8526665dea1fc01f0f2a6 "bibtex build/main"
+  "build/main.lof" 1779209465.00191 8274 af16f9f11e18b089059b3fefb846327c "xelatex"
+  "build/main.lot" 1779209465.00191 6798 7baf33ee4a4603877277b1eb282e4b93 "xelatex"
   "build/main.nls" 0 -1 0 ""
-  "build/main.out" 1779103749.12506 10302 a982764007643d3c6d70c2d3723881b3 "xelatex"
-  "build/main.run.xml" 1779103749.12906 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
-  "build/main.toc" 1779103749.12906 7888 8bfcfa0cfa8495479286a6a57bcd2e55 "xelatex"
+  "build/main.out" 1779209464.99691 10302 a982764007643d3c6d70c2d3723881b3 "xelatex"
+  "build/main.run.xml" 1779209465.00191 2578 5604d1595c62e67c5e8bba7ceb3ceeae "xelatex"
+  "build/main.toc" 1779209465.00191 8395 a930182718e4ec84511808c5c7c21bf1 "xelatex"
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-ACCURACY.png" 1778259416.22206 38123 ca947891f92c369cd71490d5e5abb4c5 ""
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-F1.png" 1778259416.22706 37262 9a544498c806c06a8318cb742b742371 ""
   "images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-RECALL.png" 1778259416.23206 37062 2afb3c675707a4dbe6893e5c4b0f1d53 ""
@@ -301,7 +301,7 @@
   "images/xg_boost.png" 1770376660.40056 42948 3bf5b930db0df76434d838d9f6a6cceb ""
   "main.nls" 0 -1 0 ""
   "main.tex" 1778610714.79902 5189 82d25b1c669fec018495c35afdb84f84 ""
-  "sections/Desarrollo/ataques_de_evasion.tex" 1779102875.35003 23442 e7eee9cf8d1d680e89fe4f0107eb6f6a ""
+  "sections/Desarrollo/ataques_de_evasion.tex" 1779209460.33991 29137 41ff2c740a02aad71fcf5969c30c8561 ""
   "sections/Desarrollo/optuna.tex" 1778778236.21562 3912 1596bcc9df575e4810f774c2841c3e16 ""
   "sections/Desarrollo/resultados.tex" 1779103743.71806 57635 eb015c8b2575c581da4e944cce8c17d6 ""
   "sections/Desarrollo/seleccion_de_hiperparametros.tex" 1778778176.86762 5237 2377646208d9c573917416fdcaf6e864 ""

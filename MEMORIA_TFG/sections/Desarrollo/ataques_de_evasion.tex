@@ -279,14 +279,194 @@ El análisis final de los clasificadores sometidos al ataque FGSM sobre el conju
 
 Los datasets perturbados con PGD y FGSM se generaron con un límite de perturbación de $\epsilon = 0.05$. Esto implica que cada característica numérica continua del tráfico de red original fue alterada, como máximo, en un 5\% de su valor original. Aunque el límite de perturbación era bastante pequeño, vimos que en algunos modelos esta pequeña alteración era suficiente para provocar una caída drástica en el rendimiento.
 
-Sin embargo, puede ser interesante analizar cómo varía la robustez de los modelos a medida que se incrementa el límite de perturbación. Para ello, se ha realizado un análisis adicional sobre los datasets probando diferentes valores de $\epsilon$: 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.2, 0.3, 0.4 y 0.5, viendo su F1-Score. De esta forma, se puede observar la relación entre la magnitud de la perturbación y la degradación del F1-Score de los modelos.
+Sin embargo, puede ser interesante analizar cómo varía la robustez de los modelos a medida que se incrementa el límite de perturbación. Para ello, se ha realizado un análisis adicional sobre los datasets probando diferentes valores de $\epsilon$: 0.01, 0.03, 0.05, 0.075, 0.1, 0.2 y 0.5, viendo su F1-Score asociado a la clase de ataque. De esta forma, se puede observar la relación entre la magnitud de la perturbación y la degradación del F1-Score de los modelos.
 
 La idea es probar estos diferentes valores de límites de perturbación y ver a partir de qué valor los modelos bajan su F1-Score por debajo de un umbral, en este caso va a ser 0.5, que es un valor bastante bajo y que indicaría que el modelo ya no es capaz de detectar correctamente la clase maliciosa.
 
 \subsection{Análisis de Resultados de UNSW-NB15}
 
+\subsubsection{FGSM}
+
+\begin{table}[H]
+\centering
+\caption{F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo MLP en UNSW-NB15}
+\label{tab:f1_pgd_mlp_unsw}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\toprule
+\textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
+\midrule
+0.010 & 0.7290 & 0.7208 & 0.6652 & 0.7136 & 0.6677 & 0.7111 & 0.7294 \\
+0.030 & 0.7071 & 0.7202 & 0.6420 & 0.7091 & 0.6219 & 0.6851 & 0.6848 \\
+0.050 & 0.7082 & 0.6841 & 0.6411 & 0.7191 & 0.5590 & 0.7071 & 0.6765 \\
+0.075 & 0.7094 & 0.6774 & 0.6250 & 0.7020 & 0.4503 & 0.7080 & 0.6710 \\
+0.100 & 0.7125 & 0.6840 & 0.6015 & 0.6889 & 0.4097 & 0.7090 & 0.6680 \\
+0.200 & 0.7062 & 0.6608 & 0.5387 & 0.7181 & 0.3791 & 0.7097 & 0.6759 \\
+0.500 & 0.7112 & 0.6626 & 0.5239 & 0.7383 & 0.3811 & 0.7085 & 0.6995 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo CNN en UNSW-NB15}
+\label{tab:f1_pgd_cnn_unsw}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\toprule
+\textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
+\midrule
+0.010 & 0.7255 & 0.7287 & 0.6826 & 0.6985 & 0.7431 & 0.7321 & 0.7156 \\
+0.030 & 0.7013 & 0.6789 & 0.6688 & 0.7076 & 0.7201 & 0.4889 & 0.7034 \\
+0.050 & 0.7067 & 0.5639 & 0.6706 & 0.6913 & 0.6822 & 0.4581 & 0.6882 \\
+0.075 & 0.7178 & 0.6979 & 0.6710 & 0.6299 & 0.6418 & 0.4983 & 0.6846 \\
+0.100 & 0.7194 & 0.6727 & 0.6745 & 0.6496 & 0.6396 & 0.5328 & 0.6847 \\
+0.200 & 0.7159 & 0.6564 & 0.6409 & 0.7293 & 0.6441 & 0.5298 & 0.6841 \\
+0.500 & 0.6806 & 0.6410 & 0.6032 & 0.7404 & 0.6424 & 0.5378 & 0.6847 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+
+\subsubsection{PGD}
+
+\begin{table}[H]
+\centering
+\caption{F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP en UNSW-NB15}
+\label{tab:f1_perturbacion_mlp_unsw}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\toprule
+\textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
+\midrule
+0.010 & 0.7210 & 0.6873 & 0.7124 & 0.6579 & 0.7046 & 0.7165 & 0.7772 \\
+0.030 & 0.7196 & 0.7019 & 0.6780 & 0.6922 & 0.7054 & 0.7110 & 0.7162 \\
+0.050 & 0.7113 & 0.7075 & 0.7251 & 0.7095 & 0.6965 & 0.7103 & 0.7157 \\
+0.075 & 0.7093 & 0.7073 & 0.6508 & 0.6874 & 0.7105 & 0.7102 & 0.7103 \\
+0.100 & 0.7084 & 0.7000 & 0.6101 & 0.7091 & 0.7145 & 0.7102 & 0.7100 \\
+0.200 & 0.7089 & 0.6983 & 0.7188 & 0.7037 & 0.7102 & 0.7102 & 0.7083 \\
+0.500 & 0.7098 & 0.7087 & \textbf{0.4985} & 0.7102 & 0.7102 & 0.7102 & 0.7137 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN en UNSW-NB15}
+\label{tab:f1_perturbacion_cnn_unsw}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\toprule
+\textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
+\midrule
+0.010 & 0.7247 & 0.7199 & 0.7669 & 0.6825 & 0.7444 & 0.7384 & 0.7156 \\
+0.030 & 0.6778 & 0.7015 & 0.7192 & 0.6880 & 0.6099 & 0.7157 & 0.7150 \\
+0.050 & 0.7013 & 0.7071 & 0.7073 & 0.7060 & 0.7053 & 0.7068 & 0.7102 \\
+0.075 & 0.7133 & 0.7124 & 0.7191 & 0.7003 & 0.6629 & 0.7126 & 0.7102 \\
+0.100 & 0.7160 & 0.6833 & 0.7201 & 0.7110 & 0.7142 & 0.6717 & 0.7102 \\
+0.200 & 0.7215 & 0.7111 & 0.7302 & 0.7036 & 0.6758 & 0.6134 & 0.7107 \\
+0.500 & 0.6781 & 0.7310 & 0.7148 & 0.6915 & 0.6761 & 0.6159 & 0.6918 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
 
 \subsection{Análisis de Resultados de IOT-23}
 
+\subsubsection{FGSM}
+
+\begin{table}[H]
+\centering
+\caption{F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}
+\label{tab:f1_perturbacion_mlp_2}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\toprule
+\textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
+\midrule
+0.010 & 0.6736 & 0.6092 & 0.5789 & 0.5784 & 0.9437 & 0.8052 & 0.9484 \\
+0.030 & 0.7356 & 0.5764 & 0.5790 & 0.5834 & 0.7617 & 0.5243 & 0.7623 \\
+0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & 0.2217 & 0.2314 & 0.6059 \\
+0.075 & 0.7619 & 0.5766 & 0.5786 & 0.6182 & 0.2203 & 0.1808 & 0.5887 \\
+0.100 & 0.7793 & 0.5768 & 0.5789 & 0.6119 & 0.2197 & 0.1786 & 0.6225 \\
+0.200 & 0.5790 & 0.6088 & 0.6097 & 0.5916 & 0.2155 & 0.1782 & 0.5888 \\
+0.500 & 0.5781 & 0.6085 & 0.6096 & 0.5916 & 0.2155 & 0.1782 & 0.5829 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}
+\label{tab:f1_perturbacion_cnn_2}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\toprule
+\textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
+\midrule
+0.010 & 0.6318 & 0.6104 & 0.5769 & 0.5786 & 0.8853 & 0.8944 & 0.9346 \\
+0.030 & 0.6167 & 0.5778 & 0.5769 & 0.6350 & 0.7888 & 0.8942 & 0.7642 \\
+0.050 & 0.6355 & 0.5777 & 0.5782 & 0.8217 & 0.7888 & 0.8958 & 0.5756 \\
+0.075 & 0.6541 & 0.5775 & 0.5782 & 0.8072 & 0.7634 & 0.8832 & 0.6223 \\
+0.100 & 0.6234 & 0.5769 & 0.5776 & 0.7083 & 0.7605 & 0.8711 & 0.6581 \\
+0.200 & 0.5826 & 0.6267 & 0.6268 & 0.5784 & 0.7602 & 0.8703 & 0.6012 \\
+0.500 & 0.5717 & 0.6194 & 0.6200 & 0.5783 & 0.7611 & 0.8588 & 0.5685 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+
+\subsubsection{PGD}
+
+\begin{table}[H]
+\centering
+\caption{F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}
+\label{tab:f1_perturbacion_mlp_3}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\toprule
+\textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
+\midrule
+0.010 & 0.6736 & 0.6092 & 0.5789 & 0.5784 & 0.9437 & 0.8052 & 0.9484 \\
+0.030 & 0.7356 & 0.5764 & 0.5790 & 0.5834 & 0.7617 & 0.5243 & 0.7623 \\
+0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & 0.2217 & 0.2314 & 0.6059 \\
+0.075 & 0.7619 & 0.5766 & 0.5786 & 0.6182 & 0.2203 & 0.1808 & 0.5887 \\
+0.100 & 0.7793 & 0.5768 & 0.5789 & 0.6119 & 0.2197 & 0.1786 & 0.6225 \\
+0.200 & 0.5790 & 0.6088 & 0.6097 & 0.5916 & 0.2155 & 0.1782 & 0.5888 \\
+0.500 & 0.5781 & 0.6085 & 0.6096 & 0.5916 & 0.2155 & 0.1782 & 0.5829 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}
+\label{tab:f1_perturbacion_cnn_3}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\toprule
+\textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
+\midrule
+0.010 & 0.6318 & 0.6104 & 0.5769 & 0.5786 & 0.8853 & 0.8944 & 0.9346 \\
+0.030 & 0.6167 & 0.5778 & 0.5769 & 0.6350 & 0.7888 & 0.8942 & 0.7642 \\
+0.050 & 0.6355 & 0.5777 & 0.5782 & 0.8217 & 0.7888 & 0.8958 & 0.5756 \\
+0.075 & 0.6541 & 0.5775 & 0.5782 & 0.8072 & 0.7634 & 0.8832 & 0.6223 \\
+0.100 & 0.6234 & 0.5769 & 0.5776 & 0.7083 & 0.7605 & 0.8711 & 0.6581 \\
+0.200 & 0.5826 & 0.6267 & 0.6268 & 0.5784 & 0.7602 & 0.8703 & 0.6012 \\
+0.500 & 0.5717 & 0.6194 & 0.6200 & 0.5783 & 0.7611 & 0.8588 & 0.5685 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
 
 \subsection{Análisis de Resultados de TON-IOT}
+
+\subsubsection{FGSM}
+
+\subsubsection{PGD}
