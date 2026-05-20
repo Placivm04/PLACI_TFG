@@ -80,16 +80,13 @@ Presentamos los resultados de la aplicación del ataque PGD sobre los modelos en
     \label{fig:PGD-RECALL-UNSW-NB15}
 \end{figure}
 
-% La evaluación de los clasificadores frente a los conjuntos de datos adversarios generados sobre el conjunto UNSW-NB15 revela vulnerabilidades críticas en las arquitecturas evaluadas. Se extraen las siguientes conclusiones principales:
+Podemos concluir que, incluso con un límite de perturbación moderado de $\epsilon = 0.05$, el ataque PGD consigue degradar el rendimiento de los modelos respecto al test limpio. Esta caída se observa especialmente en la \textbf{accuracy} y en el \textbf{F1-score de la clase ataque}, mientras que el \textit{recall} se mantiene elevado en varios modelos.
 
-% \begin{itemize}
-%     \item Los resultados confirman que las arquitecturas neuronales (MLP y CNN-1D) son extremadamente vulnerables cuando el atacante posee conocimiento del gradiente del modelo. En ambos casos, el \textit{Recall} de la clase maliciosa se reduce a niveles cercanos a cero, lo que implica una evasión técnica total del sistema de detección.
-    
-%     \item Se ha demostrado que los ataques diseñados para redes neuronales poseen una alta capacidad de transferencia hacia modelos de distinta naturaleza. Los ensambles de árboles, especialmente \textbf{CatBoost} y \textbf{Random Forest}, sufren un colapso casi total en su capacidad de detección.
+Este comportamiento indica que los modelos siguen detectando una proporción alta de ataques, pero pierden capacidad para clasificar correctamente el conjunto completo de muestras. En otras palabras, la perturbación afecta al equilibrio general del clasificador, aunque no siempre reduzca de forma drástica la detección de ataques.
 
-%     \item Un hallazgo inesperado es el comportamiento del MLP frente al ataque diseñado para la CNN (PGD-CNN). Se observa que el \textit{Recall} del MLP no disminuye, sino que aumenta ligeramente. Este fenómeno, lejos de ser una inconsistencia, evidencia la \textbf{ortogonalidad de las fronteras de decisión} entre ambas arquitecturas. Las perturbaciones espaciales calculadas para engañar a los filtros convolucionales de la CNN desplazaron las muestras hacia regiones del espacio latente que el MLP asocia de manera más unívoca con la clase maliciosa. Este resultado subraya que la transferencia adversaria no es siempre bidireccional ni simétrica.
-% \end{itemize}
+Como el \textit{recall} de la clase ataque sigue siendo alto en muchos casos, pero el F1-score disminuye, es probable que la precisión de dicha clase se vea reducida. Esto sugiere que algunos modelos tienden a clasificar un mayor número de muestras como ataque, aumentando así los falsos positivos.
 
+Por último, las perturbaciones generadas sobre los modelos MLP y CNN presentan un impacto similar en términos de F1-score, lo que evidencia nuestra hipótesis sobre la transferencia adversaria de los ataques hacia modelos clásicos como RF, XGB, LGBM, CatBoost y SVM.
 
 \subsubsection{Resultados FGSM}
 
@@ -116,18 +113,13 @@ Estos son los resultados de la aplicación del ataque FGSM:
     \label{fig:FGSM-RECALL-UNSW-NB15}
 \end{figure}
 
-% El análisis del rendimiento de los clasificadores frente al ataque \textit{Fast Gradient Sign Method} (FGSM) revela tres conclusiones directas y fundamentales sobre la robustez arquitectónica de los modelos:
+En el caso del ataque FGSM también se observa una degradación clara del rendimiento respecto al test limpio. Esta caída aparece tanto en la \textbf{accuracy} como en el \textbf{F1-score de la clase ataque}, aunque el impacto varía según el modelo evaluado y según si la perturbación se genera a partir del MLP o de la CNN.
 
-% \begin{itemize}
-%     \item A pesar de ser un algoritmo de un solo paso (\textit{single-step}) y computacionalmente más sencillo que PGD, FGSM logra una degradación severa en casi todos los modelos. En escenarios de caja blanca, anula por completo la capacidad de detección (el \textit{Recall} de MLP y CNN cae por debajo del 0.1). Además, demuestra una letal transferencia adversaria hacia los árboles de decisión, provocando el colapso casi total de \textbf{CatBoost} y reduciendo drásticamente la eficacia de \textbf{Random Forest} y \textbf{XGBoost}.
-    
-%     \item El comportamiento de \textbf{LightGBM} frente a FGSM es excepcional. Como se observa en las gráficas, frente al ataque transferido desde el MLP (FGSM-MLP), su rendimiento apenas sufre variaciones respecto a los datos limpios.
-    
-%     \item Al igual que ocurrió con iteraciones más complejas, FGSM vuelve a evidenciar el fenómeno de la transferencia asimétrica o negativa.
-% \end{itemize}
+En términos de \textit{accuracy}, todos los modelos reducen su rendimiento respecto al escenario limpio. Esta caída indica que FGSM afecta a la capacidad global de clasificación, provocando un mayor número de errores sobre el conjunto de test. En algunos modelos, como MLP frente a FGSM-CNN o SVM frente a FGSM-MLP, la reducción es especialmente notable.
 
+Respecto al F1-score de la clase ataque, se aprecia que los modelos mantienen valores moderados en varios casos, pero siempre por debajo del rendimiento limpio. Esto indica que el ataque afecta al equilibrio entre precisión y recall de la clase ataque. En particular, algunos modelos como XGB, SVM o MLP muestran una mayor sensibilidad dependiendo del modelo utilizado para generar la perturbación.
 
-% \textbf{Valoración Final de Seguridad:} Los resultados obtenidos evidencian que el uso de métricas tradicionales como el \textit{Accuracy} es insuficiente para garantizar la seguridad de un NIDS. La caída drástica del \textit{Recall} bajo ataques con perturbaciones mínimas del 5\% demuestra que la robustez frente a ejemplos adversarios debe ser un requisito de diseño desde las fases iniciales, siendo necesario considerar técnicas de \textit{Adversarial Training} o el uso de algoritmos con defensas naturales como LightGBM.
+El \textit{recall} de la clase ataque muestra un comportamiento más desigual. Algunos modelos, como RF, CatBoost y CNN, mantienen una alta capacidad de detección de ataques incluso bajo perturbación FGSM. Sin embargo, otros modelos presentan caídas importantes, especialmente XGB, LGBM, SVM y MLP en determinados escenarios.
 
 % ======================================================================
 % ======================================================================
@@ -139,69 +131,61 @@ Estos son los resultados de la aplicación del ataque FGSM:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/IOT-23/PGD-F1.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-F1.png}
     \caption{F1-PGD-IOT-23}
     \label{fig:PGD-F1-IOT-23}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/IOT-23/PGD-ACCURACY.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-ACCURACY.png}
     \caption{Accuracy-PGD-IOT-23}
     \label{fig:PGD-ACC-IOT-23}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/IOT-23/PGD-RECALL.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-RECALL.png}
     \caption{Recall-PGD-IOT-23}
     \label{fig:PGD-RECALL-IOT-23}
 \end{figure}
 
-En condiciones limpias (estado basal), la totalidad de los clasificadores exhibe un rendimiento casi perfecto, con métricas de \textit{F1-score} y \textit{Recall} próximas a 1.0, lo que demuestra la separabilidad inicial del tráfico en este dominio.
+En el dataset IoT-23, para el ataque PGD con límite de perturbación $\epsilon = 0.05$, se observa una degradación notable del rendimiento respecto al test limpio, especialmente en términos de \textbf{accuracy} y \textbf{F1-score de la clase ataque}. Aunque los modelos presentan un rendimiento casi perfecto en el escenario limpio, las perturbaciones adversarias reducen de forma clara la capacidad global de clasificación.
 
-Sin embargo, la inyección de tráfico adversario destapa las siguientes conclusiones críticas:
+Sin embargo, el \textit{recall} de la clase ataque se mantiene muy elevado en prácticamente todos los modelos, incluso tras aplicar las perturbaciones PGD generadas sobre MLP y CNN. Esto indica que los modelos siguen detectando la mayoría de las muestras maliciosas, por lo que el ataque no provoca principalmente una pérdida de detección de ataques.
 
-\begin{itemize}
-    \item El ataque generado a través del Perceptrón Multicapa (PGD-MLP) anula por completo al propio modelo generador. Además, demuestra una transferencia altamente efectiva hacia Random Forest y SVM, cuyas capacidades de detección se desploman de igual manera. No obstante, algoritmos de \textit{Boosting} como XGBoost y LightGBM muestran una resistencia moderada frente a este vector específico, logrando retener un \textit{Recall} cercano al 0.7.
+La diferencia entre el alto \textit{recall} y la caída observada en accuracy y F1-score sugiere que el principal efecto del ataque es un aumento de falsos positivos. Es decir, los modelos tienden a clasificar más muestras normales como ataques, manteniendo una alta detección de tráfico malicioso, pero reduciendo su capacidad para distinguir correctamente entre tráfico benigno y malicioso.
 
-    \item El hallazgo empírico más fascinante recae en el ataque PGD-CNN. Al evaluar la propia CNN frente al tráfico adversario generado con sus gradientes, el modelo mantiene un \textit{Recall} superior al 0.95. Esto nos viene a decir que la red convolucional ha trazado fronteras de decisión tan abruptas o no lineales en el espacio del IoT-23 que el algoritmo iterativo PGD es incapaz de encontrar una dirección de descenso válida para alterar la clasificación dentro del límite $\epsilon$ permitido.
-
-    \item De manera paradójica, aunque las perturbaciones del PGD-CNN fueron ineficaces contra su modelo origen, resultaron ser catastróficas al transferirse a modelos de caja negra. Como se observa en las gráficas de \textit{F1-score} y \textit{Recall}, la barra correspondiente al ataque PGD-CNN desaparece por completo (\textit{Recall} $= 0.0$) para \textbf{XGBoost, LightGBM y CatBoost}.
-    \end{itemize}
+Además, se observa que las perturbaciones generadas sobre MLP y CNN presentan capacidad de transferencia hacia modelos clásicos, aunque con diferencias entre clasificadores. En particular, PGD-MLP provoca una caída importante en modelos como RF, XGB, LGBM, CatBoost, SVM y MLP, mientras que PGD-CNN afecta de forma muy acusada a XGB, LGBM y CNN, pero tiene menor impacto sobre CatBoost, SVM y MLP.
 
 \subsubsection{Resultados FGSM}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-F1.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-F1.png}
     \caption{F1-FGSM-IOT-23}
     \label{fig:FGSM-F1-IOT-23}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-ACCURACY.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-ACCURACY.png}
     \caption{Accuracy-FGSM-IOT-23}
     \label{fig:FGSM-ACC-IOT-23}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/IOT-23/FGSM-RECALL.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-RECALL.png}
     \caption{Recall-FGSM-IOT-23}
     \label{fig:FGSM-RECALL-IOT-23}
 \end{figure}
 
-La aplicación del ataque \textit{Fast Gradient Sign Method} (FGSM) sobre el dataset IoT-23 corrobora los patrones críticos de vulnerabilidad descubiertos previamente, arrojando tres conclusiones concluyentes sobre el comportamiento de los modelos frente a perturbaciones de paso único:
+Aquí observamos una degradación notable del rendimiento respecto al test limpio. Esta caída se aprecia principalmente en la \textbf{accuracy} y en el \textbf{F1-score de la clase ataque}.
 
-\begin{itemize}
-    \item Las perturbaciones generadas tanto por el MLP como por la CNN desploman el \textit{Recall} de \textbf{XGBoost, LightGBM y CatBoost} prácticamente a $0.0$. Esto demuestra que, en este espacio de características específico, un único salto matemático a través del gradiente es suficiente para expulsar el tráfico malicioso fuera de las fronteras de decisión de los ensambles más potentes.
+Respecto al F1-score de la clase ataque, se observa una reducción clara frente al escenario limpio. El caso más llamativo se produce en SVM y MLP bajo FGSM-MLP, donde el F1-score cae de forma muy pronunciada. En cambio, bajo FGSM-CNN, modelos como CatBoost, SVM y MLP mantienen valores considerablemente más altos, lo que evidencia que el efecto del ataque depende tanto del modelo atacado como del modelo usado para generar la perturbación.
 
-    \item Se repite de manera exacta el fenómeno anómalo detectado con PGD. El ataque de caja blanca generado contra la CNN (FGSM-CNN) resulta ineficaz contra la propia red, la cual mantiene un \textit{Recall} superior al 0.95. Esto confirma empíricamente que la arquitectura convolucional ha generado fronteras que ocultan los gradientes útiles en IoT-23. Paradójicamente, este ataque que "falla" localmente resulta ser una perturbación maestra al transferirse, aniquilando a casi todos los modelos de caja negra.
-    
-    \item Las métricas evidencian una clara relación de vulnerabilidad unidireccional. Mientras que la CNN muestra una alta resistencia frente al ataque transferido desde el MLP (FGSM-MLP), reteniendo un \textit{Recall} superior a 0.8; el escenario inverso resulta catastrófico: el \textbf{MLP es aniquilado} (\textit{Recall} $\sim 0.0$) por el tráfico generado desde la CNN (FGSM-CNN).
-\end{itemize}
+El \textit{recall} de la clase ataque se mantiene prácticamente perfecto en la mayoría de modelos, especialmente en RF, XGB, LGBM, CatBoost y CNN. Sin embargo, aparecen caídas muy fuertes en SVM y MLP cuando las perturbaciones se generan sobre MLP. Esto indica que, en estos casos concretos, FGSM no solo incrementa los falsos positivos, sino que también provoca que una parte importante de los ataques deje de ser detectada correctamente.
 
 % ======================================================================
 % ======================================================================
@@ -213,73 +197,75 @@ La aplicación del ataque \textit{Fast Gradient Sign Method} (FGSM) sobre el dat
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-F1.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-F1.png}
     \caption{F1-PGD-TON-IOT}
     \label{fig:PGD-F1-TON-IOT}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-ACCURACY.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-ACCURACY.png}
     \caption{Accuracy-PGD-TON-IOT}
     \label{fig:PGD-ACC-TON-IOT}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/TON-IOT/PGD-RECALL.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-RECALL.png}
     \caption{Recall-PGD-TON-IOT}
     \label{fig:PGD-RECALL-TON-IOT}
 \end{figure}
 
-La evaluación final del ataque \textit{Projected Gradient Descent} (PGD) sobre el conjunto de datos ToN-IoT cierra la experimentación revelando patrones de transferibilidad altamente asimétricos y dependientes del modelo generador. Partiendo de un rendimiento basal excelente (donde todos los modelos rozan el 1.0 en métricas de \textit{F1-score} y \textit{Recall} en datos limpios), la inyección de perturbaciones adversarias arroja las siguientes conclusiones clave:
+En el dataset TON-IoT, para el ataque PGD, se observa una degradación significativa del rendimiento respecto al test limpio, donde la mayoría de modelos presentan valores muy elevados de accuracy y F1-score, cercanos a 1. Sin embargo, tras aplicar las perturbaciones PGD, ambos indicadores descienden de forma clara en la mayoría de clasificadores.
 
-\begin{itemize}
-    \item El ataque de caja blanca generado desde el Perceptrón Multicapa (PGD-MLP) se revela como el vector más devastador en este dominio. No solo aniquila la capacidad de detección de su propio modelo (\textit{Recall} de $0.0$ para el MLP), sino que demuestra una transferencia masiva hacia los ensambles de árboles.
+En términos de \textbf{accuracy}, los modelos más afectados son XGB, LGBM, CatBoost y MLP.
 
-    \item En contraposición al MLP, el ataque generado por la red convolucional (PGD-CNN) exhibe una pobre capacidad de transferencia. Aunque logra engañar parcialmente a la propia CNN, fracasa al intentar engañar a modelos como \textbf{XGBoost, LightGBM y SVM}.
-    
-    \item Destaca positivamente el comportamiento del modelo SVM, el cual se erige como la arquitectura más estable de este dataset.
-\end{itemize}
+Respecto al \textbf{F1-score}, la degradación es todavía más evidente. Modelos como LGBM, CatBoost y MLP sufren caídas pronunciadas, lo que indica que el ataque afecta de forma importante al equilibrio entre precisión y recall de la clase ataque.
+
+El \textit{recall} de la clase ataque presenta un comportamiento desigual. En algunos modelos, como XGB, MLP y CNN, se mantiene elevado bajo determinadas perturbaciones, lo que indica que siguen detectando gran parte de los ataques. Sin embargo, en otros casos se producen caídas importantes, especialmente en LGBM con PGD-MLP, CatBoost con PGD-MLP y SVM con PGD-CNN.
+
+En conjunto, los resultados muestran que PGD con $\epsilon = 0.05$ tiene un impacto relevante sobre TON-IoT. A diferencia de otros datasets donde el recall se mantenía alto en casi todos los modelos, aquí el ataque también reduce la capacidad de detección de ataques en determinados clasificadores. Esto sugiere que TON-IoT presenta una mayor sensibilidad frente a perturbaciones adversarias, especialmente en modelos como LGBM, CatBoost, MLP y SVM dependiendo del modelo generador de la perturbación.
 
 \subsubsection{Resultados FGSM}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-F1.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-F1.png}
     \caption{F1-FGSM-TON-IOT}
     \label{fig:FGSM-F1-TON-IOT}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-ACCURACY.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-ACCURACY.png}
     \caption{Accuracy-FGSM-TON-IOT}
     \label{fig:FGSM-ACC-TON-IOT}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS/TON-IOT/FGSM-RECALL.png}
+    \includegraphics[width=0.8\textwidth]{images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png}
     \caption{Recall-FGSM-TON-IOT}
     \label{fig:FGSM-RECALL-TON-IOT}
 \end{figure}
 
-El análisis final de los clasificadores sometidos al ataque FGSM sobre el conjunto de datos ToN-IoT consolida los hallazgos sobre la geometría de los modelos, revelando tres conclusiones determinantes sobre su comportamiento:
+Finalmente, para el ataque FGSM, en el escenario limpio, la mayoría de modelos presentan valores muy elevados de accuracy y F1-score, cercanos a 1. Sin embargo, tras aplicar las perturbaciones FGSM, ambos indicadores descienden de forma clara en prácticamente todos los clasificadores.
 
-\begin{itemize}
-    \item Aunque el ataque de caja blanca generado por el MLP (FGSM-MLP) logra anular a su propio modelo (\textit{Recall} $< 0.1$), su capacidad de transferencia hacia los ensambles es notablemente inferior a la observada con el ataque iterativo PGD. 
+En términos de \textbf{accuracy}, la caída es especialmente acusada en XGB, CatBoost y CNN cuando las perturbaciones se generan sobre CNN. También se observa una degradación importante con FGSM-MLP, especialmente en XGB, LGBM, CatBoost y MLP.
 
-    \item Se confirma la fragilidad de \textbf{CatBoost} en este dataset.
+Respecto al \textbf{F1-score de la clase ataque}, la degradación es muy notable en todos los modelos.
 
-    \item \textbf{Fracaso en la transferencia del ataque convolucional:} La transferencia asimétrica vuelve a manifestarse con extrema claridad. El tráfico adversario generado a partir de la red convolucional (FGSM-CNN) resulta ser altamente ineficaz contra modelos como \textbf{XGBoost y SVM}, los cuales actúan casi como si el tráfico estuviera limpio. Curiosamente, este mismo ataque sí logra evadir significativamente al \textbf{MLP}.
-\end{itemize}
+El \textit{recall} de la clase ataque presenta un comportamiento desigual. Algunos modelos, como CNN, mantienen un recall muy elevado e incluso cercano a 1 bajo perturbación, lo que indica que siguen detectando la mayoría de ataques. Sin embargo, otros modelos sufren caídas importantes, como SVM y MLP.
+
+En resumen, hemos visto como un límite de perturbación de ataque pequeño, como 0.05, puede generar caídas bastante grandes en las métricas analizadas, siempre dependiendo del modelo y del dataset perturbado que se aplique.
+
+% ===============================================================
+% ===============================================================
+% ===============================================================
 
 \section{Análisis Límite de Perturbación}
 
-Los datasets perturbados con PGD y FGSM se generaron con un límite de perturbación de $\epsilon = 0.05$. Esto implica que cada característica numérica continua del tráfico de red original fue alterada, como máximo, en un 5\% de su valor original. Aunque el límite de perturbación era bastante pequeño, vimos que en algunos modelos esta pequeña alteración era suficiente para provocar una caída drástica en el rendimiento.
-
-Sin embargo, puede ser interesante analizar cómo varía la robustez de los modelos a medida que se incrementa el límite de perturbación. Para ello, se ha realizado un análisis adicional sobre los datasets probando diferentes valores de $\epsilon$: 0.01, 0.03, 0.05, 0.075, 0.1, 0.2 y 0.5, viendo su F1-Score asociado a la clase de ataque. De esta forma, se puede observar la relación entre la magnitud de la perturbación y la degradación del F1-Score de los modelos.
+Los datasets perturbados con PGD y FGSM se generaron con un límite de perturbación de $\epsilon = 0.05$. Sin embargo, puede ser interesante analizar cómo varía la robustez de los modelos a medida que se incrementa el límite de perturbación. Para ello, se ha realizado un análisis adicional sobre los datasets probando diferentes valores de $\epsilon$: 0.01, 0.03, 0.05, 0.075, 0.1, 0.2 y 0.5, viendo su F1-Score asociado a la clase de ataque. De esta forma, se puede observar la relación entre la magnitud de la perturbación y la degradación del F1-Score de los modelos.
 
 La idea es probar estos diferentes valores de límites de perturbación y ver a partir de qué valor los modelos bajan su F1-Score por debajo de un umbral, en este caso va a ser 0.5, que es un valor bastante bajo y que indicaría que el modelo ya no es capaz de detectar correctamente la clase maliciosa.
 
@@ -296,10 +282,11 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
+0     & 0.8892 & 0.8876 & 0.8892 & 0.8873 & 0.7976 & 0.8401 & 0.8285 \\
 0.010 & 0.7290 & 0.7208 & 0.6652 & 0.7136 & 0.6677 & 0.7111 & 0.7294 \\
 0.030 & 0.7071 & 0.7202 & 0.6420 & 0.7091 & 0.6219 & 0.6851 & 0.6848 \\
 0.050 & 0.7082 & 0.6841 & 0.6411 & 0.7191 & 0.5590 & 0.7071 & 0.6765 \\
-0.075 & 0.7094 & 0.6774 & 0.6250 & 0.7020 & 0.4503 & 0.7080 & 0.6710 \\
+0.075 & 0.7094 & 0.6774 & 0.6250 & 0.7020 & \textbf{0.4503} & 0.7080 & 0.6710 \\
 0.100 & 0.7125 & 0.6840 & 0.6015 & 0.6889 & 0.4097 & 0.7090 & 0.6680 \\
 0.200 & 0.7062 & 0.6608 & 0.5387 & 0.7181 & 0.3791 & 0.7097 & 0.6759 \\
 0.500 & 0.7112 & 0.6626 & 0.5239 & 0.7383 & 0.3811 & 0.7085 & 0.6995 \\
@@ -317,8 +304,9 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
+0     & 0.8892 & 0.8876 & 0.8892 & 0.8873 & 0.7976 & 0.8401 & 0.8285 \\
 0.010 & 0.7255 & 0.7287 & 0.6826 & 0.6985 & 0.7431 & 0.7321 & 0.7156 \\
-0.030 & 0.7013 & 0.6789 & 0.6688 & 0.7076 & 0.7201 & 0.4889 & 0.7034 \\
+0.030 & 0.7013 & 0.6789 & 0.6688 & 0.7076 & 0.7201 & \textbf{0.4889} & 0.7034 \\
 0.050 & 0.7067 & 0.5639 & 0.6706 & 0.6913 & 0.6822 & 0.4581 & 0.6882 \\
 0.075 & 0.7178 & 0.6979 & 0.6710 & 0.6299 & 0.6418 & 0.4983 & 0.6846 \\
 0.100 & 0.7194 & 0.6727 & 0.6745 & 0.6496 & 0.6396 & 0.5328 & 0.6847 \\
@@ -341,6 +329,7 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
+0     & 0.8892 & 0.8876 & 0.8892 & 0.8873 & 0.7976 & 0.8401 & 0.8285 \\
 0.010 & 0.7210 & 0.6873 & 0.7124 & 0.6579 & 0.7046 & 0.7165 & 0.7772 \\
 0.030 & 0.7196 & 0.7019 & 0.6780 & 0.6922 & 0.7054 & 0.7110 & 0.7162 \\
 0.050 & 0.7113 & 0.7075 & 0.7251 & 0.7095 & 0.6965 & 0.7103 & 0.7157 \\
@@ -362,6 +351,7 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
+0     & 0.8892 & 0.8876 & 0.8892 & 0.8873 & 0.7976 & 0.8401 & 0.8285 \\
 0.010 & 0.7247 & 0.7199 & 0.7669 & 0.6825 & 0.7444 & 0.7384 & 0.7156 \\
 0.030 & 0.6778 & 0.7015 & 0.7192 & 0.6880 & 0.6099 & 0.7157 & 0.7150 \\
 0.050 & 0.7013 & 0.7071 & 0.7073 & 0.7060 & 0.7053 & 0.7068 & 0.7102 \\
@@ -387,9 +377,10 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
+0     & 0.9996 & 0.9987 & 0.9998 & 1.0000 & 0.9324 & 0.9941 & 0.9941 \\
 0.010 & 0.6736 & 0.6092 & 0.5789 & 0.5784 & 0.9437 & 0.8052 & 0.9484 \\
 0.030 & 0.7356 & 0.5764 & 0.5790 & 0.5834 & 0.7617 & 0.5243 & 0.7623 \\
-0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & 0.2217 & 0.2314 & 0.6059 \\
+0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & \textbf{0.2217} & \textbf{0.2314} & 0.6059 \\
 0.075 & 0.7619 & 0.5766 & 0.5786 & 0.6182 & 0.2203 & 0.1808 & 0.5887 \\
 0.100 & 0.7793 & 0.5768 & 0.5789 & 0.6119 & 0.2197 & 0.1786 & 0.6225 \\
 0.200 & 0.5790 & 0.6088 & 0.6097 & 0.5916 & 0.2155 & 0.1782 & 0.5888 \\
@@ -408,6 +399,7 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
+0     & 0.9996 & 0.9987 & 0.9998 & 1.0000 & 0.9324 & 0.9941 & 0.9941 \\
 0.010 & 0.6318 & 0.6104 & 0.5769 & 0.5786 & 0.8853 & 0.8944 & 0.9346 \\
 0.030 & 0.6167 & 0.5778 & 0.5769 & 0.6350 & 0.7888 & 0.8942 & 0.7642 \\
 0.050 & 0.6355 & 0.5777 & 0.5782 & 0.8217 & 0.7888 & 0.8958 & 0.5756 \\
@@ -432,9 +424,10 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
+0     & 0.9996 & 0.9987 & 0.9998 & 1.0000 & 0.9324 & 0.9941 & 0.9941 \\
 0.010 & 0.6736 & 0.6092 & 0.5789 & 0.5784 & 0.9437 & 0.8052 & 0.9484 \\
 0.030 & 0.7356 & 0.5764 & 0.5790 & 0.5834 & 0.7617 & 0.5243 & 0.7623 \\
-0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & 0.2217 & 0.2314 & 0.6059 \\
+0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & \textbf{0.2217} & \textbf{0.2314} & 0.6059 \\
 0.075 & 0.7619 & 0.5766 & 0.5786 & 0.6182 & 0.2203 & 0.1808 & 0.5887 \\
 0.100 & 0.7793 & 0.5768 & 0.5789 & 0.6119 & 0.2197 & 0.1786 & 0.6225 \\
 0.200 & 0.5790 & 0.6088 & 0.6097 & 0.5916 & 0.2155 & 0.1782 & 0.5888 \\
@@ -453,6 +446,7 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
+0     & 0.9996 & 0.9987 & 0.9998 & 1.0000 & 0.9324 & 0.9941 & 0.9941 \\
 0.010 & 0.6318 & 0.6104 & 0.5769 & 0.5786 & 0.8853 & 0.8944 & 0.9346 \\
 0.030 & 0.6167 & 0.5778 & 0.5769 & 0.6350 & 0.7888 & 0.8942 & 0.7642 \\
 0.050 & 0.6355 & 0.5777 & 0.5782 & 0.8217 & 0.7888 & 0.8958 & 0.5756 \\
@@ -478,7 +472,8 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
-0.010 & 0.6799 & 0.5647 & 0.6577 & 0.3210 & 0.4029 & 0.3369 & 0.8454 \\
+0     & 0.9946 & 0.9927 & 0.9955 & 0.9949 & 0.8434 & 0.9423 & 0.9361 \\
+0.010 & 0.6799 & 0.5647 & 0.6577 & \textbf{0.3210} & \textbf{0.4029} & \textbf{0.3369} & 0.8454 \\
 0.030 & 0.6425 & 0.5620 & 0.6391 & 0.4003 & 0.3612 & 0.2857 & 0.6518 \\
 0.050 & 0.6690 & 0.5517 & 0.5496 & 0.4257 & 0.2852 & 0.2861 & 0.6237 \\
 0.075 & 0.6807 & 0.5510 & 0.6003 & 0.4358 & 0.2329 & 0.2867 & 0.6239 \\
@@ -499,8 +494,9 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
-0.010 & 0.5548 & 0.6436 & 0.8253 & 0.3025 & 0.3217 & 0.4965 & 0.7411 \\
-0.030 & 0.4435 & 0.6053 & 0.7713 & 0.3184 & 0.3209 & 0.4768 & 0.6186 \\
+0     & 0.9946 & 0.9927 & 0.9955 & 0.9949 & 0.8434 & 0.9423 & 0.9361 \\
+0.010 & 0.5548 & 0.6436 & 0.8253 & \textbf{0.3025} & \textbf{0.3217} & \textbf{0.4965} & 0.7411 \\
+0.030 & \textbf{0.4435} & 0.6053 & 0.7713 & 0.3184 & 0.3209 & 0.4768 & 0.6186 \\
 0.050 & 0.4459 & 0.6052 & 0.7218 & 0.3238 & 0.3066 & 0.4412 & 0.5818 \\
 0.075 & 0.4469 & 0.6118 & 0.7506 & 0.3308 & 0.2954 & 0.4406 & 0.5817 \\
 0.100 & 0.4510 & 0.6099 & 0.7504 & 0.3363 & 0.2888 & 0.4637 & 0.5781 \\
@@ -522,13 +518,14 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
-0.010 & 0.7322 & 0.4618 & 0.6258 & 0.4997 & 0.7548 & 0.3946 & 0.9192 \\
+0     & 0.9946 & 0.9927 & 0.9955 & 0.9949 & 0.8434 & 0.9423 & 0.9361 \\
+0.010 & 0.7322 & \textbf{0.4618} & 0.6258 & \textbf{0.4997} & 0.7548 & \textbf{0.3946} & 0.9192 \\
 0.030 & 0.5675 & 0.4086 & 0.5527 & 0.2887 & 0.7922 & 0.4104 & 0.6605 \\
 0.050 & 0.5725 & 0.3994 & 0.5433 & 0.3501 & 0.7608 & 0.3850 & 0.6488 \\
 0.075 & 0.5221 & 0.3537 & 0.6107 & 0.3290 & 0.6546 & 0.3831 & 0.6317 \\
-0.100 & 0.4931 & 0.3531 & 0.5877 & 0.3367 & 0.5737 & 0.3830 & 0.6114 \\
-0.200 & 0.4590 & 0.3066 & 0.5526 & 0.2307 & 0.4415 & 0.3826 & 0.4588 \\
-0.500 & 0.3671 & 0.3278 & 0.4360 & 0.1261 & 0.3610 & 0.3826 & 0.0817 \\
+0.100 & \textbf{0.4931} & 0.3531 & 0.5877 & 0.3367 & 0.5737 & 0.3830 & 0.6114 \\
+0.200 & 0.4590 & 0.3066 & 0.5526 & 0.2307 & \textbf{0.4415} & 0.3826 & \textbf{0.4588} \\
+0.500 & 0.3671 & 0.3278 & \textbf{0.4360} & 0.1261 & 0.3610 & 0.3826 & 0.0817 \\
 \bottomrule
 \end{tabular}%
 }
@@ -544,13 +541,14 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \toprule
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
-0.010 & 0.5529 & 0.5838 & 0.7368 & 0.3758 & 0.3273 & 0.5400 & 0.7410 \\
-0.030 & 0.5078 & 0.6789 & 0.7228 & 0.3322 & 0.3208 & 0.4126 & 0.6080 \\
-0.050 & 0.5977 & 0.4666 & 0.6414 & 0.4006 & 0.4115 & 0.4366 & 0.5804 \\
-0.075 & 0.4611 & 0.4123 & 0.5110 & 0.3748 & 0.4057 & 0.4201 & 0.5501 \\
-0.100 & 0.5492 & 0.4199 & 0.4765 & 0.4390 & 0.4901 & 0.4025 & 0.5360 \\
+0     & 0.9946 & 0.9927 & 0.9955 & 0.9949 & 0.8434 & 0.9423 & 0.9361 \\
+0.010 & 0.5529 & 0.5838 & 0.7368 & \textbf{0.3758} & \textbf{0.3273} & 0.5400 & 0.7410 \\
+0.030 & 0.5078 & 0.6789 & 0.7228 & 0.3322 & 0.3208 & \textbf{0.4126} & 0.6080 \\
+0.050 & 0.5977 & \textbf{0.4666} & 0.6414 & 0.4006 & 0.4115 & 0.4366 & 0.5804 \\
+0.075 & \textbf{0.4611} & 0.4123 & 0.5110 & 0.3748 & 0.4057 & 0.4201 & 0.5501 \\
+0.100 & 0.5492 & 0.4199 & \textbf{0.4765} & 0.4390 & 0.4901 & 0.4025 & 0.5360 \\
 0.200 & 0.4576 & 0.4317 & 0.4569 & 0.3485 & 0.4224 & 0.3734 & 0.5026 \\
-0.500 & 0.4910 & 0.3701 & 0.4295 & 0.4782 & 0.6064 & 0.3919 & 0.4413 \\
+0.500 & 0.4910 & 0.3701 & 0.4295 & 0.4782 & 0.6064 & 0.3919 & \textbf{0.4413} \\ 
 \bottomrule
 \end{tabular}%
 }
