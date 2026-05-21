@@ -1474,3 +1474,75 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el datas
     \caption{Hiperparámetros ganadores de los modelos evaluados con ToN-IoT}
     \label{tab:ton_best_hyperparams}
 \end{table}
+
+\section{Modelos Evaluados en Local}
+
+Para terminar la comparativa entre los modelos es interesante ver el tiempo que tardarían en la fase de inferencia en un entorno más realista, es decir, cargar los modelos en nuestro propio ordenador (no usando un super servidor).
+Hemos cargado los modelos ganadores entrenados en mi ordenador y hemos calculado el tiempo que tardaría en procesar todos los registros y hacer la predicción.
+
+\subsection{Resultados UNSW-NB15}
+
+\begin{table}[H]
+\centering
+\caption{Tiempo medio de inferencia y throughput aproximado en máquina local para UNSW-NB15}
+\label{tab:inferencia_unsw}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Modelo} & \textbf{Tiempo medio (s)} & \textbf{Muestras/s aprox.} \\
+\midrule
+SVM      & 0.0155 & 16600905 \\
+CatBoost & 0.1572 & 1639079  \\
+LightGBM & 0.2044 & 1260820  \\
+RF       & 0.2130 & 1209890  \\
+MLP      & 0.2240 & 1150412  \\
+XGBoost  & 0.2313 & 1113803  \\
+CNN      & 1.1434 & 225353   \\
+\bottomrule
+\end{tabular}%
+\end{table}
+
+\subsection{Resultados IOT-23}
+
+\begin{table}[H]
+\centering
+\caption{Tiempo medio de inferencia y throughput aproximado en máquina local para IoT-23}
+\label{tab:inferencia_iot23}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Modelo} & \textbf{Tiempo medio (s)} & \textbf{Muestras/s aprox.} \\
+\midrule
+XGBoost  & 0.2160 & 5391713 \\
+SVM      & 0.2188 & 5323551 \\
+LightGBM & 0.2962 & 3932579 \\
+CatBoost & 0.3018 & 3859140 \\
+MLP      & 0.5940 & 1961042 \\
+RF       & 1.0131 & 1149778 \\
+CNN      & 6.2271 & 187062  \\
+\bottomrule
+\end{tabular}%
+\end{table}
+
+\subsection{Resultados TON-IOT}
+
+\begin{table}[H] 
+\centering
+\caption{Tiempo medio de inferencia y throughput aproximado en máquina local para TON-IoT}
+\label{tab:inferencia_toniot}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Modelo} & \textbf{Tiempo medio (s)} & \textbf{Muestras/s aprox.} \\
+\midrule
+SVM      & 0.0413 & 5113359 \\
+XGBoost  & 0.0810 & 2605794 \\
+CatBoost & 0.0912 & 2313078 \\
+RF       & 0.1506 & 1401017 \\
+LightGBM & 0.1676 & 1259440 \\
+MLP      & 0.2519 & 837747  \\
+CNN      & 2.1399 & 98625   \\
+\bottomrule
+\end{tabular}%
+\end{table}
+
+En conclusión, los resultados demuestran que la viabilidad de un IDS no solo se mide por su robustez métrica, sino por su eficiencia temporal. Los modelos evaluados exhiben una fase de inferencia altamente competitiva en hardware convencional, lo que valida su aplicabilidad práctica fuera de entornos de supercomputación.
+
+La selección del clasificador óptimo responderá, por tanto, a un compromiso de ingeniería (trade-off) entre los recursos disponibles y los requerimientos de seguridad de cada escenario. Arquitecturas profundas como la CNN ofrecen una tolerancia y resiliencia sobresalientes frente a ataques de evasión adversarios, pero penalizan severamente la latencia del sistema. Por el contrario, los ensambles basados en árboles de decisión se posicionan como las soluciones más equilibradas. La elección final quedará condicionada a si el entorno \textbf{prioriza la robustez o la disponibilidad en tiempo real}.
