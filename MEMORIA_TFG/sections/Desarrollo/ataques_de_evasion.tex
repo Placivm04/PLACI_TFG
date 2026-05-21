@@ -269,7 +269,7 @@ Los datasets perturbados con PGD y FGSM se generaron con un límite de perturbac
 
 La idea es probar estos diferentes valores de límites de perturbación y ver a partir de qué valor los modelos bajan su F1-Score por debajo de un umbral, en este caso va a ser 0.5, que es un valor bastante bajo y que indicaría que el modelo ya no es capaz de detectar correctamente la clase maliciosa.
 
-\subsection{Análisis de Resultados de UNSW-NB15}
+\subsection{Resultados UNSW-NB15}
 
 \subsubsection{FGSM}
 
@@ -364,7 +364,7 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 }
 \end{table}
 
-\subsection{Análisis de Resultados de IOT-23}
+\subsection{Resultados IOT-23}
 
 \subsubsection{FGSM}
 
@@ -459,7 +459,7 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 }
 \end{table}
 
-\subsection{Análisis de Resultados de TON-IOT}
+\subsection{Resultados TON-IOT}
 
 \subsubsection{FGSM}
 
@@ -553,3 +553,15 @@ La idea es probar estos diferentes valores de límites de perturbación y ver a 
 \end{tabular}%
 }
 \end{table}
+
+\subsection{Conclusiones del análisis del límite de perturbación}
+
+A partir de los resultados obtenidos, se observa que el incremento del límite de perturbación no produce siempre una degradación estrictamente monótona del F1-score. Aunque cabría esperar que valores mayores de $\epsilon$ provocasen una caída progresiva del rendimiento, en varios modelos aparecen comportamientos irregulares, con recuperaciones parciales del F1-score para perturbaciones superiores. Este fenómeno es especialmente relevante en datos tabulares, donde perturbaciones elevadas pueden desplazar las muestras fuera de la distribución original del dataset o producir efectos de saturación tras el recorte de valores.
+
+En el caso de UNSW-NB15, la degradación es moderada. Algunos modelos mantienen valores de F1-score superiores a 0.5 incluso para perturbaciones elevadas, lo que indica una cierta estabilidad frente a los ataques evaluados.
+
+En IoT-23, los resultados muestran una caída muy acusada respecto al escenario limpio, especialmente porque los modelos parten de valores de F1-score cercanos a 1. En este dataset, algunos modelos como SVM y MLP sufren degradaciones importantes con determinados ataques, mientras que otros mantienen valores más elevados. Este comportamiento sugiere que, aunque los modelos alcanzan un rendimiento muy alto en condiciones normales, pueden ser sensibles a pequeñas perturbaciones adversarias.
+
+Por último, TON-IoT es el dataset donde se observa una degradación más severa y generalizada. En varios modelos, el F1-score cae por debajo del umbral de 0.5 incluso con valores bajos de $\epsilon$, especialmente bajo ataques PGD. Esto indica que las muestras de este dataset son más sensibles a perturbaciones adversarias.
+
+En conjunto, este análisis permite concluir que la robustez adversaria no puede evaluarse únicamente a partir del rendimiento en test limpio. Modelos con valores elevados de F1-score en condiciones normales pueden sufrir caídas importantes cuando se aplican perturbaciones adversarias. Además, el impacto del ataque depende del dataset, del tipo de ataque, del límite de perturbación y del modelo generador utilizado para construir las muestras adversarias.
