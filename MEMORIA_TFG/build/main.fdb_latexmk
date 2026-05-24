@@ -1,6 +1,6 @@
 # Fdb version 4
-["bibtex build/main"] 1779620402.55671 "build/main.aux" "build/main.bbl" "build/main" 1779620402.67686 0
-  "./sections/Referencias/references.bib" 1779620402.38315 5912 a1bce53f4ceb3791f81d403e04fc0dde ""
+["bibtex build/main"] 1779620438.05039 "build/main.aux" "build/main.bbl" "build/main" 1779620438.17223 0
+  "./sections/Referencias/references.bib" 1779620437.86315 5912 a1bce53f4ceb3791f81d403e04fc0dde ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1678141846 65484 b7949c47a88ed6dca66ebc7a04577312 ""
   "build/main-blx.bib" 1779620362.11615 342 c5de4049c74822bc6d3880ddbdd0cbb6 "xelatex"
   "build/main.aux" 1779620362.10715 61804 15ddcb48c914d18456a22b40a624001d "xelatex"
@@ -8,12 +8,12 @@
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1779620362.64648 "build/main.xdv" "build/main.pdf" "build/main" 1779620402.67955 0
+["xdvipdfmx"] 1779620362.64648 "build/main.xdv" "build/main.pdf" "build/main" 1779620438.17464 0
   "build/main.xdv" 1779620362.11715 1461452 5084b444393ee27cbf825acdfc84691b "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1779620359.42048 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1779620402.67698 0
+["xelatex"] 1779620359.42048 "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" "build/main.xdv" "main" 1779620438.17229 0
   "/etc/texmf/web2c/texmf.cnf" 1769677803.1198 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/placi/Escritorio/TFG/PLACI_TFG/MEMORIA_TFG/main.tex" 1779619079.59512 8078 d20e0269e8c30bd94ef6c56555cddb75 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -219,7 +219,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1769677935 10845601 08ab28420c66ab5ee09b14fd73accf73 ""
   "build/main.aux" 1779620362.10715 61804 15ddcb48c914d18456a22b40a624001d "xelatex"
-  "build/main.bbl" 1779620402.66315 13618 f84f77f45c0c46a7bf17ba9fe51e4686 "bibtex build/main"
+  "build/main.bbl" 1779620438.16015 13618 f84f77f45c0c46a7bf17ba9fe51e4686 "bibtex build/main"
   "build/main.lof" 1779620362.11715 8317 bd0ceb780caaf050c762b871e7d04f7a "xelatex"
   "build/main.lot" 1779620362.11715 8411 8296ae245f08f7be02647bb317f58904 "xelatex"
   "build/main.nls" 0 -1 0 ""
