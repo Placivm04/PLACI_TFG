@@ -62,7 +62,7 @@
     \field{year}{2019}
   \endentry
 
-  \entry{alharthi2025comparative}{article}{}
+  \entry{ml_comparative_dl}{article}{}
     \name{author}{3}{}{%
       {{hash=AA}{%
          family={Alharthi},
@@ -102,7 +102,7 @@
     \field{year}{2025}
   \endentry
 
-  \entry{alzaher2025intrusion}{article}{}
+  \entry{rf_xgboost}{article}{}
     \name{author}{2}{}{%
       {{hash=AFJ}{%
          family={ALzaher},
@@ -131,91 +131,7 @@
     \field{year}{2025}
   \endentry
 
-  \entry{10913549}{inproceedings}{}
-    \name{author}{3}{}{%
-      {{hash=HB}{%
-         family={Hafid},
-         familyi={H\bibinitperiod},
-         given={Bouchra},
-         giveni={B\bibinitperiod},
-      }}%
-      {{hash=EA}{%
-         family={Ezzouhairi},
-         familyi={E\bibinitperiod},
-         given={Abdellatif},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=HK}{%
-         family={Haddouch},
-         familyi={H\bibinitperiod},
-         given={Khalid},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \keyw{Privacy;Image edge detection;Intrusion detection;Boosting;Internet of Things;Security;Resource management;Protection;Random forests;Edge computing;Internet of Things;Intrusion Detection System;Edge computing;Machine Learning;IoT Security}
-    \strng{namehash}{HBEAHK1}
-    \strng{fullhash}{HBEAHK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{booktitle}{2024 3rd International Conference on Embedded Systems and Artificial Intelligence (ESAI)}
-    \verb{doi}
-    \verb 10.1109/ESAI62891.2024.10913549
-    \endverb
-    \field{pages}{1\bibrangedash 9}
-    \field{title}{Strengthening Security in the Internet of Things (IoT): Integrated Approach of Intrusion Detection Systems (IDS) and Edge Computing}
-    \field{year}{2024}
-  \endentry
-
-  \entry{Kamruzzaman2025LightweightAI}{article}{}
-    \name{author}{5}{}{%
-      {{hash=KM}{%
-         family={Kamruzzaman},
-         familyi={K\bibinitperiod},
-         given={Md.},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=SMS}{%
-         family={Siddiki},
-         familyi={S\bibinitperiod},
-         given={Md.\bibnamedelima Shoeb},
-         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=MRS}{%
-         family={Mondal},
-         familyi={M\bibinitperiod},
-         given={Rabi\bibnamedelima Sankar},
-         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=SS}{%
-         family={Saha},
-         familyi={S\bibinitperiod},
-         given={Sujoy},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=BMNA}{%
-         family={Bhuiyan},
-         familyi={B\bibinitperiod},
-         given={Md\bibnamedelima Nazmul\bibnamedelima Alam},
-         giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KM+1}
-    \strng{fullhash}{KMSMSMRSSSBMNA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{title}{Lightweight AI-Driven intrusion detection for SMEs: Comparative analysis of machine lerning models on Ton\_Iot}
-    \verb{url}
-    \verb https://api.semanticscholar.org/CorpusID:283327148
-    \endverb
-    \field{journaltitle}{Intelligent Decision Technologies}
-    \field{year}{2025}
-  \endentry
-
-  \entry{kasongo2023rnnids}{article}{}
+  \entry{lstm}{article}{}
     \name{author}{1}{}{%
       {{hash=KSM}{%
          family={Kasongo},
@@ -243,7 +159,7 @@
     \field{year}{2023}
   \endentry
 
-  \entry{Manduru2024ALG}{article}{}
+  \entry{lightgbm}{article}{}
     \name{author}{6}{}{%
       {{hash=MV}{%
          family={Manduru},
@@ -297,7 +213,27 @@
     \field{year}{2024}
   \endentry
 
-  \entry{article}{article}{}
+  \entry{vscode_jupyter_notebooks}{online}{}
+    \name{author}{1}{}{%
+      {{hash=M}{%
+         family={{Microsoft}},
+         familyi={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{M1}
+    \strng{fullhash}{M1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{{Jupyter Notebooks in VS Code}}
+    \verb{url}
+    \verb https://code.visualstudio.com/docs/datascience/jupyter-notebooks
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{mlp_layers}{article}{}
     \name{author}{3}{}{%
       {{hash=MA}{%
          family={Mohammed},
@@ -335,7 +271,7 @@
     \field{year}{2020}
   \endentry
 
-  \entry{mukhef2025adversarial}{article}{}
+  \entry{art}{article}{}
     \name{author}{1}{}{%
       {{hash=MHA}{%
          family={Mukhef},
@@ -364,7 +300,7 @@
     \field{year}{2025}
   \endentry
 
-  \entry{10823298}{inproceedings}{}
+  \entry{optuna}{inproceedings}{}
     \name{author}{5}{}{%
       {{hash=PN}{%
          family={Parekh},
@@ -413,7 +349,7 @@
     \field{year}{2024}
   \endentry
 
-  \entry{10627334}{inproceedings}{}
+  \entry{iot-23}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=SA}{%
          family={Sharma},
@@ -444,7 +380,7 @@
     \field{year}{2024}
   \endentry
 
-  \entry{singh2023dlidsreview}{article}{}
+  \entry{ton-iot}{article}{}
     \name{author}{2}{}{%
       {{hash=SG}{%
          family={Singh},
@@ -478,7 +414,7 @@
     \field{year}{2023}
   \endentry
 
-  \entry{tripathy2025idsreview}{article}{}
+  \entry{unsw-nb15}{article}{}
     \name{author}{2}{}{%
       {{hash=TSS}{%
          family={Tripathy},

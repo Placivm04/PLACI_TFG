@@ -1,34 +1,5 @@
 \chapter{Resultados}
 
-\section{Entorno de pruebas}
-
-Antes de analizar los resultados obtenidos, es importante describir el entorno de pruebas utilizado para la evaluación de los modelos. Todos los experimentos se han llevado a cabo en un entorno controlado con las siguientes características:
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|l|l|}
-        \hline
-        \textbf{Componente} & \textbf{Especificación Técnica} \\
-        \hline
-        Sistema Operativo & Debian GNU/Linux 12 (bookworm) \\
-        \hline
-        Procesador (CPU) & 2x Intel® Xeon® Gold 5418Y (Arquitectura Dual-Socket) \\
-        \hline
-        Núcleos de CPU & 48 físicos / 96 lógicos (Hilos) \\
-        \hline
-        Memoria RAM (Sistema) & 512 GB (503 GiB disponibles) \\
-        \hline
-        Aceleradores Gráficos (GPU) & 4x NVIDIA L40S \\
-        \hline
-        Memoria VRAM (Total) & 192 GB (48 GB dedicados por cada GPU) \\
-        \hline
-        Plataforma de Cómputo & CUDA Version 13.0 (Driver 580.95.05) \\
-        \hline
-    \end{tabular}
-    \caption{Especificaciones del entorno experimental}
-    \label{tab:entorno_experimental}
-\end{table}
-
 \section{Modelos entrenados con UNSW-NB15}
 \subsection{Random Forest}
 

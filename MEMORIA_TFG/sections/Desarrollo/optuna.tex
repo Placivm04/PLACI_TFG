@@ -1,14 +1,79 @@
-\section{Optuna}
+\chapter{Tecnologías utilizadas}
 
-\textbf{Optuna} es un framework de optimización de hiperparámetros de código abierto que permite a los desarrolladores y científicos de datos encontrar automáticamente los mejores hiperparámetros para sus modelos de aprendizaje automático. Optuna utiliza técnicas de optimización bayesiana para explorar el espacio de hiperparámetros de manera eficiente, lo que puede mejorar significativamente el rendimiento de los modelos.
+\section{Lenguaje de Programación}
+
+Para el desarrollo, exprimentación y análisis de este trabajo, hemos usado \textbf{Python} como lenguaje de programación principal. En la actualidad, Python se ha consolidado como el lenguaje estándar de la comunidad científica para proyectos de ciberseguridad o Inteligencia Artificial.
+En cuanto al desarrollo, el proyecto se ha estructurado y ejecutado utilizando \textbf{Jupyter Notebook} para mantener un flujo de trabajo ágil y ordenado ~\cite{vscode_jupyter_notebooks}. Por ejemplo, esto nos permite renderizar tablas de resultados en la misma línea del código y probar diferentes parámetros sin tener que ejecutar el código completo.
+
+\section{Librerías Usadas}
+
+Las librerías de código usadas en este trabajo han sido las siguientes:
+
+\begin{table}[H]
+\centering
+\caption{Librerías utilizadas durante el desarrollo experimental}
+\label{tab:librerias_utilizadas}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll}
+\toprule
+\textbf{Librería} & \textbf{Objetivo principal} \\
+\midrule
+\textbf{NumPy} & Operaciones numéricas, manejo de arrays y cálculo eficiente sobre matrices. \\
+\textbf{Polars} & Procesamiento eficiente de datasets tabulares con gran volumen de registros. \\
+\textbf{Pandas} & Manipulación de datos y creación de tablas sencillas de resultados. \\
+\textbf{Psutil} & Monitorización de recursos del sistema y apoyo en la medición del rendimiento. \\
+\textbf{Matplotlib} & Generación de gráficas y visualización de resultados experimentales. \\
+\textbf{Seaborn} & Creación de visualizaciones estadísticas de forma más clara y legible. \\
+\textbf{TensorFlow/Keras} & Implementación, entrenamiento y evaluación de modelos de deep learning. \\
+\textbf{Scikit-learn} & Preprocesamiento, métricas de evaluación y entrenamiento de modelos clásicos. \\
+\textbf{XGBoost} & Entrenamiento y evaluación del modelo basado en gradient boosting. \\
+\textbf{LightGBM} & Entrenamiento eficiente de modelos de boosting sobre datos tabulares. \\
+\textbf{CatBoost} & Entrenamiento de modelos de boosting con buen rendimiento en datos tabulares. \\
+\textbf{Adversarial Robustness Toolbox} & Generación de ataques adversarios como FGSM y PGD. \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\section{Entorno de pruebas}
+
+Antes de analizar los resultados obtenidos, es importante describir el entorno de pruebas utilizado para la evaluación de los modelos. Todos los experimentos se han llevado a cabo en un entorno controlado con las siguientes características:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Componente} & \textbf{Especificación Técnica} \\
+        \hline
+        Sistema Operativo & Debian GNU/Linux 12 (bookworm) \\
+        \hline
+        Procesador (CPU) & 2x Intel® Xeon® Gold 5418Y (Arquitectura Dual-Socket) \\
+        \hline
+        Núcleos de CPU & 48 físicos / 96 lógicos (Hilos) \\
+        \hline
+        Memoria RAM (Sistema) & 512 GB (503 GiB disponibles) \\
+        \hline
+        Aceleradores Gráficos (GPU) & 4x NVIDIA L40S \\
+        \hline
+        Memoria VRAM (Total) & 192 GB (48 GB dedicados por cada GPU) \\
+        \hline
+        Plataforma de Cómputo & CUDA Version 13.0 (Driver 580.95.05) \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del entorno experimental}
+    \label{tab:entorno_experimental}
+\end{table}
+
+\section{Optuna}
+\textbf{Optuna} es un framework de optimización de hiperparámetros de código abierto que permite a los desarrolladores y científicos de datos encontrar automáticamente los mejores hiperparámetros para sus modelos de aprendizaje automático ~\cite{akiba2019optuna}. Optuna utiliza técnicas de optimización bayesiana para explorar el espacio de hiperparámetros de manera eficiente, lo que puede mejorar significativamente el rendimiento de los modelos.
 
 A diferencia de Grid Search, que realiza una búsqueda exhaustiva y costosa, o Random Search, que no aprende de iteraciones pasadas, Optuna utiliza un enfoque bayesiano basado en el Tree-structured Parzen Estimator (TPE).
 
 El algoritmo TPE construye un modelo probabilístico de la función objetivo. En lugar de probar combinaciones al azar, predice qué regiones del espacio de búsqueda tienen más probabilidades de mejorar los resultados actuales.
 
-Otra de las ventajas de este framework es que nos permite establecer una \textbf{optimización multiobjetivo}, lo que es especialmente útil cuando se desea optimizar varias métricas al mismo tiempo, como la precisión y eficiencia del modelo.
+Otra de las ventajas de este framework es que nos permite establecer una \textbf{optimización multiobjetivo}, lo que es especialmente útil cuando se desea optimizar varias métricas al mismo tiempo, como la precisión y eficiencia del modelo. ~\cite{optuna}
 
-Optuna identifica un conjunto de soluciones que se encuentran en la frontera de Pareto, lo que significa que no hay otra solución que sea mejor en todas las métricas. Esto permite a los usuarios elegir entre diferentes compromisos según sus necesidades específicas, por lo que no presentamos una única solución.
+Optuna identifica un conjunto de soluciones que se encuentran en la \textbf{frontera de Pareto}, lo que significa que no hay otra solución que sea mejor en todas las métricas. Esto permite a los usuarios elegir entre diferentes compromisos según sus necesidades específicas, por lo que no presentamos una única solución.
 
 \begin{figure}[H]
     \centering

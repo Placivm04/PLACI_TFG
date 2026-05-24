@@ -456,6 +456,12 @@ INPUT ./images/mlp.png
 INPUT ./images/CNN_1D.jpg
 INPUT ./images/CNN_1D.jpg
 INPUT ./images/CNN_1D.jpg
+INPUT ./sections/Desarrollo/optuna.tex
+INPUT ./sections/Desarrollo/optuna.tex
+INPUT sections/Desarrollo/optuna.tex
+INPUT ./images/optuna.png
+INPUT ./images/optuna.png
+INPUT ./images/optuna.png
 INPUT ./sections/Estudio_del_arte/dataSets.tex
 INPUT ./sections/Estudio_del_arte/dataSets.tex
 INPUT sections/Estudio_del_arte/dataSets.tex
@@ -468,12 +474,6 @@ INPUT ./images/stratosphere_laboratory_CTU.png
 INPUT ./sections/Desarrollo/seleccion_de_hiperparametros.tex
 INPUT ./sections/Desarrollo/seleccion_de_hiperparametros.tex
 INPUT sections/Desarrollo/seleccion_de_hiperparametros.tex
-INPUT ./sections/Desarrollo/optuna.tex
-INPUT ./sections/Desarrollo/optuna.tex
-INPUT sections/Desarrollo/optuna.tex
-INPUT ./images/optuna.png
-INPUT ./images/optuna.png
-INPUT ./images/optuna.png
 INPUT ./sections/Desarrollo/resultados.tex
 INPUT ./sections/Desarrollo/resultados.tex
 INPUT sections/Desarrollo/resultados.tex
