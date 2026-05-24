@@ -67,19 +67,52 @@
 
 %────────────────────── Resumen / Abstract ─────────────────────────────
 \renewcommand{\abstractname}{Resumen}
+
 \begin{abstract}
+
+En el ámbito de la ciberseguridad, los sistemas de detección de intrusiones (IDS) desempeñan un papel fundamental para la
+identificación temprana de ataques y actividades maliciosas en redes informáticas. En los últimos años, el uso de técnicas de
+inteligencia artificial (IA) y aprendizaje automático (Machine Learning) ha permitido mejorar significativamente la precisión
+y la capacidad de adaptación de estos sistemas frente a amenazas cada vez más complejas y dinámicas. \\
+    
+Sin embargo, gran parte de la investigación existente se ha centrado principalmente en mejorar la tasa de detección o reducir los
+falsos positivos, sin considerar en profundidad el impacto computacional y energético que conllevan estos modelos. En entornos
+donde el procesamiento debe realizarse en tiempo real (como redes corporativas, sistemas embebidos o infraestructuras
+críticas) el consumo de recursos (CPU, memoria, GPU) y la latencia de inferencia se convierten en factores determinantes para
+la viabilidad de la solución. \\
+
+El proyecto se enfoca en el análisis, evaluación, selección de hiperparámetros y configuración de modelos de IA para comparar el rendimiento y eficiencia computacional de los distintos modelos aplicados a la detección de intrusiones.
+
+Además, se hace un análisis posterior para ver como los mejores modelos reaccionan ante diferentes técnicas de evasión.
+
 
 
 \medskip
 \noindent\textbf{Palabras clave:} 
+sistemas de detección de intrusiones (IDS), ataques adversarios, Internet de las Cosas (IoT), eficiencia computacional, frontera de pareto 
 \end{abstract}
 
 \renewcommand{\abstractname}{Abstract}
 \begin{abstract}
 
+In the field of cybersecurity, intrusion detection systems (IDS) play a vital role in the
+early identification of attacks and malicious activity on computer networks. In recent years, the use of
+artificial intelligence (AI) and machine learning techniques has significantly improved the accuracy
+and adaptability of these systems in the face of increasingly complex and dynamic threats. \\
+    
+However, much of the existing research has focused primarily on improving the detection rate or reducing
+false positives, without thoroughly considering the computational and energy impact of these models. In environments
+where processing must be carried out in real time (such as corporate networks, embedded systems or critical
+infrastructure), resource consumption (CPU, memory, GPU) and inference latency become determining factors for
+the viability of the solution. \\
+
+The project focuses on the analysis, evaluation, hyperparameter selection and configuration of AI models to compare the performance and computational efficiency of the various models applied to intrusion detection.
+
+Furthermore, a subsequent analysis is carried out to examine how the best models react to different evasion techniques.
 
 \medskip
 \noindent\textbf{Keywords:} 
+intrusion detection systems (IDS), cyberattacks, the Internet of Things (IoT), computational efficiency, pareto frontier
 \end{abstract}
 
 %──────────────── Agradecimientos ──────────────────────────────────────
@@ -111,16 +144,16 @@
 
 \chapter{Investigación Previa}
 \input{sections/Estudio_del_arte/investigacion_modelos.tex}
+\input{sections/Desarrollo/optuna.tex}
 \input{sections/Estudio_del_arte/dataSets.tex}
 \input{sections/Desarrollo/seleccion_de_hiperparametros.tex}
-\input{sections/Desarrollo/optuna.tex}
 \input{sections/Desarrollo/resultados.tex}
 \input{sections/Desarrollo/ataques_de_evasion.tex}
 
 %────────────────────── Contraportada ──────────────────────────────────
 \backmatter
 \nocite{*}
-\printbibliography[title={Bibliografía}]
+\printbibliography[heading=bibintoc,title={Bibliografía}]
 \cleardoublepage
 \MakeUMABackCover
 \end{document}

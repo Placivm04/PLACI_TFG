@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  21 MAY 2026 11:35
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  24 MAY 2026 12:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1357,13 +1357,43 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
+
+Overfull \hbox (3.30263pt too wide) in paragraph at lines 73--77
+\TU/lmss/m/n/12 (IDS) desempeñan un papel fundamental para la identificación temprana de ataques
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--83
+
+ []
+
+[1
 
 
 
 ] [2
 
-] [3
+]
+Underfull \hbox (badness 10000) in paragraph at lines 98--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--108
+
+ []
+
+
+Overfull \hbox (2.66075pt too wide) in paragraph at lines 114--116
+\TU/lmss/bx/n/12 Keywords: \TU/lmss/m/n/12 intrusion detection systems (IDS), cyberattacks, the Internet of Things
+ []
+
+[3
 
 ] [4
 
@@ -1375,26 +1405,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) [7
 
-])
+] [8])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [8] (build/main.lof [9
+ [9] (build/main.lof [10
 
-])
+] [11])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [10] [11] (build/main.lot [12
+ [12] (build/main.lot [13
 
 ])
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [13] [14
-
-
-]
+ [14]
 No file main.nls.
 Capítulo 1.
 (./sections/Estudio_del_arte/investigacion_modelos.tex
@@ -1408,6 +1435,8 @@ Overfull \hbox (7.17593pt too wide) in paragraph at lines 17--30
  []
 
 [15
+
+
 
 
 
@@ -1440,112 +1469,122 @@ File: images/mlp.png Graphic file (type bmp)
 [21] [22]
 File: images/CNN_1D.jpg Graphic file (type bmp)
 <images/CNN_1D.jpg>
-) (./sections/Estudio_del_arte/dataSets.tex [23]
-File: images/university_of_new_south_wales.jpeg Graphic file (type bmp)
-<images/university_of_new_south_wales.jpeg>
- [24] [25] [26]
-File: images/stratosphere_laboratory_CTU.png Graphic file (type bmp)
-<images/stratosphere_laboratory_CTU.png>
- [27]) (./sections/Desarrollo/seleccion_de_hiperparametros.tex [28] [29]) (./sections/Desarrollo/optuna.tex [30]
+) (./sections/Desarrollo/optuna.tex [23] [24
+
+]
+Capítulo 2.
+[25]
 File: images/OPTUNA.png Graphic file (type bmp)
 <images/OPTUNA.png>
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 23.
-) (./sections/Desarrollo/resultados.tex [31] [32]
-Capítulo 2.
+ [26]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 88.
+) (./sections/Estudio_del_arte/dataSets.tex [27] [28
+
+]
+Capítulo 3.
+[29]
+File: images/university_of_new_south_wales.jpeg Graphic file (type bmp)
+<images/university_of_new_south_wales.jpeg>
+ [30] [31] [32]
+File: images/stratosphere_laboratory_CTU.png Graphic file (type bmp)
+<images/stratosphere_laboratory_CTU.png>
+) (./sections/Desarrollo/seleccion_de_hiperparametros.tex [33] [34] [35]) (./sections/Desarrollo/resultados.tex [36]
+Capítulo 4.
 File: images/PARETO_RF.png Graphic file (type bmp)
 <images/PARETO_RF.png>
-[33
+[37
 
 ]
 File: images/PARETO_XGBOOST.png Graphic file (type bmp)
 <images/PARETO_XGBOOST.png>
- [34]
+ [38]
 File: images/PARETO_LIGHTGBM.png Graphic file (type bmp)
 <images/PARETO_LIGHTGBM.png>
- [35]
-Overfull \hbox (45.81198pt too wide) in paragraph at lines 144--160
+
+Overfull \hbox (45.81198pt too wide) in paragraph at lines 115--131
  [][] 
  []
 
+[39]
 File: images/PARETO_CATBOOST.png Graphic file (type bmp)
 <images/PARETO_CATBOOST.png>
-[36]
+ [40]
 File: images/PARETO_SVM.png Graphic file (type bmp)
 <images/PARETO_SVM.png>
- [37]
+ [41]
 File: images/PARETO_MLP.png Graphic file (type bmp)
 <images/PARETO_MLP.png>
- [38] [39]
+ [42]
 File: images/PARETO_CNN.png Graphic file (type bmp)
 <images/PARETO_CNN.png>
-
-Underfull \hbox (badness 1331) in paragraph at lines 401--401
+ [43]
+Underfull \hbox (badness 1331) in paragraph at lines 372--372
 \TU/Malacitana-Sans(0)/m/n/10.95 las falsas alarmas, siendo ideal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 []|\TU/Malacitana-Sans(0)/m/n/10.95 Calculada mediante
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 \TU/lmtt/m/n/10.95 scikit-learn \TU/Malacitana-Sans(0)/m/n/10.95 (\TU/lmtt/m/n/10.95 f1_score\TU/Malacitana-Sans(0)/m/n/10.95 ),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 \TU/Malacitana-Sans(0)/m/n/10.95 cruzando las etiquetas reales
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 \TU/Malacitana-Sans(0)/m/n/10.95 predicciones generadas por el
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--403
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 []|\TU/Malacitana-Sans(0)/b/n/10.95 Latencia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 []|\TU/Malacitana-Sans(0)/m/n/10.95 Medida mediante
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 \TU/lmtt/m/n/10.95 time.perf_counter() \TU/Malacitana-Sans(0)/m/n/10.95 al
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--405
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 []|\TU/Malacitana-Sans(0)/b/n/10.95 Throughput
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--407
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []|\TU/Malacitana-Sans(0)/b/n/10.95 Pico RAM
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 []|\TU/Malacitana-Sans(0)/m/n/10.95 Monitorizando el proceso con
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 \TU/lmtt/m/n/10.95 psutil.memory_info().rss\TU/Malacitana-Sans(0)/m/n/10.95 ,
  []
 
-[40]
-Overfull \hbox (55.01546pt too wide) in paragraph at lines 419--438
+[44]
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 390--409
  [][] 
  []
 
 File: images/ROC_MODELOS.png Graphic file (type bmp)
 <images/ROC_MODELOS.png>
-[41]
+[45]
 File: images/MC/MC_RF.png Graphic file (type bmp)
 <images/MC/MC_RF.png>
 File: images/MC/MC_XGBOOST.png Graphic file (type bmp)
@@ -1554,51 +1593,51 @@ File: images/MC/MC_LIGHTGBM.png Graphic file (type bmp)
 <images/MC/MC_LIGHTGBM.png>
 File: images/MC/MC_CATBOOST.png Graphic file (type bmp)
 <images/MC/MC_CATBOOST.png>
- [42]
+ [46]
 File: images/MC/MC_SVM.png Graphic file (type bmp)
 <images/MC/MC_SVM.png>
 File: images/MC/MC_MLP.png Graphic file (type bmp)
 <images/MC/MC_MLP.png>
 File: images/MC/MC_CNN.png Graphic file (type bmp)
 <images/MC/MC_CNN.png>
- [43]
+ [47]
 File: images/IOT/PARETO_RF_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_RF_IOT.png>
- [44]
+ [48]
 File: images/IOT/PARETO_XGBOOST_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_XGBOOST_IOT.png>
- [45]
+ [49]
 File: images/IOT/PARETO_LIGHTGBM_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_LIGHTGBM_IOT.png>
- [46]
-Overfull \hbox (45.48798pt too wide) in paragraph at lines 663--678
+ [50]
+Overfull \hbox (45.48798pt too wide) in paragraph at lines 634--649
  [][] 
  []
 
 File: images/IOT/PARETO_CATBOOST_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_CATBOOST_IOT.png>
-[47]
+[51]
 File: images/IOT/PARETO_SVM_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_SVM_IOT.png>
- [48]
+ [52]
 File: images/IOT/PARETO_MLP_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_MLP_IOT.png>
- [49]
+ [53]
 File: images/IOT/PARETO_CNN_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_CNN_IOT.png>
- [50]
-Overfull \hbox (25.97597pt too wide) in paragraph at lines 844--857
+ [54]
+Overfull \hbox (25.97597pt too wide) in paragraph at lines 815--828
  [][] 
  []
 
 
-Overfull \hbox (55.01546pt too wide) in paragraph at lines 870--889
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 841--860
  [][] 
  []
 
 File: images/IOT/ROC_MODELOS.png Graphic file (type bmp)
 <images/IOT/ROC_MODELOS.png>
-[51]
+[55]
 File: images/IOT/MC/MC_RF_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_RF_IOT.png>
 File: images/IOT/MC/MC_XGBOOST_IOT.png Graphic file (type bmp)
@@ -1607,51 +1646,51 @@ File: images/IOT/MC/MC_LIGHTGBM_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_LIGHTGBM_IOT.png>
 File: images/IOT/MC/MC_CATBOOST_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_CATBOOST_IOT.png>
- [52]
+ [56]
 File: images/IOT/MC/MC_SVM_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_SVM_IOT.png>
 File: images/IOT/MC/MC_MLP_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_MLP_IOT.png>
 File: images/IOT/MC/MC_CNN_IOT.png Graphic file (type bmp)
 <images/IOT/MC/MC_CNN_IOT.png>
- [53]
+ [57]
 File: images/TON/PARETO_RF_TON.png Graphic file (type bmp)
 <images/TON/PARETO_RF_TON.png>
- [54]
+ [58]
 File: images/TON/PARETO_XGBOOST_TON.png Graphic file (type bmp)
 <images/TON/PARETO_XGBOOST_TON.png>
- [55]
+ [59]
 File: images/TON/PARETO_LIGHTGBM_TON.png Graphic file (type bmp)
 <images/TON/PARETO_LIGHTGBM_TON.png>
- [56]
-Overfull \hbox (45.31998pt too wide) in paragraph at lines 1126--1143
+ [60]
+Overfull \hbox (45.31998pt too wide) in paragraph at lines 1097--1114
  [][] 
  []
 
 File: images/TON/PARETO_CATBOOST_TON.png Graphic file (type bmp)
 <images/TON/PARETO_CATBOOST_TON.png>
-[57] [58]
+[61] [62]
 File: images/TON/PARETO_SVM_TON.png Graphic file (type bmp)
 <images/TON/PARETO_SVM_TON.png>
- [59]
+ [63]
 File: images/TON/PARETO_MLP_TON.png Graphic file (type bmp)
 <images/TON/PARETO_MLP_TON.png>
- [60]
+ [64]
 File: images/TON/PARETO_CNN_TON.png Graphic file (type bmp)
 <images/TON/PARETO_CNN_TON.png>
- [61]
-Overfull \hbox (24.99196pt too wide) in paragraph at lines 1318--1335
+ [65]
+Overfull \hbox (24.99196pt too wide) in paragraph at lines 1289--1306
  [][] 
  []
 
 
-Overfull \hbox (55.01546pt too wide) in paragraph at lines 1348--1367
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 1319--1338
  [][] 
  []
 
 File: images/TON/ROC_MODELOS_TON.png Graphic file (type bmp)
 <images/TON/ROC_MODELOS_TON.png>
-[62]
+[66]
 File: images/TON/MC/MC_RF_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_RF_TON.png>
 File: images/TON/MC/MC_XGBOOST_TON.png Graphic file (type bmp)
@@ -1660,72 +1699,72 @@ File: images/TON/MC/MC_LIGHTGBM_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_LIGHTGBM_TON.png>
 File: images/TON/MC/MC_CATBOOST_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_CATBOOST_TON.png>
- [63]
+ [67]
 File: images/TON/MC/MC_SVM_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_SVM_TON.png>
 File: images/TON/MC/MC_MLP_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_MLP_TON.png>
 File: images/TON/MC/MC_CNN_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_CNN_TON.png>
- [64] [65]) (./sections/Desarrollo/ataques_de_evasion.tex [66] [67] [68]
+ [68] [69]) (./sections/Desarrollo/ataques_de_evasion.tex [70] [71] [72]
 File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-F1.png>
- [69]
+ [73]
 File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-ACCURACY.png>
 File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-RECALL.png>
- [70]
+ [74]
 File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-F1.png>
 File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-ACCURACY.png>
- [71]
+ [75]
 File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/FGSM-RECALL.png>
- [72]
+ [76]
 File: images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-F1.png>
 File: images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-ACCURACY.png>
 File: images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/IOT-23/PGD-RECALL.png>
- [73]
+ [77]
 File: images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-F1.png>
- [74]
+ [78]
 File: images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-ACCURACY.png>
 File: images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/IOT-23/FGSM-RECALL.png>
- [75]
+ [79]
 File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-F1.png>
 File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-ACCURACY.png>
- [76]
+ [80]
 File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/TON-IOT/PGD-RECALL.png>
- [77]
+ [81]
 File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-F1.png>
 File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-ACCURACY.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-ACCURACY.png>
 File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png>
- [78] [79] [80] [81] [82] [83]) [84]
-Overfull \hbox (24.4958pt too wide) in paragraph at lines 123--123
+ [82] [83] [84] [85] [86] [87]) [88]
+Overfull \hbox (24.4958pt too wide) in paragraph at lines 156--156
 \TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
  []
 
-[85
+[89
 
 
 
-] [86]
+] [90]
 File: template/logos/NEG-logo-umaes.png Graphic file (type bmp)
 <template/logos/NEG-logo-umaes.png>
- [87
+ [91
 
 
 ] (build/main.aux)
@@ -1734,18 +1773,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 59D1E9C07B7F9F27459856308395307C;11054.
+(rerunfilecheck)             Checksum: A98432C9FF7423B30FEFE341DBF76F69;13452.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44979 strings out of 474878
- 964710 string characters out of 5762516
+ 44983 strings out of 474878
+ 964130 string characters out of 5762516
  1948627 words of memory out of 5000000
- 66305 multiletter control sequences out of 15000+600000
+ 66309 multiletter control sequences out of 15000+600000
  563339 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,12n,121p,1920b,5581s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,12n,121p,1920b,5579s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (91 pages, 1396172 bytes).
+Output written on build/main.xdv (95 pages, 1461452 bytes).
