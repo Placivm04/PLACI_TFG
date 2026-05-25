@@ -432,6 +432,9 @@ INPUT build/main.lot
 INPUT build/main.lot
 INPUT build/main.lot
 OUTPUT build/main.lot
+INPUT ./sections/Desarrollo/introduccion.tex
+INPUT ./sections/Desarrollo/introduccion.tex
+INPUT sections/Desarrollo/introduccion.tex
 INPUT ./sections/Estudio_del_arte/investigacion_modelos.tex
 INPUT ./sections/Estudio_del_arte/investigacion_modelos.tex
 INPUT sections/Estudio_del_arte/investigacion_modelos.tex
@@ -673,6 +676,9 @@ INPUT ./images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-ACCURACY.png
 INPUT ./images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png
 INPUT ./images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png
 INPUT ./images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png
+INPUT ./sections/Desarrollo/conclusiones_lineas_futuras.tex
+INPUT ./sections/Desarrollo/conclusiones_lineas_futuras.tex
+INPUT sections/Desarrollo/conclusiones_lineas_futuras.tex
 INPUT ./template/logos/NEG-logo-umaes.png
 INPUT ./template/logos/NEG-logo-umaes.png
 INPUT ./template/logos/NEG-logo-umaes.png

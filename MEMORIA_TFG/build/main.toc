@@ -1,99 +1,108 @@
 \contentsline {chapter}{Resumen}{1}{chapter*.1}%
 \contentsline {chapter}{Abstract}{3}{chapter*.2}%
 \contentsline {chapter}{Agradecimientos}{5}{chapter*.4}%
-\contentsline {chapter}{\numberline {1}Investigación Previa}{15}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Machine Learning}{15}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Random Forest (RF)}{15}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Extreme Gradient Boosting (XGBoost)}{16}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Light Gradient Boosting Machine (LightGBM)}{17}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}CatBoost}{18}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Support Vector Machine (SVM)}{19}{subsection.1.1.5}%
-\contentsline {section}{\numberline {1.2}Deep Learning}{21}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Multilayer Perceptron (MLP)}{21}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Convolutional Neural Networks (CNN)}{22}{subsection.1.2.2}%
-\contentsline {chapter}{\numberline {2}Tecnologías utilizadas}{25}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Lenguaje de Programación}{25}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Librerías Usadas}{25}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Entorno de pruebas}{25}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Optuna}{26}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Obtención y Análisis de Datos}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}UNSW-NB15 DataSet}{29}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Motivación para el uso del dataset}{29}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Estructura del dataset}{29}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Distribución de ataques}{30}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}ToN\_IoT DataSet}{31}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Motivación para el uso del dataset}{31}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Estructura del dataset}{31}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Distribución de ataques}{31}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}IoT-23 DataSet}{31}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Motivación para el uso del dataset}{32}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Estructura del dataset}{32}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Distribución de ataques}{32}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Relación entre los datasets}{33}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Justificación del enfoque en la fase de inferencia}{33}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Optimización de hiperparámetros estructurales}{35}{subsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.2.1}Random Forest}{35}{subsubsection.3.4.2.1}%
-\contentsline {subsubsection}{\numberline {3.4.2.2}XGBoost}{35}{subsubsection.3.4.2.2}%
-\contentsline {subsubsection}{\numberline {3.4.2.3}LightGBM}{35}{subsubsection.3.4.2.3}%
-\contentsline {subsubsection}{\numberline {3.4.2.4}CatBoost}{36}{subsubsection.3.4.2.4}%
-\contentsline {subsubsection}{\numberline {3.4.2.5}Support Vector Machine (SVM)}{36}{subsubsection.3.4.2.5}%
-\contentsline {subsubsection}{\numberline {3.4.2.6}Multilayer Perceptron (MLP)}{36}{subsubsection.3.4.2.6}%
-\contentsline {subsubsection}{\numberline {3.4.2.7}Convolutional Neural Networks (CNN 1D)}{36}{subsubsection.3.4.2.7}%
-\contentsline {chapter}{\numberline {4}Resultados}{37}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Modelos entrenados con UNSW-NB15}{37}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Random Forest}{37}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}XGBoost}{38}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}LightGBM}{39}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}CatBoost}{40}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Support Vector Machine (SVM)}{41}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Multilayer Perceptron (MLP)}{42}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}CNN-1D}{43}{subsection.4.1.7}%
-\contentsline {subsection}{\numberline {4.1.8}Comparativa Modelos con Dataset UNSW-NB15}{44}{subsection.4.1.8}%
-\contentsline {section}{\numberline {4.2}Modelos entrenados con IOT-23}{48}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Random Forest}{48}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}XGBoost}{49}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}LightGBM}{50}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}CatBoost}{51}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}SVM}{52}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Multilayer Perceptron (MLP)}{53}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}CNN-1D}{54}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}Comparativa Modelos con Dataset IOT-23}{55}{subsection.4.2.8}%
-\contentsline {section}{\numberline {4.3}Modelos entrenados con ToN-IoT}{58}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Random Forest}{58}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}XGBoost}{59}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}LightGBM}{60}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}CatBoost}{61}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}SVM}{63}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Multilayer Perceptron (MLP)}{64}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}CNN-1D}{65}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}Comparativa Modelos con Dataset ToN-IoT}{66}{subsection.4.3.8}%
-\contentsline {section}{\numberline {4.4}Modelos Evaluados en Local}{69}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Resultados UNSW-NB15}{69}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Resultados IOT-23}{70}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Resultados TON-IOT}{70}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Evaluación de robustez frente a ataques adversarios}{70}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Uso de Adversarial Robustness Toolbox}{71}{subsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.1.1}Ataques Empleados}{71}{subsubsection.4.5.1.1}%
-\contentsline {subsubsection}{\numberline {4.5.1.2}Ataques de Caja Blanca basados en Gradiente (MLP y CNN-1D)}{72}{subsubsection.4.5.1.2}%
-\contentsline {subsubsection}{\numberline {4.5.1.3}Transferencia Adversaria para Modelos Discretos (Ensambles y SVM)}{72}{subsubsection.4.5.1.3}%
-\contentsline {subsection}{\numberline {4.5.2}Análisis de Resultados en UNSW-NB15}{73}{subsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.1}Resultados PGD}{73}{subsubsection.4.5.2.1}%
-\contentsline {subsubsection}{\numberline {4.5.2.2}Resultados FGSM}{75}{subsubsection.4.5.2.2}%
-\contentsline {subsection}{\numberline {4.5.3}Análisis de Resultados en IOT-23}{77}{subsection.4.5.3}%
-\contentsline {subsubsection}{\numberline {4.5.3.1}Resultados PGD}{77}{subsubsection.4.5.3.1}%
-\contentsline {subsubsection}{\numberline {4.5.3.2}Resultados FGSM}{79}{subsubsection.4.5.3.2}%
-\contentsline {subsection}{\numberline {4.5.4}Análisis de Resultados en TON-IOT}{80}{subsection.4.5.4}%
-\contentsline {subsubsection}{\numberline {4.5.4.1}Resultados PGD}{80}{subsubsection.4.5.4.1}%
-\contentsline {subsubsection}{\numberline {4.5.4.2}Resultados FGSM}{82}{subsubsection.4.5.4.2}%
-\contentsline {section}{\numberline {4.6}Análisis Límite de Perturbación}{83}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Resultados UNSW-NB15}{84}{subsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.1.1}FGSM}{84}{subsubsection.4.6.1.1}%
-\contentsline {subsubsection}{\numberline {4.6.1.2}PGD}{85}{subsubsection.4.6.1.2}%
-\contentsline {subsection}{\numberline {4.6.2}Resultados IOT-23}{85}{subsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.1}FGSM}{85}{subsubsection.4.6.2.1}%
-\contentsline {subsubsection}{\numberline {4.6.2.2}PGD}{86}{subsubsection.4.6.2.2}%
-\contentsline {subsection}{\numberline {4.6.3}Resultados TON-IOT}{86}{subsection.4.6.3}%
-\contentsline {subsubsection}{\numberline {4.6.3.1}FGSM}{87}{subsubsection.4.6.3.1}%
-\contentsline {subsubsection}{\numberline {4.6.3.2}PGD}{87}{subsubsection.4.6.3.2}%
-\contentsline {subsection}{\numberline {4.6.4}Conclusiones del análisis del límite de perturbación}{88}{subsection.4.6.4}%
-\contentsline {chapter}{Bibliografía}{89}{chapter*.126}%
+\contentsline {chapter}{\numberline {1}Introducción}{15}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivación}{15}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivos}{15}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Metodología de trabajo}{16}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Estructura del documento}{16}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Investigación Previa}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Machine Learning}{17}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Random Forest (RF)}{17}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Extreme Gradient Boosting (XGBoost)}{18}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Light Gradient Boosting Machine (LightGBM)}{19}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}CatBoost}{20}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Support Vector Machine (SVM)}{21}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Deep Learning}{23}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Multilayer Perceptron (MLP)}{23}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Convolutional Neural Networks (CNN)}{24}{subsection.2.2.2}%
+\contentsline {chapter}{\numberline {3}Tecnologías utilizadas}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Lenguaje de Programación}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Librerías Usadas}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Entorno de pruebas}{27}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Optuna}{28}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Obtención y Análisis de Datos}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}UNSW-NB15 DataSet}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Motivación para el uso del dataset}{31}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Estructura del dataset}{31}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Distribución de ataques}{32}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}ToN\_IoT DataSet}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Motivación para el uso del dataset}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Estructura del dataset}{33}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Distribución de ataques}{33}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}IoT-23 DataSet}{33}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Motivación para el uso del dataset}{34}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Estructura del dataset}{34}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Distribución de ataques}{34}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Relación entre los datasets}{35}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Justificación del enfoque en la fase de inferencia}{35}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Optimización de hiperparámetros estructurales}{37}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Random Forest}{37}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}XGBoost}{37}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}LightGBM}{37}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}CatBoost}{38}{subsubsection.4.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.4.2.5}Support Vector Machine (SVM)}{38}{subsubsection.4.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.4.2.6}Multilayer Perceptron (MLP)}{38}{subsubsection.4.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.4.2.7}Convolutional Neural Networks (CNN 1D)}{38}{subsubsection.4.4.2.7}%
+\contentsline {chapter}{\numberline {5}Análisis de Modelos y Búsqueda de Hiperparámetros}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Modelos entrenados con UNSW-NB15}{39}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Random Forest}{39}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}XGBoost}{40}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}LightGBM}{41}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}CatBoost}{42}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}SVM}{43}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}MLP}{44}{subsection.5.1.6}%
+\contentsline {subsection}{\numberline {5.1.7}CNN-1D}{45}{subsection.5.1.7}%
+\contentsline {subsection}{\numberline {5.1.8}Comparativa Modelos con Dataset UNSW-NB15}{46}{subsection.5.1.8}%
+\contentsline {section}{\numberline {5.2}Modelos entrenados con IOT-23}{50}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Random Forest}{50}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}XGBoost}{51}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}LightGBM}{52}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}CatBoost}{53}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}SVM}{54}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}MLP}{55}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}CNN-1D}{56}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}Comparativa Modelos con Dataset IOT-23}{57}{subsection.5.2.8}%
+\contentsline {section}{\numberline {5.3}Modelos entrenados con ToN-IoT}{60}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Random Forest}{60}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}XGBoost}{61}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}LightGBM}{62}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}CatBoost}{63}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}SVM}{65}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5.3.6}MLP}{66}{subsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.3.7}CNN-1D}{67}{subsection.5.3.7}%
+\contentsline {subsection}{\numberline {5.3.8}Comparativa Modelos con Dataset ToN-IoT}{68}{subsection.5.3.8}%
+\contentsline {section}{\numberline {5.4}Modelos Evaluados en Local}{71}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Resultados UNSW-NB15}{71}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Resultados IOT-23}{72}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Resultados TON-IOT}{72}{subsection.5.4.3}%
+\contentsline {chapter}{\numberline {6}Ataques de Evasión}{73}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Evaluación de robustez frente a ataques adversarios}{73}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Uso de Adversarial Robustness Toolbox}{73}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Ataques Empleados}{74}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.2}Ataques de Caja Blanca basados en Gradiente (MLP y CNN-1D)}{74}{subsubsection.6.1.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.1.3}Transferencia Adversaria para Modelos Discretos (Ensambles y SVM)}{74}{subsubsection.6.1.1.3}%
+\contentsline {subsection}{\numberline {6.1.2}Análisis de Resultados en UNSW-NB15}{75}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Resultados PGD}{76}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}Resultados FGSM}{77}{subsubsection.6.1.2.2}%
+\contentsline {subsection}{\numberline {6.1.3}Análisis de Resultados en IOT-23}{79}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}Resultados PGD}{79}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}Resultados FGSM}{81}{subsubsection.6.1.3.2}%
+\contentsline {subsection}{\numberline {6.1.4}Análisis de Resultados en TON-IOT}{82}{subsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.4.1}Resultados PGD}{83}{subsubsection.6.1.4.1}%
+\contentsline {subsubsection}{\numberline {6.1.4.2}Resultados FGSM}{84}{subsubsection.6.1.4.2}%
+\contentsline {section}{\numberline {6.2}Análisis Límite de Perturbación}{86}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Resultados UNSW-NB15}{86}{subsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.1.1}FGSM}{86}{subsubsection.6.2.1.1}%
+\contentsline {subsubsection}{\numberline {6.2.1.2}PGD}{87}{subsubsection.6.2.1.2}%
+\contentsline {subsection}{\numberline {6.2.2}Resultados IOT-23}{87}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}FGSM}{88}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}PGD}{88}{subsubsection.6.2.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Resultados TON-IOT}{89}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}FGSM}{89}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}PGD}{90}{subsubsection.6.2.3.2}%
+\contentsline {subsection}{\numberline {6.2.4}Conclusiones del análisis del límite de perturbación}{90}{subsection.6.2.4}%
+\contentsline {chapter}{\numberline {7}Conclusiones y Líneas Futuras}{93}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{93}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Líneas Futuras}{93}{section.7.2}%
+\contentsline {chapter}{Bibliografía}{95}{chapter*.126}%

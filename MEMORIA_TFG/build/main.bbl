@@ -131,6 +131,50 @@
     \field{year}{2025}
   \endentry
 
+  \entry{transferencia_adversaria}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AK}{%
+         family={Anderson},
+         familyi={A\bibinitperiod},
+         given={Kelly},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AK1}
+    \strng{fullhash}{AK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Comparative Study of White-Box and Black-Box Adversarial Attacks on Network Intrusion Detection Models}
+    \field{year}{2024}
+  \endentry
+
+  \entry{FGSM}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=GTsCs}{%
+         family={Gaddam},
+         familyi={G\bibinitperiod},
+         given={Tulasi sai Charan\bibnamedelima sharma},
+         giveni={T\bibinitperiod\bibinitdelim s\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim s\bibinitperiod},
+      }}%
+    }
+    \keyw{Accuracy;Perturbation methods;Computational modeling;Intrusion detection;Artificial neural networks;NSL-KDD;Robustness;Adversarial machine learning;Pattern recognition;Computer security;Adversarial machine learning;Intrusion detection;Evasion attacks;Data poisoning;Model robustness;Cybersecurity threats}
+    \strng{namehash}{GTsCs1}
+    \strng{fullhash}{GTsCs1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{booktitle}{2026 International Conference on Intelligent and Innovative Technologies in Computing, Electrical and Electronics (IITCEE)}
+    \verb{doi}
+    \verb 10.1109/IITCEE67948.2026.11394707
+    \endverb
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{Adversarial Vulnerability Analysis of Deep Neural Network-Based Intrusion Detection Systems Using FGSM and PGD Attacks}
+    \field{year}{2026}
+  \endentry
+
   \entry{lstm}{article}{}
     \name{author}{1}{}{%
       {{hash=KSM}{%
@@ -157,6 +201,36 @@
     \field{volume}{196}
     \field{journaltitle}{Computer Communications}
     \field{year}{2023}
+  \endentry
+
+  \entry{PGD}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LI}{%
+         family={Löwy},
+         familyi={L\bibinitperiod},
+         given={Ilana},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LI1}
+    \strng{fullhash}{LI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.rbms.2020.09.007
+    \endverb
+    \field{issn}{2405-6618}
+    \field{note}{Reprotech in France and the United States: differences and similarities}
+    \field{pages}{48\bibrangedash 55}
+    \field{title}{ART with PGD: risky heredity and stratified reproduction}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S240566182030023X
+    \endverb
+    \field{volume}{11}
+    \field{journaltitle}{Reproductive Biomedicine And Society Online}
+    \field{year}{2020}
   \endentry
 
   \entry{lightgbm}{article}{}
@@ -269,6 +343,45 @@
     \field{journaltitle}{IAES International Journal of Artificial Intelligence (IJ-AI)}
     \field{month}{12}
     \field{year}{2020}
+  \endentry
+
+  \entry{unsw-nb15}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MN}{%
+         family={Moustafa},
+         familyi={M\bibinitperiod},
+         given={Nour},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=TB}{%
+         family={Turnbull},
+         familyi={T\bibinitperiod},
+         given={Benjamin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CKKR}{%
+         family={Choo},
+         familyi={C\bibinitperiod},
+         given={Kim-Kwang\bibnamedelima Raymond},
+         giveni={K\bibinithyphendelim K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \keyw{Protocols;Feature extraction;Internet of Things;Botnet;Temperature sensors;TCPIP;Botnet;ensemble learning;Internet of Things (IoT);network intrusion detection system (NIDS);statistical flow features}
+    \strng{namehash}{MNTBCKKR1}
+    \strng{fullhash}{MNTBCKKR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1109/JIOT.2018.2871719
+    \endverb
+    \field{number}{3}
+    \field{pages}{4815\bibrangedash 4830}
+    \field{title}{An Ensemble Intrusion Detection Technique Based on Proposed Statistical Flow Features for Protecting Network Traffic of Internet of Things}
+    \field{volume}{6}
+    \field{journaltitle}{IEEE Internet of Things Journal}
+    \field{year}{2019}
   \endentry
 
   \entry{art}{article}{}
@@ -412,38 +525,6 @@
     \field{volume}{52}
     \field{journaltitle}{Cuestiones de Fisioterapia}
     \field{year}{2023}
-  \endentry
-
-  \entry{unsw-nb15}{article}{}
-    \name{author}{2}{}{%
-      {{hash=TSS}{%
-         family={Tripathy},
-         familyi={T\bibinitperiod},
-         given={Sudhanshu\bibnamedelima Sekhar},
-         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=BB}{%
-         family={Behera},
-         familyi={B\bibinitperiod},
-         given={Bichitrananda},
-         giveni={B\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{TSSBB1}
-    \strng{fullhash}{TSSBB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \verb{doi}
-    \verb 10.48550/arXiv.2506.02438
-    \endverb
-    \field{title}{Detection System: Advances and Challenges}
-    \verb{url}
-    \verb https://doi.org/10.48550/arXiv.2506.02438
-    \endverb
-    \field{journaltitle}{arXiv preprint arXiv:2506.02438}
-    \field{year}{2025}
   \endentry
 \enddatalist
 \endinput
