@@ -1,77 +1,80 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Esquema representativo del funcionamiento de Random Forest.}}{16}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Esquema representativo del funcionamiento de XGBoost.}}{17}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Esquema representativo del funcionamiento de LightGBM.}}{18}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Esquema representativo del funcionamiento de CatBoost.}}{19}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Ejemplo de separación óptima de clases mediante SVM y margen máximo.}}{20}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Proceso de retropropagación en una red neuronal MLP.}}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Esquema representativo de una arquitectura CNN 1D aplicada a datos tabulares.}}{23}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Visualización de la optimización con Optuna}}{26}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Esquema representativo del funcionamiento de Random Forest.}}{18}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Esquema representativo del funcionamiento de XGBoost.}}{19}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema representativo del funcionamiento de LightGBM.}}{20}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Esquema representativo del funcionamiento de CatBoost.}}{21}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de separación óptima de clases mediante SVM y margen máximo.}}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Proceso de retropropagación en una red neuronal MLP.}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Esquema representativo de una arquitectura CNN 1D aplicada a datos tabulares.}}{25}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Logo de la University of New South Wales, entidad responsable de la publicación del dataset UNSW-NB15.}}{30}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Logo del Stratosphere Laboratory de la Czech Technical University, entidad responsable de la publicación del dataset IoT-23.}}{33}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Visualización de la optimización con Optuna}}{28}{figure.caption.21}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Frontera de Pareto - Random Forest}}{37}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Frontera de Pareto - XGBoost}}{38}{figure.caption.31}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Frontera de Pareto - LightGBM}}{39}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Frontera de Pareto - CatBoost}}{40}{figure.caption.35}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Frontera de Pareto - SVM}}{41}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Frontera de Pareto - MLP}}{42}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Frontera de Pareto - CNN}}{44}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Curva ROC - Modelos}}{46}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces MC - Random Forest}}{46}{figure.caption.46}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces MC - XGBoost}}{46}{figure.caption.46}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces MC - LightGBM}}{47}{figure.caption.47}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces MC - CatBoost}}{47}{figure.caption.47}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces MC - SVM}}{47}{figure.caption.48}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces MC - MLP}}{47}{figure.caption.48}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces MC - CNN}}{47}{figure.caption.49}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Frontera de Pareto - Random Forest (IOT-23)}}{48}{figure.caption.51}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Frontera de Pareto - XGBoost (IOT-23)}}{49}{figure.caption.53}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Frontera de Pareto - LightGBM (IOT-23)}}{50}{figure.caption.55}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Frontera de Pareto - CatBoost (IOT-23)}}{51}{figure.caption.57}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Frontera de Pareto - SVM (IOT-23)}}{52}{figure.caption.59}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Frontera de Pareto - MLP (IOT-23)}}{53}{figure.caption.61}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Frontera de Pareto - CNN-1D (IOT-23)}}{54}{figure.caption.63}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Curva ROC - Modelos (IOT-23)}}{56}{figure.caption.66}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces MC - Random Forest (IOT-23)}}{56}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces MC - XGBoost (IOT-23)}}{56}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces MC - LightGBM (IOT-23)}}{57}{figure.caption.68}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces MC - CatBoost (IOT-23)}}{57}{figure.caption.68}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces MC - SVM (IOT-23)}}{57}{figure.caption.69}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces MC - MLP (IOT-23)}}{57}{figure.caption.69}%
-\contentsline {figure}{\numberline {4.30}{\ignorespaces MC - CNN (IOT-23)}}{57}{figure.caption.70}%
-\contentsline {figure}{\numberline {4.31}{\ignorespaces Frontera de Pareto - Random Forest (ToN-IoT)}}{58}{figure.caption.72}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Frontera de Pareto - XGBoost (ToN-IoT)}}{59}{figure.caption.74}%
-\contentsline {figure}{\numberline {4.33}{\ignorespaces Frontera de Pareto - LightGBM (ToN-IoT)}}{60}{figure.caption.76}%
-\contentsline {figure}{\numberline {4.34}{\ignorespaces Frontera de Pareto - CatBoost (ToN-IoT)}}{62}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.35}{\ignorespaces Frontera de Pareto - SVM (ToN-IoT)}}{63}{figure.caption.80}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces Frontera de Pareto - MLP (ToN-IoT)}}{64}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.37}{\ignorespaces Frontera de Pareto - CNN-1D (ToN-IoT)}}{65}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.38}{\ignorespaces Curva ROC - Modelos (ToN-IoT)}}{67}{figure.caption.87}%
-\contentsline {figure}{\numberline {4.39}{\ignorespaces MC - Random Forest (ToN-IoT)}}{67}{figure.caption.88}%
-\contentsline {figure}{\numberline {4.40}{\ignorespaces MC - XGBoost (ToN-IoT)}}{67}{figure.caption.88}%
-\contentsline {figure}{\numberline {4.41}{\ignorespaces MC - LightGBM (ToN-IoT)}}{68}{figure.caption.89}%
-\contentsline {figure}{\numberline {4.42}{\ignorespaces MC - CatBoost (ToN-IoT)}}{68}{figure.caption.89}%
-\contentsline {figure}{\numberline {4.43}{\ignorespaces MC - SVM (ToN-IoT)}}{68}{figure.caption.90}%
-\contentsline {figure}{\numberline {4.44}{\ignorespaces MC - MLP (ToN-IoT)}}{68}{figure.caption.90}%
-\contentsline {figure}{\numberline {4.45}{\ignorespaces MC - CNN (ToN-IoT)}}{68}{figure.caption.91}%
-\contentsline {figure}{\numberline {4.46}{\ignorespaces F1-PGD-UNSW-NB15}}{74}{figure.caption.96}%
-\contentsline {figure}{\numberline {4.47}{\ignorespaces Accuracy-PGD-UNSW-NB15}}{74}{figure.caption.97}%
-\contentsline {figure}{\numberline {4.48}{\ignorespaces Recall-PGD-UNSW-NB15}}{74}{figure.caption.98}%
-\contentsline {figure}{\numberline {4.49}{\ignorespaces F1-FGSM-UNSW-NB15}}{75}{figure.caption.99}%
-\contentsline {figure}{\numberline {4.50}{\ignorespaces Accuracy-FGSM-UNSW-NB15}}{76}{figure.caption.100}%
-\contentsline {figure}{\numberline {4.51}{\ignorespaces Recall-FGSM-UNSW-NB15}}{76}{figure.caption.101}%
-\contentsline {figure}{\numberline {4.52}{\ignorespaces F1-PGD-IOT-23}}{77}{figure.caption.102}%
-\contentsline {figure}{\numberline {4.53}{\ignorespaces Accuracy-PGD-IOT-23}}{77}{figure.caption.103}%
-\contentsline {figure}{\numberline {4.54}{\ignorespaces Recall-PGD-IOT-23}}{78}{figure.caption.104}%
-\contentsline {figure}{\numberline {4.55}{\ignorespaces F1-FGSM-IOT-23}}{79}{figure.caption.105}%
-\contentsline {figure}{\numberline {4.56}{\ignorespaces Accuracy-FGSM-IOT-23}}{79}{figure.caption.106}%
-\contentsline {figure}{\numberline {4.57}{\ignorespaces Recall-FGSM-IOT-23}}{79}{figure.caption.107}%
-\contentsline {figure}{\numberline {4.58}{\ignorespaces F1-PGD-TON-IOT}}{80}{figure.caption.108}%
-\contentsline {figure}{\numberline {4.59}{\ignorespaces Accuracy-PGD-TON-IOT}}{81}{figure.caption.109}%
-\contentsline {figure}{\numberline {4.60}{\ignorespaces Recall-PGD-TON-IOT}}{81}{figure.caption.110}%
-\contentsline {figure}{\numberline {4.61}{\ignorespaces F1-FGSM-TON-IOT}}{82}{figure.caption.111}%
-\contentsline {figure}{\numberline {4.62}{\ignorespaces Accuracy-FGSM-TON-IOT}}{82}{figure.caption.112}%
-\contentsline {figure}{\numberline {4.63}{\ignorespaces Recall-FGSM-TON-IOT}}{83}{figure.caption.113}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Logo de la University of New South Wales, entidad responsable de la publicación del dataset UNSW-NB15.}}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Logo del Stratosphere Laboratory de la Czech Technical University, entidad responsable de la publicación del dataset IoT-23.}}{35}{figure.caption.26}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Frontera de Pareto - Random Forest}}{39}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Frontera de Pareto - XGBoost}}{40}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Frontera de Pareto - LightGBM}}{41}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Frontera de Pareto - CatBoost}}{42}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Frontera de Pareto - SVM}}{44}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Frontera de Pareto - MLP}}{45}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Frontera de Pareto - CNN}}{46}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Curva ROC - Modelos}}{48}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces MC - Random Forest}}{48}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces MC - XGBoost}}{48}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces MC - LightGBM}}{49}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces MC - CatBoost}}{49}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces MC - SVM}}{49}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces MC - MLP}}{49}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces MC - CNN}}{49}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Frontera de Pareto - Random Forest (IOT-23)}}{50}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Frontera de Pareto - XGBoost (IOT-23)}}{51}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Frontera de Pareto - LightGBM (IOT-23)}}{52}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Frontera de Pareto - CatBoost (IOT-23)}}{53}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Frontera de Pareto - SVM (IOT-23)}}{54}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Frontera de Pareto - MLP (IOT-23)}}{55}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Frontera de Pareto - CNN-1D (IOT-23)}}{56}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Curva ROC - Modelos (IOT-23)}}{58}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces MC - Random Forest (IOT-23)}}{58}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces MC - XGBoost (IOT-23)}}{58}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces MC - LightGBM (IOT-23)}}{59}{figure.caption.68}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces MC - CatBoost (IOT-23)}}{59}{figure.caption.68}%
+\contentsline {figure}{\numberline {5.28}{\ignorespaces MC - SVM (IOT-23)}}{59}{figure.caption.69}%
+\contentsline {figure}{\numberline {5.29}{\ignorespaces MC - MLP (IOT-23)}}{59}{figure.caption.69}%
+\contentsline {figure}{\numberline {5.30}{\ignorespaces MC - CNN (IOT-23)}}{59}{figure.caption.70}%
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Frontera de Pareto - Random Forest (ToN-IoT)}}{60}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.32}{\ignorespaces Frontera de Pareto - XGBoost (ToN-IoT)}}{61}{figure.caption.74}%
+\contentsline {figure}{\numberline {5.33}{\ignorespaces Frontera de Pareto - LightGBM (ToN-IoT)}}{62}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.34}{\ignorespaces Frontera de Pareto - CatBoost (ToN-IoT)}}{64}{figure.caption.78}%
+\contentsline {figure}{\numberline {5.35}{\ignorespaces Frontera de Pareto - SVM (ToN-IoT)}}{65}{figure.caption.80}%
+\contentsline {figure}{\numberline {5.36}{\ignorespaces Frontera de Pareto - MLP (ToN-IoT)}}{66}{figure.caption.82}%
+\contentsline {figure}{\numberline {5.37}{\ignorespaces Frontera de Pareto - CNN-1D (ToN-IoT)}}{67}{figure.caption.84}%
+\contentsline {figure}{\numberline {5.38}{\ignorespaces Curva ROC - Modelos (ToN-IoT)}}{69}{figure.caption.87}%
+\contentsline {figure}{\numberline {5.39}{\ignorespaces MC - Random Forest (ToN-IoT)}}{69}{figure.caption.88}%
+\contentsline {figure}{\numberline {5.40}{\ignorespaces MC - XGBoost (ToN-IoT)}}{69}{figure.caption.88}%
+\contentsline {figure}{\numberline {5.41}{\ignorespaces MC - LightGBM (ToN-IoT)}}{70}{figure.caption.89}%
+\contentsline {figure}{\numberline {5.42}{\ignorespaces MC - CatBoost (ToN-IoT)}}{70}{figure.caption.89}%
+\contentsline {figure}{\numberline {5.43}{\ignorespaces MC - SVM (ToN-IoT)}}{70}{figure.caption.90}%
+\contentsline {figure}{\numberline {5.44}{\ignorespaces MC - MLP (ToN-IoT)}}{70}{figure.caption.90}%
+\contentsline {figure}{\numberline {5.45}{\ignorespaces MC - CNN (ToN-IoT)}}{70}{figure.caption.91}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces F1-PGD-UNSW-NB15}}{76}{figure.caption.96}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Accuracy-PGD-UNSW-NB15}}{76}{figure.caption.97}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Recall-PGD-UNSW-NB15}}{77}{figure.caption.98}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces F1-FGSM-UNSW-NB15}}{78}{figure.caption.99}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Accuracy-FGSM-UNSW-NB15}}{78}{figure.caption.100}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Recall-FGSM-UNSW-NB15}}{78}{figure.caption.101}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces F1-PGD-IOT-23}}{79}{figure.caption.102}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Accuracy-PGD-IOT-23}}{80}{figure.caption.103}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Recall-PGD-IOT-23}}{80}{figure.caption.104}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces F1-FGSM-IOT-23}}{81}{figure.caption.105}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Accuracy-FGSM-IOT-23}}{81}{figure.caption.106}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Recall-FGSM-IOT-23}}{82}{figure.caption.107}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces F1-PGD-TON-IOT}}{83}{figure.caption.108}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Accuracy-PGD-TON-IOT}}{83}{figure.caption.109}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Recall-PGD-TON-IOT}}{83}{figure.caption.110}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces F1-FGSM-TON-IOT}}{84}{figure.caption.111}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Accuracy-FGSM-TON-IOT}}{85}{figure.caption.112}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Recall-FGSM-TON-IOT}}{85}{figure.caption.113}%
+\addvspace {10\p@ }

@@ -1,3 +1,4 @@
+\chapter{Ataques de Evasión}
 \section{Evaluación de robustez frente a ataques adversarios}
 
 Hasta este punto del trabajo, los modelos de detección de intrusiones desarrollados han mostrado un rendimiento muy elevado sobre los conjuntos de prueba originales. En particular, las arquitecturas profundas, como MLP y CNN-1D, han alcanzado valores de F1-score superiores al 96\%, mientras que los modelos basados en ensambles de árboles de decisión, como Random Forest, XGBoost, LightGBM y CatBoost, han obtenido resultados cercanos al 99\%. Estos resultados indican que los modelos son capaces de aprender patrones relevantes en los datasets empleados y ofrecen una alta capacidad de clasificación en condiciones normales de evaluación.
@@ -18,9 +19,9 @@ La evaluación de robustez de los distintos clasificadores NIDS propuestos en es
 
 En esta evaluación se han empleado dos ataques de evasión ampliamente reconocidos en la literatura de aprendizaje automático adversario:
 \begin{itemize}
-    \item \textbf{Fast Gradient Sign Method (FGSM):} Este método genera perturbaciones adversarias a partir del gradiente de la función de pérdida con respecto a las características de entrada. La perturbación se calcula como el signo del gradiente multiplicado por un factor de escala $\epsilon$, que controla la magnitud de la alteración. FGSM es un ataque rápido y eficiente, aunque su efectividad puede ser limitada frente a modelos robustos o con mecanismos de defensa.
+    \item \textbf{Fast Gradient Sign Method (FGSM):} Este método genera perturbaciones adversarias a partir del gradiente de la función de pérdida con respecto a las características de entrada. La perturbación se calcula como el signo del gradiente multiplicado por un factor de escala $\epsilon$, que controla la magnitud de la alteración. FGSM es un ataque rápido y eficiente, aunque su efectividad puede ser limitada frente a modelos robustos o con mecanismos de defensa ~\cite{FGSM}.
     
-    \item \textbf{Projected Gradient Descent (PGD):} PGD es una extensión iterativa de FGSM que aplica múltiples pasos de perturbación, proyectando cada iteración dentro de un espacio permitido definido por $\epsilon$. Este método es más potente que FGSM, ya que permite explorar un espacio más amplio de perturbaciones y puede superar defensas basadas en la limitación de la magnitud de las alteraciones.
+    \item \textbf{Projected Gradient Descent (PGD):} PGD es una extensión iterativa de FGSM que aplica múltiples pasos de perturbación, proyectando cada iteración dentro de un espacio permitido definido por $\epsilon$. Este método es más potente que FGSM, ya que permite explorar un espacio más amplio de perturbaciones y puede superar defensas basadas en la limitación de la magnitud de las alteraciones \cite{PGD}.
 \end{itemize}
 
 \subsubsection{Ataques de Caja Blanca basados en Gradiente (MLP y CNN-1D)}
@@ -33,7 +34,7 @@ En arquitecturas de aprendizaje profundo como el Perceptrón Multicapa (MLP) y l
 
 A diferencia de las redes neuronales, los modelos que fundamentan sus decisiones en particiones del espacio paramétrico, como los ensambles de árboles de decisión (Random Forest, XGBoost, LightGBM, CatBoost) o las Máquinas de Vectores de Soporte (SVM), presentan fronteras lógicas abruptas que inutilizan la aplicación directa del cálculo de gradientes.
 
-Para solventar esta limitación e incorporar estos algoritmos a la evaluación de seguridad, se explota la técnica de \textbf{Transferencia Adversaria} (\textit{Adversarial Transferability}). Esta estrategia asume que las perturbaciones diseñadas para engañar a un modelo específico suelen evadir con éxito clasificadores con arquitecturas completamente distintas. 
+Para solventar esta limitación e incorporar estos algoritmos a la evaluación de seguridad, se explota la técnica de \textbf{Transferencia Adversaria} (\textit{Adversarial Transferability}) ~\cite{transferencia_adversaria}. Esta estrategia asume que las perturbaciones diseñadas para engañar a un modelo específico suelen evadir con éxito clasificadores con arquitecturas completamente distintas. 
 Es decir, el veneno que fabricas para matar a un modelo específico, suele ser letal también para otros modelos que no tienen nada que ver con el primero. Por ejemplo, un ataque diseñado para engañar a un MLP podría transferirse con éxito a un Random Forest o a una SVM, incluso sin acceso directo a sus parámetros internos.
 
 El procedimiento aplicado es el siguiente:

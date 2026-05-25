@@ -1,0 +1,53 @@
+\chapter{Introducción}
+
+En esta sección se presenta la motivación para la elaboración de este proyecto, los objetivos a alcanzar, la metodología seguida y la estructura del documento.
+
+\section{Motivación}
+
+En el ámbito de la ciberseguridad, los sistemas de detección de intrusiones (\textit{Intrusion Detection Systems}, IDS) desempeñan un papel fundamental 
+en la identificación temprana de ataques y actividades maliciosas en redes informáticas. En los últimos años, el uso de técnicas de inteligencia artificial 
+y aprendizaje automático (\textit{Machine Learning}) ha permitido mejorar significativamente la precisión y la capacidad de adaptación de estos sistemas 
+frente a amenazas cada vez más complejas y dinámicas.
+
+Sin embargo, gran parte de la investigación existente se ha centrado principalmente en mejorar la tasa de detección o reducir 
+los falsos positivos, sin considerar en la misma medida el impacto computacional que conllevan estos modelos. En entornos 
+donde el procesamiento debe realizarse en tiempo real, como redes corporativas, sistemas embebidos, dispositivos IoT o 
+infraestructuras críticas, el consumo de recursos, la memoria utilizada y la latencia de inferencia se convierten en factores 
+determinantes para la viabilidad de la solución.
+
+Por este motivo, resulta necesario analizar no solo la capacidad predictiva de los modelos, sino también su eficiencia y su comportamiento ante escenarios adversos. 
+En este contexto, este Trabajo Fin de Grado plantea una evaluación experimental de distintos modelos de aprendizaje automático y aprendizaje profundo aplicados a la detección de intrusiones, considerando tanto su rendimiento en condiciones normales como su robustez frente a perturbaciones adversarias.
+
+\section{Objetivos}
+
+El objetivo principal de este Trabajo de Fin de Grado es evaluar de forma integral el rendimiento, la robustez y la viabilidad operativa de diferentes modelos de aprendizaje automático y profundo aplicados a Sistemas de Detección de Intrusiones (IDS). Se busca analizar el compromiso (trade-off) existente entre la capacidad predictiva de los algoritmos frente a amenazas camufladas y el coste computacional requerido para su ejecución en entornos con recursos limitados.
+
+\section{Metodología de trabajo}
+
+Para la elaboración de este TFG, se ha seguido una metodología estructurada siguiendo un enfoque iterativo y experimental. Dada la naturaleza exploratoria del proyecto, se ha seguido una metodología mista, combinando el modelo CRISP-DM con un enfoque experimental orientado al análisis de rendimiento.
+Esta metodología se divide en las siguientes fases:
+
+\begin{itemize}
+    \item Estudio del estado del arte sobre aprendizaje automático y sistemas de detección de intrusiones.
+    \item Obtención y análisis de los datasets, evaluando su viabilidad para el proyecto.
+    \item Implementación, evaluación y búsqueda de hiperparámetros de modelos de Machine Learning y Deep Learning.
+    \item Aplicación de ataques de evasión a los modelos ganadores
+    \item Análisis y conclusiones de los resultados obtenidos
+\end{itemize}
+
+
+Además, se ha tenido un contacto continuo con los tutores, a través de mensajería y reuniones frecuentes para seguir el proceso continuo de avance del TFG y plantear las dudas correspondientes.
+
+\section{Estructura del documento}
+
+Esta memoria está estructurada en los siguientes capítulos:
+
+\begin{itemize}
+    \item \textbf{Capítulo 1. Introducción: } se presenta una introducción del proyecto, a través de su motivación, los objetivos y la metodología de trabajo a seguir.
+    \item \textbf{Capítulo 2. Investigación previa: } se tratan los conceptos básicos para entender el objetivo del proyecto. Además, se explica el contexto y estado actual de la detección de anomalías a través de aprendizaje automático.
+    \item \textbf{Capítulo 3. Tecnologías utilizadas: } se describen las tecnologías utilizadas por el proyecto. 
+    \item \textbf{Capítulo 4. Obtención y Análisis de Datos: } se detallan los datasets elegidos con un análsis de ellos.
+    \item \textbf{Capítulo 5. Análisis de Modelos y Búsqueda de Hiperparámetros: } se explica el proceso seguido para la búsqueda de los mejores hiperparámetros de cada modelo, junto con sus métricas y resultados.
+    \item \textbf{Capítulo 6. Ataques de Evasión: } se tratan los modelos elegidos y se exponen ante ataques adversarios para ver la degradación de la eficacia de los modelos.
+    \item \textbf{Capítulo 7. Conclusiones y líneas futuras: } se reúnen conclusiones obtenidas tras la realización del trabajo, además de caminos de interés a seguir para trabajos futuros.
+\end{itemize}

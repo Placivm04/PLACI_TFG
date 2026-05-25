@@ -1,4 +1,4 @@
-\chapter{Resultados}
+\chapter{Análisis de Modelos y Búsqueda de Hiperparámetros}
 
 \section{Modelos entrenados con UNSW-NB15}
 \subsection{Random Forest}
@@ -176,7 +176,7 @@ Los resultados obtenidos en el set de test son los siguientes:
         Candidato 5 & 500 & 10 & 0.85702 & 0.863419 & 0.000375 \\
         \hline
     \end{tabular}
-    \caption{Comparativa final de modelos CatBoost en el set de test}
+    \caption{Comparativa final de modelos CatBoost en el set de test} 
     \label{tab:catboost_comparison}
 \end{table}
 
@@ -187,7 +187,7 @@ A pesar de ser el modelo más masivo y profundo de los evaluados, presenta una l
 %------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------
     
-\subsection{Support Vector Machine (SVM)}
+\subsection{SVM}
 
 La gráfica de la frontera de Pareto obtenida para SVM:
 
@@ -225,7 +225,7 @@ A diferencia de los modelos basados en árboles (RF, XGBoost, LightGBM) que supe
 
 Dentro de las limitaciones del enfoque lineal, el \textbf{Candidato 3} (C=0.000187) es el ganador absoluto e indiscutible.
 
-\subsection{Multilayer Perceptron (MLP)}
+\subsection{MLP}
 
 La gráfica de la frontera de Pareto obtenida para MLP es la siguiente:
 
@@ -739,7 +739,7 @@ Los resultados obtenidos en el set de test para los modelos seleccionados de la 
 
 En este caso, el \textbf{Candidato 2} es el modelo más eficiente, con un F1-Score de 0.943695 y una latencia de inferencia de 0.000025 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento es significativamente inferior al de los modelos basados en árboles.
 
-\subsection{Multilayer Perceptron (MLP)}
+\subsection{MLP}
 
 La gráfica de la frontera de Pareto obtenida para MLP es la siguiente:
 
@@ -1219,7 +1219,7 @@ Los resultados obtenidos en el set de test para los modelos seleccionados de la 
 
 El \textbf{Candidato 4} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional, con un F1-Score de 0.897815 y una latencia de inferencia de 0.000031 ms, lo que lo posiciona como un modelo bastante bueno para este dataset de IoT, aunque su rendimiento es significativamente inferior al de los modelos basados en árboles.
 
-\subsection{Multilayer Perceptron (MLP)}
+\subsection{MLP}
 
 La frontera de Pareto obtenida para MLP con el dataset ToN-IoT es la siguiente:
 
