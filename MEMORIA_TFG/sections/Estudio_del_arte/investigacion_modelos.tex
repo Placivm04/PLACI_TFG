@@ -151,7 +151,7 @@ Una de las principales fortalezas de las SVM es el uso de \textit{kernels}, que 
     \item \textbf{Kernel radial (RBF)}: Proyecta los datos a un espacio de dimensión infinita, permitiendo separar patrones altamente no lineales. Si bien suele ofrecer un alto rendimiento predictivo, su entrenamiento e inferencia son significativamente más costosos, especialmente en conjuntos de datos de gran tamaño.
 \end{itemize}
 
-En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante un \textbf{kernel lineal}, ya que ofrece un compromiso adecuado entre rendimiento y eficiencia computacional. Los kernels no lineales, como el RBF, resultan poco escalables para los volúmenes de datos considerados y presentan un coste energético elevado, lo que los hace menos compatibles con los principios de \textit{Green AI}.
+En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante un \textbf{kernel lineal}, ya que ofrece un compromiso adecuado entre rendimiento y eficiencia computacional ~\cite{liblinear}. Los kernels no lineales, como el RBF, resultan poco escalables para los volúmenes de datos considerados y presentan un coste computacional elevado (el tiempo de entrenamiento escala al menos cuadráticamente con el número de muestras y puede ser impracticable con decenas de miles de muestras), lo que los hace menos compatibles con los principios de \textit{Green AI} ~\cite{nonlinear_more_complexity}.
 
 \begin{table}[H]
     \centering
@@ -252,3 +252,58 @@ Desde el punto de vista computacional, el coste de una CNN depende principalment
 \end{figure}
 
 En resumen, la selección de modelos de aprendizaje automático y profundo para la detección de intrusiones debe considerar no solo el rendimiento predictivo, sino también el coste computacional asociado.
+
+\section{Justificación del enfoque en la fase de inferencia}
+
+
+En el contexto de los Sistemas de Detección de Intrusiones (\textit{Intrusion Detection Systems}, IDS), resulta importante distinguir entre la \textbf{fase de entrenamiento} del modelo y la \textbf{fase de inferencia}. 
+
+Durante el entrenamiento, el modelo aprende patrones a partir de un conjunto de datos previamente etiquetado, ajustando sus parámetros internos con el objetivo de mejorar su capacidad de clasificación. Esta fase puede implicar un coste computacional elevado, especialmente en modelos complejos o con grandes volúmenes de datos, pero suele realizarse de forma puntual o con una frecuencia limitada.
+Por el contrario, la fase de inferencia corresponde al uso del modelo ya entrenado para clasificar nuevas muestras. En un IDS desplegado en un entorno real, esta fase se ejecuta de manera continua, analizando el tráfico de red entrante para identificar posibles comportamientos maliciosos. Por ello, aunque el entrenamiento pueda ser costoso, el coste asociado a la inferencia adquiere una relevancia especial, ya que se repite constantemente durante el funcionamiento del sistema.
+
+Esta diferencia es especialmente importante en escenarios donde la detección debe realizarse en tiempo real o cerca del origen de los datos, como redes corporativas, dispositivos IoT, sistemas embebidos o infraestructuras críticas. En estos casos, un modelo con buen rendimiento predictivo puede no ser viable si presenta una latencia elevada, un consumo excesivo de memoria o una demanda computacional incompatible con el entorno de despliegue.
+
+Por eso mismo, \textbf{el coste asociado a la inferencia es el que determina la viabilidad práctica del sistema}. Un modelo con excelente rendimiento predictivo pero con alta latencia o consumo excesivo de CPU y memoria puede resultar inviable para su despliegue en tiempo real. Así que, el presente trabajo \textbf{centra su análisis experimental en el consumo computacional durante la fase de inferencia}.
+
+\section{Métricas Utilizadas}
+
+No solo hemos comparado los modelos a través de su F1-Score y latencia, sino que también hemos realizado una evaluación global de su rendimiento en términos de latencia, throughput, uso de CPU y RAM. Para calcular las métricas de rendimiento, hemos usado los siguientes conceptos:
+
+\begin{table}[H]
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabularx}{\textwidth}{|p{2.4cm}|X|p{6.2cm}|}
+        \hline
+        \textbf{Métrica} & \textbf{Significado Técnico} & \textbf{Metodología de Código} \\
+        \hline
+
+        \textbf{F1-Score} 
+        & Métrica de eficacia predictiva. Es la media armónica entre Precisión y Sensibilidad (Recall). Representa la capacidad del modelo para detectar ataques reales minimizando las falsas alarmas, siendo ideal para tráfico desbalanceado.
+        & Calculada mediante \texttt{scikit-learn} (\texttt{f1\_score}), cruzando las etiquetas reales del dataset de test frente a las predicciones generadas por el modelo. \\
+        \hline
+
+        \textbf{Latencia (ms)} 
+        & Tiempo de respuesta unitario. Representa los milisegundos que tarda el sistema en procesar y clasificar un único paquete desde entrada hasta veredicto.
+        & Medida mediante \texttt{time.perf\_counter()} al procesar el set de test por lotes, dividido entre el número total de paquetes procesados. \\
+        \hline
+
+        \textbf{Throughput (paq/s)} 
+        & Caudal de procesamiento. Representa el volumen de tráfico, expresado en paquetes por segundo, que el modelo puede soportar sin cuellos de botella.
+        & Calculado dividiendo el número total de paquetes del conjunto de test entre el tiempo físico total de inferencia, también denominado \textit{wall time}. \\
+        \hline
+
+        \textbf{Incremento RAM (MB)} 
+        & Huella máxima de memoria volátil. Representa la cantidad de memoria física extra que el sistema operativo cedió al proceso durante la predicción.
+        & Monitorizado mediante \texttt{psutil.memory\_info().rss}, restando la memoria base al pico máximo alcanzado durante la inferencia. \\
+        \hline
+
+        \textbf{CPU Efectiva (\%)} 
+        & Porcentaje medio de uso efectivo de CPU durante la inferencia, normalizado por el número total de núcleos lógicos disponibles. Representa qué proporción de la capacidad total de CPU del sistema ha sido utilizada por el proceso durante la predicción.
+        & Calculada a partir del tiempo de CPU consumido por el proceso, el tiempo real transcurrido y el número de núcleos lógicos disponibles. \[\left(\frac{\texttt{media\_cpu}}{\texttt{media\_muro} \cdot \texttt{total\_nucleos}}\right)\cdot 100\] \\
+        \hline 
+    \end{tabularx}
+
+    \caption{Definición de métricas de evaluación de rendimiento}
+    \label{tab:metricas_definicion}
+\end{table}

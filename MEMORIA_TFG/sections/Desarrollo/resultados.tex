@@ -1,5 +1,103 @@
 \chapter{Análisis de Modelos y Búsqueda de Hiperparámetros}
 
+En este sección se presentan los resultados obtenidos tras la aplicación de Optuna para la optimización de hiperparámetros en los modelos entrenados con los datasets mencionados en la sección anterior. Se ha seguido un enfoque de optimización multiobjetivo, buscando un equilibrio entre la precisión del modelo (medida a través del F1-Score) y su eficiencia (medida a través de la latencia de inferencia).
+
+El procedimiento seguido es el siguiente:
+
+\begin{enumerate}
+    \item Para cada modelo, se ha definido un espacio de búsqueda de hiperparámetros específico, adaptado a las características de cada algoritmo.
+    \item Se ha utilizado validación cruzada estratificada para evaluar el rendimiento de cada configuración de hiperparámetros, asegurando una evaluación robusta y representativa del modelo.
+    \item Se han optimizado simultáneamente dos objetivos: el F1-Score (para maximizar la precisión) y la latencia de inferencia (para minimizar el tiempo de respuesta).
+    \item Se ha identificado la frontera de Pareto para cada modelo, lo que permite visualizar el compromiso entre precisión y eficiencia y seleccionar configuraciones que se ajusten a diferentes necesidades.
+    \item Finalmente, se han evaluado los candidatos seleccionados de la frontera de Pareto en el conjunto de test para obtener una comparativa final de su rendimiento y latencia.
+\end{enumerate}
+
+Una vez que tenemos todos los modelos ganadores de todos los datasets, se han evaluado y obtenido las métricas mencionadas anteriormente (F1\_score, latencia, throughput, incremento RAM y CPU efectiva), además de matrices de confusión y curvas ROC de cada modelo.
+
+\section{Optimización de hiperparámetros estructurales}
+
+El ajuste de hiperparámetros se centra específicamente en aquellos que determinan la \textbf{estructura del modelo}. Los hiperparámetros estructurales influyen directamente en la complejidad computacional, el número de operaciones necesarias para generar una predicción y el tamaño final del modelo.
+
+A diferencia de otros hiperparámetros relacionados con el proceso de entrenamiento (como la tasa de aprendizaje o el optimizador), los \textbf{hiperparámetros estructurales determinan la arquitectura final del modelo} y, por tanto, pueden influir de forma directa o relevante en su coste en tiempo de ejecución una vez desplegado.
+
+A continuación, se describen los hiperparámetros estructurales más relevantes para cada uno de los modelos considerados en este trabajo.
+
+\subsubsection{Random Forest}
+
+En el caso de Random Forest, el coste de inferencia depende principalmente de:
+
+\begin{itemize}
+    \item \textbf{n\_estimators}: número de árboles que componen el bosque. Un mayor número de árboles incrementa linealmente el número de recorridos necesarios para cada predicción.
+    \item \textbf{max\_depth}: profundidad máxima de cada árbol. Árboles más profundos implican más comparaciones por predicción.
+\end{itemize}
+
+\subsubsection{XGBoost}
+
+En XGBoost, la inferencia consiste en recorrer secuencialmente todos los árboles entrenados y sumar sus contribuciones. Los hiperparámetros estructurales más relevantes son:
+
+\begin{itemize}
+    \item \textbf{n\_estimators}: número total de árboles del modelo.
+    \item \textbf{max\_depth}: profundidad máxima de cada árbol.
+\end{itemize}
+
+\subsubsection{LightGBM}
+
+En LightGBM, el coste de inferencia también está influenciado por:
+\begin{itemize}
+    \item \textbf{n\_estimators}: número de árboles en el modelo.
+    \item \textbf{max\_depth}: profundidad máxima de cada árbol.
+    \item \textbf{num\_leaves}: número máximo de hojas por árbol, que afecta la complejidad del modelo y el número de comparaciones necesarias para cada predicción.
+\end{itemize}
+
+\subsubsection{CatBoost}
+
+En CatBoost, los hiperparámetros estructurales que afectan el coste de inferencia son:
+
+\begin{itemize}
+    \item \textbf{iterations}: número de árboles a entrenar. Un mayor número de iteraciones incrementa linealmente el coste computacional en inferencia, ya que cada predicción requiere recorrer todos los árboles.
+    \item \textbf{depth}: profundidad máxima de cada árbol. Árboles más profundos implican más comparaciones y operaciones por predicción.
+\end{itemize}
+
+
+\subsubsection{Support Vector Machine (SVM)}
+
+Para SVM, el coste de inferencia depende principalmente del tipo de kernel utilizado. En este trabajo se prioriza el uso de:
+
+\begin{itemize}
+    \item \textbf{C}: parámetro de regularización que puede influir en la complejidad del modelo, aunque su impacto en la inferencia es menor que el tipo de kernel.
+\end{itemize}
+
+\subsubsection{Multilayer Perceptron (MLP)}
+
+En redes MLP, el coste de inferencia está directamente relacionado con el número total de pesos del modelo. Los hiperparámetros estructurales clave son:
+
+\begin{itemize}
+    \item \textbf{hidden\_layer\_sizes}: número de capas ocultas y número de neuronas por capa.
+\end{itemize}
+
+% \subsubsection{Long Short-Term Memory (LSTM)}
+
+% En las redes LSTM, la complejidad de inferencia depende de:
+
+% \begin{itemize}
+%     \item \textbf{lstm\_units}: número de unidades LSTM en la capa recurrente.
+%     \item \textbf{time\_steps}: número de pasos temporales procesados.
+%     \item \textbf{num\_layers}: número de capas en la red.
+% \end{itemize}
+
+
+\subsubsection{Convolutional Neural Networks (CNN 1D)}
+
+En las CNN 1D utilizadas en este trabajo, los hiperparámetros estructurales más relevantes son:
+
+\begin{itemize}
+    \item \textbf{n\_filters}: número de filtros en las capas convolucionales.
+    \item \textbf{kernel\_size}: tamaño del kernel.
+    \item \textbf{dense\_units}: número de unidades en la capa densa.
+\end{itemize}
+
+
+
 \section{Modelos entrenados con UNSW-NB15}
 \subsection{Random Forest}
 
@@ -340,47 +438,6 @@ El \textbf{Candidato 1} es el modelo ganador, con un F1-Score de 0.773052 y una 
 Aunque su rendimiento es excelente, su latencia es significativamente mayor que la de los modelos basados en árboles, lo que podría limitar su aplicabilidad en entornos de producción donde la velocidad de detección es crítica.
 
 \subsection{Comparativa Modelos con Dataset UNSW-NB15}
-
-No solo hemos comparado los modelos a través de su F1-Score y latencia, sino que también hemos realizado una evaluación global de su rendimiento en términos de latencia, throughput, uso de CPU y RAM. Para calcular las métricas de rendimiento, hemos usado los siguientes conceptos:
-
-% \begin{table}[H]
-%     \centering
-%     \small
-%     \begin{tabular}{|p{2.5cm}|p{4.5cm}|p{5cm}|}
-%         \hline
-%         \textbf{Métrica} & \textbf{Descripción} & \textbf{Metodología} \\
-%         \hline
-%         \textbf{Tiempo de Muro} & Tiempo físico y real que transcurre desde el inicio hasta la finalización. Métrica definitiva de la latencia percibida por el usuario o la red. Independientemente de cuántos núcleos trabaje el servidor, es el tiempo exacto que un paquete debe esperar para ser clasificado. & Obtenido utilizando \texttt{time.perf\_counter()}, que proporciona el reloj de mayor resolución disponible en el hardware, inmune a actualizaciones automáticas de la hora del sistema. \\
-%         \hline
-%         \textbf{Tiempo de CPU} & Suma total del tiempo que la Unidad Central de Procesamiento ejecuta activamente instrucciones. Acumula el esfuerzo de \textbf{todos los hilos simultáneamente}. Si el Tiempo de Muro es 1 segundo pero Tiempo de CPU es 95 segundos, indica que 95 hilos lógicos trabajaron en paralelo a máxima capacidad. & Obtenido mediante \texttt{psutil.Process().cpu\_times()}, sumando tiempo de usuario y llamadas al sistema. Se calcula la diferencia (delta) entre inicio y fin del lote. \\
-%         \hline
-%         \textbf{Pico de RAM} & Porción de memoria física (RAM) asignada de manera exclusiva al proceso y residente activamente en memoria. Algoritmos como CNN generan tensores intermedios masivos que requieren picos muy elevados, pudiendo inviabilizar despliegue en hardware de frontera con memoria limitada. & Sondeo iterativo mediante \texttt{psutil.Process().memory\_info().rss}. Se captura la memoria base antes de comenzar y se resta al valor máximo registrado durante procesamiento de lotes. \\
-%         \hline
-%     \end{tabular}
-%     \caption{Definición técnica de métricas de monitoreo de recursos}
-%     \label{tab:metricas_monitoreo}
-% \end{table}
-
-
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabular}{|p{2cm}|p{5cm}|p{5cm}|}
-        \hline
-        \textbf{Métrica} & \textbf{Significado Técnico} & \textbf{Metodología de Código} \\
-        \hline
-        \textbf{F1-Score} & Métrica de eficacia predictiva. Es la media armónica entre Precisión y Sensibilidad (Recall). Representa la capacidad del modelo para detectar ataques reales minimizando las falsas alarmas, siendo ideal para tráfico desbalanceado. & Calculada mediante \texttt{scikit-learn} (\texttt{f1\_score}), cruzando las etiquetas reales del dataset de test frente a las predicciones generadas por el modelo. \\
-        \hline
-        \textbf{Latencia (ms)} & Tiempo de respuesta unitario. Representa los milisegundos que tarda el sistema en procesar y clasificar un único paquete desde entrada hasta veredicto. & Medida mediante \texttt{time.perf\_counter()} al procesar el set de test por lotes, dividido entre el número total de paquetes procesados. \\
-        \hline
-        \textbf{Throughput (paq/s)} & Caudal de procesamiento. Representa el volumen de tráfico (paquetes por segundo) que el modelo puede soportar sin cuellos de botella. & Dividiendo el número total de paquetes del conjunto de test entre el tiempo físico total (Wall Time en segundos). \\
-        \hline
-        \textbf{Pico RAM (MB)} & Huella máxima de memoria volátil. Representa la cantidad de memoria física extra que el sistema operativo cedió al proceso durante la predicción. & Monitorizando el proceso con \texttt{psutil.memory\_info().rss}, restando la memoria base al pico máximo alcanzado. \\
-        \hline
-    \end{tabular}
-    \caption{Definición de métricas de evaluación de rendimiento}
-    \label{tab:metricas_definicion}
-\end{table}
 
 Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
@@ -1446,7 +1503,7 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el datas
     \label{tab:ton_best_hyperparams}
 \end{table}
 
-\section{Modelos Evaluados en Local}
+\section{Potencial de Análisis en Tiempo Real}
 
 Para terminar la comparativa entre los modelos es interesante ver el tiempo que tardarían en la fase de inferencia en un entorno más realista, es decir, cargar los modelos en nuestro propio ordenador (no usando un super servidor).
 Hemos cargado los modelos ganadores entrenados en mi ordenador y hemos calculado el tiempo que tardaría en procesar todos los registros y hacer la predicción.

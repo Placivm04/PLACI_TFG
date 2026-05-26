@@ -7,58 +7,59 @@
 \contentsline {table}{\numberline {2.5}{\ignorespaces Principales hiperparámetros de SVM y su significado.}}{22}{table.caption.13}%
 \contentsline {table}{\numberline {2.6}{\ignorespaces Principales hiperparámetros de MLP y su significado.}}{23}{table.caption.15}%
 \contentsline {table}{\numberline {2.7}{\ignorespaces Principales hiperparámetros de CNN 1D y su significado.}}{25}{table.caption.17}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces Definición de métricas de evaluación de rendimiento}}{27}{table.caption.19}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Librerías utilizadas durante el desarrollo experimental}}{27}{table.caption.19}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Especificaciones del entorno experimental}}{28}{table.caption.20}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Librerías utilizadas durante el desarrollo experimental}}{29}{table.caption.20}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Especificaciones del entorno experimental}}{30}{table.caption.21}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Características técnicas del equipo local utilizado para la inferencia}}{30}{table.caption.22}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Distribución de clases y tipos de ataque en el dataset UNSW-NB15}}{32}{table.caption.22}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Distribución de clases y tipos de ataque en el dataset ToN\_IoT}}{34}{table.caption.24}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Distribución de clases y tipos de tráfico en el dataset IoT-23}}{35}{table.caption.25}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Correspondencia principal entre características de CIC-IDS-2017 y UNSW-NB15}}{36}{table.caption.27}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Correspondencia principal entre características de ToN\_IoT e IoT-23}}{36}{table.caption.28}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Distribución de clases y tipos de ataque en el dataset UNSW-NB15}}{34}{table.caption.24}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Distribución de clases y tipos de ataque en el dataset ToN\_IoT}}{36}{table.caption.26}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Distribución de clases y tipos de tráfico en el dataset IoT-23}}{37}{table.caption.27}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Correspondencia principal entre características de UNSW-NB15}}{38}{table.caption.29}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Correspondencia principal entre características de ToN\_IoT e IoT-23}}{38}{table.caption.30}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Comparativa final de modelos Random Forest en el set de test}}{40}{table.caption.30}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Comparativa final de modelos XGBoost en el set de test}}{41}{table.caption.32}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Comparativa final de modelos LightGBM en el set de test}}{42}{table.caption.34}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Comparativa final de modelos CatBoost en el set de test}}{43}{table.caption.36}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Comparativa final de modelos SVM en el set de test}}{44}{table.caption.38}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Comparativa final de modelos MLP en el set de test}}{45}{table.caption.40}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Comparativa final de modelos CNN en el set de test}}{46}{table.caption.42}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Definición de métricas de evaluación de rendimiento}}{47}{table.caption.43}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Comparativa global de rendimiento de modelos - UNSW-NB15}}{47}{table.caption.44}%
-\contentsline {table}{\numberline {5.10}{\ignorespaces Hiperparámetros ganadores de los modelos evaluados con UNSW-NB15}}{50}{table.caption.50}%
-\contentsline {table}{\numberline {5.11}{\ignorespaces Comparativa final de modelos Random Forest en el set de test (IOT-23)}}{51}{table.caption.52}%
-\contentsline {table}{\numberline {5.12}{\ignorespaces Comparativa final de modelos XGBoost en el set de test (IOT-23)}}{52}{table.caption.54}%
-\contentsline {table}{\numberline {5.13}{\ignorespaces Comparativa final de modelos LightGBM en el set de test (IOT-23)}}{53}{table.caption.56}%
-\contentsline {table}{\numberline {5.14}{\ignorespaces Comparativa final de modelos CatBoost en el set de test (IOT-23)}}{54}{table.caption.58}%
-\contentsline {table}{\numberline {5.15}{\ignorespaces Comparativa final de modelos SVM en el set de test (IOT-23)}}{55}{table.caption.60}%
-\contentsline {table}{\numberline {5.16}{\ignorespaces Comparativa final de modelos MLP en el set de test (IOT-23)}}{56}{table.caption.62}%
-\contentsline {table}{\numberline {5.17}{\ignorespaces Comparativa final de modelos CNN-1D en el set de test (IOT-23)}}{57}{table.caption.64}%
-\contentsline {table}{\numberline {5.18}{\ignorespaces Comparativa global de rendimiento de modelos - IOT-23}}{57}{table.caption.65}%
-\contentsline {table}{\numberline {5.19}{\ignorespaces Hiperparámetros ganadores de los modelos evaluados con IOT-23}}{60}{table.caption.71}%
-\contentsline {table}{\numberline {5.20}{\ignorespaces Comparativa final de modelos Random Forest en el set de test (ToN-IoT)}}{61}{table.caption.73}%
-\contentsline {table}{\numberline {5.21}{\ignorespaces Comparativa final de modelos XGBoost en el set de test (ToN-IoT)}}{62}{table.caption.75}%
-\contentsline {table}{\numberline {5.22}{\ignorespaces Comparativa final de modelos LightGBM en el set de test (ToN-IoT)}}{63}{table.caption.77}%
-\contentsline {table}{\numberline {5.23}{\ignorespaces Comparativa final de modelos CatBoost en el set de test (ToN-IoT)}}{64}{table.caption.79}%
-\contentsline {table}{\numberline {5.24}{\ignorespaces Comparativa final de modelos SVM en el set de test (ToN-IoT)}}{66}{table.caption.81}%
-\contentsline {table}{\numberline {5.25}{\ignorespaces Comparativa final de modelos MLP en el set de test (ToN-IoT)}}{67}{table.caption.83}%
-\contentsline {table}{\numberline {5.26}{\ignorespaces Comparativa final de modelos CNN-1D en el set de test (ToN-IoT)}}{68}{table.caption.85}%
-\contentsline {table}{\numberline {5.27}{\ignorespaces Comparativa global de rendimiento de modelos - IOT-23}}{68}{table.caption.86}%
-\contentsline {table}{\numberline {5.28}{\ignorespaces Hiperparámetros ganadores de los modelos evaluados con ToN-IoT}}{71}{table.caption.92}%
-\contentsline {table}{\numberline {5.29}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para UNSW-NB15}}{71}{table.caption.93}%
-\contentsline {table}{\numberline {5.30}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para IoT-23}}{72}{table.caption.94}%
-\contentsline {table}{\numberline {5.31}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para TON-IoT}}{72}{table.caption.95}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Comparativa final de modelos Random Forest en el set de test}}{42}{table.caption.32}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Comparativa final de modelos XGBoost en el set de test}}{43}{table.caption.34}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Comparativa final de modelos LightGBM en el set de test}}{44}{table.caption.36}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Comparativa final de modelos CatBoost en el set de test}}{45}{table.caption.38}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Comparativa final de modelos SVM en el set de test}}{46}{table.caption.40}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Comparativa final de modelos MLP en el set de test}}{47}{table.caption.42}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Comparativa final de modelos CNN en el set de test}}{48}{table.caption.44}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Comparativa global de rendimiento de modelos - UNSW-NB15}}{49}{table.caption.45}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Hiperparámetros ganadores de los modelos evaluados con UNSW-NB15}}{51}{table.caption.51}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces Comparativa final de modelos Random Forest en el set de test (IOT-23)}}{52}{table.caption.53}%
+\contentsline {table}{\numberline {5.11}{\ignorespaces Comparativa final de modelos XGBoost en el set de test (IOT-23)}}{53}{table.caption.55}%
+\contentsline {table}{\numberline {5.12}{\ignorespaces Comparativa final de modelos LightGBM en el set de test (IOT-23)}}{54}{table.caption.57}%
+\contentsline {table}{\numberline {5.13}{\ignorespaces Comparativa final de modelos CatBoost en el set de test (IOT-23)}}{55}{table.caption.59}%
+\contentsline {table}{\numberline {5.14}{\ignorespaces Comparativa final de modelos SVM en el set de test (IOT-23)}}{56}{table.caption.61}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces Comparativa final de modelos MLP en el set de test (IOT-23)}}{57}{table.caption.63}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces Comparativa final de modelos CNN-1D en el set de test (IOT-23)}}{58}{table.caption.65}%
+\contentsline {table}{\numberline {5.17}{\ignorespaces Comparativa global de rendimiento de modelos - IOT-23}}{58}{table.caption.66}%
+\contentsline {table}{\numberline {5.18}{\ignorespaces Hiperparámetros ganadores de los modelos evaluados con IOT-23}}{61}{table.caption.72}%
+\contentsline {table}{\numberline {5.19}{\ignorespaces Comparativa final de modelos Random Forest en el set de test (ToN-IoT)}}{62}{table.caption.74}%
+\contentsline {table}{\numberline {5.20}{\ignorespaces Comparativa final de modelos XGBoost en el set de test (ToN-IoT)}}{63}{table.caption.76}%
+\contentsline {table}{\numberline {5.21}{\ignorespaces Comparativa final de modelos LightGBM en el set de test (ToN-IoT)}}{64}{table.caption.78}%
+\contentsline {table}{\numberline {5.22}{\ignorespaces Comparativa final de modelos CatBoost en el set de test (ToN-IoT)}}{65}{table.caption.80}%
+\contentsline {table}{\numberline {5.23}{\ignorespaces Comparativa final de modelos SVM en el set de test (ToN-IoT)}}{67}{table.caption.82}%
+\contentsline {table}{\numberline {5.24}{\ignorespaces Comparativa final de modelos MLP en el set de test (ToN-IoT)}}{68}{table.caption.84}%
+\contentsline {table}{\numberline {5.25}{\ignorespaces Comparativa final de modelos CNN-1D en el set de test (ToN-IoT)}}{69}{table.caption.86}%
+\contentsline {table}{\numberline {5.26}{\ignorespaces Comparativa global de rendimiento de modelos - IOT-23}}{69}{table.caption.87}%
+\contentsline {table}{\numberline {5.27}{\ignorespaces Hiperparámetros ganadores de los modelos evaluados con ToN-IoT}}{72}{table.caption.93}%
+\contentsline {table}{\numberline {5.28}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para UNSW-NB15}}{72}{table.caption.94}%
+\contentsline {table}{\numberline {5.29}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para IoT-23}}{73}{table.caption.95}%
+\contentsline {table}{\numberline {5.30}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para TON-IoT}}{73}{table.caption.96}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo MLP en UNSW-NB15}}{86}{table.caption.114}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo CNN en UNSW-NB15}}{87}{table.caption.115}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP en UNSW-NB15}}{87}{table.caption.116}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN en UNSW-NB15}}{87}{table.caption.117}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{88}{table.caption.118}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{88}{table.caption.119}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{88}{table.caption.120}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{89}{table.caption.121}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{89}{table.caption.122}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{89}{table.caption.123}%
-\contentsline {table}{\numberline {6.11}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{90}{table.caption.124}%
-\contentsline {table}{\numberline {6.12}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{90}{table.caption.125}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo MLP en UNSW-NB15}}{88}{table.caption.115}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo CNN en UNSW-NB15}}{89}{table.caption.116}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP en UNSW-NB15}}{89}{table.caption.117}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN en UNSW-NB15}}{89}{table.caption.118}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{90}{table.caption.119}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{90}{table.caption.120}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{90}{table.caption.121}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{91}{table.caption.122}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{91}{table.caption.123}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{91}{table.caption.124}%
+\contentsline {table}{\numberline {6.11}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{92}{table.caption.125}%
+\contentsline {table}{\numberline {6.12}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{92}{table.caption.126}%
 \addvspace {10\p@ }

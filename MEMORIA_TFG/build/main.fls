@@ -459,6 +459,10 @@ INPUT ./images/mlp.png
 INPUT ./images/CNN_1D.jpg
 INPUT ./images/CNN_1D.jpg
 INPUT ./images/CNN_1D.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./sections/Desarrollo/optuna.tex
 INPUT ./sections/Desarrollo/optuna.tex
 INPUT sections/Desarrollo/optuna.tex
@@ -474,9 +478,6 @@ INPUT ./images/university_of_new_south_wales.jpeg
 INPUT ./images/stratosphere_laboratory_CTU.png
 INPUT ./images/stratosphere_laboratory_CTU.png
 INPUT ./images/stratosphere_laboratory_CTU.png
-INPUT ./sections/Desarrollo/seleccion_de_hiperparametros.tex
-INPUT ./sections/Desarrollo/seleccion_de_hiperparametros.tex
-INPUT sections/Desarrollo/seleccion_de_hiperparametros.tex
 INPUT ./sections/Desarrollo/resultados.tex
 INPUT ./sections/Desarrollo/resultados.tex
 INPUT sections/Desarrollo/resultados.tex
@@ -501,10 +502,6 @@ INPUT ./images/PARETO_MLP.png
 INPUT ./images/PARETO_CNN.png
 INPUT ./images/PARETO_CNN.png
 INPUT ./images/PARETO_CNN.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./images/ROC_MODELOS.png
 INPUT ./images/ROC_MODELOS.png
 INPUT ./images/ROC_MODELOS.png

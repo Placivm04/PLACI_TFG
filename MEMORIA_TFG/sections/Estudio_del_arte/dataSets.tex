@@ -1,4 +1,4 @@
-\chapter{Obtención y Análisis de Datos}
+\chapter{Obtención y Análisis de Datos} 
 Para cumplir con los objetivos de este Trabajo Fin de Grado, resulta imprescindible realizar una selección cuidadosa de los conjuntos de datos empleados en la fase experimental.
 
 En particular, dado que este trabajo no se centra únicamente en la capacidad de detección, sino también en el rendimiento y el consumo de recursos computacionales, los conjuntos de datos seleccionados deben posibilitar el análisis de aspectos como la latencia de inferencia, el uso de CPU y memoria, y la escalabilidad de los modelos en distintos escenarios. El uso de datasets excesivamente simplificados o poco representativos podría conducir a conclusiones poco realistas, mientras que el empleo de conjuntos de datos desproporcionadamente grandes o complejos podría dificultar la reproducibilidad y el análisis experimental detallado.
@@ -135,7 +135,7 @@ La distribución de clases del subconjunto de red de ToN\_IoT presenta una propo
 
 Como puede observarse, el dataset incluye múltiples tipos de ataques representativos de entornos IoT, tales como ataques de denegación de servicio, inyección, escaneo, ransomware y ataques de intermediario (\emph{Man-in-the-Middle}).
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \caption{Distribución de clases y tipos de ataque en el dataset ToN\_IoT}
     \label{tab:toniots-ataques}
@@ -177,7 +177,7 @@ Con el fin de garantizar la viabilidad experimental y mantener la reproducibilid
 
 La distribución de clases en los escenarios seleccionados de IoT-23 presenta un fuerte desbalanceo entre tráfico benigno y tráfico malicioso, así como una predominancia de determinados comportamientos de ataque característicos de dispositivos IoT comprometidos. En la Tabla~\ref{tab:iot23-ataques} se muestra el número total de flujos correspondiente a cada clase y tipo de tráfico, considerando conjuntamente los archivos \texttt{capture-1-1.labeled} y \texttt{capture-3-1.labeled}.
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \caption{Distribución de clases y tipos de tráfico en el dataset IoT-23}
     \label{tab:iot23-ataques}
@@ -206,37 +206,44 @@ Como puede observarse, el tráfico malicioso asociado a escaneos horizontales de
 
 \section{Relación entre los datasets}
 
-// Habría que obviar CIC-IDS-2017 ya que no se ha usado al final
+Los tres datasets proporcionan características extraídas a nivel de flujo de red (estadísticas de paquetes, bytes, duraciones, banderas TCP) a partir de capturas reales.
+Todos ellos reflejan la realidad de las redes actuales, donde el tráfico normal (benigno) suele ser la clase mayoritaria. Debido a este desbalanceo, usamos como métrica principal comparativa el F1-score.
+Todos los datasets son datasets reconocidos en la literatura de los análisis de IDS, ya que están diseñados específicamente para el entrenamiento y auditoría de algoritmos de Machine Learning y Deep Learning.
 
-A continuación se muestra una tabla simplificada que resume la correspondencia principal entre las características de CIC-IDS-2017 y UNSW-NB15, facilitando la comparación y el diseño de modelos comunes.
+No obstante, también se han elegido porque presentan algunas diferencias entre ellos y así poder ver los resultados de datasets que tienen distinta distribución y topología. 
+Por ejemplo, UNSW-NB15 está enfocado en una red corporativa tradicional y sirve como punto de referencia base para comprobar que nuestros modelos sepan cazar amenazas usuales.
 
-\begin{table}[htbp]
+Por otro lado, los datasets IoT-23 y ToN-IoT están enfocados en entornos puramente de IoT donde las capturas provienen de amenazas de infecciones reales de malware en dispositivos inteligentes.
+
+A continuación se muestra una tabla simplificada que resume las características principales de UNSW-NB15:
+
+\begin{table}[H]
 \centering
-\caption{Correspondencia principal entre características de CIC-IDS-2017 y UNSW-NB15}
+\caption{Correspondencia principal entre características de UNSW-NB15}
 \label{tab:relacion-cic-unsw}
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-\textbf{Categoría} & \textbf{CIC-IDS-2017} & \textbf{UNSW-NB15} \\
+\textbf{Categoría} & \textbf{UNSW-NB15} \\
 \hline
-Duración flujo & Flow.Duration & dur \\
-Intervalo paquetes origen & Fwd.IAT.Mean & sinpkt \\
-Intervalo paquetes destino & Bwd.IAT.Mean & dinpkt \\
-Paquetes origen & Total.Fwd.Packets & spkts \\
-Paquetes destino & Total.Backward.Packets & dpkts \\
-Bytes origen & Total.Length.of.Fwd.Packets & sbytes \\
-Bytes destino & Total.Length.of.Bwd.Packets & dbytes \\
-Tasa paquetes & Flow.Packets.s & rate \\
-Tamaño medio paquetes origen & Fwd.Packet.Length.Mean & smean \\
-Tamaño medio paquetes destino & Bwd.Packet.Length.Mean & dmean \\
-SYN flag & SYN.Flag.Count & synack \\
-ACK flag & ACK.Flag.Count & ackdat \\
-Etiqueta & Label & label / attack\_cat \\
+Duración flujo & dur \\
+Intervalo paquetes origen & sinpkt \\
+Intervalo paquetes destino & dinpkt \\
+Paquetes origen & spkts \\
+Paquetes destino & dpkts \\
+Bytes origen & sbytes \\
+Bytes destino & dbytes \\
+Tasa paquetes & rate \\
+Tamaño medio paquetes origen & smean \\
+Tamaño medio paquetes destino & dmean \\
+SYN flag & synack \\
+ACK flag & ackdat \\
+Etiqueta & label / attack\_cat \\ 
 \hline
 \end{tabular}
 \end{table}
 
 Ahora relacionamos los datasets ToN\_IoT y IoT-23, destacando los features comunes.
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \caption{Correspondencia principal entre características de ToN\_IoT e IoT-23}
 \label{tab:correspondencia-toniot-iot23}
