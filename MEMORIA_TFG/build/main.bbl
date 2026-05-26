@@ -150,6 +150,77 @@
     \field{year}{2024}
   \endentry
 
+  \entry{deb2001multiobjective}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DK}{%
+         family={Deb},
+         familyi={D\bibinitperiod},
+         given={Kalyanmoy},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley \& Sons}%
+    }
+    \strng{namehash}{DK1}
+    \strng{fullhash}{DK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{{Multi-Objective Optimization using Evolutionary Algorithms}}
+    \field{year}{2001}
+  \endentry
+
+  \entry{liblinear}{article}{}
+    \name{author}{5}{}{%
+      {{hash=FRE}{%
+         family={Fan},
+         familyi={F\bibinitperiod},
+         given={Rong-En},
+         giveni={R\bibinithyphendelim E\bibinitperiod},
+      }}%
+      {{hash=CKW}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Kai-Wei},
+         giveni={K\bibinithyphendelim W\bibinitperiod},
+      }}%
+      {{hash=HCJ}{%
+         family={Hsieh},
+         familyi={H\bibinitperiod},
+         given={Cho-Jui},
+         giveni={C\bibinithyphendelim J\bibinitperiod},
+      }}%
+      {{hash=WXR}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Xiang-Rui},
+         giveni={X\bibinithyphendelim R\bibinitperiod},
+      }}%
+      {{hash=LCJ}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Chih-Jen},
+         giveni={C\bibinithyphendelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FRE+1}
+    \strng{fullhash}{FRECKWHCJWXRLCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{pages}{1871\bibrangedash 1874}
+    \field{title}{{LIBLINEAR: A Library for Large Linear Classification}}
+    \verb{url}
+    \verb https://www.jmlr.org/papers/v9/fan08a.html
+    \endverb
+    \field{volume}{9}
+    \field{journaltitle}{Journal of Machine Learning Research}
+    \field{year}{2008}
+  \endentry
+
   \entry{FGSM}{inproceedings}{}
     \name{author}{1}{}{%
       {{hash=GTsCs}{%
@@ -173,6 +244,91 @@
     \field{pages}{1\bibrangedash 6}
     \field{title}{Adversarial Vulnerability Analysis of Deep Neural Network-Based Intrusion Detection Systems Using FGSM and PGD Attacks}
     \field{year}{2026}
+  \endentry
+
+  \entry{opt_multiobjective}{article}{}
+    \name{author}{11}{}{%
+      {{hash=KF}{%
+         family={Karl},
+         familyi={K\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=PT}{%
+         family={Pielok},
+         familyi={P\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Moosbauer},
+         familyi={M\bibinitperiod},
+         given={Julia},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PF}{%
+         family={Pfisterer},
+         familyi={P\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Coors},
+         familyi={C\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Binder},
+         familyi={B\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Schneider},
+         familyi={S\bibinitperiod},
+         given={Lennart},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Thomas},
+         familyi={T\bibinitperiod},
+         given={Janek},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Richter},
+         familyi={R\bibinitperiod},
+         given={Jakob},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Lang},
+         familyi={L\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BB}{%
+         family={Bischl},
+         familyi={B\bibinitperiod},
+         given={Bernd},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KF+1}
+    \strng{fullhash}{KFPTMJPFCSBMSLTJRJLMBB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.1145/3610536
+    \endverb
+    \field{number}{4}
+    \field{title}{{Multi-Objective Hyperparameter Optimization in Machine Learning: An Overview}}
+    \field{volume}{3}
+    \field{journaltitle}{ACM Transactions on Evolutionary Learning and Optimization}
+    \field{year}{2023}
   \endentry
 
   \entry{lstm}{article}{}
@@ -462,6 +618,30 @@
     \field{year}{2024}
   \endentry
 
+  \entry{sklearn_stratifiedkfold}{online}{}
+    \name{author}{1}{}{%
+      {{hash=s}{%
+         family={{scikit-learn developers}},
+         familyi={s\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{s1}
+    \strng{fullhash}{s1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{{StratifiedKFold}}
+    \verb{url}
+    \verb https://scikit-learn.org/stable/modules/generated/sklearn.model_selec
+    \verb tion.StratifiedKFold.html
+    \endverb
+    \field{year}{2026}
+    \field{urlday}{25}
+    \field{urlmonth}{05}
+    \field{urlyear}{2026}
+  \endentry
+
   \entry{iot-23}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=SA}{%
@@ -525,6 +705,42 @@
     \field{volume}{52}
     \field{journaltitle}{Cuestiones de Fisioterapia}
     \field{year}{2023}
+  \endentry
+
+  \entry{nonlinear_more_complexity}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=TIW}{%
+         family={Tsang},
+         familyi={T\bibinitperiod},
+         given={Ivor\bibnamedelima W.},
+         giveni={I\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=KJT}{%
+         family={Kwok},
+         familyi={K\bibinitperiod},
+         given={James\bibnamedelima T.},
+         giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=CPM}{%
+         family={Cheung},
+         familyi={C\bibinitperiod},
+         given={Pak-Ming},
+         giveni={P\bibinithyphendelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TIWKJTCPM1}
+    \strng{fullhash}{TIWKJTCPM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{booktitle}{Proceedings of the Tenth International Workshop on Artificial Intelligence and Statistics}
+    \field{pages}{349\bibrangedash 356}
+    \field{title}{{Very Large SVM Training using Core Vector Machines}}
+    \verb{url}
+    \verb https://proceedings.mlr.press/r5/tsang05a/tsang05a.pdf
+    \endverb
+    \field{year}{2005}
   \endentry
 \enddatalist
 \endinput

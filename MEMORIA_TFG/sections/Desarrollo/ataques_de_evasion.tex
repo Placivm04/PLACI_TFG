@@ -266,9 +266,9 @@ En resumen, hemos visto como un límite de perturbación de ataque pequeño, com
 
 \section{Análisis Límite de Perturbación}
 
-Los datasets perturbados con PGD y FGSM se generaron con un límite de perturbación de $\epsilon = 0.05$. Sin embargo, puede ser interesante analizar cómo varía la robustez de los modelos a medida que se incrementa el límite de perturbación. Para ello, se ha realizado un análisis adicional sobre los datasets probando diferentes valores de $\epsilon$: 0.01, 0.03, 0.05, 0.075, 0.1, 0.2 y 0.5, viendo su F1-Score asociado a la clase de ataque. De esta forma, se puede observar la relación entre la magnitud de la perturbación y la degradación del F1-Score de los modelos.
+Los datasets perturbados con PGD y FGSM se generaron inicialmente con un límite de perturbación de $\epsilon = 0.05$. Sin embargo, resulta relevante analizar cómo varía la robustez de los modelos a medida que se incrementa dicho límite. Para ello, se ha realizado un análisis adicional sobre los datasets, evaluando \textbf{diferentes valores de $\epsilon$}: 0.01, 0.03, 0.05, 0.075, 0.1, 0.2 y 0.5. En cada caso, se ha calculado el F1-score asociado a la clase ataque, con el objetivo de estudiar la relación entre la magnitud de la perturbación y la degradación del rendimiento de los modelos.
 
-La idea es probar estos diferentes valores de límites de perturbación y ver a partir de qué valor los modelos bajan su F1-Score por debajo de un umbral, en este caso va a ser 0.5, que es un valor bastante bajo y que indicaría que el modelo ya no es capaz de detectar correctamente la clase maliciosa.
+Con este análisis se pretende identificar el valor de $\epsilon$ a partir del cual cada modelo presenta una degradación significativa. Para ello, se ha tomado como referencia el umbral $F1 = 0.5$, ya que un valor inferior indica una pérdida importante en la capacidad del modelo para detectar correctamente la clase maliciosa. En las tablas siguientes, los valores resaltados en \textbf{negrita} indican el primer punto en el que cada modelo cae por debajo de dicho umbral.
 
 \subsection{Resultados UNSW-NB15}
 
