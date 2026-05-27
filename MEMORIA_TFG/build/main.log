@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  26 MAY 2026 20:40
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  27 MAY 2026 14:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1556,17 +1556,16 @@ File: images/stratosphere_laboratory_CTU.png Graphic file (type bmp)
 Capítulo 5.
 [39
 
-] [40]
+] [40] [41]
 File: images/PARETO_RF.png Graphic file (type bmp)
 <images/PARETO_RF.png>
- [41]
 File: images/PARETO_XGBOOST.png Graphic file (type bmp)
 <images/PARETO_XGBOOST.png>
  [42]
 File: images/PARETO_LIGHTGBM.png Graphic file (type bmp)
 <images/PARETO_LIGHTGBM.png>
  [43]
-Overfull \hbox (45.81198pt too wide) in paragraph at lines 213--229
+Overfull \hbox (45.81198pt too wide) in paragraph at lines 217--233
  [][] 
  []
 
@@ -1582,7 +1581,7 @@ File: images/PARETO_MLP.png Graphic file (type bmp)
 File: images/PARETO_CNN.png Graphic file (type bmp)
 <images/PARETO_CNN.png>
 
-Overfull \hbox (55.01546pt too wide) in paragraph at lines 447--466
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 451--470
  [][] 
  []
 
@@ -1614,7 +1613,7 @@ File: images/IOT/PARETO_XGBOOST_IOT.png Graphic file (type bmp)
 File: images/IOT/PARETO_LIGHTGBM_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_LIGHTGBM_IOT.png>
  [53]
-Overfull \hbox (45.48798pt too wide) in paragraph at lines 691--706
+Overfull \hbox (45.48798pt too wide) in paragraph at lines 695--710
  [][] 
  []
 
@@ -1630,12 +1629,12 @@ File: images/IOT/PARETO_MLP_IOT.png Graphic file (type bmp)
 File: images/IOT/PARETO_CNN_IOT.png Graphic file (type bmp)
 <images/IOT/PARETO_CNN_IOT.png>
  [57]
-Overfull \hbox (25.97597pt too wide) in paragraph at lines 872--885
+Overfull \hbox (25.97597pt too wide) in paragraph at lines 876--889
  [][] 
  []
 
 
-Overfull \hbox (55.01546pt too wide) in paragraph at lines 898--917
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 902--921
  [][] 
  []
 
@@ -1667,7 +1666,7 @@ File: images/TON/PARETO_XGBOOST_TON.png Graphic file (type bmp)
 File: images/TON/PARETO_LIGHTGBM_TON.png Graphic file (type bmp)
 <images/TON/PARETO_LIGHTGBM_TON.png>
  [63]
-Overfull \hbox (45.31998pt too wide) in paragraph at lines 1154--1171
+Overfull \hbox (45.31998pt too wide) in paragraph at lines 1158--1175
  [][] 
  []
 
@@ -1683,12 +1682,12 @@ File: images/TON/PARETO_MLP_TON.png Graphic file (type bmp)
 File: images/TON/PARETO_CNN_TON.png Graphic file (type bmp)
 <images/TON/PARETO_CNN_TON.png>
  [68]
-Overfull \hbox (24.99196pt too wide) in paragraph at lines 1346--1363
+Overfull \hbox (24.99196pt too wide) in paragraph at lines 1350--1367
  [][] 
  []
 
 
-Overfull \hbox (55.01546pt too wide) in paragraph at lines 1376--1395
+Overfull \hbox (55.01546pt too wide) in paragraph at lines 1380--1399
  [][] 
  []
 
@@ -1710,11 +1709,11 @@ File: images/TON/MC/MC_MLP_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_MLP_TON.png>
 File: images/TON/MC/MC_CNN_TON.png Graphic file (type bmp)
 <images/TON/MC/MC_CNN_TON.png>
- [71] [72]) (./sections/Desarrollo/ataques_de_evasion.tex [73] [74
-
-]
+ [71] [72] [73]) (./sections/Desarrollo/ataques_de_evasion.tex [74]
 Capítulo 6.
-[75] [76] [77]
+[75
+
+] [76] [77]
 File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-F1.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-F1.png>
 File: images/ATAQUES_ADVERSARIOS_2/UNSW-NB15/PGD-ACCURACY.png Graphic file (type bmp)
@@ -1760,11 +1759,11 @@ File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-ACCURACY.png Graphic file (type 
  [86]
 File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png>
- [87] [88] [89] [90] [91] [92]) (./sections/Desarrollo/conclusiones_lineas_futuras.tex [93] [94
-
-]
+ [87] [88] [89] [90] [91] [92]) (./sections/Desarrollo/conclusiones_lineas_futuras.tex [93] [94]
 Capítulo 7.
-) [95] [96
+) [95
+
+] [96
 
 ]
 Missing character: There is no   (U+00A0) in font [template/fonts/Malacitana_Sans/Malacitana-Sans-Italic.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
@@ -1773,24 +1772,25 @@ Overfull \hbox (5.80603pt too wide) in paragraph at lines 157--157
 []\TU/Malacitana-Sans(0)/m/n/12 Ilana Löwy. “  ART with PGD: risky heredity and stratified reproduction”. In: \TU/Malacitana-Sans(0)/m/it/12 Reproductive Biomedicine
  []
 
-
-Overfull \hbox (25.4318pt too wide) in paragraph at lines 157--157
-\TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
- []
-
 [97
 
 
 ]
+Overfull \hbox (25.4318pt too wide) in paragraph at lines 157--157
+\TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
+ []
+
+
 Overfull \hbox (0.53477pt too wide) in paragraph at lines 157--157
 []\TU/Malacitana-Sans(0)/m/n/12 scikit-learn developers. \TU/Malacitana-Sans(0)/m/it/12 StratifiedKFold\TU/Malacitana-Sans(0)/m/n/12 . 2026. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][][][][] [][] [][][][][] [] [][][] [] [][][][][][] []
  []
 
-[98]
+[98] [99] [100
+
+]
 File: template/logos/NEG-logo-umaes.png Graphic file (type bmp)
 <template/logos/NEG-logo-umaes.png>
- [99
-
+ [101
 
 ] (build/main.aux)
  ***********
@@ -1798,18 +1798,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D3730EFDD611BAAB353329336262FA6B;14599.
+(rerunfilecheck)             Checksum: 10EF0229A89040F75155A269EB237CDD;14897.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45043 strings out of 474878
- 966978 string characters out of 5762516
+ 45059 strings out of 474878
+ 967615 string characters out of 5762516
  1948627 words of memory out of 5000000
- 66361 multiletter control sequences out of 15000+600000
+ 66377 multiletter control sequences out of 15000+600000
  563371 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,15n,121p,1920b,5625s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,15n,121p,1920b,5581s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (103 pages, 1595596 bytes).
+Output written on build/main.xdv (105 pages, 1659684 bytes).

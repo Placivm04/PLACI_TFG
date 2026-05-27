@@ -270,7 +270,7 @@ Los datasets perturbados con PGD y FGSM se generaron inicialmente con un límite
 
 Con este análisis se pretende identificar el valor de $\epsilon$ a partir del cual cada modelo presenta una degradación significativa. Para ello, se ha tomado como referencia el umbral $F1 = 0.5$, ya que un valor inferior indica una pérdida importante en la capacidad del modelo para detectar correctamente la clase maliciosa. En las tablas siguientes, los valores resaltados en \textbf{negrita} indican el primer punto en el que cada modelo cae por debajo de dicho umbral.
 
-\subsection{Resultados UNSW-NB15}
+\subsection{Resultados UNSW-NB15} 
 
 \subsubsection{FGSM}
 
@@ -364,6 +364,8 @@ Con este análisis se pretende identificar el valor de $\epsilon$ a partir del c
 \end{tabular}%
 }
 \end{table}
+
+En el caso de UNSW-NB15, los resultados muestran una degradación moderada del F1-score a medida que se introducen perturbaciones adversarias. Para FGSM, se observa que la mayoría de modelos mantienen valores superiores al umbral de 0.5 incluso con perturbaciones elevadas, aunque aparecen casos concretos de vulnerabilidad, como SVM cuando la perturbación se genera sobre MLP y MLP cuando la perturbación se genera sobre CNN. En cambio, PGD presenta un comportamiento más estable para la mayoría de clasificadores, con caídas menos acusadas y únicamente un descenso por debajo del umbral en LGBM para perturbaciones generadas sobre MLP con $\epsilon = 0.5$.
 
 \subsection{Resultados IOT-23}
 
@@ -460,6 +462,8 @@ Con este análisis se pretende identificar el valor de $\epsilon$ a partir del c
 }
 \end{table}
 
+En IoT-23, la caída respecto al escenario limpio es mucho más acusada que en UNSW-NB15, especialmente porque los modelos parten de valores de F1-score muy elevados, cercanos a 1. Tanto FGSM como PGD provocan una reducción clara del rendimiento en varios clasificadores, aunque el impacto no es homogéneo. En particular, SVM y MLP presentan caídas muy pronunciadas cuando las perturbaciones se generan sobre MLP, llegando a valores claramente inferiores al umbral de 0.5. Por el contrario, cuando las perturbaciones se generan sobre CNN, modelos como SVM y MLP mantienen valores más altos, lo que evidencia una transferencia adversaria desigual.
+
 \subsection{Resultados TON-IOT}
 
 \subsubsection{FGSM}
@@ -555,14 +559,12 @@ Con este análisis se pretende identificar el valor de $\epsilon$ a partir del c
 }
 \end{table}
 
+En TON-IoT se observa la degradación más severa entre los tres datasets analizados. En este caso, tanto FGSM como PGD consiguen reducir el F1-score por debajo del umbral de 0.5 en numerosos modelos, incluso para valores bajos de $\epsilon$. Con FGSM, la caída es especialmente notable en modelos como CatBoost, SVM y MLP, que muestran valores inferiores a 0.5 desde los primeros niveles de perturbación. Además, cuando la perturbación se genera sobre CNN, también se observa una afectación temprana en RF y también en CatBoost, SVM y MLP.
+
+PGD presenta un comportamiento todavía más agresivo en TON-IoT. Varios modelos caen por debajo de 0.5 desde $\epsilon = 0.01$, especialmente XGBoost, CatBoost y MLP cuando la perturbación se genera sobre MLP, así como CatBoost y SVM cuando se genera sobre CNN. A diferencia de UNSW-NB15, donde muchos clasificadores mantenían cierta estabilidad, en TON-IoT la mayoría de mecanismos de detección muestran una sensibilidad elevada frente a perturbaciones adversarias. Esto sugiere que las características de este dataset generan fronteras de decisión más vulnerables o más fácilmente alterables por pequeñas modificaciones en las variables de entrada.
+
 \subsection{Conclusiones del análisis del límite de perturbación}
 
-A partir de los resultados obtenidos, se observa que el incremento del límite de perturbación no produce siempre una degradación estrictamente monótona del F1-score. Aunque cabría esperar que valores mayores de $\epsilon$ provocasen una caída progresiva del rendimiento, en varios modelos aparecen comportamientos irregulares, con recuperaciones parciales del F1-score para perturbaciones superiores. Este fenómeno es especialmente relevante en datos tabulares, donde perturbaciones elevadas pueden desplazar las muestras fuera de la distribución original del dataset o producir efectos de saturación tras el recorte de valores.
+A partir de los resultados obtenidos, es curioso ver cómo el incremento del límite de perturbación no produce siempre una degradación estrictamente monótona del F1-score. Aunque cabría esperar que valores mayores de $\epsilon$ provocasen una caída progresiva del rendimiento, en varios modelos aparecen comportamientos irregulares, con recuperaciones parciales del F1-score para perturbaciones superiores. Esto se debe a que aplicar tanta perturbación destruye el camuflaje del paquete, por lo que el modelo detecta una deformación tan extrema que lo clasifica inmediatamente como una anomalía o ataque.
 
-En el caso de UNSW-NB15, la degradación es moderada. Algunos modelos mantienen valores de F1-score superiores a 0.5 incluso para perturbaciones elevadas, lo que indica una cierta estabilidad frente a los ataques evaluados.
-
-En IoT-23, los resultados muestran una caída muy acusada respecto al escenario limpio, especialmente porque los modelos parten de valores de F1-score cercanos a 1. En este dataset, algunos modelos como SVM y MLP sufren degradaciones importantes con determinados ataques, mientras que otros mantienen valores más elevados. Este comportamiento sugiere que, aunque los modelos alcanzan un rendimiento muy alto en condiciones normales, pueden ser sensibles a pequeñas perturbaciones adversarias.
-
-Por último, TON-IoT es el dataset donde se observa una degradación más severa y generalizada. En varios modelos, el F1-score cae por debajo del umbral de 0.5 incluso con valores bajos de $\epsilon$, especialmente bajo ataques PGD. Esto indica que las muestras de este dataset son más sensibles a perturbaciones adversarias.
-
-En conjunto, este análisis permite concluir que la robustez adversaria no puede evaluarse únicamente a partir del rendimiento en test limpio. Modelos con valores elevados de F1-score en condiciones normales pueden sufrir caídas importantes cuando se aplican perturbaciones adversarias. Además, el impacto del ataque depende del dataset, del tipo de ataque, del límite de perturbación y del modelo generador utilizado para construir las muestras adversarias.
+El análisis también muestra que la robustez adversaria depende de varios factores simultáneamente: el tipo de ataque utilizado, el modelo sobre el que se genera la perturbación, el clasificador evaluado y el dataset empleado. En este sentido, no puede afirmarse que FGSM o PGD sean siempre más perjudiciales en todos los casos, ya que el impacto varía según la combinación concreta de ataque y modelo. Del mismo modo, las perturbaciones generadas sobre MLP y CNN no se transfieren con la misma intensidad a todos los mecanismos de detección.
