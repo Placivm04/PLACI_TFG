@@ -101,14 +101,14 @@ El algoritmo TPE construye un modelo probabilístico de la función objetivo. En
 
 Otra de las ventajas de este framework es que nos permite establecer una \textbf{optimización multiobjetivo} ~\cite{opt_multiobjective}, lo que es especialmente útil cuando se desea optimizar varias métricas al mismo tiempo, como la precisión y eficiencia del modelo. 
 
-% Optuna identifica un conjunto de soluciones que se encuentran en la \textbf{frontera de Pareto}, lo que significa que no hay otra solución que sea mejor en todas las métricas. Esto permite a los usuarios elegir entre diferentes compromisos según sus necesidades específicas, por lo que no presentamos una única solución.
 En un problema multiobjetivo no existe necesariamente una única solución óptima, sino un conjunto de soluciones no dominadas que representan distintos compromisos entre los objetivos. Este conjunto se conoce como \textbf{conjunto Pareto-óptimo}, y su representación en el espacio de objetivos constituye la \textbf{frontera de Pareto}~\cite{deb2001multiobjective}.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/OPTUNA.png}
-    \caption{Visualización de la optimización con Optuna}
-    \label{fig:optuna}
-\end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/OPTUNA.png}
+%     \caption{Visualización de la optimización con Optuna}
+%     \label{fig:optuna}
+% \end{figure}
 
 Para estructurar la búsqueda de hiperparámetros y garantizar una evaluación justa del compromiso entre rendimiento y tiempo de inferencia, en este proyecto se ha diseñado el flujo de trabajo descrito en el Algoritmo~\ref{alg:optuna_cv_multiobjetivo}.
 Aunque cada arquitectura tiene un espacio de hiperparámetros específico, la estrategia de evaluación se mantiene constante: cada configuración se evalúa mediante validación cruzada estratificada ~\cite{sklearn_stratifiedkfold} y se optimiza simultáneamente el rendimiento predictivo y el coste de inferencia.

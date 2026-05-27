@@ -31,12 +31,12 @@ A diferencia de los métodos de \textit{boosting}, como XGBoost, los árboles qu
     \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{images/random_forest.png}
-    \caption{Esquema representativo del funcionamiento de Random Forest.}
-    \label{fig:randomforest}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{images/random_forest.png}
+%     \caption{Esquema representativo del funcionamiento de Random Forest.}
+%     \label{fig:randomforest}
+% \end{figure}
 
 \subsection{Extreme Gradient Boosting (XGBoost)}
 
@@ -68,12 +68,12 @@ El proceso de entrenamiento es secuencial: cada nuevo árbol se entrena para cor
     \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{images/xg_boost.png}
-    \caption{Esquema representativo del funcionamiento de XGBoost.}
-    \label{fig:xgboost}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{images/xg_boost.png}
+%     \caption{Esquema representativo del funcionamiento de XGBoost.}
+%     \label{fig:xgboost}
+% \end{figure}
 
 \subsection{Light Gradient Boosting Machine (LightGBM)}
 \textbf{Light Gradient Boosting Machine} (LightGBM) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}. A diferencia de otros métodos de boosting, LightGBM utiliza un enfoque de crecimiento de árboles basado en hojas, lo que significa que en cada iteración se expande la hoja con el mayor error en lugar de expandir todos los nodos a un nivel determinado. Esta estrategia permite construir árboles más profundos y complejos sin aumentar significativamente el número de nodos, lo que mejora la capacidad de modelado y reduce el tiempo de entrenamiento ~\cite{lightgbm}.
@@ -97,12 +97,12 @@ El proceso de entrenamiento es secuencial: cada nuevo árbol se entrena para cor
     \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{images/lightgbm.png}
-    \caption{Esquema representativo del funcionamiento de LightGBM.}
-    \label{fig:lightgbm}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{images/lightgbm.png}
+%     \caption{Esquema representativo del funcionamiento de LightGBM.}
+%     \label{fig:lightgbm}
+% \end{figure}
 
 \subsection{CatBoost}
 
@@ -130,12 +130,12 @@ Otro punto clave es que a diferencia de otros modelos como XGBoost o LightGBM, C
     \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{images/catBoost.png}
-    \caption{Esquema representativo del funcionamiento de CatBoost.}
-    \label{fig:catboost}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{images/catBoost.png}
+%     \caption{Esquema representativo del funcionamiento de CatBoost.}
+%     \label{fig:catboost}
+% \end{figure}
 
 \subsection{Support Vector Machine (SVM)}
 
@@ -170,12 +170,12 @@ En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante
     \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/SVM_margin.png}
-    \caption{Ejemplo de separación óptima de clases mediante SVM y margen máximo.}
-    \label{fig:svm_margin}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{images/SVM_margin.png}
+%     \caption{Ejemplo de separación óptima de clases mediante SVM y margen máximo.}
+%     \label{fig:svm_margin}
+% \end{figure}
 
 \section{Deep Learning}
 
@@ -209,12 +209,12 @@ Desde el punto de vista computacional, su coste está directamente relacionado c
     \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{images/mlp.png}
-    \caption{Proceso de retropropagación en una red neuronal MLP.}
-    \label{fig:mlp_backpropagation}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{images/mlp.png}
+%     \caption{Proceso de retropropagación en una red neuronal MLP.}
+%     \label{fig:mlp_backpropagation}
+% \end{figure}
 
 \subsection{Convolutional Neural Networks (CNN)}
 
@@ -244,12 +244,12 @@ Desde el punto de vista computacional, el coste de una CNN depende principalment
     \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{images/CNN_1D.jpg}
-    \caption{Esquema representativo de una arquitectura CNN 1D aplicada a datos tabulares.}
-    \label{fig:cnn_1d}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{images/CNN_1D.jpg}
+%     \caption{Esquema representativo de una arquitectura CNN 1D aplicada a datos tabulares.}
+%     \label{fig:cnn_1d}
+% \end{figure}
 
 En resumen, la selección de modelos de aprendizaje automático y profundo para la detección de intrusiones debe considerar no solo el rendimiento predictivo, sino también el coste computacional asociado.
 
