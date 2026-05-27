@@ -59,22 +59,22 @@
 \contentsline {figure}{\numberline {5.44}{\ignorespaces MC - MLP (ToN-IoT)}}{71}{figure.caption.91}%
 \contentsline {figure}{\numberline {5.45}{\ignorespaces MC - CNN (ToN-IoT)}}{71}{figure.caption.92}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces F1-PGD-UNSW-NB15}}{78}{figure.caption.97}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Accuracy-PGD-UNSW-NB15}}{78}{figure.caption.98}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Recall-PGD-UNSW-NB15}}{79}{figure.caption.99}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces F1-FGSM-UNSW-NB15}}{80}{figure.caption.100}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Accuracy-FGSM-UNSW-NB15}}{80}{figure.caption.101}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Recall-FGSM-UNSW-NB15}}{80}{figure.caption.102}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces F1-PGD-IOT-23}}{81}{figure.caption.103}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Accuracy-PGD-IOT-23}}{82}{figure.caption.104}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Recall-PGD-IOT-23}}{82}{figure.caption.105}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces F1-FGSM-IOT-23}}{83}{figure.caption.106}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Accuracy-FGSM-IOT-23}}{83}{figure.caption.107}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Recall-FGSM-IOT-23}}{84}{figure.caption.108}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces F1-PGD-TON-IOT}}{85}{figure.caption.109}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Accuracy-PGD-TON-IOT}}{85}{figure.caption.110}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Recall-PGD-TON-IOT}}{85}{figure.caption.111}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces F1-FGSM-TON-IOT}}{86}{figure.caption.112}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Accuracy-FGSM-TON-IOT}}{87}{figure.caption.113}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Recall-FGSM-TON-IOT}}{87}{figure.caption.114}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces F1-PGD-UNSW-NB15}}{78}{figure.caption.98}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Accuracy-PGD-UNSW-NB15}}{78}{figure.caption.99}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Recall-PGD-UNSW-NB15}}{79}{figure.caption.100}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces F1-FGSM-UNSW-NB15}}{80}{figure.caption.101}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Accuracy-FGSM-UNSW-NB15}}{80}{figure.caption.102}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Recall-FGSM-UNSW-NB15}}{80}{figure.caption.103}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces F1-PGD-IOT-23}}{81}{figure.caption.104}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Accuracy-PGD-IOT-23}}{82}{figure.caption.105}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Recall-PGD-IOT-23}}{82}{figure.caption.106}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces F1-FGSM-IOT-23}}{83}{figure.caption.107}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Accuracy-FGSM-IOT-23}}{83}{figure.caption.108}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Recall-FGSM-IOT-23}}{84}{figure.caption.109}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces F1-PGD-TON-IOT}}{85}{figure.caption.110}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Accuracy-PGD-TON-IOT}}{85}{figure.caption.111}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Recall-PGD-TON-IOT}}{85}{figure.caption.112}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces F1-FGSM-TON-IOT}}{86}{figure.caption.113}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Accuracy-FGSM-TON-IOT}}{87}{figure.caption.114}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Recall-FGSM-TON-IOT}}{87}{figure.caption.115}%
 \addvspace {10\p@ }

@@ -12,7 +12,11 @@ El procedimiento seguido es el siguiente:
     \item Finalmente, se han evaluado los candidatos seleccionados de la frontera de Pareto en el conjunto de test para obtener una comparativa final de su rendimiento y latencia.
 \end{enumerate}
 
-Una vez que tenemos todos los modelos ganadores de todos los datasets, se han evaluado y obtenido las métricas mencionadas anteriormente (F1\_score, latencia, throughput, incremento RAM y CPU efectiva), además de matrices de confusión y curvas ROC de cada modelo.
+Para la evaluación final de los modelos seleccionados se utilizó un procedimiento de benchmarking instrumentado. En primer lugar, el conjunto de test se dividió en bloques o paquetes de muestras, de forma que la inferencia no se realizó mediante una única llamada global al modelo, sino procesando secuencialmente dichos bloques. Esta decisión permitió monitorizar el proceso durante la predicción y obtener métricas adicionales de consumo, como el incremento de memoria RAM.
+
+La latencia se calculó a partir del tiempo total necesario para procesar todos los bloques del conjunto de test, dividiendo dicho tiempo entre el número total de muestras evaluadas. Por tanto, la latencia reportada representa el tiempo medio de clasificación por muestra dentro de una ejecución monitorizada. De forma complementaria, el throughput se obtuvo dividiendo el número total de muestras entre el tiempo total de inferencia.
+
+Este procedimiento permite evaluar no solo la velocidad de predicción del modelo, sino también su comportamiento en términos de uso de recursos durante la ejecución. No obstante, al incluir monitorización de memoria y procesamiento por bloques, las métricas temporales obtenidas reflejan el rendimiento del benchmark instrumentado y pueden diferir de una medición de inferencia pura realizada mediante una única llamada a \texttt{predict}, como veremos posteriormente.
 
 \section{Optimización de hiperparámetros estructurales}
 
@@ -1505,26 +1509,29 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el datas
 
 \section{Potencial de Análisis en Tiempo Real}
 
-Para terminar la comparativa entre los modelos es interesante ver el tiempo que tardarían en la fase de inferencia en un entorno más realista, es decir, cargar los modelos en nuestro propio ordenador (no usando un super servidor).
-Hemos cargado los modelos ganadores entrenados en mi ordenador y hemos calculado el tiempo que tardaría en procesar todos los registros y hacer la predicción.
+Como se ha indicado anteriormente, los benchmarks realizados en el servidor tenían como objetivo medir no solo el tiempo de inferencia, sino también el uso de CPU y memoria RAM durante la predicción. Por este motivo, las métricas temporales obtenidas en dichos benchmarks incluyen la sobrecarga asociada al procesamiento por bloques y a la monitorización del proceso.
+
+Para complementar ese análisis, en esta sección se realiza una medición adicional centrada exclusivamente en el tiempo puro de inferencia. El objetivo es estimar la capacidad máxima de procesamiento de los modelos una vez cargados en memoria, por lo que la comparación se centra principalmente en el \textit{throughput}, expresado como el número de muestras procesadas por segundo.
+
+Además, esta medición se ha repetido en un equipo local, sin utilizar el servidor de altas prestaciones empleado durante las fases anteriores. De esta forma, se pretende analizar y comparar el comportamiento de los modelos en un entorno más limitado y cercano a un posible escenario real de despliegue, donde los recursos disponibles pueden ser inferiores a los del entorno de entrenamiento.
 
 \subsection{Resultados UNSW-NB15}
 
 \begin{table}[H]
 \centering
-\caption{Tiempo medio de inferencia y throughput aproximado en máquina local para UNSW-NB15}
+\caption{Comparativa de F1-score y throughput de inferencia pura para UNSW-NB15}
 \label{tab:inferencia_unsw}
-\begin{tabular}{lrr}
+\begin{tabular}{lrrr}
 \toprule
-\textbf{Modelo} & \textbf{Tiempo medio (s)} & \textbf{Muestras/s aprox.} \\
+\textbf{Modelo} & \textbf{F1-Score} & \textbf{Throughput Portátil} & \textbf{Throughput Servidor} \\
 \midrule
-SVM      & 0.0155 & 16600905 \\
-CatBoost & 0.1572 & 1639079  \\
-LightGBM & 0.2044 & 1260820  \\
-RF       & 0.2130 & 1209890  \\
-MLP      & 0.2240 & 1150412  \\
-XGBoost  & 0.2313 & 1113803  \\
-CNN      & 1.1434 & 225353   \\
+RF       & 0.8606 & 1209890  & 3721179 \\
+XGBoost  & 0.8579 & 1113803  & 9916876 \\ 
+CatBoost & 0.8570 & 1639079  & 3058951 \\
+LightGBM & 0.8592 & 1260820  & 5452214 \\
+SVM      & 0.7092 & 16600905 & 31271516 \\
+MLP      & 0.7862 & 1150412  & 1199516 \\
+CNN      & 0.7665 & 225353   & 646466 \\ 
 \bottomrule
 \end{tabular}%
 \end{table}
@@ -1533,19 +1540,19 @@ CNN      & 1.1434 & 225353   \\
 
 \begin{table}[H]
 \centering
-\caption{Tiempo medio de inferencia y throughput aproximado en máquina local para IoT-23}
+\caption{Comparativa de F1-score y throughput de inferencia pura para IoT-23}
 \label{tab:inferencia_iot23}
-\begin{tabular}{lrr}
+\begin{tabular}{lrrr}
 \toprule
-\textbf{Modelo} & \textbf{Tiempo medio (s)} & \textbf{Muestras/s aprox.} \\
+\textbf{Modelo} & \textbf{F1-Score} & \textbf{Throughput Portátil} & \textbf{Throughput Servidor} \\
 \midrule
-XGBoost  & 0.2160 & 5391713 \\
-SVM      & 0.2188 & 5323551 \\
-LightGBM & 0.2962 & 3932579 \\
-CatBoost & 0.3018 & 3859140 \\
-MLP      & 0.5940 & 1961042 \\
-RF       & 1.0131 & 1149778 \\
-CNN      & 6.2271 & 187062  \\
+RF       & 0.9997 & 1149778 & 5684020 \\
+XGBoost  & 0.9991 & 5391713 & 48100521 \\
+CatBoost & 0.9999 & 3859140 & 4200133 \\
+LightGBM & 0.9998 & 3932579 & 8290807 \\
+SVM      & 0.9550 & 5323551 & 9656967 \\
+MLP      & 0.9956 & 1961042 & 2278408 \\
+CNN      & 0.9952 & 187062  & 629180 \\
 \bottomrule
 \end{tabular}%
 \end{table}
@@ -1554,23 +1561,56 @@ CNN      & 6.2271 & 187062  \\
 
 \begin{table}[H] 
 \centering
-\caption{Tiempo medio de inferencia y throughput aproximado en máquina local para TON-IoT}
+\caption{Comparativa de F1-score y throughput de inferencia pura para TON-IoT}
 \label{tab:inferencia_toniot}
-\begin{tabular}{lrr}
+\begin{tabular}{lrrr}
 \toprule
-\textbf{Modelo} & \textbf{Tiempo medio (s)} & \textbf{Muestras/s aprox.} \\
+\textbf{Modelo} & \textbf{F1-Score} & \textbf{Throughput Portátil} & \textbf{Throughput Servidor} \\
 \midrule
-SVM      & 0.0413 & 5113359 \\
-XGBoost  & 0.0810 & 2605794 \\
-CatBoost & 0.0912 & 2313078 \\
-RF       & 0.1506 & 1401017 \\
-LightGBM & 0.1676 & 1259440 \\
-MLP      & 0.2519 & 837747  \\
-CNN      & 2.1399 & 98625   \\
+RF       & 0.9983 & 1401017 & 3924738 \\
+XGBoost  & 0.9986 & 2605794 & 41432520 \\
+CatBoost & 0.9985 & 2313078 & 3063462\\
+LightGBM & 0.9977 & 1259440 & 5034803 \\
+SVM      & 0.9522 & 5113359 & 10344547 \\
+MLP      & 0.9829 & 837747  & 1133827 \\
+CNN      & 0.9826 & 98625  & 334864 \\
 \bottomrule
 \end{tabular}%
 \end{table}
 
-En conclusión, los resultados demuestran que la viabilidad de un IDS no solo se mide por su robustez métrica, sino por su eficiencia temporal. Los modelos evaluados exhiben una fase de inferencia altamente competitiva en hardware convencional, lo que valida su aplicabilidad práctica fuera de entornos de supercomputación.
+\subsection{Comparación con cargas de red de referencia}
 
-La selección del clasificador óptimo responderá, por tanto, a un compromiso de ingeniería (trade-off) entre los recursos disponibles y los requerimientos de seguridad de cada escenario. Arquitecturas profundas como la CNN ofrecen una tolerancia y resiliencia sobresalientes frente a ataques de evasión adversarios, pero penalizan severamente la latencia del sistema. Por el contrario, los ensambles basados en árboles de decisión se posicionan como las soluciones más equilibradas. La elección final quedará condicionada a si el entorno \textbf{prioriza la robustez o la disponibilidad en tiempo real}.
+Una vez que hemos obtenido los resultados de throughput para cada modelo en los tres datasets, es interesante compararlos con las cargas de red típicas que se pueden encontrar en diferentes escenarios, para así estimar qué modelo nos convendría más en función del entorno de despliegue y del volumen de tráfico que se espera analizar.
+
+Para ello, se han tomado como referencia varios escenarios: una red IoT local básica de 21 dispositivos ~\cite{cargas_iot}, una red universitaria ~\cite{cargas_universitarias} y distintos casos de pequeñas y medianas empresas ~\cite{cargas_pymes}.
+
+\begin{table}[H]
+\centering
+\caption{Cargas de red de referencia expresadas en paquetes por segundo}
+\label{tab:cargas_red_referencia}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Escenario} & \textbf{Tráfico considerado} & \textbf{Tamaño medio paquete} & \textbf{Carga estimada (paq/s)} \\
+\midrule
+Red IoT local básica -- caso mínimo & 400 Kbps & 225 bytes & 222 \\
+Red IoT local básica -- caso intermedio & 400 Kbps & 75 bytes & 667 \\
+Red IoT local básica -- caso alto & 17 Mbps & 225 bytes & 9444 \\
+Red IoT local básica -- peor caso & 17 Mbps & 75 bytes & 28333 \\
+Red universitaria & 17.8M paquetes / 10 min & -- & 29667 \\
+PYME pequeña -- 8 Mbps & 8 Mbps & 225 bytes & 4444 \\
+PYME pequeña -- 32 Mbps & 32 Mbps & 225 bytes & 17778 \\
+PYME 50 empleados -- 189 Mbps & 189 Mbps & 225 bytes & 105000 \\
+PYME 50 empleados -- peor caso & 189 Mbps & 75 bytes & 315000 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+Como podemos ver en la tabla \ref{tab:cargas_red_referencia}, las cargas de red de referencia varían desde unos pocos cientos de paquetes por segundo en el caso de una red IoT local básica, hasta varios cientos de miles de paquetes por segundo en el caso de una PYME con un tráfico elevado.
+
+Al comparar estas cargas con lo throughput obtenido por los modelos en los tres datasets, podemos observar que la mayoría de modelos presentan una capacidad de procesamiento superior a las cargas de referencia, incluso cuando se ejecutan en nuestro propio portátil.
+
+Modelos como SVM, XGBoost, LightGBM, Random Forest y CatBoost alcanzan valores superiores al millón de muestras por segundo, lo que los posiciona como opciones viables para escenarios con cargas de red elevadas.
+
+Por otro lado, modelos como CNN-1D ejecutados en equipo local pueden ser viables para escenarios con cargas más moderadas, pero insuficientes para casos más exigentes como 315000 paquetes por segundo, requiriendo hardware más potente.

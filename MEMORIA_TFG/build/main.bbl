@@ -150,6 +150,34 @@
     \field{year}{2024}
   \endentry
 
+  \entry{cargas_pymes}{report}{}
+    \name{author}{1}{}{%
+      {{hash=B}{%
+         family={{Broadband Stakeholder Group}},
+         familyi={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{B1}
+    \strng{fullhash}{B1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{{The Broadband Requirements of Small Businesses in the UK}}
+    \verb{url}
+    \verb https://static1.1.sqspcdn.com/static/f/1321365/26509292/1441267216757
+    \verb /BSG%2BSME%2Bbandwidth%2Bforecast.pdf
+    \endverb
+    \list{institution}{1}{%
+      {{Broadband Stakeholder Group}}%
+    }
+    \field{type}{techreport}
+    \field{year}{2015}
+    \field{urlday}{27}
+    \field{urlmonth}{05}
+    \field{urlyear}{2026}
+  \endentry
+
   \entry{deb2001multiobjective}{book}{}
     \name{author}{1}{}{%
       {{hash=DK}{%
@@ -569,6 +597,64 @@
     \field{year}{2025}
   \endentry
 
+  \entry{cargas_universitarias}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=PR}{%
+         family={Pang},
+         familyi={P\bibinitperiod},
+         given={Ruoming},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Allman},
+         familyi={A\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bennett},
+         familyi={B\bibinitperiod},
+         given={Mike},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PV}{%
+         family={Paxson},
+         familyi={P\bibinitperiod},
+         given={Vern},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=TB}{%
+         family={Tierney},
+         familyi={T\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PR+1}
+    \strng{fullhash}{PRAMBMLJPVTB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{Proceedings of the 5th ACM SIGCOMM Conference on Internet Measurement (IMC)}
+    \verb{doi}
+    \verb 10.1145/1062529.1062533
+    \endverb
+    \field{pages}{15\bibrangedash 28}
+    \field{title}{{A First Look at Modern Enterprise Traffic}}
+    \verb{url}
+    \verb https://conferences.sigcomm.org/imc/2005/papers/imc05efiles/pang/pang
+    \verb .pdf
+    \endverb
+    \field{year}{2005}
+  \endentry
+
   \entry{optuna}{inproceedings}{}
     \name{author}{5}{}{%
       {{hash=PN}{%
@@ -705,6 +791,69 @@
     \field{volume}{52}
     \field{journaltitle}{Cuestiones de Fisioterapia}
     \field{year}{2023}
+  \endentry
+
+  \entry{cargas_iot}{inproceedings}{}
+    \name{author}{7}{}{%
+      {{hash=SA}{%
+         family={Sivanathan},
+         familyi={S\bibinitperiod},
+         given={Arunan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Sherratt},
+         familyi={S\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GHH}{%
+         family={Gharakheili},
+         familyi={G\bibinitperiod},
+         given={Hassan\bibnamedelima Habibi},
+         giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Radford},
+         familyi={R\bibinitperiod},
+         given={Adam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Wijenayake},
+         familyi={W\bibinitperiod},
+         given={Chamith},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=VA}{%
+         family={Vishwanath},
+         familyi={V\bibinitperiod},
+         given={Arun},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Sivaraman},
+         familyi={S\bibinitperiod},
+         given={Vijay},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SA+1}
+    \strng{fullhash}{SASDGHHRAWCVASV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{Proceedings of the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)}
+    \verb{doi}
+    \verb 10.1109/INFCOMW.2017.8116438
+    \endverb
+    \field{pages}{559\bibrangedash 564}
+    \field{title}{{Characterizing and Classifying IoT Traffic in Smart Cities and Campuses}}
+    \verb{url}
+    \verb https://www2.ee.unsw.edu.au/~vijay/pubs/conf/17infocom.pdf
+    \endverb
+    \field{year}{2017}
   \endentry
 
   \entry{nonlinear_more_complexity}{inproceedings}{}

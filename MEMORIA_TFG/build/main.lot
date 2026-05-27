@@ -46,20 +46,21 @@
 \contentsline {table}{\numberline {5.25}{\ignorespaces Comparativa final de modelos CNN-1D en el set de test (ToN-IoT)}}{69}{table.caption.86}%
 \contentsline {table}{\numberline {5.26}{\ignorespaces Comparativa global de rendimiento de modelos - IOT-23}}{69}{table.caption.87}%
 \contentsline {table}{\numberline {5.27}{\ignorespaces Hiperparámetros ganadores de los modelos evaluados con ToN-IoT}}{72}{table.caption.93}%
-\contentsline {table}{\numberline {5.28}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para UNSW-NB15}}{72}{table.caption.94}%
-\contentsline {table}{\numberline {5.29}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para IoT-23}}{73}{table.caption.95}%
-\contentsline {table}{\numberline {5.30}{\ignorespaces Tiempo medio de inferencia y throughput aproximado en máquina local para TON-IoT}}{73}{table.caption.96}%
+\contentsline {table}{\numberline {5.28}{\ignorespaces Comparativa de F1-score y throughput de inferencia pura para UNSW-NB15}}{72}{table.caption.94}%
+\contentsline {table}{\numberline {5.29}{\ignorespaces Comparativa de F1-score y throughput de inferencia pura para IoT-23}}{73}{table.caption.95}%
+\contentsline {table}{\numberline {5.30}{\ignorespaces Comparativa de F1-score y throughput de inferencia pura para TON-IoT}}{73}{table.caption.96}%
+\contentsline {table}{\numberline {5.31}{\ignorespaces Cargas de red de referencia expresadas en paquetes por segundo}}{74}{table.caption.97}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo MLP en UNSW-NB15}}{88}{table.caption.115}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo CNN en UNSW-NB15}}{89}{table.caption.116}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP en UNSW-NB15}}{89}{table.caption.117}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN en UNSW-NB15}}{89}{table.caption.118}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{90}{table.caption.119}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{90}{table.caption.120}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{90}{table.caption.121}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{91}{table.caption.122}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{91}{table.caption.123}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{91}{table.caption.124}%
-\contentsline {table}{\numberline {6.11}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{92}{table.caption.125}%
-\contentsline {table}{\numberline {6.12}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{92}{table.caption.126}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo MLP en UNSW-NB15}}{88}{table.caption.116}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces F1-score de la clase ataque ante perturbaciones PGD generadas sobre el modelo CNN en UNSW-NB15}}{89}{table.caption.117}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP en UNSW-NB15}}{89}{table.caption.118}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN en UNSW-NB15}}{89}{table.caption.119}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{90}{table.caption.120}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{90}{table.caption.121}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{91}{table.caption.122}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{91}{table.caption.123}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{92}{table.caption.124}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{92}{table.caption.125}%
+\contentsline {table}{\numberline {6.11}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo MLP}}{92}{table.caption.126}%
+\contentsline {table}{\numberline {6.12}{\ignorespaces F1-score de la clase ataque ante perturbaciones generadas sobre el modelo CNN}}{93}{table.caption.127}%
 \addvspace {10\p@ }
