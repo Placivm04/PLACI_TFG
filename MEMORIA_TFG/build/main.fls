@@ -580,9 +580,9 @@ INPUT ./images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-ACCURACY.png
 INPUT ./images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png
 INPUT ./images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png
 INPUT ./images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png
-INPUT ./sections/Desarrollo/conclusiones_lineas_futuras.tex
-INPUT ./sections/Desarrollo/conclusiones_lineas_futuras.tex
-INPUT sections/Desarrollo/conclusiones_lineas_futuras.tex
+INPUT ./sections/Conclusiones/conclusiones_lineas_futuras.tex
+INPUT ./sections/Conclusiones/conclusiones_lineas_futuras.tex
+INPUT sections/Conclusiones/conclusiones_lineas_futuras.tex
 INPUT ./sections/Desarrollo/anexo.tex
 INPUT ./sections/Desarrollo/anexo.tex
 INPUT sections/Desarrollo/anexo.tex

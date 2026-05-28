@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  28 MAY 2026 13:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  28 MAY 2026 16:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1649,16 +1649,16 @@ File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-ACCURACY.png Graphic file (type 
  [62]
 File: images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png Graphic file (type bmp)
 <images/ATAQUES_ADVERSARIOS_2/TON-IOT/FGSM-RECALL.png>
- [63] [64] [65] [66] [67] [68]) (./sections/Desarrollo/conclusiones_lineas_futuras.tex [69] [70]
+ [63] [64] [65] [66] [67] [68]) (./sections/Conclusiones/conclusiones_lineas_futuras.tex [69] [70]
 Capítulo 7.
-) [71
+[71
 
-] [72
-
-] (./sections/Desarrollo/anexo.tex
+]) [72] (./sections/Desarrollo/anexo.tex
 File: images/PARETO_RF.png Graphic file (type bmp)
 <images/PARETO_RF.png>
- [73]
+ [73
+
+]
 File: images/PARETO_XGBOOST.png Graphic file (type bmp)
 <images/PARETO_XGBOOST.png>
  [74]
@@ -1786,12 +1786,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44963 strings out of 474878
- 965301 string characters out of 5762516
+ 44964 strings out of 474878
+ 965333 string characters out of 5762516
  1947627 words of memory out of 5000000
  66290 multiletter control sequences out of 15000+600000
  563371 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  125i,15n,121p,1920b,5583s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (105 pages, 1704652 bytes).
+Output written on build/main.xdv (105 pages, 1736940 bytes).
