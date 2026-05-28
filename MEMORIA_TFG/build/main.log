@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  28 MAY 2026 16:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  28 MAY 2026 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1520,7 +1520,7 @@ Capítulo 3.
 [25
 
 ] [26]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 117.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 118.
 ) (./sections/Estudio_del_arte/dataSets.tex [27] [28
 
 ]
@@ -1749,17 +1749,22 @@ Overfull \hbox (35.81804pt too wide) in paragraph at lines 163--163
  []
 
 Missing character: There is no   (U+00A0) in font [template/fonts/Malacitana_Sans/Malacitana-Sans-Italic.otf]/OT:script=latn;language=dflt;mapping=tex-text;!
-
-Overfull \hbox (5.83003pt too wide) in paragraph at lines 163--163
-[]\TU/Malacitana-Sans(0)/m/n/12 Ilana Löwy. “  ART with PGD: risky heredity and stratified reproduction”. In: \TU/Malacitana-Sans(0)/m/it/12 Reproductive Biomedicine
- []
-
 [97
 
 
 ]
+Overfull \hbox (5.83003pt too wide) in paragraph at lines 163--163
+[]\TU/Malacitana-Sans(0)/m/n/12 Ilana Löwy. “  ART with PGD: risky heredity and stratified reproduction”. In: \TU/Malacitana-Sans(0)/m/it/12 Reproductive Biomedicine
+ []
+
+
 Overfull \hbox (25.4558pt too wide) in paragraph at lines 163--163
 \TU/Malacitana-Sans(0)/m/it/12 and Computer Engineering (ICSSEECC) \TU/Malacitana-Sans(0)/m/n/12 (2024), pp. 1–6. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][] []
+ []
+
+[98]
+Overfull \hbox (23.29704pt too wide) in paragraph at lines 163--163
+[]\TU/Malacitana-Sans(0)/m/n/12 Maria-Irina Nicolae et al. “  Adversarial Robustness Toolbox v1.0.0”. In: \TU/Malacitana-Sans(0)/m/it/12 arXiv preprint arXiv:1807.01069
  []
 
 
@@ -1767,12 +1772,11 @@ Overfull \hbox (0.55878pt too wide) in paragraph at lines 163--163
 []\TU/Malacitana-Sans(0)/m/n/12 scikit-learn developers. \TU/Malacitana-Sans(0)/m/it/12 StratifiedKFold\TU/Malacitana-Sans(0)/m/n/12 . 2026. \TU/Malacitana-Sans(0)/m/sc/12 url\TU/Malacitana-Sans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][][][][] [][] [][][][][] [] [][][] [] [][][][][][] []
  []
 
-[98] [99] [100
-
-]
+[99] [100]
 File: template/logos/NEG-logo-umaes.png Graphic file (type bmp)
 <template/logos/NEG-logo-umaes.png>
  [101
+
 
 ] (build/main.aux)
  ***********
@@ -1786,12 +1790,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44964 strings out of 474878
- 965333 string characters out of 5762516
+ 45019 strings out of 474878
+ 967481 string characters out of 5762516
  1947627 words of memory out of 5000000
- 66290 multiletter control sequences out of 15000+600000
+ 66345 multiletter control sequences out of 15000+600000
  563371 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,15n,121p,1920b,5583s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,15n,121p,1920b,5585s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (105 pages, 1736940 bytes).
+Output written on build/main.xdv (105 pages, 1768680 bytes).
