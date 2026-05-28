@@ -178,6 +178,40 @@
     \field{urlyear}{2026}
   \endentry
 
+  \entry{xgboost_pararell}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CT}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Tianqi},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Guestrin},
+         familyi={G\bibinitperiod},
+         given={Carlos},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CTGC1}
+    \strng{fullhash}{CTGC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{eprint}
+    \verb 1603.02754
+    \endverb
+    \field{title}{XGBoost: {A} Scalable Tree Boosting System}
+    \verb{url}
+    \verb http://arxiv.org/abs/1603.02754
+    \endverb
+    \field{volume}{abs/1603.02754}
+    \field{journaltitle}{CoRR}
+    \field{eprinttype}{arXiv}
+    \field{year}{2016}
+  \endentry
+
   \entry{deb2001multiobjective}{book}{}
     \name{author}{1}{}{%
       {{hash=DK}{%
@@ -489,6 +523,29 @@
     \verb https://code.visualstudio.com/docs/datascience/jupyter-notebooks
     \endverb
     \field{year}{2023}
+  \endentry
+
+  \entry{lightgbm_pararell}{online}{}
+    \name{author}{1}{}{%
+      {{hash=M}{%
+         family={{Microsoft}},
+         familyi={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{M1}
+    \strng{fullhash}{M1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{{Parameters Tuning --- LightGBM documentation}}
+    \verb{url}
+    \verb https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
+    \endverb
+    \field{year}{2026}
+    \field{urlday}{28}
+    \field{urlmonth}{05}
+    \field{urlyear}{2026}
   \endentry
 
   \entry{mlp_layers}{article}{}
