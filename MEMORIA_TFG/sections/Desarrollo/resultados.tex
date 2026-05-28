@@ -147,9 +147,9 @@ Tras hacer la fase de benchmarking con los mejores candidatos de los diferentes 
         \hline
         Linear SVM & 0.00014 & $7.315991 \times 10^{6}$ & 0.09 & 0.9 & 0.7092 \\
         \hline
-        LightGBM & 0.00064 & $1.551954 \times 10^{6}$ & 0.13 & 100.5 & 0.8592 \\
+        LightGBM & 0.00064 & $1.551954 \times 10^{6}$ & 0.13 & 100 & 0.8592 \\
         \hline
-        XGBoost & 0.00067 & $1.492419 \times 10^{6}$ & 0.0 & 101.5 & 0.8579 \\
+        XGBoost & 0.00067 & $1.492419 \times 10^{6}$ & 0.0 & 100 & 0.8579 \\
         \hline
         CatBoost & 0.00156 & 641453.0 & 1.0 & 50.1 & 0.8570 \\
         \hline
@@ -164,6 +164,13 @@ Tras hacer la fase de benchmarking con los mejores candidatos de los diferentes 
     \label{tab:hardware_benchmark_global}
 \end{table}
 
+A partir de la comparativa global de rendimiento, se observa que los modelos basados en árboles presentan el mejor equilibrio entre capacidad predictiva y eficiencia computacional. Random Forest, LightGBM, XGBoost y CatBoost alcanzan los valores más altos de F1-score. Entre ellos, LightGBM y XGBoost destacan por ofrecer una latencia muy reducida y un throughput elevado, mientras que Random Forest obtiene un F1-score ligeramente superior, aunque con una latencia mayor.
+
+Por otro lado, Linear SVM presenta la menor latencia de inferencia, pero también el F1-score más bajo entre los modelos evaluados. Esto indica que, aunque resulta muy eficiente desde el punto de vista temporal, su formulación lineal limita su capacidad para capturar relaciones no lineales presentes en el dataset. Los modelos neuronales, MLP y CNN-1D, obtienen resultados intermedios en términos de F1-score, pero con un coste de inferencia superior al de los modelos basados en árboles, especialmente en el caso de CNN-1D.
+
+En cuanto al consumo de recursos, modelos como CNN-1D y MLP presentan un mayor incremento de memoria RAM, especialmente CNN-1D, que requiere más memoria durante la inferencia que los modelos clásicos. Por el contrario, SVM, XGBoost, LightGBM y CatBoost presentan una huella de memoria más reducida. Respecto al uso de CPU, LightGBM y XGBoost acaparan el 100\% de la CPU durante la inferencia, puede explicarse por la propia implementación de estas librerías, pues son modelos diseñados para ser eficientes y paralelizables ~\cite{xgboost_pararell} ~\cite{lightgbm_pararell}.
+
+La curva ROC de cada modelo se muestra a continuación:
 
 \begin{figure}[H]
     \centering
@@ -172,7 +179,9 @@ Tras hacer la fase de benchmarking con los mejores candidatos de los diferentes 
     \label{fig:roc_modelos}
 \end{figure}
 
-Las matrices de confusión de cada modelo se muestran a continuación:
+La curva ROC confirma la tendencia observada en la tabla anterior, mostrando que los modelos basados en árboles alcanzan las áreas bajo la curva más elevadas, lo que indica una mejor capacidad de discriminación entre clases. SVM presenta un rendimiento inferior en términos de AUC, mientras que los modelos neuronales muestran un rendimiento intermedio.
+
+Las matrices de confusión nos permiten observar on más detalle los errores cometidos por cada modelo. Se presentan a continuación:
 
 \begin{figure}[H]
     \centering
@@ -289,7 +298,7 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el datas
         \hline
         Linear SVM & 0.00018 & $5.684672 \times 10^{6}$ & 2.01 & 1.1 & 0.955 \\
         \hline
-        LightGBM & 0.00047 & $2.144772 \times 10^{6}$ & 0.11 & 100.6 & 0.9998 \\
+        LightGBM & 0.00047 & $2.144772 \times 10^{6}$ & 0.11 & 100 & 0.9998 \\
         \hline
         XGBoost & 0.00584 & 171225 & 0.31 & 96.2 & 0.9991 \\
         \hline
@@ -306,6 +315,12 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el datas
     \label{tab:hardware_benchmark_global_iot23}
 \end{table}
 
+En el caso de IoT-23, la tabla de rendimiento muestra valores de F1-score muy elevados en la mayoría de modelos, especialmente en los clasificadores basados en árboles. Random Forest, XGBoost, LightGBM y CatBoost alcanzan resultados cercanos a 1, lo que indica una gran capacidad para distinguir entre tráfico benigno y malicioso en este dataset. Además, estos modelos mantienen latencias reducidas y throughputs elevados, por lo que ofrecen un compromiso muy favorable entre rendimiento predictivo y eficiencia.
+
+Los modelos neuronales, MLP y CNN-1D, también presentan un rendimiento muy competitivo, aunque con un coste de inferencia superior, especialmente en el caso de CNN-1D. Por su parte, SVM vuelve a destacar por su rapidez, pero su F1-score queda por debajo del resto de modelos.
+
+Respecto al consumo de recursos, se observa que Random Forest es el modelo con mayor incremento de RAM, seguido de CNN-1D. En términos de uso de CPU, al igual que con UNSW-NB15, LightGBM y XGBoost son los modelos que mayor porcentaje de uso de CPU acaparan.
+
 La curva ROC de los modelos evaluados con el dataset IOT-23 es la siguiente:
 \begin{figure}[H]
     \centering
@@ -314,7 +329,9 @@ La curva ROC de los modelos evaluados con el dataset IOT-23 es la siguiente:
     \label{fig:roc_modelos_iot}
 \end{figure}
 
-Las matrices de confusión de cada modelo se muestran a continuación:
+Las curvas ROC obtenidas confirman una excelente separación entre clases en la mayoría de modelos, coherentes con los valores de F1-score observados en la tabla anterior.
+
+Las matrices de confusión de cada modelo son las siguientes:
 
 \begin{figure}[H]
     \centering
@@ -431,9 +448,9 @@ Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes
         \hline
         Linear SVM & 0.00019 & $5.185815 \times 10^{6}$ & 0.02 & 1.3 & 0.9522 \\
         \hline
-        LightGBM & 0.0003 & $3.333129 \times 10^{6}$ & 0.0 & 105.3 & 0.9977 \\
+        LightGBM & 0.0003 & $3.333129 \times 10^{6}$ & 0.0 & 100 & 0.9977 \\
         \hline
-        XGBoost & 0.00065 & $1.536528 \times 10^{6}$ & 0.2 & 101.8 & 0.9986 \\
+        XGBoost & 0.00065 & $1.536528 \times 10^{6}$ & 0.2 & 100 & 0.9986 \\
         \hline
         CatBoost & 0.00129 & 773537.0 & 0.03 & 57.3 & 0.9985 \\
         \hline
@@ -448,6 +465,12 @@ Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes
     \label{tab:hardware_benchmark_global_ton}
 \end{table}
 
+En TON-IoT, los modelos basados en árboles vuelven a situarse entre las mejores alternativas, combinando valores elevados de F1-score con tiempos de inferencia reducidos. XGBoost, CatBoost, Random Forest y LightGBM muestran un rendimiento muy alto, lo que confirma la eficacia de este tipo de modelos en datasets tabulares de detección de intrusiones.
+
+SVM, de nuevo, mantiene una latencia muy baja, pero obtiene un F1-score inferior al de los modelos basados en árboles. Los modelos neuronales, MLP y CNN-1D, presentan un comportamiento competitivo, aunque con mayor coste temporal. 
+
+Si miramos el consumo de recursos, CNN-1D destaca como el modelo con mayor incremento de RAM. En cuanto al uso de CPU, LightGBM y XGBoost vuelven a ser los modelos que muestras mayores porcentajes durante la fase de inferencia.
+
 La curva ROC de los modelos evaluados con el dataset ToN-IoT es la siguiente:
 
 \begin{figure}[H]
@@ -456,6 +479,8 @@ La curva ROC de los modelos evaluados con el dataset ToN-IoT es la siguiente:
     \caption{Curva ROC - Modelos (ToN-IoT)}
     \label{fig:roc_modelos_ton}
 \end{figure}
+
+Al igual que el dataset anterior, las curvas ROC obtenidas muestran una excelente capacidad de discriminación entre clases para la mayoría de modelos, especialmente los basados en árboles, que alcanzan áreas bajo la curva cercanas a 1, lo que es coherente con los valores de F1-score observados en la tabla de rendimiento.
 
 Las matrices de confusión de cada modelo se muestran a continuación:
 

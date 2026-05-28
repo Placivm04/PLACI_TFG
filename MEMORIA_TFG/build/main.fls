@@ -448,12 +448,6 @@ INPUT sections/Desarrollo/optuna.tex
 INPUT ./sections/Estudio_del_arte/dataSets.tex
 INPUT ./sections/Estudio_del_arte/dataSets.tex
 INPUT sections/Estudio_del_arte/dataSets.tex
-INPUT ./images/university_of_new_south_wales.jpeg
-INPUT ./images/university_of_new_south_wales.jpeg
-INPUT ./images/university_of_new_south_wales.jpeg
-INPUT ./images/stratosphere_laboratory_CTU.png
-INPUT ./images/stratosphere_laboratory_CTU.png
-INPUT ./images/stratosphere_laboratory_CTU.png
 INPUT ./sections/Desarrollo/resultados.tex
 INPUT ./sections/Desarrollo/resultados.tex
 INPUT sections/Desarrollo/resultados.tex
