@@ -1,0 +1,26 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{\textbf{ART}}]\begingroup Adversarial Robustness Toolbox\nomeqref {0}\nompageref{16}
+  \item [{\textbf{AUC}}]\begingroup Area Under the Curve\nomeqref {0}\nompageref{16}
+  \item [{\textbf{CNN}}]\begingroup Convolutional Neural Network\nomeqref {0}\nompageref{16}
+  \item [{\textbf{CRISP-DM}}]\begingroup Cross-Industry Standard Process for Data Mining\nomeqref {0}\nompageref{16}
+  \item [{\textbf{CUDA}}]\begingroup Compute Unified Device Architecture\nomeqref {0}\nompageref{16}
+  \item [{\textbf{FGSM}}]\begingroup Fast Gradient Sign Method\nomeqref {0}\nompageref{16}
+  \item [{\textbf{GPU}}]\begingroup Graphics Processing Unit\nomeqref {0}\nompageref{16}
+  \item [{\textbf{IDS}}]\begingroup Intrusion Detection System\nomeqref {0}\nompageref{16}
+  \item [{\textbf{IoT}}]\begingroup Internet of Things\nomeqref {0}\nompageref{16}
+  \item [{\textbf{IP}}]\begingroup Internet Protocol\nomeqref {0}\nompageref{16}
+  \item [{\textbf{LGBM}}]\begingroup Light Gradient Boosting Machine\nomeqref {0}\nompageref{16}
+  \item [{\textbf{LSTM}}]\begingroup Long Short-Term Memory\nomeqref {0}\nompageref{16}
+  \item [{\textbf{MLP}}]\begingroup Multilayer Perceptron\nomeqref {0}\nompageref{16}
+  \item [{\textbf{NIDS}}]\begingroup Network Intrusion Detection System\nomeqref {0}\nompageref{16}
+  \item [{\textbf{PGD}}]\begingroup Projected Gradient Descent\nomeqref {0}\nompageref{16}
+  \item [{\textbf{PYME}}]\begingroup Pequeña y Mediana Empresa\nomeqref {0}\nompageref{16}
+  \item [{\textbf{RAM}}]\begingroup Random Access Memory\nomeqref {0}\nompageref{16}
+  \item [{\textbf{RF}}]\begingroup Random Forest\nomeqref {0}\nompageref{16}
+  \item [{\textbf{ROC}}]\begingroup Receiver Operating Characteristic\nomeqref {0}\nompageref{16}
+  \item [{\textbf{SVM}}]\begingroup Support Vector Machine\nomeqref {0}\nompageref{16}
+  \item [{\textbf{XGBoost}}]\begingroup Extreme Gradient Boosting\nomeqref {0}\nompageref{16}
+
+\end{thenomenclature}

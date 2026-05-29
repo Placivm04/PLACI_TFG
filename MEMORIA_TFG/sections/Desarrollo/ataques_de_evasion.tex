@@ -1,7 +1,7 @@
 \chapter{Ataques de Evasión}
 \section{Evaluación de robustez frente a ataques adversarios}
 
-Hasta este punto del trabajo, los modelos de detección de intrusiones desarrollados han mostrado un rendimiento muy elevado sobre los conjuntos de prueba originales. En particular, las arquitecturas profundas, como MLP y CNN-1D, han alcanzado valores de F1-score superiores al 96\%, mientras que los modelos basados en ensambles de árboles de decisión, como Random Forest, XGBoost, LightGBM y CatBoost, han obtenido resultados cercanos al 99\%. Estos resultados indican que los modelos son capaces de aprender patrones relevantes en los datasets empleados y ofrecen una alta capacidad de clasificación en condiciones normales de evaluación.
+Hasta este punto del trabajo, los modelos de detección de intrusiones desarrollados han mostrado un rendimiento muy elevado sobre los conjuntos de prueba originales. En particular, las arquitecturas profundas, como MLP y CNN-1D, han alcanzado valores de F1-score superiores al 96\%, mientras que los modelos basados en ensambles de árboles de decisión, como Random Forest, XGBoost, LightGBM y CatBoost, han obtenido resultados cercanos al 99\%. Estos resultados indican que los modelos son capaces de aprender patrones relevantes en los \textit{datasets} empleados y ofrecen una alta capacidad de clasificación en condiciones normales de evaluación.
  
 Sin embargo, en el ámbito de la ciberseguridad, un buen rendimiento sobre datos estáticos no garantiza por sí solo que un sistema sea robusto en escenarios reales. Los atacantes pueden conocer o inferir el funcionamiento de los sistemas de detección y adaptar su comportamiento para evadirlos. En este contexto surge el \textbf{aprendizaje automático adversario}, cuyo objetivo es estudiar cómo pequeñas modificaciones en las entradas pueden provocar errores de clasificación en modelos de inteligencia artificial.
 
@@ -35,7 +35,7 @@ En arquitecturas de aprendizaje profundo como el Perceptrón Multicapa (MLP) y l
 A diferencia de las redes neuronales, los modelos que fundamentan sus decisiones en particiones del espacio paramétrico, como los ensambles de árboles de decisión (Random Forest, XGBoost, LightGBM, CatBoost) o las Máquinas de Vectores de Soporte (SVM), presentan fronteras lógicas abruptas que inutilizan la aplicación directa del cálculo de gradientes.
 
 Para solventar esta limitación e incorporar estos algoritmos a la evaluación de seguridad, se explota la técnica de \textbf{Transferencia Adversaria} (\textit{Adversarial Transferability}) ~\cite{transferencia_adversaria}. Esta estrategia asume que las perturbaciones diseñadas para engañar a un modelo específico suelen evadir con éxito clasificadores con arquitecturas completamente distintas. 
-Es decir, el veneno que fabricas para matar a un modelo específico, suele ser letal también para otros modelos que no tienen nada que ver con el primero. Por ejemplo, un ataque diseñado para engañar a un MLP podría transferirse con éxito a un Random Forest o a una SVM, incluso sin acceso directo a sus parámetros internos.
+Es decir, el veneno que fabricamos para matar a un modelo específico, suele ser letal también para otros modelos que no tienen nada que ver con el primero. Por ejemplo, un ataque diseñado para engañar a un MLP podría transferirse con éxito a un Random Forest o a una SVM, incluso sin acceso directo a sus parámetros internos.
 
 El procedimiento aplicado es el siguiente:
 
@@ -48,9 +48,9 @@ El procedimiento aplicado es el siguiente:
 
 \subsection{Análisis de Resultados en UNSW-NB15}
 
-En esta sección se presentarán los resultados obtenidos tras la aplicación de los ataques de evasión descritos en la sección anterior sobre los modelos ganadores de la sección anterior y con su dataset correspondiente.
+En esta sección se presentarán los resultados obtenidos tras la aplicación de los ataques de evasión descritos en la sección anterior sobre los modelos ganadores de la sección anterior y con su \textit{dataset} correspondiente.
 
-El procedimiento que se siguió fue entrenar cada modelo nuevamente con la configuración de hiperparámetros seleccionada en la fase anterior con su dataset correspondiente. Posteriormente, se aplicaron los ataques de evasión para generar un nuevo conjunto de datos adversarios sobre los modelos MLP y CNN-1D (transferencia adversaria).
+El procedimiento que se siguió fue entrenar cada modelo nuevamente con la configuración de hiperparámetros seleccionada en la fase anterior con su \textit{dataset} correspondiente. Posteriormente, se aplicaron los ataques de evasión para generar un nuevo conjunto de datos adversarios sobre los modelos MLP y CNN-1D (transferencia adversaria).
 
 Es fundamental destacar que estos ataques se han configurado con un límite de perturbación extremadamente restrictivo \textbf{($\epsilon = 0.05$)}. Esto implica que el algoritmo de evasión solo ha modificado, como máximo, un 5\% el valor original de las características numéricas continuas, garantizando que el tráfico malicioso generado sea prácticamente indistinguible del tráfico original a nivel de red.
 
@@ -58,7 +58,7 @@ Finalmente, los datos adversarios generados se introdujeron en la fase de infere
 
 \subsubsection{Resultados PGD}
 
-Presentamos los resultados de la aplicación del ataque PGD sobre los modelos entrenados con el dataset UNSW-NB15. En los gráficos de barras podemos ver la métrica que corresponde a cada modelo, tanto en su estado original (barra azul), tras la aplicación del ataque con el dataset alterado con MLP (barra naranja) y tras la aplicación del ataque con el dataset alterado con CNN-1D (barra verde).
+Presentamos los resultados de la aplicación del ataque PGD sobre los modelos entrenados con el \textit{dataset} UNSW-NB15. En los gráficos de barras podemos ver la métrica que corresponde a cada modelo, tanto en su estado original (barra azul), tras la aplicación del ataque con el \textit{dataset} alterado con MLP (barra naranja) y tras la aplicación del ataque con el \textit{dataset} alterado con CNN-1D (barra verde).
 
 \begin{figure}[H]
     \centering
@@ -151,7 +151,7 @@ El \textit{recall} de la clase ataque muestra un comportamiento más desigual. A
     \label{fig:PGD-RECALL-IOT-23}
 \end{figure}
 
-En el dataset IoT-23, para el ataque PGD con límite de perturbación $\epsilon = 0.05$, se observa una degradación notable del rendimiento respecto al test limpio, especialmente en términos de \textbf{accuracy} y \textbf{F1-score de la clase ataque}. Aunque los modelos presentan un rendimiento casi perfecto en el escenario limpio, las perturbaciones adversarias reducen de forma clara la capacidad global de clasificación.
+En el \textit{dataset} IoT-23, para el ataque PGD con límite de perturbación $\epsilon = 0.05$, se observa una degradación notable del rendimiento respecto al test limpio, especialmente en términos de \textbf{accuracy} y \textbf{F1-score de la clase ataque}. Aunque los modelos presentan un rendimiento casi perfecto en el escenario limpio, las perturbaciones adversarias reducen de forma clara la capacidad global de clasificación.
 
 Sin embargo, el \textit{recall} de la clase ataque se mantiene muy elevado en prácticamente todos los modelos, incluso tras aplicar las perturbaciones PGD generadas sobre MLP y CNN. Esto indica que los modelos siguen detectando la mayoría de las muestras maliciosas, por lo que el ataque no provoca principalmente una pérdida de detección de ataques.
 
@@ -217,7 +217,7 @@ El \textit{recall} de la clase ataque se mantiene prácticamente perfecto en la 
     \label{fig:PGD-RECALL-TON-IOT}
 \end{figure}
 
-En el dataset TON-IoT, para el ataque PGD, se observa una degradación significativa del rendimiento respecto al test limpio, donde la mayoría de modelos presentan valores muy elevados de accuracy y F1-score, cercanos a 1. Sin embargo, tras aplicar las perturbaciones PGD, ambos indicadores descienden de forma clara en la mayoría de clasificadores.
+En el \textit{dataset} TON-IoT, para el ataque PGD, se observa una degradación significativa del rendimiento respecto al test limpio, donde la mayoría de modelos presentan valores muy elevados de accuracy y F1-score, cercanos a 1. Sin embargo, tras aplicar las perturbaciones PGD, ambos indicadores descienden de forma clara en la mayoría de clasificadores.
 
 En términos de \textbf{accuracy}, los modelos más afectados son XGB, LGBM, CatBoost y MLP.
 
@@ -225,7 +225,7 @@ Respecto al \textbf{F1-score}, la degradación es todavía más evidente. Modelo
 
 El \textit{recall} de la clase ataque presenta un comportamiento desigual. En algunos modelos, como XGB, MLP y CNN, se mantiene elevado bajo determinadas perturbaciones, lo que indica que siguen detectando gran parte de los ataques. Sin embargo, en otros casos se producen caídas importantes, especialmente en LGBM con PGD-MLP, CatBoost con PGD-MLP y SVM con PGD-CNN.
 
-En conjunto, los resultados muestran que PGD con $\epsilon = 0.05$ tiene un impacto relevante sobre TON-IoT. A diferencia de otros datasets donde el recall se mantenía alto en casi todos los modelos, aquí el ataque también reduce la capacidad de detección de ataques en determinados clasificadores. Esto sugiere que TON-IoT presenta una mayor sensibilidad frente a perturbaciones adversarias, especialmente en modelos como LGBM, CatBoost, MLP y SVM dependiendo del modelo generador de la perturbación.
+En conjunto, los resultados muestran que PGD con $\epsilon = 0.05$ tiene un impacto relevante sobre TON-IoT. A diferencia de otros \textit{datasets} donde el recall se mantenía alto en casi todos los modelos, aquí el ataque también reduce la capacidad de detección de ataques en determinados clasificadores. Esto sugiere que TON-IoT presenta una mayor sensibilidad frente a perturbaciones adversarias, especialmente en modelos como LGBM, CatBoost, MLP y SVM dependiendo del modelo generador de la perturbación.
 
 \subsubsection{Resultados FGSM}
 
@@ -258,7 +258,7 @@ Respecto al \textbf{F1-score de la clase ataque}, la degradación es muy notable
 
 El \textit{recall} de la clase ataque presenta un comportamiento desigual. Algunos modelos, como CNN, mantienen un recall muy elevado e incluso cercano a 1 bajo perturbación, lo que indica que siguen detectando la mayoría de ataques. Sin embargo, otros modelos sufren caídas importantes, como SVM y MLP.
 
-En resumen, hemos visto como un límite de perturbación de ataque pequeño, como 0.05, puede generar caídas bastante grandes en las métricas analizadas, siempre dependiendo del modelo y del dataset perturbado que se aplique.
+En resumen, hemos visto como un límite de perturbación de ataque pequeño, como 0.05, puede generar caídas bastante grandes en las métricas analizadas, siempre dependiendo del modelo y del \textit{dataset} perturbado que se aplique.
 
 % ===============================================================
 % ===============================================================
@@ -266,7 +266,7 @@ En resumen, hemos visto como un límite de perturbación de ataque pequeño, com
 
 \section{Análisis Límite de Perturbación}
 
-Los datasets perturbados con PGD y FGSM se generaron inicialmente con un límite de perturbación de $\epsilon = 0.05$. Sin embargo, resulta relevante analizar cómo varía la robustez de los modelos a medida que se incrementa dicho límite. Para ello, se ha realizado un análisis adicional sobre los datasets, evaluando \textbf{diferentes valores de $\epsilon$}: 0.01, 0.03, 0.05, 0.075, 0.1, 0.2 y 0.5. En cada caso, se ha calculado el F1-score asociado a la clase ataque, con el objetivo de estudiar la relación entre la magnitud de la perturbación y la degradación del rendimiento de los modelos.
+Los \textit{datasets} perturbados con PGD y FGSM se generaron inicialmente con un límite de perturbación de $\epsilon = 0.05$. Sin embargo, resulta relevante analizar cómo varía la robustez de los modelos a medida que se incrementa dicho límite. Para ello, se ha realizado un análisis adicional sobre los \textit{datasets}, evaluando \textbf{diferentes valores de $\epsilon$}: 0.01, 0.03, 0.05, 0.075, 0.1, 0.2 y 0.5. En cada caso, se ha calculado el F1-score asociado a la clase ataque, con el objetivo de estudiar la relación entre la magnitud de la perturbación y la degradación del rendimiento de los modelos.
 
 Con este análisis se pretende identificar el valor de $\epsilon$ a partir del cual cada modelo presenta una degradación significativa. Para ello, se ha tomado como referencia el umbral $F1 = 0.5$, ya que un valor inferior indica una pérdida importante en la capacidad del modelo para detectar correctamente la clase maliciosa. En las tablas siguientes, los valores resaltados en \textbf{negrita} indican el primer punto en el que cada modelo cae por debajo de dicho umbral.
 
@@ -559,12 +559,12 @@ En IoT-23, la caída respecto al escenario limpio es mucho más acusada que en U
 }
 \end{table}
 
-En TON-IoT se observa la degradación más severa entre los tres datasets analizados. En este caso, tanto FGSM como PGD consiguen reducir el F1-score por debajo del umbral de 0.5 en numerosos modelos, incluso para valores bajos de $\epsilon$. Con FGSM, la caída es especialmente notable en modelos como CatBoost, SVM y MLP, que muestran valores inferiores a 0.5 desde los primeros niveles de perturbación. Además, cuando la perturbación se genera sobre CNN, también se observa una afectación temprana en RF y también en CatBoost, SVM y MLP.
+En TON-IoT se observa la degradación más severa entre los tres \textit{datasets} analizados. En este caso, tanto FGSM como PGD consiguen reducir el F1-score por debajo del umbral de 0.5 en numerosos modelos, incluso para valores bajos de $\epsilon$. Con FGSM, la caída es especialmente notable en modelos como CatBoost, SVM y MLP, que muestran valores inferiores a 0.5 desde los primeros niveles de perturbación. Además, cuando la perturbación se genera sobre CNN, también se observa una afectación temprana en RF y también en CatBoost, SVM y MLP.
 
-PGD presenta un comportamiento todavía más agresivo en TON-IoT. Varios modelos caen por debajo de 0.5 desde $\epsilon = 0.01$, especialmente XGBoost, CatBoost y MLP cuando la perturbación se genera sobre MLP, así como CatBoost y SVM cuando se genera sobre CNN. A diferencia de UNSW-NB15, donde muchos clasificadores mantenían cierta estabilidad, en TON-IoT la mayoría de mecanismos de detección muestran una sensibilidad elevada frente a perturbaciones adversarias. Esto sugiere que las características de este dataset generan fronteras de decisión más vulnerables o más fácilmente alterables por pequeñas modificaciones en las variables de entrada.
+PGD presenta un comportamiento todavía más agresivo en TON-IoT. Varios modelos caen por debajo de 0.5 desde $\epsilon = 0.01$, especialmente XGBoost, CatBoost y MLP cuando la perturbación se genera sobre MLP, así como CatBoost y SVM cuando se genera sobre CNN. A diferencia de UNSW-NB15, donde muchos clasificadores mantenían cierta estabilidad, en TON-IoT la mayoría de mecanismos de detección muestran una sensibilidad elevada frente a perturbaciones adversarias. Esto sugiere que las características de este \textit{dataset} generan fronteras de decisión más vulnerables o más fácilmente alterables por pequeñas modificaciones en las variables de entrada.
 
 \subsection{Conclusiones del análisis del límite de perturbación}
 
 A partir de los resultados obtenidos, es curioso ver cómo el incremento del límite de perturbación no produce siempre una degradación estrictamente monótona del F1-score. Aunque cabría esperar que valores mayores de $\epsilon$ provocasen una caída progresiva del rendimiento, en varios modelos aparecen comportamientos irregulares, con recuperaciones parciales del F1-score para perturbaciones superiores. Esto se debe a que aplicar tanta perturbación puede destruir el camuflaje del paquete, por lo que el modelo detecta una deformación tan extrema que lo clasifica inmediatamente como una anomalía o ataque.
 
-El análisis también muestra que la robustez adversaria depende de varios factores simultáneamente: el tipo de ataque utilizado, el modelo sobre el que se genera la perturbación, el clasificador evaluado y el dataset empleado. En este sentido, no puede afirmarse que FGSM o PGD sean siempre más perjudiciales en todos los casos, ya que el impacto varía según la combinación concreta de ataque y modelo. Del mismo modo, las perturbaciones generadas sobre MLP y CNN no se transfieren con la misma intensidad a todos los mecanismos de detección.
+El análisis también muestra que la robustez adversaria depende de varios factores simultáneamente: el tipo de ataque utilizado, el modelo sobre el que se genera la perturbación, el clasificador evaluado y el \textit{dataset} empleado. En este sentido, no puede afirmarse que FGSM o PGD sean siempre más perjudiciales en todos los casos, ya que el impacto varía según la combinación concreta de ataque y modelo. Del mismo modo, las perturbaciones generadas sobre MLP y CNN no se transfieren con la misma intensidad a todos los mecanismos de detección.

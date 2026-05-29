@@ -8,7 +8,7 @@ En el contexto de los Sistemas de Detección de Intrusos (IDS), el \textit{Machi
 
 \subsection{Random Forest (RF)}
 
-\textbf{Random Forest} es un modelo de aprendizaje supervisado que combina múltiples árboles de decisión para obtener una predicción más robusta que la de un único árbol. En lugar de entrenar todos los árboles con exactamente los mismos datos, cada uno se construye a partir de una muestra diferente del conjunto de entrenamiento, generada mediante \textit{bootstrap sampling}. Además, en cada división se selecciona un subconjunto aleatorio de características. Esta combinación de aleatoriedad en los datos y en las variables es clave para que el modelo generalice mejor.
+\textbf{Random Forest} es un modelo de aprendizaje supervisado que combina múltiples árboles de decisión para obtener una predicción más robusta que la de un único árbol. En lugar de entrenar todos los árboles con exactamente los mismos datos, cada uno se construye a partir de una muestra diferente del conjunto de entrenamiento, generada mediante \textit{bootstrap sampling} (muestreo con reemplazo). Además, en cada división se selecciona un subconjunto aleatorio de características. Esta combinación de aleatoriedad en los datos y en las variables es clave para que el modelo generalice mejor.
 
 A diferencia de los métodos de \textit{boosting}, como XGBoost, los árboles que componen un Random Forest no se entrenan de manera secuencial ni dependen unos de otros. Cada árbol aprende por su cuenta y aporta su propia “opinión”, que posteriormente se integra con la del resto, normalmente mediante votación mayoritaria en clasificación. Esta independencia reduce la varianza del modelo y lo hace menos sensible al ruido o a pequeñas variaciones en los datos, algo especialmente útil en escenarios como la detección de intrusiones ~\cite{rf_xgboost}.
 
@@ -40,7 +40,7 @@ A diferencia de los métodos de \textit{boosting}, como XGBoost, los árboles qu
 
 \subsection{Extreme Gradient Boosting (XGBoost)}
 
-\textbf{XGBoost} (\textit{Extreme Gradient Boosting}) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa de forma altamente optimizada el principio de \textit{gradient boosting}. A diferencia de otros métodos basados en ensamblados de árboles, XGBoost construye el modelo de manera secuencial, añadiendo nuevos árboles que se centran en corregir los errores cometidos por los árboles previamente entrenados. Este proceso se basa en la optimización iterativa de una función objetivo que combina el error de clasificación con términos explícitos de regularización, lo que permite controlar la complejidad del modelo y reducir el sobreajuste.
+\textbf{XGBoost} (\textit{Extreme Gradient Boosting}) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa de forma altamente optimizada el principio de \textit{gradient boosting} (técnica de ensemble que combina modelos débiles secuencialmente, corrigiendo errores anteriores para mejorar la predicción). A diferencia de otros métodos basados en ensamblados de árboles, XGBoost construye el modelo de manera secuencial, añadiendo nuevos árboles que se centran en corregir los errores cometidos por los árboles previamente entrenados. Este proceso se basa en la optimización iterativa de una función objetivo que combina el error de clasificación con términos explícitos de regularización, lo que permite controlar la complejidad del modelo y reducir el sobreajuste.
 
 En cada iteración, XGBoost utiliza información de primer (dirección) y segundo (qué tan pronunciado es el plano) orden del gradiente de la función de pérdida para determinar la estructura óptima de los árboles, lo que le permite capturar relaciones no lineales complejas e interacciones entre características de forma eficiente. Estas propiedades lo convierten en una opción especialmente adecuada para la detección de intrusiones en conjuntos de datos tabulares, donde los patrones maliciosos suelen manifestarse a través de combinaciones no triviales de múltiples variables.
 
@@ -144,9 +144,9 @@ Otro punto clave es que a diferencia de otros modelos como XGBoost o LightGBM, C
 Una de las principales fortalezas de las SVM es el uso de \textit{kernels}, que permiten proyectar los datos originales a espacios de mayor dimensionalidad sin realizar explícitamente dicha transformación. Gracias a este mecanismo, SVM puede modelar fronteras de decisión no lineales incluso cuando los datos no son separables linealmente en el espacio original. Entre los kernels más utilizados se encuentran:
 
 \begin{itemize}
-    \item \textbf{Kernel lineal}: Define una frontera de decisión lineal en el espacio de características original. Es el kernel más simple y el más eficiente desde el punto de vista computacional, lo que lo hace especialmente adecuado para datasets de gran tamaño y para escenarios donde se prioriza la eficiencia.
+    \item \textbf{Kernel lineal}: Define una frontera de decisión lineal en el espacio de características original. Es el kernel más simple y el más eficiente desde el punto de vista computacional, lo que lo hace especialmente adecuado para \textit{datasets} de gran tamaño y para escenarios donde se prioriza la eficiencia.
     
-    \item \textbf{Kernel polinómico}: Permite modelar relaciones no lineales mediante funciones polinómicas de distinto grado. Aunque puede capturar interacciones más complejas entre las características, su coste computacional aumenta rápidamente con el grado del polinomio y el tamaño del dataset.
+    \item \textbf{Kernel polinómico}: Permite modelar relaciones no lineales mediante funciones polinómicas de distinto grado. Aunque puede capturar interacciones más complejas entre las características, su coste computacional aumenta rápidamente con el grado del polinomio y el tamaño del \textit{dataset}.
     
     \item \textbf{Kernel radial (RBF)}: Proyecta los datos a un espacio de dimensión infinita, permitiendo separar patrones altamente no lineales. Si bien suele ofrecer un alto rendimiento predictivo, su entrenamiento e inferencia son significativamente más costosos, especialmente en conjuntos de datos de gran tamaño.
 \end{itemize}
@@ -179,7 +179,7 @@ En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante
 
 \section{Deep Learning}
 
-El \textit{Deep Learning} (aprendizaje profundo) es una subárea del aprendizaje automático que se basa en redes neuronales artificiales con múltiples capas (redes neuronales profundas). Estas redes son capaces de aprender representaciones jerárquicas de los datos, lo que les permite capturar patrones complejos y realizar tareas como clasificación, reconocimiento de imágenes y procesamiento del lenguaje natural.
+El \textit{Deep Learning} (aprendizaje profundo) es un subárea del aprendizaje automático que se basa en redes neuronales artificiales con múltiples capas (redes neuronales profundas). Estas redes son capaces de aprender representaciones jerárquicas de los datos, lo que les permite capturar patrones complejos y realizar tareas como clasificación, reconocimiento de imágenes y procesamiento del lenguaje natural.
 
 En el ámbito de los IDS, el \textit{Deep Learning} se utiliza para mejorar la detección de intrusiones mediante la capacidad de aprender características complejas del tráfico de red. Sin embargo, es importante considerar que los modelos de aprendizaje profundo suelen requerir una gran cantidad de datos y recursos computacionales, lo que puede aumentar el consumo energético. Por lo tanto, es crucial buscar enfoques que optimicen el rendimiento sin comprometer la eficiencia energética.
 
@@ -280,7 +280,7 @@ No solo hemos comparado los modelos a través de su F1-Score y latencia, sino qu
 
         \textbf{F1-Score} 
         & Métrica de eficacia predictiva. Es la media armónica entre Precisión y Sensibilidad (Recall). Representa la capacidad del modelo para detectar ataques reales minimizando las falsas alarmas, siendo ideal para tráfico desbalanceado.
-        & Calculada mediante \texttt{scikit-learn} (\texttt{f1\_score}), cruzando las etiquetas reales del dataset de test frente a las predicciones generadas por el modelo. \\
+        & Calculada mediante \texttt{scikit-learn} (\texttt{f1\_score}), cruzando las etiquetas reales del \textit{dataset} de test frente a las predicciones generadas por el modelo. \\
         \hline
 
         \textbf{Latencia (ms)} 
