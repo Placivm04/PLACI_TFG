@@ -1365,6 +1365,50 @@
     \field{urlyear}{2026}
   \endentry
 
+  \entry{green_ai}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SR}{%
+         family={Schwartz},
+         familyi={S\bibinitperiod},
+         given={Roy},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=DJ}{%
+         family={Dodge},
+         familyi={D\bibinitperiod},
+         given={Jesse},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SNA}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Noah\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=EO}{%
+         family={Etzioni},
+         familyi={E\bibinitperiod},
+         given={Oren},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SR+1}
+    \strng{fullhash}{SRDJSNAEO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1145/3381831
+    \endverb
+    \field{number}{12}
+    \field{pages}{54\bibrangedash 63}
+    \field{title}{{Green AI}}
+    \field{volume}{63}
+    \field{journaltitle}{Communications of the ACM}
+    \field{year}{2020}
+  \endentry
+
   \entry{sklearn_stratifiedkfold}{online}{}
     \name{author}{1}{}{%
       {{hash=s}{%

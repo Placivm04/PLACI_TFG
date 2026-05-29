@@ -432,6 +432,13 @@ INPUT build/main.lot
 INPUT build/main.lot
 INPUT build/main.lot
 OUTPUT build/main.lot
+INPUT build/main.loa
+INPUT build/main.loa
+INPUT build/main.loa
+OUTPUT build/main.loa
+INPUT build/main.nls
+INPUT build/main.nls
+INPUT build/main.nls
 INPUT ./sections/Desarrollo/introduccion.tex
 INPUT ./sections/Desarrollo/introduccion.tex
 INPUT sections/Desarrollo/introduccion.tex

@@ -105,7 +105,7 @@ sistemas de detección de intrusiones (IDS), ataques adversarios, Internet de la
 The project focuses on the analysis, evaluation, hyperparameter selection and configuration of AI models to compare the performance and computational efficiency (CPU, latency) of the various models applied to intrusion detection systems. 
 The aim is to determine which models are not only more robust but also computationally efficient. \\
 
-The project is structured in several phases. Initially, we obtain and analyse realistic datasets provided by cybersecurity experts and widely used in research tasks.
+The project is structured in several phases. Initially, we obtain and analyse realistic \textit{datasets} provided by cybersecurity experts and widely used in research tasks.
 Subsequently, we develop intrusion detection systems, searching for the optimal hyperparameters. The models we will use are ensemble models comprising decision trees, SVMs, multilayer perceptrons and 1-D convolutional networks. \\
 
 Finally, we examine how these trained models perform against evasion attack mechanisms such as PGD or FGSM and compare them to assess their degradation.
@@ -132,11 +132,34 @@ intrusion detection systems (IDS), cyberattacks, the Internet of Things (IoT), c
 \clearpage
 \listoftables
 \clearpage
+\listofalgorithms     
+\clearpage
 
 %────────────────────── Nomenclatura ───────────────────────────────────
-\nomenclature{}{}
+\renewcommand{\nomname}{Lista de acrónimos}
+\nomenclature{\textbf{ART}}{Adversarial Robustness Toolbox}
+\nomenclature{\textbf{AUC}}{Area Under the Curve}
+\nomenclature{\textbf{CNN}}{Convolutional Neural Network}
+\nomenclature{\textbf{CRISP-DM}}{Cross-Industry Standard Process for Data Mining}
+\nomenclature{\textbf{CUDA}}{Compute Unified Device Architecture}
+\nomenclature{\textbf{FGSM}}{Fast Gradient Sign Method}
+\nomenclature{\textbf{GPU}}{Graphics Processing Unit}
+\nomenclature{\textbf{IDS}}{Intrusion Detection System}
+\nomenclature{\textbf{IoT}}{Internet of Things}
+\nomenclature{\textbf{IP}}{Internet Protocol}
+\nomenclature{\textbf{LGBM}}{Light Gradient Boosting Machine}
+\nomenclature{\textbf{LSTM}}{Long Short-Term Memory}
+\nomenclature{\textbf{MLP}}{Multilayer Perceptron}
+\nomenclature{\textbf{NIDS}}{Network Intrusion Detection System}
+\nomenclature{\textbf{PGD}}{Projected Gradient Descent}
+\nomenclature{\textbf{PYME}}{Pequeña y Mediana Empresa} 
+\nomenclature{\textbf{RAM}}{Random Access Memory}
+\nomenclature{\textbf{RF}}{Random Forest}
+\nomenclature{\textbf{ROC}}{Receiver Operating Characteristic}
+\nomenclature{\textbf{SVM}}{Support Vector Machine}
+\nomenclature{\textbf{XGBoost}}{Extreme Gradient Boosting}
 \printnomenclature
-\clearpage
+\clearpage 
 
 \mainmatter
 %────────────────────── Cuerpo ─────────────────────────────────────────

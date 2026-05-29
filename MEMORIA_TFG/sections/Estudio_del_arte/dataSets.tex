@@ -1,11 +1,11 @@
 \chapter{Obtención y Análisis de Datos} 
 Para cumplir con los objetivos de este Trabajo Fin de Grado, resulta imprescindible realizar una selección cuidadosa de los conjuntos de datos empleados en la fase experimental.
 
-En particular, dado que este trabajo no se centra únicamente en la capacidad de detección, sino también en el rendimiento y el consumo de recursos computacionales, los conjuntos de datos seleccionados deben posibilitar el análisis de aspectos como la latencia de inferencia, el uso de CPU y memoria, y la escalabilidad de los modelos en distintos escenarios. El uso de datasets excesivamente simplificados o poco representativos podría conducir a conclusiones poco realistas, mientras que el empleo de conjuntos de datos desproporcionadamente grandes o complejos podría dificultar la reproducibilidad y el análisis experimental detallado.
+En particular, dado que este trabajo no se centra únicamente en la capacidad de detección, sino también en el rendimiento y el consumo de recursos computacionales, los conjuntos de datos seleccionados deben posibilitar el análisis de aspectos como la latencia de inferencia, el uso de CPU y memoria, y la escalabilidad de los modelos en distintos escenarios. El uso de \textit{datasets} excesivamente simplificados o poco representativos podría conducir a conclusiones poco realistas, mientras que el empleo de conjuntos de datos desproporcionadamente grandes o complejos podría dificultar la reproducibilidad y el análisis experimental detallado.
 
-Por este motivo, en este proyecto se han seleccionado datasets ampliamente utilizados en la literatura científica, que cubren diferentes entornos y tipologías de ataque, y que ofrecen un equilibrio adecuado entre realismo, diversidad y viabilidad experimental. Esta elección permite evaluar de forma comparativa el comportamiento de distintos modelos de aprendizaje automático y profundo.
+Por este motivo, en este proyecto se han seleccionado \textit{datasets} ampliamente utilizados en la literatura científica, que cubren diferentes entornos y tipologías de ataque, y que ofrecen un equilibrio adecuado entre realismo, diversidad y viabilidad experimental. Esta elección permite evaluar de forma comparativa el comportamiento de distintos modelos de aprendizaje automático y profundo.
 
-% \subsection{CIC-IDS-2017 DataSet}
+% \subsection{CIC-IDS-2017 dataset}
 
 % \subsubsection{Motivación para el uso del dataset}
 
@@ -66,17 +66,17 @@ Por este motivo, en este proyecto se han seleccionado datasets ampliamente utili
 
 % ======================================================================
 
-\section{UNSW-NB15 DataSet}
+\section{UNSW-NB15 \textit{DataSet}}
 
-\subsection{Motivación para el uso del dataset}
+\subsection{Motivación para el uso del \textit{dataset}}
 
-El conjunto de datos UNSW-NB15 se ha seleccionado como dataset principal en este trabajo con el objetivo de proporcionar un escenario más realista y actualizado para la evaluación de sistemas IDS ~\cite{unsw-nb15}. Este dataset fue desarrollado por la \emph{University of New South Wales (UNSW)}.
+El conjunto de datos UNSW-NB15 se ha seleccionado como \textit{dataset} principal en este trabajo con el objetivo de proporcionar un escenario más realista y actualizado para la evaluación de sistemas IDS ~\cite{unsw-nb15}. Este \textit{dataset} fue desarrollado por la \emph{University of New South Wales (UNSW)}.
 
-\subsection{Estructura del dataset}
+\subsection{Estructura del \textit{dataset}}
 
-El dataset UNSW-NB15 está compuesto por registros de tráfico de red generados mediante la combinación de tráfico real y tráfico sintético, con el fin de simular de forma controlada distintos escenarios de ataque en una red corporativa. El conjunto de datos se distribuye en dos archivos principales claramente diferenciados: uno destinado al entrenamiento de los modelos y otro reservado para su evaluación, lo que facilita la reproducibilidad experimental y minimiza el riesgo de \textit{data leakage}.
+El \textit{dataset} UNSW-NB15 está compuesto por registros de tráfico de red generados mediante la combinación de tráfico real y tráfico sintético, con el fin de simular de forma controlada distintos escenarios de ataque en una red corporativa. El conjunto de datos se distribuye en dos archivos principales claramente diferenciados: uno destinado al entrenamiento de los modelos y otro reservado para su evaluación, lo que facilita la reproducibilidad experimental y minimiza el riesgo de \textit{data leakage}.
 
-Cada registro representa un flujo de red y se describe mediante un conjunto de características heterogéneas que incluyen métricas relacionadas con el volumen de tráfico, estadísticas temporales, información de protocolos y atributos derivados del comportamiento de la comunicación. En cuanto a las etiquetas, el dataset incorpora una etiqueta binaria que distingue entre tráfico benigno y tráfico malicioso, así como una etiqueta adicional que especifica el tipo de ataque, lo que permite abordar tanto problemas de clasificación binaria como multiclase.
+Cada registro representa un flujo de red y se describe mediante un conjunto de características heterogéneas que incluyen métricas relacionadas con el volumen de tráfico, estadísticas temporales, información de protocolos y atributos derivados del comportamiento de la comunicación. En cuanto a las etiquetas, el \textit{dataset} incorpora una etiqueta binaria que distingue entre tráfico benigno y tráfico malicioso, así como una etiqueta adicional que especifica el tipo de ataque, lo que permite abordar tanto problemas de clasificación binaria como multiclase.
 
 
 \subsection{Distribución de ataques}
@@ -84,7 +84,7 @@ Cada registro representa un flujo de red y se describe mediante un conjunto de c
 
 \begin{table}[htbp]
   \centering
-  \caption{Distribución de clases y tipos de ataque en el dataset UNSW-NB15}
+  \caption{Distribución de clases y tipos de ataque en el \textit{dataset} UNSW-NB15}
   \label{tab:unsw-nb15-ataques}
   \begin{tabular}{|l|r|}
     \hline
@@ -107,7 +107,7 @@ Cada registro representa un flujo de red y se describe mediante un conjunto de c
   \end{tabular}
 \end{table}
 
-Como puede observarse, aunque el tráfico benigno constituye una parte relevante del dataset, una proporción significativa de los registros corresponde a tráfico malicioso, distribuido entre múltiples categorías de ataque. Destacan especialmente las clases \emph{Generic}, \emph{Exploits} y \emph{Fuzzers}, mientras que otras, como \emph{Worms} o \emph{Shellcode}, presentan una frecuencia mucho menor. Esta distribución refleja un escenario realista y resulta adecuada para evaluar el comportamiento de los modelos tanto en términos de detección general de intrusiones como de clasificación específica de ataques.
+Como puede observarse, aunque el tráfico benigno constituye una parte relevante del \textit{dataset}, una proporción significativa de los registros corresponde a tráfico malicioso, distribuido entre múltiples categorías de ataque. Destacan especialmente las clases \emph{Generic}, \emph{Exploits} y \emph{Fuzzers}, mientras que otras, como \emph{Worms} o \emph{Shellcode}, presentan una frecuencia mucho menor. Esta distribución refleja un escenario realista y resulta adecuada para evaluar el comportamiento de los modelos tanto en términos de detección general de intrusiones como de clasificación específica de ataques.
 
 % \begin{figure}[H]
 %     \centering
@@ -117,27 +117,27 @@ Como puede observarse, aunque el tráfico benigno constituye una parte relevante
 % \end{figure}
 % ======================================================================
 
-\section{ToN\_IoT DataSet}
+\section{ToN\_IoT \textit{DataSet}}
 
-\subsection{Motivación para el uso del dataset}
+\subsection{Motivación para el uso del \textit{dataset}}
 
-El conjunto de datos ToN\_IoT (\emph{Telemetry of Network IoT}) se ha incluido en este trabajo con el objetivo de evaluar el comportamiento de los modelos de detección de intrusiones en entornos IoT y \emph{edge computing}, caracterizados por una elevada heterogeneidad, recursos computacionales limitados y requisitos estrictos de eficiencia. Este dataset fue desarrollado por la \emph{University of New South Wales (UNSW)} con el propósito de cubrir las limitaciones de los conjuntos de datos tradicionales, que no representan adecuadamente el tráfico ni los patrones de ataque presentes en infraestructuras IoT reales ~\cite{ton-iot}.
+El conjunto de datos ToN\_IoT (\emph{Telemetry of Network IoT}) se ha incluido en este trabajo con el objetivo de evaluar el comportamiento de los modelos de detección de intrusiones en entornos IoT y \emph{edge computing}, caracterizados por una elevada heterogeneidad, recursos computacionales limitados y requisitos estrictos de eficiencia. Este \textit{dataset} fue desarrollado por la \emph{University of New South Wales (UNSW)} con el propósito de cubrir las limitaciones de los conjuntos de datos tradicionales, que no representan adecuadamente el tráfico ni los patrones de ataque presentes en infraestructuras IoT reales ~\cite{ton-iot}.
 
-\subsection{Estructura del dataset}
+\subsection{Estructura del \textit{dataset}}
 
-El dataset ToN\_IoT se distribuye en múltiples subconjuntos que incluyen tráfico de red. En concreto, se ha empleado el archivo \texttt{Train\_Test\_Network\_dataset.csv}, que proporciona los datos en formato CSV e incluye una partición predefinida de entrenamiento y prueba. Cada registro representa un flujo de red y se describe mediante un conjunto de características extraídas automáticamente, que abarcan métricas relacionadas con el volumen de tráfico, estadísticas temporales, información de protocolos y atributos derivados del comportamiento de la comunicación.
+El \textit{dataset} ToN\_IoT se distribuye en múltiples subconjuntos que incluyen tráfico de red. En concreto, se ha empleado el archivo \texttt{Train\_Test\_Network\_dataset.csv}, que proporciona los datos en formato CSV e incluye una partición predefinida de entrenamiento y prueba. Cada registro representa un flujo de red y se describe mediante un conjunto de características extraídas automáticamente, que abarcan métricas relacionadas con el volumen de tráfico, estadísticas temporales, información de protocolos y atributos derivados del comportamiento de la comunicación.
 
-En cuanto al etiquetado, el dataset incorpora una etiqueta binaria que distingue entre tráfico benigno y tráfico malicioso, así como una etiqueta adicional que identifica el tipo de ataque. Esta estructura permite abordar tanto el problema de detección binaria de intrusiones como el análisis de los distintos tipos de tráfico malicioso presentes en entornos IoT.
+En cuanto al etiquetado, el \textit{dataset} incorpora una etiqueta binaria que distingue entre tráfico benigno y tráfico malicioso, así como una etiqueta adicional que identifica el tipo de ataque. Esta estructura permite abordar tanto el problema de detección binaria de intrusiones como el análisis de los distintos tipos de tráfico malicioso presentes en entornos IoT.
 
 \subsection{Distribución de ataques}
 
 La distribución de clases del subconjunto de red de ToN\_IoT presenta una proporción equilibrada entre tráfico benigno y varias categorías de ataques, lo que resulta especialmente interesante para evaluar el comportamiento de los modelos en un escenario IoT controlado. En la Tabla~\ref{tab:toniots-ataques} se muestra el número total de flujos correspondiente a cada clase, considerando el conjunto completo de datos.
 
-Como puede observarse, el dataset incluye múltiples tipos de ataques representativos de entornos IoT, tales como ataques de denegación de servicio, inyección, escaneo, ransomware y ataques de intermediario (\emph{Man-in-the-Middle}).
+Como puede observarse, el \textit{dataset} incluye múltiples tipos de ataques representativos de entornos IoT, tales como ataques de denegación de servicio, inyección, escaneo, ransomware y ataques de intermediario (\emph{Man-in-the-Middle}).
 
 \begin{table}[H]
     \centering
-    \caption{Distribución de clases y tipos de ataque en el dataset ToN\_IoT}
+    \caption{Distribución de clases y tipos de ataque en el \textit{dataset} ToN\_IoT}
     \label{tab:toniots-ataques}
     \begin{tabular}{|l|r|}
         \hline
@@ -161,13 +161,13 @@ Como puede observarse, el dataset incluye múltiples tipos de ataques representa
 
 % ======================================================================
 
-\section{IoT-23 DataSet}
+\section{IoT-23 \textit{DataSet}}
 
-\subsection{Motivación para el uso del dataset}
+\subsection{Motivación para el uso del \textit{dataset}}
 
-El conjunto de datos \textbf{IoT-23} se ha incorporado en este trabajo como dataset complementario orientado a entornos IoT reales. IoT-23, desarrollado por el grupo \emph{Stratosphere IPS} de la \emph{Czech Technical University (CTU)}, es uno de los conjuntos de datos más representativos para el estudio de amenazas dirigidas específicamente a dispositivos IoT.
+El conjunto de datos \textbf{IoT-23} se ha incorporado en este trabajo como \textit{dataset} complementario orientado a entornos IoT reales. IoT-23, desarrollado por el grupo \emph{Stratosphere IPS} de la \emph{Czech Technical University (CTU)}, es uno de los conjuntos de datos más representativos para el estudio de amenazas dirigidas específicamente a dispositivos IoT.
 
-\subsection{Estructura del dataset}
+\subsection{Estructura del \textit{dataset}}
 
 IoT-23 se distribuye en forma de escenarios independientes, donde cada escenario corresponde a una captura concreta asociada a un tipo específico de malware o comportamiento malicioso. Estos escenarios se almacenan en directorios separados y presentan tamaños muy variables, desde unos pocos megabytes hasta decenas de gigabytes, lo que dificulta su uso directo en entornos experimentales con recursos limitados.
 
@@ -179,7 +179,7 @@ La distribución de clases en los escenarios seleccionados de IoT-23 presenta un
 
 \begin{table}[H]
     \centering
-    \caption{Distribución de clases y tipos de tráfico en el dataset IoT-23}
+    \caption{Distribución de clases y tipos de tráfico en el \textit{dataset} IoT-23}
     \label{tab:iot23-ataques}
     \begin{tabular}{|l|r|}
         \hline
@@ -204,16 +204,16 @@ Como puede observarse, el tráfico malicioso asociado a escaneos horizontales de
 %     \label{fig:stratosphere-logo}
 % \end{figure}
 
-\section{Relación entre los datasets}
+\section{Relación entre los \textit{datasets}}
 
-Los tres datasets proporcionan características extraídas a nivel de flujo de red (estadísticas de paquetes, bytes, duraciones, banderas TCP) a partir de capturas reales.
+Los tres \textit{datasets} proporcionan características extraídas a nivel de flujo de red (estadísticas de paquetes, bytes, duraciones, banderas TCP) a partir de capturas reales.
 Todos ellos reflejan la realidad de las redes actuales, donde el tráfico normal (benigno) suele ser la clase mayoritaria. Debido a este desbalanceo, usamos como métrica principal comparativa el F1-score.
-Todos los datasets son datasets reconocidos en la literatura de los análisis de IDS, ya que están diseñados específicamente para el entrenamiento y auditoría de algoritmos de Machine Learning y Deep Learning.
+Todos los \textit{datasets} son \textit{datasets} reconocidos en la literatura de los análisis de IDS, ya que están diseñados específicamente para el entrenamiento y auditoría de algoritmos de Machine Learning y Deep Learning.
 
-No obstante, también se han elegido porque presentan algunas diferencias entre ellos y así poder ver los resultados de datasets que tienen distinta distribución y topología. 
+No obstante, también se han elegido porque presentan algunas diferencias entre ellos y así poder ver los resultados de \textit{datasets} que tienen distinta distribución y topología. 
 Por ejemplo, UNSW-NB15 está enfocado en una red corporativa tradicional y sirve como punto de referencia base para comprobar que nuestros modelos sepan cazar amenazas usuales.
 
-Por otro lado, los datasets IoT-23 y ToN-IoT están enfocados en entornos puramente de IoT donde las capturas provienen de amenazas de infecciones reales de malware en dispositivos inteligentes.
+Por otro lado, los \textit{datasets} IoT-23 y ToN-IoT están enfocados en entornos puramente de IoT donde las capturas provienen de amenazas de infecciones reales de malware en dispositivos inteligentes.
 
 A continuación se muestra una tabla simplificada que resume las características principales de UNSW-NB15:
 
@@ -242,7 +242,7 @@ Etiqueta & label / attack\_cat \\
 \end{tabular}
 \end{table}
 
-Ahora relacionamos los datasets ToN\_IoT y IoT-23, destacando los features comunes.
+Ahora relacionamos los \textit{datasets} ToN\_IoT y IoT-23, destacando los features comunes.
 \begin{table}[H]
 \centering
 \caption{Correspondencia principal entre características de ToN\_IoT e IoT-23}

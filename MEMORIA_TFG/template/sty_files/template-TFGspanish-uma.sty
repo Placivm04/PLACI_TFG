@@ -134,17 +134,12 @@
 \AtBeginDocument{\renewcommand{\nomname}{Nomenclatura}}
 \AtBeginDocument{%
   \@ifundefined{printnomenclature}{}{%
-    % prepend our own heading – grouped so Roman doesn’t leak
+    % add nomenclature to the main table of contents
     \pretocmd{\printnomenclature}{%
       \cleardoublepage
-      {\MalacitanaRoman\chapter*{\nomname}}%  ⟵ grouped
+      \phantomsection
       \addcontentsline{toc}{chapter}{\nomname}%
-      \markboth{\nomname}{\nomname}%
-      \vspace{10pt}}{}{}%
-    % strip the original heading lines
-    \patchcmd{\printnomenclature}{\chapter*{\nomname}}{}{}{}%
-    \patchcmd{\printnomenclature}{\addcontentsline{toc}{chapter}{\nomname}}{}{}{}%
-    \patchcmd{\printnomenclature}{\markboth{\nomname}{\nomname}}{}{}{}%
+      \markboth{\nomname}{\nomname}}{}{}%
   }%
 }
 
@@ -424,6 +419,18 @@
 \RequirePackage{nomencl}\makenomenclature
 \RequirePackage{algorithm,algpseudocode}
 \algrenewcommand\algorithmicindent{1em}
+\makeatletter
+\renewcommand{\listalgorithmname}{Índice de Algoritmos}
+\renewcommand{\listofalgorithms}{%
+  \cleardoublepage
+  \phantomsection
+  \markboth{\listalgorithmname}{\listalgorithmname}%
+  \noindent\hfill{\listalgorithmname}\par
+  \vspace{2\baselineskip}%
+  \@namedef{l@algorithm}{\@dottedtocline{1}{1.5em}{2.3em}}%
+  \@starttoc{loa}%
+}
+\makeatother
 \RequirePackage{cleveref}
 
 \crefname{lstlisting}{Listing}{Listings}
@@ -566,4 +573,3 @@
 % ─────────────────────────────────────────────────────────────────────────────
 %  End of file
 % ─────────────────────────────────────────────────────────────────────────────
-

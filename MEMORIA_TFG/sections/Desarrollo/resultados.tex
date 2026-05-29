@@ -1,6 +1,6 @@
 \chapter{Análisis de Modelos y Búsqueda de Hiperparámetros}
 
-En este sección se presentan los resultados obtenidos tras la aplicación de Optuna para la optimización de hiperparámetros en los modelos entrenados con los datasets mencionados en la sección anterior. Se ha seguido un enfoque de optimización multiobjetivo, buscando un equilibrio entre la precisión del modelo (medida a través del F1-Score) y su eficiencia (medida a través de la latencia de inferencia).
+En este sección se presentan los resultados obtenidos tras la aplicación de Optuna para la optimización de hiperparámetros en los modelos entrenados con los \textit{datasets} mencionados en la sección anterior. Se ha seguido un enfoque de optimización multiobjetivo, buscando un equilibrio entre la precisión del modelo (medida a través del F1-Score) y su eficiencia (medida a través de la latencia de inferencia).
 
 El procedimiento seguido es el siguiente:
 
@@ -18,10 +18,10 @@ Para la evaluación final de los modelos seleccionados se utilizó un procedimie
 
 % Este procedimiento permite evaluar no solo la velocidad de predicción del modelo, sino también su comportamiento en términos de uso de recursos durante la ejecución. No obstante, al incluir monitorización de memoria y procesamiento por bloques, las métricas temporales obtenidas reflejan el rendimiento del benchmark instrumentado y pueden diferir de una medición de inferencia pura realizada mediante una única llamada a \texttt{predict}, como veremos posteriormente.
 
-Antes de presentar los resultados finales, es importante señalar que el proceso completo de selección de hiperparámetros se recoge en el Apéndice~\ref{apendice}. En dicho apéndice se incluyen las fronteras de Pareto y las tablas completas de candidatos evaluados para cada combinación de modelo y dataset.
+Antes de presentar los resultados finales, es importante señalar que el proceso completo de selección de hiperparámetros se recoge en el Apéndice~\ref{apendice}. En dicho apéndice se incluyen las fronteras de Pareto y las tablas completas de candidatos evaluados para cada combinación de modelo y \textit{dataset}.
 
 De forma general, las fronteras de Pareto obtenidas muestran un comportamiento de saturación en gran parte de los modelos evaluados (forma exponencial), lo que indica que a partir de cierto punto, las mejoras en F1-Score se logran a costa de incrementos significativos en la latencia.
-No obstante, este patrón no aparece con la misma claridad en todos los modelos. En algunos casos, como SVM ~\ref{fig:pareto_svm} en UNSW-NB15, la frontera de Pareto no muestra una curva de saturación tan definida. En este caso, los puntos aparecen más agrupados y las diferencias de latencia entre configuraciones son muy pequeñas, por lo que no se aprecia una relación tan evidente entre el aumento del rendimiento y el coste temporal. Este comportamiento puede deberse a varios factores, como la propia naturaleza del modelo, la distribución de los datos del dataset, el rango de hiperparámetros explorado por Optuna o la escasa variación de latencia entre candidatos.
+No obstante, este patrón no aparece con la misma claridad en todos los modelos. En algunos casos, como SVM ~\ref{fig:pareto_svm} en UNSW-NB15, la frontera de Pareto no muestra una curva de saturación tan definida. En este caso, los puntos aparecen más agrupados y las diferencias de latencia entre configuraciones son muy pequeñas, por lo que no se aprecia una relación tan evidente entre el aumento del rendimiento y el coste temporal. Este comportamiento puede deberse a varios factores, como la propia naturaleza del modelo, la distribución de los datos del \textit{dataset}, el rango de hiperparámetros explorado por Optuna o la escasa variación de latencia entre candidatos.
 
 La elección del \textbf{candidato ganador} se ha realizado mediante una observación conjunta de la frontera de Pareto. No se ha seleccionado siempre el candidato con mayor F1-score, sino aquel que ofrecía el mejor equilibrio entre F1-score y latencia.
 
@@ -112,9 +112,9 @@ En las CNN 1D utilizadas en este trabajo, los hiperparámetros estructurales má
 \section{Modelos entrenados con UNSW-NB15}
 
 % AQUÍ IRÍA TODO EL DESARROLLO DE LOS MODELOS
-% \subsection{Comparativa Modelos con Dataset UNSW-NB15}
+% \subsection{Comparativa Modelos con dataset UNSW-NB15}
 
-En esta sección se presetan los resultados obtenidos tras la optimización de hiperparámetros estructurales para cada modelo entrenado con el dataset UNSW-NB15. Se muestra la configuración ganadora de cada modelo, seguida de una comparativa global de benchmarking, además de la curva ROC y las matrices de confusión correspondientes a cada modelo.
+En esta sección se presetan los resultados obtenidos tras la optimización de hiperparámetros estructurales para cada modelo entrenado con el \textit{dataset} UNSW-NB15. Se muestra la configuración ganadora de cada modelo, seguida de una comparativa global de benchmarking, además de la curva ROC y las matrices de confusión correspondientes a cada modelo.
 La combinación de hiperparámetros ganadores para cada modelo se muestra en la siguiente tabla:
 
 \begin{table}[H]
@@ -173,7 +173,7 @@ Tras hacer la fase de benchmarking con los mejores candidatos de los diferentes 
 
 A partir de la comparativa global de rendimiento, se observa que los modelos basados en árboles presentan el mejor equilibrio entre capacidad predictiva y eficiencia computacional. Random Forest, LightGBM, XGBoost y CatBoost alcanzan los valores más altos de F1-score. Entre ellos, LightGBM y XGBoost destacan por ofrecer una latencia muy reducida y un throughput elevado, mientras que Random Forest obtiene un F1-score ligeramente superior, aunque con una latencia mayor.
 
-Por otro lado, Linear SVM presenta la menor latencia de inferencia, pero también el F1-score más bajo entre los modelos evaluados. Esto indica que, aunque resulta muy eficiente desde el punto de vista temporal, su formulación lineal limita su capacidad para capturar relaciones no lineales presentes en el dataset. Los modelos neuronales, MLP y CNN-1D, obtienen resultados intermedios en términos de F1-score, pero con un coste de inferencia superior al de los modelos basados en árboles, especialmente en el caso de CNN-1D.
+Por otro lado, Linear SVM presenta la menor latencia de inferencia, pero también el F1-score más bajo entre los modelos evaluados. Esto indica que, aunque resulta muy eficiente desde el punto de vista temporal, su formulación lineal limita su capacidad para capturar relaciones no lineales presentes en el \textit{dataset}. Los modelos neuronales, MLP y CNN-1D, obtienen resultados intermedios en términos de F1-score, pero con un coste de inferencia superior al de los modelos basados en árboles, especialmente en el caso de CNN-1D.
 
 En cuanto al consumo de recursos, modelos como CNN-1D y MLP presentan un mayor incremento de memoria RAM, especialmente CNN-1D, que requiere más memoria durante la inferencia que los modelos clásicos. Por el contrario, SVM, XGBoost, LightGBM y CatBoost presentan una huella de memoria más reducida. Respecto al uso de CPU, LightGBM y XGBoost acaparan el 100\% de la CPU durante la inferencia, puede explicarse por la propia implementación de estas librerías, pues son modelos diseñados para ser eficientes y paralelizables ~\cite{xgboost_pararell} ~\cite{lightgbm_pararell}.
 
@@ -260,15 +260,15 @@ Las matrices de confusión nos permiten observar on más detalle los errores com
 
 \section{Modelos entrenados con IOT-23}
 
-Para completar el análisis y las comparaciones, es interesante ver cómo se comportan los modelos con un dataset adaptado a un entorno de Internet de las Cosas (IoT), que suele presentar características muy diferentes a los datasets tradicionales de tráfico de red.
-En este caso, se han entrenado los mismos modelos que el apartado anterior, pero usando este dataset.
+Para completar el análisis y las comparaciones, es interesante ver cómo se comportan los modelos con un \textit{dataset} adaptado a un entorno de Internet de las Cosas (IoT), que suele presentar características muy diferentes a los \textit{datasets} tradicionales de tráfico de red.
+En este caso, se han entrenado los mismos modelos que el apartado anterior, pero usando este \textit{dataset}.
 
 % AQUÍ IRÍA TODO EL DESARROLLO DE LOS MODELOS
-% \subsection{Comparativa Modelos con Dataset IOT-23}
+% \subsection{Comparativa Modelos con dataset IOT-23}
 
 Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
-La tabla de los mejores hiperparámetros obtenidos para cada modelo con el dataset IOT-23 es la siguiente:
+La tabla de los mejores hiperparámetros obtenidos para cada modelo con el \textit{dataset} IOT-23 es la siguiente:
 
 \begin{table}[H]
     \centering
@@ -322,13 +322,13 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el datas
     \label{tab:hardware_benchmark_global_iot23}
 \end{table}
 
-En el caso de IoT-23, la tabla de rendimiento muestra valores de F1-score muy elevados en la mayoría de modelos, especialmente en los clasificadores basados en árboles. Random Forest, XGBoost, LightGBM y CatBoost alcanzan resultados cercanos a 1, lo que indica una gran capacidad para distinguir entre tráfico benigno y malicioso en este dataset. Además, estos modelos mantienen latencias reducidas y throughputs elevados, por lo que ofrecen un compromiso muy favorable entre rendimiento predictivo y eficiencia.
+En el caso de IoT-23, la tabla de rendimiento muestra valores de F1-score muy elevados en la mayoría de modelos, especialmente en los clasificadores basados en árboles. Random Forest, XGBoost, LightGBM y CatBoost alcanzan resultados cercanos a 1, lo que indica una gran capacidad para distinguir entre tráfico benigno y malicioso en este \textit{dataset}. Además, estos modelos mantienen latencias reducidas y throughputs elevados, por lo que ofrecen un compromiso muy favorable entre rendimiento predictivo y eficiencia.
 
 Los modelos neuronales, MLP y CNN-1D, también presentan un rendimiento muy competitivo, aunque con un coste de inferencia superior, especialmente en el caso de CNN-1D. Por su parte, SVM vuelve a destacar por su rapidez, pero su F1-score queda por debajo del resto de modelos.
 
 Respecto al consumo de recursos, se observa que Random Forest es el modelo con mayor incremento de RAM, seguido de CNN-1D. En términos de uso de CPU, al igual que con UNSW-NB15, LightGBM y XGBoost son los modelos que mayor porcentaje de uso de CPU acaparan.
 
-La curva ROC de los modelos evaluados con el dataset IOT-23 es la siguiente:
+La curva ROC de los modelos evaluados con el \textit{dataset} IOT-23 es la siguiente:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/IOT/ROC_MODELOS.png}
@@ -411,12 +411,12 @@ Las matrices de confusión de cada modelo son las siguientes:
 
 \section{Modelos entrenados con ToN-IoT}
 
-Una de las sospechas de los resultados obtenidos con el dataset IOT-23 es que en este dataset la mayoría de muestras de ataque son de escaneos horizontales de puertos, lo que hace que el modelo pueda aprender a detectar ataques simplemente con la información de los puertos, sin necesidad de aprender patrones más complejos. Para comprobar esta hipótesis, se ha entrenado el mismo proceso de entrenamiento y benchmarking con el dataset ToN-IoT, que es un dataset de IoT con una mayor variedad de ataques y características.
+Una de las sospechas de los resultados obtenidos con el \textit{dataset} IOT-23 es que en este \textit{dataset} la mayoría de muestras de ataque son de escaneos horizontales de puertos, lo que hace que el modelo pueda aprender a detectar ataques simplemente con la información de los puertos, sin necesidad de aprender patrones más complejos. Para comprobar esta hipótesis, se ha entrenado el mismo proceso de entrenamiento y benchmarking con el \textit{dataset} ToN-IoT, que es un \textit{dataset} de IoT con una mayor variedad de ataques y características.
 
-% \subsection{Comparativa Modelos con Dataset ToN-IoT}
+% \subsection{Comparativa Modelos con dataset ToN-IoT}
 
 
-La tabla de los mejores hiperparámetros obtenidos para cada modelo con el dataset ToN-IoT es la siguiente:
+La tabla de los mejores hiperparámetros obtenidos para cada modelo con el \textit{dataset} ToN-IoT es la siguiente:
 
 \begin{table}[H]
     \centering
@@ -472,13 +472,13 @@ Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes
     \label{tab:hardware_benchmark_global_ton}
 \end{table}
 
-En TON-IoT, los modelos basados en árboles vuelven a situarse entre las mejores alternativas, combinando valores elevados de F1-score con tiempos de inferencia reducidos. XGBoost, CatBoost, Random Forest y LightGBM muestran un rendimiento muy alto, lo que confirma la eficacia de este tipo de modelos en datasets tabulares de detección de intrusiones.
+En TON-IoT, los modelos basados en árboles vuelven a situarse entre las mejores alternativas, combinando valores elevados de F1-score con tiempos de inferencia reducidos. XGBoost, CatBoost, Random Forest y LightGBM muestran un rendimiento muy alto, lo que confirma la eficacia de este tipo de modelos en \textit{datasets} tabulares de detección de intrusiones.
 
 SVM, de nuevo, mantiene una latencia muy baja, pero obtiene un F1-score inferior al de los modelos basados en árboles. Los modelos neuronales, MLP y CNN-1D, presentan un comportamiento competitivo, aunque con mayor coste temporal. 
 
 Si miramos el consumo de recursos, CNN-1D destaca como el modelo con mayor incremento de RAM. En cuanto al uso de CPU, LightGBM y XGBoost vuelven a ser los modelos que muestras mayores porcentajes durante la fase de inferencia.
 
-La curva ROC de los modelos evaluados con el dataset ToN-IoT es la siguiente:
+La curva ROC de los modelos evaluados con el \textit{dataset} ToN-IoT es la siguiente:
 
 \begin{figure}[H]
     \centering
@@ -487,7 +487,7 @@ La curva ROC de los modelos evaluados con el dataset ToN-IoT es la siguiente:
     \label{fig:roc_modelos_ton}
 \end{figure}
 
-Al igual que el dataset anterior, las curvas ROC obtenidas muestran una excelente capacidad de discriminación entre clases para la mayoría de modelos, especialmente los basados en árboles, que alcanzan áreas bajo la curva cercanas a 1, lo que es coherente con los valores de F1-score observados en la tabla de rendimiento.
+Al igual que el \textit{dataset} anterior, las curvas ROC obtenidas muestran una excelente capacidad de discriminación entre clases para la mayoría de modelos, especialmente los basados en árboles, que alcanzan áreas bajo la curva cercanas a 1, lo que es coherente con los valores de F1-score observados en la tabla de rendimiento.
 
 Las matrices de confusión de cada modelo se muestran a continuación:
 
@@ -632,7 +632,7 @@ CNN      & 0.9826 & 98625  & 334864 \\
 
 \subsection{Comparación con cargas de red de referencia}
 
-Una vez que hemos obtenido los resultados de throughput para cada modelo en los tres datasets, es interesante compararlos con las cargas de red típicas que se pueden encontrar en diferentes escenarios, para así estimar qué modelo nos convendría más en función del entorno de despliegue y del volumen de tráfico que se espera analizar.
+Una vez que hemos obtenido los resultados de throughput para cada modelo en los tres \textit{datasets}, es interesante compararlos con las cargas de red típicas que se pueden encontrar en diferentes escenarios, para así estimar qué modelo nos convendría más en función del entorno de despliegue y del volumen de tráfico que se espera analizar.
 
 Para ello, se han tomado como referencia varios escenarios: una red IoT local básica de 21 dispositivos ~\cite{cargas_iot}, una red universitaria ~\cite{cargas_universitarias} y distintos casos de pequeñas y medianas empresas ~\cite{cargas_pymes}.
 
@@ -661,7 +661,7 @@ PYME 50 empleados -- peor caso & 189 Mbps & 75 bytes & 315000 \\
 
 Como podemos ver en la tabla \ref{tab:cargas_red_referencia}, las cargas de red de referencia varían desde unos pocos cientos de paquetes por segundo en el caso de una red IoT local básica, hasta varios cientos de miles de paquetes por segundo en el caso de una PYME con un tráfico elevado.
 
-Al comparar estas cargas con lo throughput obtenido por los modelos en los tres datasets, podemos observar que la mayoría de modelos presentan una capacidad de procesamiento superior a las cargas de referencia, incluso cuando se ejecutan en nuestro propio portátil.
+Al comparar estas cargas con los throughputs obtenidos por los modelos en los tres \textit{datasets}, podemos observar que la mayoría de modelos presentan una capacidad de procesamiento superior a las cargas de referencia, incluso cuando se ejecutan en nuestro equipo personal.
 
 Modelos como SVM, XGBoost, LightGBM, Random Forest y CatBoost alcanzan valores superiores al millón de muestras por segundo, lo que los posiciona como opciones viables para escenarios con cargas de red elevadas, al igual que MLP.
 
