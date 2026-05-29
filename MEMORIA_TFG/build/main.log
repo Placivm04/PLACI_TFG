@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  29 MAY 2026 20:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.29)  29 MAY 2026 21:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1470,57 +1470,57 @@ Overfull \hbox (25.87195pt too wide) in paragraph at lines 196--210
  [][] 
  []
 
-[26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 []|\TU/Malacitana-Sans(0)/m/n/10.95 Calculada mediante \TU/lmtt/m/n/10.95 scikit-learn
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 314--314
+Underfull \hbox (badness 1142) in paragraph at lines 312--312
 \TU/Malacitana-Sans(0)/m/n/10.95 procesar y clasificar un único paquete
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 []|\TU/Malacitana-Sans(0)/m/n/10.95 Medida mediante
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 \TU/lmtt/m/n/10.95 time.perf_counter() \TU/Malacitana-Sans(0)/m/n/10.95 al procesar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-[]|\TU/Malacitana-Sans(0)/b/n/10.95 Throughput
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+[]|\TU/Malacitana-Sans(0)/b/it/10.95 Throughput
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 []|\TU/Malacitana-Sans(0)/b/n/10.95 Incremento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 []|\TU/Malacitana-Sans(0)/m/n/10.95 Monitorizado mediante
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 \TU/lmtt/m/n/10.95 psutil.memory_info().rss\TU/Malacitana-Sans(0)/m/n/10.95 , re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 []|\TU/Malacitana-Sans(0)/b/n/10.95 CPU Efectiva
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 314--314
+Underfull \hbox (badness 4378) in paragraph at lines 312--312
 []|\TU/Malacitana-Sans(0)/m/n/10.95 Porcentaje medio de uso efectivo de
  []
 
-) (./sections/Desarrollo/optuna.tex [28]
+) (./sections/Desarrollo/optuna.tex [27] [28]
 Capítulo 3.
 [29
 
@@ -1795,12 +1795,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45050 strings out of 474878
- 968380 string characters out of 5762516
+ 45053 strings out of 474878
+ 968563 string characters out of 5762516
  1947627 words of memory out of 5000000
- 66369 multiletter control sequences out of 15000+600000
- 563379 words of font info for 103 fonts, out of 8000000 for 9000
+ 66371 multiletter control sequences out of 15000+600000
+ 563387 words of font info for 104 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  125i,15n,121p,1920b,5585s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (109 pages, 1789684 bytes).
+Output written on build/main.xdv (109 pages, 1787768 bytes).

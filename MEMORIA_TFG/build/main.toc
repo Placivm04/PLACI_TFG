@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Multilayer Perceptron (MLP)}{25}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Convolutional Neural Networks (CNN)}{26}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Justificación del enfoque en la fase de inferencia}{27}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Métricas Utilizadas}{28}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Métricas Utilizadas}{27}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Tecnologías utilizadas}{29}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Lenguaje de Programación}{29}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Librerías Usadas}{29}{section.3.2}%

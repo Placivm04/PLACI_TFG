@@ -91,7 +91,8 @@
     \verb{eprint}
     \verb 1603.04467
     \endverb
-    \field{title}{{TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems}}
+    \field{title}{{TensorFlow: Large-Scale Machine Learning on Heterogeneous
+  Distributed Systems}}
     \verb{url}
     \verb https://arxiv.org/abs/1603.04467
     \endverb
@@ -139,9 +140,11 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{A}
     \field{sortinithash}{A}
-    \field{booktitle}{The 25th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining}
+    \field{booktitle}{The 25th ACM SIGKDD International Conference on Knowledge
+  Discovery \& Data Mining}
     \field{pages}{2623\bibrangedash 2631}
-    \field{title}{{O}ptuna: A Next-Generation Hyperparameter Optimization Framework}
+    \field{title}{{O}ptuna: A Next-Generation Hyperparameter Optimization
+  Framework}
     \field{year}{2019}
   \endentry
 
@@ -179,7 +182,9 @@
     \verb 10.1016/j.array.2025.100406
     \endverb
     \field{pages}{100406}
-    \field{title}{A Comparative Study of Machine Learning and Deep Learning Models in Binary and Multiclass Classification for Intrusion Detection Systems}
+    \field{title}{A Comparative Study of Machine Learning and Deep Learning
+  Models in Binary and Multiclass Classification for Intrusion Detection
+  Systems}
     \field{volume}{26}
     \field{journaltitle}{Array}
     \field{year}{2025}
@@ -210,7 +215,8 @@
     \field{pages}{440\bibrangedash 454}
     \field{title}{Intrusion Detection Using Machine Learning and Deep Learning}
     \field{volume}{16}
-    \field{journaltitle}{International Journal of Advanced Computer Science and Applications}
+    \field{journaltitle}{International Journal of Advanced Computer Science and
+  Applications}
     \field{year}{2025}
   \endentry
 
@@ -229,7 +235,8 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{A}
     \field{sortinithash}{A}
-    \field{title}{Comparative Study of White-Box and Black-Box Adversarial Attacks on Network Intrusion Detection Models}
+    \field{title}{Comparative Study of White-Box and Black-Box Adversarial
+  Attacks on Network Intrusion Detection Models}
     \field{year}{2024}
   \endentry
 
@@ -282,7 +289,8 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{C}
     \field{sortinithash}{C}
-    \field{booktitle}{Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}
+    \field{booktitle}{Proceedings of the 22nd ACM SIGKDD International
+  Conference on Knowledge Discovery and Data Mining}
     \verb{doi}
     \verb 10.1145/2939672.2939785
     \endverb
@@ -427,22 +435,29 @@
          family={Gaddam},
          familyi={G\bibinitperiod},
          given={Tulasi sai Charan\bibnamedelima sharma},
-         giveni={T\bibinitperiod\bibinitdelim s\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim s\bibinitperiod},
+         giveni={T\bibinitperiod\bibinitdelim s\bibinitperiod\bibinitdelim
+  C\bibinitperiod\bibinitdelim s\bibinitperiod},
       }}%
     }
-    \keyw{Accuracy;Perturbation methods;Computational modeling;Intrusion detection;Artificial neural networks;NSL-KDD;Robustness;Adversarial machine learning;Pattern recognition;Computer security;Adversarial machine learning;Intrusion detection;Evasion attacks;Data poisoning;Model robustness;Cybersecurity threats}
+    \keyw{Accuracy;Perturbation methods;Computational modeling;Intrusion
+  detection;Artificial neural networks;NSL-KDD;Robustness;Adversarial machine
+  learning;Pattern recognition;Computer security;Adversarial machine
+  learning;Intrusion detection;Evasion attacks;Data poisoning;Model
+  robustness;Cybersecurity threats}
     \strng{namehash}{GTsCs1}
     \strng{fullhash}{GTsCs1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{G}
     \field{sortinithash}{G}
-    \field{booktitle}{2026 International Conference on Intelligent and Innovative Technologies in Computing, Electrical and Electronics (IITCEE)}
+    \field{booktitle}{2026 International Conference on Intelligent and
+  Innovative Technologies in Computing, Electrical and Electronics (IITCEE)}
     \verb{doi}
     \verb 10.1109/IITCEE67948.2026.11394707
     \endverb
     \field{pages}{1\bibrangedash 6}
-    \field{title}{Adversarial Vulnerability Analysis of Deep Neural Network-Based Intrusion Detection Systems Using FGSM and PGD Attacks}
+    \field{title}{Adversarial Vulnerability Analysis of Deep Neural
+  Network-Based Intrusion Detection Systems Using FGSM and PGD Attacks}
     \field{year}{2026}
   \endentry
 
@@ -634,9 +649,11 @@
     \verb 10.1145/3610536
     \endverb
     \field{number}{4}
-    \field{title}{{Multi-Objective Hyperparameter Optimization in Machine Learning: An Overview}}
+    \field{title}{{Multi-Objective Hyperparameter Optimization in Machine
+  Learning: An Overview}}
     \field{volume}{3}
-    \field{journaltitle}{ACM Transactions on Evolutionary Learning and Optimization}
+    \field{journaltitle}{ACM Transactions on Evolutionary Learning and
+  Optimization}
     \field{year}{2023}
   \endentry
 
@@ -662,7 +679,8 @@
     \verb 10.1016/j.comcom.2022.10.015
     \endverb
     \field{pages}{57\bibrangedash 73}
-    \field{title}{A Deep Learning Technique for Intrusion Detection System Using a Recurrent Neural Networks Based Framework}
+    \field{title}{A Deep Learning Technique for Intrusion Detection System
+  Using a Recurrent Neural Networks Based Framework}
     \field{volume}{196}
     \field{journaltitle}{Computer Communications}
     \field{year}{2023}
@@ -726,7 +744,8 @@
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{booktitle}{Advances in Neural Information Processing Systems}
-    \field{title}{{LightGBM: A Highly Efficient Gradient Boosting Decision Tree}}
+    \field{title}{{LightGBM: A Highly Efficient Gradient Boosting Decision
+  Tree}}
     \verb{url}
     \verb https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradien
     \verb t-boosting-decision-tree
@@ -754,7 +773,8 @@
     \verb https://doi.org/10.1016/j.rbms.2020.09.007
     \endverb
     \field{issn}{2405-6618}
-    \field{note}{Reprotech in France and the United States: differences and similarities}
+    \field{note}{Reprotech in France and the United States: differences and
+  similarities}
     \field{pages}{48\bibrangedash 55}
     \field{title}{ART with PGD: risky heredity and stratified reproduction}
     \verb{url}
@@ -777,7 +797,8 @@
          family={Kasireddy},
          familyi={K\bibinitperiod},
          given={Tharun Gopi\bibnamedelima Reddy},
-         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim R\bibinitperiod},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
       }}%
       {{hash=MK}{%
          family={Manchina},
@@ -795,13 +816,15 @@
          family={S},
          familyi={S},
          given={Venkatrama Phani\bibnamedelima Kumar},
-         giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim K\bibinitperiod},
+         giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  K\bibinitperiod},
       }}%
       {{hash=KVKK}{%
          family={K},
          familyi={K},
          given={Venkata Krishna\bibnamedelima Kishore},
-         giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim K\bibinitperiod},
+         giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim
+  K\bibinitperiod},
       }}%
     }
     \strng{namehash}{MV+1}
@@ -811,11 +834,13 @@
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{pages}{1\bibrangedash 6}
-    \field{title}{A Light Gradient Boosted Model for Network Intrusion Detection}
+    \field{title}{A Light Gradient Boosted Model for Network Intrusion
+  Detection}
     \verb{url}
     \verb https://api.semanticscholar.org/CorpusID:272372361
     \endverb
-    \field{journaltitle}{2024 International Conference on Smart Systems for Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)}
+    \field{journaltitle}{2024 International Conference on Smart Systems for
+  Electrical, Electronics, Communication and Computer Engineering (ICSSEECC)}
     \field{year}{2024}
   \endentry
 
@@ -930,9 +955,11 @@
     \verb 10.11591/ijai.v9.i4.pp609-615
     \endverb
     \field{pages}{609}
-    \field{title}{A multilayer perceptron artificial neural network approach for improving the accuracy of intrusion detection systems}
+    \field{title}{A multilayer perceptron artificial neural network approach
+  for improving the accuracy of intrusion detection systems}
     \field{volume}{9}
-    \field{journaltitle}{IAES International Journal of Artificial Intelligence (IJ-AI)}
+    \field{journaltitle}{IAES International Journal of Artificial Intelligence
+  (IJ-AI)}
     \field{month}{12}
     \field{year}{2020}
   \endentry
@@ -955,10 +982,13 @@
          family={Choo},
          familyi={C\bibinitperiod},
          given={Kim-Kwang\bibnamedelima Raymond},
-         giveni={K\bibinithyphendelim K\bibinitperiod\bibinitdelim R\bibinitperiod},
+         giveni={K\bibinithyphendelim K\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
       }}%
     }
-    \keyw{Protocols;Feature extraction;Internet of Things;Botnet;Temperature sensors;TCPIP;Botnet;ensemble learning;Internet of Things (IoT);network intrusion detection system (NIDS);statistical flow features}
+    \keyw{Protocols;Feature extraction;Internet of Things;Botnet;Temperature
+  sensors;TCPIP;Botnet;ensemble learning;Internet of Things (IoT);network
+  intrusion detection system (NIDS);statistical flow features}
     \strng{namehash}{MNTBCKKR1}
     \strng{fullhash}{MNTBCKKR1}
     \field{labelnamesource}{author}
@@ -970,7 +1000,9 @@
     \endverb
     \field{number}{3}
     \field{pages}{4815\bibrangedash 4830}
-    \field{title}{An Ensemble Intrusion Detection Technique Based on Proposed Statistical Flow Features for Protecting Network Traffic of Internet of Things}
+    \field{title}{An Ensemble Intrusion Detection Technique Based on Proposed
+  Statistical Flow Features for Protecting Network Traffic of Internet of
+  Things}
     \field{volume}{6}
     \field{journaltitle}{IEEE Internet of Things Journal}
     \field{year}{2019}
@@ -1001,7 +1033,8 @@
     \verb https://jqcsm.qu.edu.iq/index.php/journalcm/article/view/2554
     \endverb
     \field{volume}{17}
-    \field{journaltitle}{Journal of Al-Qadisiyah for Computer Science and Mathematics}
+    \field{journaltitle}{Journal of Al-Qadisiyah for Computer Science and
+  Mathematics}
     \field{year}{2025}
   \endentry
 
@@ -1129,7 +1162,8 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{P}
     \field{sortinithash}{P}
-    \field{booktitle}{Proceedings of the 5th ACM SIGCOMM Conference on Internet Measurement (IMC)}
+    \field{booktitle}{Proceedings of the 5th ACM SIGCOMM Conference on Internet
+  Measurement (IMC)}
     \verb{doi}
     \verb 10.1145/1062529.1062533
     \endverb
@@ -1166,7 +1200,8 @@
          family={Jayaseeli},
          familyi={J\bibinitperiod},
          given={J.\bibnamedelima D.\bibnamedelima Dorathi},
-         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim D\bibinitperiod},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
       }}%
       {{hash=RP}{%
          family={Robert},
@@ -1175,14 +1210,18 @@
          giveni={P\bibinitperiod},
       }}%
     }
-    \keyw{Radio frequency;Industries;Adaptation models;Accuracy;Computational modeling;Network intrusion detection;Telecommunication traffic;Real-time systems;Tuning;Optimization;Network Intrusion Detection Systems;Hyperparameter Optimization;Optuna;Machine Learning}
+    \keyw{Radio frequency;Industries;Adaptation models;Accuracy;Computational
+  modeling;Network intrusion detection;Telecommunication traffic;Real-time
+  systems;Tuning;Optimization;Network Intrusion Detection
+  Systems;Hyperparameter Optimization;Optuna;Machine Learning}
     \strng{namehash}{PN+1}
     \strng{fullhash}{PNSARPJJDDRP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{P}
     \field{sortinithash}{P}
-    \field{booktitle}{2024 International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS)}
+    \field{booktitle}{2024 International Conference on IoT Based Control
+  Networks and Intelligent Systems (ICICNIS)}
     \verb{doi}
     \verb 10.1109/ICICNIS64247.2024.10823298
     \endverb
@@ -1282,7 +1321,8 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{P}
     \field{sortinithash}{P}
-    \field{title}{{Polars: Lightning-fast DataFrame library for Rust and Python}}
+    \field{title}{{Polars: Lightning-fast DataFrame library for Rust and
+  Python}}
     \verb{url}
     \verb https://pola.rs/
     \endverb
@@ -1355,7 +1395,8 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{R}
     \field{sortinithash}{R}
-    \field{title}{{psutil: Cross-platform lib for process and system monitoring in Python}}
+    \field{title}{{psutil: Cross-platform lib for process and system monitoring
+  in Python}}
     \verb{url}
     \verb https://github.com/giampaolo/psutil
     \endverb
@@ -1448,19 +1489,24 @@
          giveni={H\bibinitperiod},
       }}%
     }
-    \keyw{Radio frequency;Training;Accuracy;Biological system modeling;Telecommunication traffic;Nearest neighbor methods;Data models;Cybersecurity;IoT attacks;Intrusion Detection Systems;IoT devices;Machine Learning}
+    \keyw{Radio frequency;Training;Accuracy;Biological system
+  modeling;Telecommunication traffic;Nearest neighbor methods;Data
+  models;Cybersecurity;IoT attacks;Intrusion Detection Systems;IoT
+  devices;Machine Learning}
     \strng{namehash}{SABH1}
     \strng{fullhash}{SABH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{S}
     \field{sortinithash}{S}
-    \field{booktitle}{2024 4th International Conference on Intelligent Technologies (CONIT)}
+    \field{booktitle}{2024 4th International Conference on Intelligent
+  Technologies (CONIT)}
     \verb{doi}
     \verb 10.1109/CONIT61985.2024.10627334
     \endverb
     \field{pages}{1\bibrangedash 5}
-    \field{title}{Understanding IoT-23 Dataset: A Benchmark for IoT Security Analysis}
+    \field{title}{Understanding IoT-23 Dataset: A Benchmark for IoT Security
+  Analysis}
     \field{year}{2024}
   \endentry
 
@@ -1489,7 +1535,8 @@
     \verb 10.48047/qdgj7n28
     \endverb
     \field{number}{3}
-    \field{title}{An Analytical Review of Deep Learning Models and Datasets for Anomaly-Based Intrusion Detection Systems}
+    \field{title}{An Analytical Review of Deep Learning Models and Datasets for
+  Anomaly-Based Intrusion Detection Systems}
     \verb{url}
     \verb https://doi.org/10.48047/qdgj7n28
     \endverb
@@ -1549,12 +1596,14 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{S}
     \field{sortinithash}{S}
-    \field{booktitle}{Proceedings of the IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)}
+    \field{booktitle}{Proceedings of the IEEE Conference on Computer
+  Communications Workshops (INFOCOM WKSHPS)}
     \verb{doi}
     \verb 10.1109/INFCOMW.2017.8116438
     \endverb
     \field{pages}{559\bibrangedash 564}
-    \field{title}{{Characterizing and Classifying IoT Traffic in Smart Cities and Campuses}}
+    \field{title}{{Characterizing and Classifying IoT Traffic in Smart Cities
+  and Campuses}}
     \verb{url}
     \verb https://www2.ee.unsw.edu.au/~vijay/pubs/conf/17infocom.pdf
     \endverb
@@ -1588,7 +1637,8 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{T}
     \field{sortinithash}{T}
-    \field{booktitle}{Proceedings of the Tenth International Workshop on Artificial Intelligence and Statistics}
+    \field{booktitle}{Proceedings of the Tenth International Workshop on
+  Artificial Intelligence and Statistics}
     \field{pages}{349\bibrangedash 356}
     \field{title}{{Very Large SVM Training using Core Vector Machines}}
     \verb{url}
