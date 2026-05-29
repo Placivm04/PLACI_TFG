@@ -300,8 +300,17 @@ No solo hemos comparado los modelos a través de su F1-Score y latencia, sino qu
 
         \textbf{CPU Efectiva (\%)} 
         & Porcentaje medio de uso efectivo de CPU durante la inferencia, normalizado por el número total de núcleos lógicos disponibles. Representa qué proporción de la capacidad total de CPU del sistema ha sido utilizada por el proceso durante la predicción.
-        & Calculada a partir del tiempo de CPU consumido por el proceso, el tiempo real transcurrido y el número de núcleos lógicos disponibles. \[\left(\frac{\texttt{media\_cpu}}{\texttt{media\_muro} \cdot \texttt{total\_nucleos}}\right)\cdot 100\] \\
-        \hline 
+        & Calculada a partir del tiempo de CPU consumido por el proceso, el tiempo real transcurrido y el número de núcleos lógicos disponibles:
+        \[
+        \resizebox{0.95\linewidth}{!}{$
+        \displaystyle
+        \text{CPU efectiva} =
+        \frac{T_{CPU}}{T_{real} \cdot N_{cores}} \cdot 100
+        $}
+        \]
+        donde \(T_{CPU}\) es el tiempo acumulado de CPU consumido por el proceso, \(T_{real}\) el tiempo real medio transcurrido y \(N_{cores}\) el número de núcleos lógicos disponibles.
+        \\
+        \hline
     \end{tabularx}
 
     \caption{Definición de métricas de evaluación de rendimiento}

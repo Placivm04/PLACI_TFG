@@ -48,7 +48,7 @@
 \contentsline {table}{\numberline {7.3}{\ignorespaces Comparativa final de modelos LightGBM en el set de test}}{76}{table.caption.81}%
 \contentsline {table}{\numberline {7.4}{\ignorespaces Comparativa final de modelos CatBoost en el set de test}}{77}{table.caption.83}%
 \contentsline {table}{\numberline {7.5}{\ignorespaces Comparativa final de modelos SVM en el set de test}}{78}{table.caption.85}%
-\contentsline {table}{\numberline {7.6}{\ignorespaces Comparativa final de modelos MLP en el set de test}}{79}{table.caption.87}%
+\contentsline {table}{\numberline {7.6}{\ignorespaces Comparativa final de modelos MLP en el set de test}}{78}{table.caption.87}%
 \contentsline {table}{\numberline {7.7}{\ignorespaces Comparativa final de modelos CNN en el set de test}}{80}{table.caption.89}%
 \contentsline {table}{\numberline {7.8}{\ignorespaces Comparativa final de modelos Random Forest en el set de test (IOT-23)}}{81}{table.caption.91}%
 \contentsline {table}{\numberline {7.9}{\ignorespaces Comparativa final de modelos XGBoost en el set de test (IOT-23)}}{82}{table.caption.93}%
@@ -58,9 +58,9 @@
 \contentsline {table}{\numberline {7.13}{\ignorespaces Comparativa final de modelos MLP en el set de test (IOT-23)}}{86}{table.caption.101}%
 \contentsline {table}{\numberline {7.14}{\ignorespaces Comparativa final de modelos CNN-1D en el set de test (IOT-23)}}{87}{table.caption.103}%
 \contentsline {table}{\numberline {7.15}{\ignorespaces Comparativa final de modelos Random Forest en el set de test (ToN-IoT)}}{88}{table.caption.105}%
-\contentsline {table}{\numberline {7.16}{\ignorespaces Comparativa final de modelos XGBoost en el set de test (ToN-IoT)}}{90}{table.caption.107}%
-\contentsline {table}{\numberline {7.17}{\ignorespaces Comparativa final de modelos LightGBM en el set de test (ToN-IoT)}}{91}{table.caption.109}%
-\contentsline {table}{\numberline {7.18}{\ignorespaces Comparativa final de modelos CatBoost en el set de test (ToN-IoT)}}{92}{table.caption.111}%
+\contentsline {table}{\numberline {7.16}{\ignorespaces Comparativa final de modelos XGBoost en el set de test (ToN-IoT)}}{89}{table.caption.107}%
+\contentsline {table}{\numberline {7.17}{\ignorespaces Comparativa final de modelos LightGBM en el set de test (ToN-IoT)}}{90}{table.caption.109}%
+\contentsline {table}{\numberline {7.18}{\ignorespaces Comparativa final de modelos CatBoost en el set de test (ToN-IoT)}}{91}{table.caption.111}%
 \contentsline {table}{\numberline {7.19}{\ignorespaces Comparativa final de modelos SVM en el set de test (ToN-IoT)}}{93}{table.caption.113}%
 \contentsline {table}{\numberline {7.20}{\ignorespaces Comparativa final de modelos MLP en el set de test (ToN-IoT)}}{94}{table.caption.115}%
 \contentsline {table}{\numberline {7.21}{\ignorespaces Comparativa final de modelos CNN-1D en el set de test (ToN-IoT)}}{95}{table.caption.117}%

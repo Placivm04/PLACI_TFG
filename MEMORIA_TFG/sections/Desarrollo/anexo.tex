@@ -55,7 +55,7 @@ A continuaci\'on se muestran los resultados obtenidos por XGBoost:
     \label{fig:pareto_xgboost}
 \end{figure}
 
-Hemos selecciondo las 3 combinaciones de la frontera de Pareto para testarlas:
+Hemos selecciondo las siguientes combinaciones de la frontera de Pareto para testarlas:
 
 \begin{enumerate}
     \item (350, 12) 
@@ -109,7 +109,7 @@ Entre los diferentes puntos de la frontera de Pareto, se han seleccionado los si
     \item (100, 122, 7) 
 \end{enumerate}
 
-Los resultados obtenidos en el set de test son los siguientesss:
+Los resultados obtenidos en el dataset de test son los siguientes:
 
 \begin{table}[H]
     \centering
@@ -222,9 +222,9 @@ Los resultados obtenidos en el set de test para los modelos seleccionados de la 
     \label{tab:svm_comparison}
 \end{table}
 
-A diferencia de los modelos basados en árboles (RF, XGBoost, LightGBM) que superaban holgadamente el 85\% de F1-Score, LinearSVC se estanca en un máximo de 0.7092 (Candidato 3). Esta drástica caída de rendimiento demuestra empíricamente que las intrusiones de red no son linealmente separables en este espacio de características.
+A diferencia de los modelos basados en árboles (RF, XGBoost, LightGBM) que superaban holgadamente el 85\% de F1-Score, LinearSVC se estanca en un máximo de 0.7092 (Candidato 3). Esta drástica caída de rendimiento sugiere que las intrusiones de red no son linealmente separables en este espacio de características.
 
-Dentro de las limitaciones del enfoque lineal, el \textbf{Candidato 3} (C=0.000187) es el ganador absoluto e indiscutible.
+Dentro de las limitaciones del enfoque lineal, el \textbf{Candidato 3} (C=0.000187) es el ganador.
 
 \subsection{MLP}
 
@@ -260,7 +260,7 @@ Ahora mostramos los resultados obtenidos en el set de test para los modelos sele
     \label{tab:mlp_comparison}
 \end{table}
 
-Nos quedamos con el \textbf{Candidato 4}, que ofrece el mejor rendimiento (F1-Score de 0.7869) y una latencia de inferencia de 0.001421 ms, lo que lo posiciona como un modelo competitivo dentro de los modelos no lineales, aunque aún por debajo de los basados en árboles.
+Seleccionamos el \textbf{Candidato 4}, que ofrece el mejor rendimiento (F1-Score de 0.7869) y una latencia de inferencia de 0.001421 ms, lo que lo posiciona como un modelo competitivo dentro de los modelos no lineales, aunque aún por debajo de los basados en árboles.
 
 % \subsection{LSTM}
 
@@ -338,7 +338,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
 \end{table}
 
 El \textbf{Candidato 1} es el modelo ganador, con un F1-Score de 0.773052 y una latencia de inferencia de 0.00888 ms.
-Aunque su rendimiento es excelente, su latencia es significativamente mayor que la de los modelos basados en árboles, lo que podría limitar su aplicabilidad en entornos de producción donde la velocidad de detección es crítica.
+Aunque su rendimiento es competitivo, su latencia es significativamente mayor que la de los modelos basados en árboles, lo que podría limitar su aplicabilidad en entornos de producción donde la velocidad de detección es crítica.
 
 
 \section{Modelos entrenados con IoT-23}
@@ -384,7 +384,7 @@ Los resultados son los siguientes:
     \label{tab:rf_comparison_iot}
 \end{table}
 
-En este caso, el \textbf{Candidato 1} es el modelo más eficiente, con un F1-Score de 0.999675 y una latencia de inferencia de 0.001496 ms, lo que lo posiciona como un modelo extremadamente preciso y rápido para este dataset específico de IoT.
+En este caso, el \textbf{Candidato 1} es el modelo más eficiente, con un F1-Score de 0.999675 y una latencia de inferencia de 0.001496 ms, lo que lo posiciona como un modelo preciso y rápido para este dataset específico de IoT.
 
 \subsection{XGBoost}
 
@@ -428,7 +428,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \label{tab:xgboost_comparison_iot}
 \end{table}
 
-En este caso, el \textbf{Candidato 2} es el modelo más eficiente, con un F1-Score de 0.999122 y una latencia de inferencia de 0.000027 ms, lo que lo posiciona como un modelo extremadamente preciso y rápido en este dataset de IoT, superando incluso a los modelos de Random Forest en términos de latencia.
+En este caso, el \textbf{Candidato 2} es el modelo más eficiente, con un F1-Score de 0.999122 y una latencia de inferencia de 0.000027 ms, lo que lo posiciona como un modelo preciso y rápido en este dataset de IoT, superando incluso a los modelos de Random Forest en términos de latencia.
 
 \subsection{LightGBM}
 
@@ -474,7 +474,7 @@ Los resultados obtenidos en el set de test son los siguientes:
     \label{tab:lightgbm_comparison_iot}
 \end{table}
 
-En este caso, el \textbf{Candidato 1} es el mejor modelo, con un F1-Score de 0.999813 y una latencia de inferencia de 0.000057 ms, lo que lo posiciona como un modelo bastante bueno.
+En este caso, el \textbf{Candidato 1} es el mejor modelo, con un F1-Score de 0.999813 y una latencia de inferencia de 0.000057 ms.
 
 \subsection{CatBoost}
 
@@ -521,7 +521,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \label{tab:catboost_comparison_iot}
 \end{table}
 
-En este caso, el \textbf{Candidato 2} es el modelo más eficiente, con un F1-Score de 0.999960 y una latencia de inferencia de 0.000256 ms, lo que lo posiciona como un modelo extremadamente bueno.
+En este caso, el \textbf{Candidato 2} es el modelo más eficiente, con un F1-Score de 0.999960 y una latencia de inferencia de 0.000256 ms, lo que lo posiciona como un modelo bastante bueno.
 
 \subsection{SVM}
 
@@ -701,7 +701,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \label{tab:rf_comparison_ton}
 \end{table}
 
-El \textbf{Candidato 2} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional.
+El \textbf{Candidato 2} representa el punto de equilibrio perfecto entre capacidad de detección y coste computacional.
 
 \subsection{XGBoost}
 
@@ -801,7 +801,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \label{tab:lightgbm_comparison_ton}
 \end{table}
 
-Nos quedamos con el \textbf{Candidato 6} que ofrece un excelente rendimiento (F1-Score de 0.997085) y una latencia de inferencia de 0.000202 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.
+Nos quedamos con el \textbf{Candidato 6} que ofrece un excelente rendimiento (F1-Score de 0.997085) y una latencia de inferencia de 0.000202 ms, lo que lo posiciona como un modelo muy bueno para este dataset de IoT, aunque su rendimiento es inferior comparado con los otros ensembles de árboles.
 
 \subsection{CatBoost}
 
@@ -854,7 +854,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \label{tab:catboost_comparison_ton}
 \end{table}
 
-El \textbf{Candidato 4} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional, con un F1-Score de 0.996628 y una latencia de inferencia de 0.000354 ms.
+El \textbf{Candidato 4} representa el punto de equilibrio perfecto entre capacidad de detección y coste computacional, con un F1-Score de 0.996628 y una latencia de inferencia de 0.000354 ms.
 
 \subsection{SVM}
 
@@ -903,7 +903,7 @@ Los resultados obtenidos en el set de test para los modelos seleccionados de la 
     \label{tab:svm_comparison_ton}
 \end{table}
 
-El \textbf{Candidato 4} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional, con un F1-Score de 0.897815 y una latencia de inferencia de 0.000031 ms, lo que lo posiciona como un modelo bastante bueno para este dataset de IoT, aunque su rendimiento es significativamente inferior al de los modelos basados en árboles.
+El \textbf{Candidato 4} representa el punto de equilibrio perfecto entre capacidad de detección y coste computacional, con un F1-Score de 0.897815 y una latencia de inferencia de 0.000031 ms, lo que lo posiciona como un modelo bastante bueno para este dataset de IoT, aunque su rendimiento es significativamente inferior al de los modelos basados en árboles.
 
 \subsection{MLP}
 
@@ -946,7 +946,7 @@ Los modelos seleccionados de la frontera de Pareto y sus resultados en el set de
     \label{tab:mlp_comparison_ton}
 \end{table}
 
-El \textbf{Candidato 4} representa el punto de equilibrio perfecto (el óptimo de Pareto) entre capacidad de detección y coste computacional, con un F1-Score de 0.963034 y una latencia de inferencia de 0.002268 ms, lo que lo posiciona como un modelo bastante bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.
+El \textbf{Candidato 4} representa el punto de equilibrio perfecto entre capacidad de detección y coste computacional, con un F1-Score de 0.963034 y una latencia de inferencia de 0.002268 ms, lo que lo posiciona como un modelo bastante bueno para este dataset de IoT, aunque su rendimiento sigue siendo inferior al de los modelos basados en árboles.
 
 \subsection{CNN-1D}
 
