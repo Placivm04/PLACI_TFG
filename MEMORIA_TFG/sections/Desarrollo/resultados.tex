@@ -12,7 +12,7 @@ El procedimiento seguido es el siguiente:
     \item Finalmente, se han evaluado los candidatos seleccionados de la frontera de Pareto en el conjunto de test para obtener una comparativa final de su rendimiento y latencia.
 \end{enumerate}
 
-Para la evaluación final de los modelos seleccionados se utilizó un procedimiento de benchmarking instrumentado. En primer lugar, el conjunto de test se dividió en bloques o paquetes de muestras, de forma que la inferencia no se realizó mediante una única llamada global al modelo, sino procesando secuencialmente dichos bloques. Esta decisión permitió monitorizar el proceso durante la predicción y obtener métricas adicionales de consumo, como el incremento de memoria RAM.
+Para la evaluación final de los modelos seleccionados se utilizó un procedimiento de \textit{benchmarking} instrumentado. En primer lugar, el conjunto de test se dividió en bloques o paquetes de muestras, de forma que la inferencia no se realizó mediante una única llamada global al modelo, sino procesando secuencialmente dichos bloques. Esta decisión permitió monitorizar el proceso durante la predicción y obtener métricas adicionales de consumo, como el incremento de memoria RAM.
 
 % La latencia se calculó a partir del tiempo total necesario para procesar todos los bloques del conjunto de test, dividiendo dicho tiempo entre el número total de muestras evaluadas. Por tanto, la latencia reportada representa el tiempo medio de clasificación por muestra dentro de una ejecución monitorizada. De forma complementaria, el throughput se obtuvo dividiendo el número total de muestras entre el tiempo total de inferencia.
 
@@ -72,10 +72,10 @@ En CatBoost, los hiperparámetros estructurales que afectan el coste de inferenc
 
 \subsubsection{Support Vector Machine (SVM)}
 
-Para SVM, el coste de inferencia depende principalmente del tipo de kernel utilizado. En este trabajo se prioriza el uso de:
+Para SVM, el coste de inferencia depende principalmente del tipo de \textit{kernel} utilizado. En este trabajo se prioriza el uso de:
 
 \begin{itemize}
-    \item \textbf{C}: parámetro de regularización que puede influir en la complejidad del modelo, aunque su impacto en la inferencia es menor que el tipo de kernel.
+    \item \textbf{C}: parámetro de regularización que puede influir en la complejidad del modelo, aunque su impacto en la inferencia es menor que el tipo de \textit{kernel}.
 \end{itemize}
 
 \subsubsection{Multilayer Perceptron (MLP)}
@@ -103,7 +103,7 @@ En las CNN 1D utilizadas en este trabajo, los hiperparámetros estructurales má
 
 \begin{itemize}
     \item \textbf{n\_filters}: número de filtros en las capas convolucionales.
-    \item \textbf{kernel\_size}: tamaño del kernel.
+    \item \textbf{kernel\_size}: tamaño del \textit{kernel}.
     \item \textbf{dense\_units}: número de unidades en la capa densa.
 \end{itemize}
 
@@ -114,7 +114,7 @@ En las CNN 1D utilizadas en este trabajo, los hiperparámetros estructurales má
 % AQUÍ IRÍA TODO EL DESARROLLO DE LOS MODELOS
 % \subsection{Comparativa Modelos con dataset UNSW-NB15}
 
-En esta sección se presetan los resultados obtenidos tras la optimización de hiperparámetros estructurales para cada modelo entrenado con el \textit{dataset} UNSW-NB15. Se muestra la configuración ganadora de cada modelo, seguida de una comparativa global de benchmarking, además de la curva ROC y las matrices de confusión correspondientes a cada modelo.
+En esta sección se presetan los resultados obtenidos tras la optimización de hiperparámetros estructurales para cada modelo entrenado con el \textit{dataset} UNSW-NB15. Se muestra la configuración ganadora de cada modelo, seguida de una comparativa global de \textit{benchmarking}, además de la curva ROC y las matrices de confusión correspondientes a cada modelo.
 La combinación de hiperparámetros ganadores para cada modelo se muestra en la siguiente tabla:
 
 \begin{table}[H]
@@ -143,7 +143,7 @@ La combinación de hiperparámetros ganadores para cada modelo se muestra en la 
     \label{tab:unsw_best_hyperparams}
 \end{table}
  
-Tras hacer la fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
+Tras hacer la fase de \textit{benchmarking} con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
 \begin{table}[H]
     \centering
@@ -171,7 +171,7 @@ Tras hacer la fase de benchmarking con los mejores candidatos de los diferentes 
     \label{tab:hardware_benchmark_global}
 \end{table}
 
-A partir de la comparativa global de rendimiento, se observa que los modelos basados en árboles presentan el mejor equilibrio entre capacidad predictiva y eficiencia computacional. Random Forest, LightGBM, XGBoost y CatBoost alcanzan los valores más altos de F1-score. Entre ellos, LightGBM y XGBoost destacan por ofrecer una latencia muy reducida y un throughput elevado, mientras que Random Forest obtiene un F1-score ligeramente superior, aunque con una latencia mayor.
+A partir de la comparativa global de rendimiento, se observa que los modelos basados en árboles presentan el mejor equilibrio entre capacidad predictiva y eficiencia computacional. Random Forest, LightGBM, XGBoost y CatBoost alcanzan los valores más altos de F1-score. Entre ellos, LightGBM y XGBoost destacan por ofrecer una latencia muy reducida y un \textit{throughput} elevado, mientras que Random Forest obtiene un F1-score ligeramente superior, aunque con una latencia mayor.
 
 Por otro lado, Linear SVM presenta la menor latencia de inferencia, pero también el F1-score más bajo entre los modelos evaluados. Esto indica que, aunque resulta muy eficiente desde el punto de vista temporal, su formulación lineal limita su capacidad para capturar relaciones no lineales presentes en el \textit{dataset}. Los modelos neuronales, MLP y CNN-1D, obtienen resultados intermedios en términos de F1-score, pero con un coste de inferencia superior al de los modelos basados en árboles, especialmente en el caso de CNN-1D.
 
@@ -266,7 +266,7 @@ En este caso, se han entrenado los mismos modelos que el apartado anterior, pero
 % AQUÍ IRÍA TODO EL DESARROLLO DE LOS MODELOS
 % \subsection{Comparativa Modelos con dataset IOT-23}
 
-Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
+Tras hacer una fase de \textit{benchmarking} con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
 La tabla de los mejores hiperparámetros obtenidos para cada modelo con el \textit{dataset} IOT-23 es la siguiente:
 
@@ -322,7 +322,7 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el \text
     \label{tab:hardware_benchmark_global_iot23}
 \end{table}
 
-En el caso de IoT-23, la tabla de rendimiento muestra valores de F1-score muy elevados en la mayoría de modelos, especialmente en los clasificadores basados en árboles. Random Forest, XGBoost, LightGBM y CatBoost alcanzan resultados cercanos a 1, lo que indica una gran capacidad para distinguir entre tráfico benigno y malicioso en este \textit{dataset}. Además, estos modelos mantienen latencias reducidas y throughputs elevados, por lo que ofrecen un compromiso muy favorable entre rendimiento predictivo y eficiencia.
+En el caso de IoT-23, la tabla de rendimiento muestra valores de F1-score muy elevados en la mayoría de modelos, especialmente en los clasificadores basados en árboles. Random Forest, XGBoost, LightGBM y CatBoost alcanzan resultados cercanos a 1, lo que indica una gran capacidad para distinguir entre tráfico benigno y malicioso en este \textit{dataset}. Además, estos modelos mantienen latencias reducidas y \textit{throughputs} elevados, por lo que ofrecen un compromiso muy favorable entre rendimiento predictivo y eficiencia.
 
 Los modelos neuronales, MLP y CNN-1D, también presentan un rendimiento muy competitivo, aunque con un coste de inferencia superior, especialmente en el caso de CNN-1D. Por su parte, SVM vuelve a destacar por su rapidez, pero su F1-score queda por debajo del resto de modelos.
 
@@ -411,7 +411,7 @@ Las matrices de confusión de cada modelo son las siguientes:
 
 \section{Modelos entrenados con ToN-IoT}
 
-Una de las sospechas de los resultados obtenidos con el \textit{dataset} IOT-23 es que en este \textit{dataset} la mayoría de muestras de ataque son de escaneos horizontales de puertos, lo que hace que el modelo pueda aprender a detectar ataques simplemente con la información de los puertos, sin necesidad de aprender patrones más complejos. Para comprobar esta hipótesis, se ha entrenado el mismo proceso de entrenamiento y benchmarking con el \textit{dataset} ToN-IoT, que es un \textit{dataset} de IoT con una mayor variedad de ataques y características.
+Una de las sospechas de los resultados obtenidos con el \textit{dataset} IOT-23 es que en este \textit{dataset} la mayoría de muestras de ataque son de escaneos horizontales de puertos, lo que hace que el modelo pueda aprender a detectar ataques simplemente con la información de los puertos, sin necesidad de aprender patrones más complejos. Para comprobar esta hipótesis, se ha entrenado el mismo proceso de entrenamiento y \textit{benchmarking} con el \textit{dataset} ToN-IoT, que es un \textit{dataset} de IoT con una mayor variedad de ataques y características.
 
 % \subsection{Comparativa Modelos con dataset ToN-IoT}
 
@@ -444,7 +444,7 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el \text
     \label{tab:ton_best_hyperparams}
 \end{table}
 
-Tras hacer una fase de benchmarking con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
+Tras hacer una fase de \textit{benchmarking} con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
 \begin{table}[H]
     \centering
@@ -561,7 +561,7 @@ Las matrices de confusión de cada modelo se muestran a continuación:
 
 \section{Potencial de Análisis en Tiempo Real}
 
-Como se ha indicado anteriormente, los benchmarks realizados en el servidor tenían como objetivo medir no solo el tiempo de inferencia, sino también el uso de CPU y memoria RAM durante la predicción. Por este motivo, las métricas temporales obtenidas en dichos benchmarks incluyen la sobrecarga asociada al procesamiento por bloques y a la monitorización del proceso.
+Como se ha indicado anteriormente, los \textit{benchmarks} realizados en el servidor tenían como objetivo medir no solo el tiempo de inferencia, sino también el uso de CPU y memoria RAM durante la predicción. Por este motivo, las métricas temporales obtenidas en dichos \textit{benchmarks} incluyen la sobrecarga asociada al procesamiento por bloques y a la monitorización del proceso.
 
 Para complementar ese análisis, en esta sección se realiza una medición adicional centrada exclusivamente en el tiempo puro de inferencia. El objetivo es estimar la capacidad máxima de procesamiento de los modelos una vez cargados en memoria, por lo que la comparación se centra principalmente en el \textit{throughput}, expresado como el número de muestras procesadas por segundo.
 
@@ -632,7 +632,7 @@ CNN      & 0.9826 & 98625  & 334864 \\
 
 \subsection{Comparación con cargas de red de referencia}
 
-Una vez que hemos obtenido los resultados de throughput para cada modelo en los tres \textit{datasets}, es interesante compararlos con las cargas de red típicas que se pueden encontrar en diferentes escenarios, para así estimar qué modelo nos convendría más en función del entorno de despliegue y del volumen de tráfico que se espera analizar.
+Una vez que hemos obtenido los resultados de \textit{throughput} para cada modelo en los tres \textit{datasets}, es interesante compararlos con las cargas de red típicas que se pueden encontrar en diferentes escenarios, para así estimar qué modelo nos convendría más en función del entorno de despliegue y del volumen de tráfico que se espera analizar.
 
 Para ello, se han tomado como referencia varios escenarios: una red IoT local básica de 21 dispositivos ~\cite{cargas_iot}, una red universitaria ~\cite{cargas_universitarias} y distintos casos de pequeñas y medianas empresas ~\cite{cargas_pymes}.
 
@@ -661,7 +661,7 @@ PYME 50 empleados -- peor caso & 189 Mbps & 75 bytes & 315000 \\
 
 Como podemos ver en la tabla \ref{tab:cargas_red_referencia}, las cargas de red de referencia varían desde unos pocos cientos de paquetes por segundo en el caso de una red IoT local básica, hasta varios cientos de miles de paquetes por segundo en el caso de una PYME con un tráfico elevado.
 
-Al comparar estas cargas con los throughputs obtenidos por los modelos en los tres \textit{datasets}, podemos observar que la mayoría de modelos presentan una capacidad de procesamiento superior a las cargas de referencia, incluso cuando se ejecutan en nuestro equipo personal.
+Al comparar estas cargas con los \textit{throughputs} obtenidos por los modelos en los tres \textit{datasets}, podemos observar que la mayoría de modelos presentan una capacidad de procesamiento superior a las cargas de referencia, incluso cuando se ejecutan en nuestro equipo personal.
 
 Modelos como SVM, XGBoost, LightGBM, Random Forest y CatBoost alcanzan valores superiores al millón de muestras por segundo, lo que los posiciona como opciones viables para escenarios con cargas de red elevadas, al igual que MLP.
 

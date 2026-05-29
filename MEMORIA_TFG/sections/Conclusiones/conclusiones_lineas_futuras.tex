@@ -12,9 +12,9 @@ Los resultados también muestran diferencias importantes entre \textit{datasets}
 
 El análisis frente a ataques de evasión mediante FGSM y PGD ha puesto de manifiesto que un buen rendimiento en test limpio no garantiza necesariamente robustez adversaria. Algunos modelos que obtienen valores elevados de F1-score en condiciones normales sufren caídas importantes al evaluar muestras perturbadas. Además, el impacto de los ataques no es uniforme: depende del \textit{dataset}, del modelo atacado, del modelo utilizado para generar las perturbaciones y del límite de perturbación considerado. También se ha observado que el incremento de $\epsilon$ no siempre produce una degradación estrictamente monótona, especialmente en datos tabulares, donde perturbaciones elevadas pueden desplazar las muestras fuera de la distribución original o generar efectos de saturación.
 
-Desde el punto de vista computacional, los resultados de inferencia muestran que muchos de los modelos evaluados presentan un throughput elevado, tanto en servidor como en un equipo local con menos recursos. Esto sugiere que, una vez entrenados y cargados en memoria, varios modelos clásicos podrían ser viables para escenarios de análisis en tiempo real.
+Desde el punto de vista computacional, los resultados de inferencia muestran que muchos de los modelos evaluados presentan un \textit{throughput} elevado, tanto en servidor como en un equipo local con menos recursos. Esto sugiere que, una vez entrenados y cargados en memoria, varios modelos clásicos podrían ser viables para escenarios de análisis en tiempo real.
 
-En conjunto, los resultados obtenidos permiten concluir que la selección de un modelo IDS no debe basarse únicamente en maximizar una métrica predictiva. Es necesario considerar otros aspectos de forma conjunta, la distribución del \textit{dataset}, la capacidad de detección, la latencia, el throughput, el consumo de recursos y la robustez frente a ataques adversarios.
+En conjunto, los resultados obtenidos permiten concluir que la selección de un modelo IDS no debe basarse únicamente en maximizar una métrica predictiva. Es necesario considerar otros aspectos de forma conjunta, la distribución del \textit{dataset}, la capacidad de detección, la latencia, el \textit{throughput}, el consumo de recursos y la robustez frente a ataques adversarios.
 
 \section{Líneas Futuras}
 

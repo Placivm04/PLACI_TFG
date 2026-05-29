@@ -76,7 +76,7 @@ El proceso de entrenamiento es secuencial: cada nuevo árbol se entrena para cor
 % \end{figure}
 
 \subsection{Light Gradient Boosting Machine (LightGBM)}
-\textbf{Light Gradient Boosting Machine} (LightGBM) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}. A diferencia de otros métodos de boosting, LightGBM utiliza un enfoque de crecimiento de árboles basado en hojas, lo que significa que en cada iteración se expande la hoja con el mayor error en lugar de expandir todos los nodos a un nivel determinado. Esta estrategia permite construir árboles más profundos y complejos sin aumentar significativamente el número de nodos, lo que mejora la capacidad de modelado y reduce el tiempo de entrenamiento ~\cite{lightgbm}.
+\textbf{Light Gradient Boosting Machine} (LightGBM) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}. A diferencia de otros métodos de \textit{boosting}, LightGBM utiliza un enfoque de crecimiento de árboles basado en hojas, lo que significa que en cada iteración se expande la hoja con el mayor error en lugar de expandir todos los nodos a un nivel determinado. Esta estrategia permite construir árboles más profundos y complejos sin aumentar significativamente el número de nodos, lo que mejora la capacidad de modelado y reduce el tiempo de entrenamiento ~\cite{lightgbm}.
 
 \begin{table}[H]
     \centering
@@ -141,17 +141,17 @@ Otro punto clave es que a diferencia de otros modelos como XGBoost o LightGBM, C
 
 \textbf{Support Vector Machines} (SVM) es un algoritmo de aprendizaje supervisado cuyo objetivo principal es encontrar una frontera de decisión que separe de forma óptima las distintas clases en el espacio de características. En su formulación básica, SVM busca el hiperplano que maximiza el margen entre las muestras de distintas clases, utilizando únicamente un subconjunto de los datos denominado \textit{vectores soporte}. Esta propiedad permite construir modelos robustos frente al ruido y con buena capacidad de generalización.
 
-Una de las principales fortalezas de las SVM es el uso de \textit{kernels}, que permiten proyectar los datos originales a espacios de mayor dimensionalidad sin realizar explícitamente dicha transformación. Gracias a este mecanismo, SVM puede modelar fronteras de decisión no lineales incluso cuando los datos no son separables linealmente en el espacio original. Entre los kernels más utilizados se encuentran:
+Una de las principales fortalezas de las SVM es el uso de \textit{kernels}, que permiten proyectar los datos originales a espacios de mayor dimensionalidad sin realizar explícitamente dicha transformación. Gracias a este mecanismo, SVM puede modelar fronteras de decisión no lineales incluso cuando los datos no son separables linealmente en el espacio original. Entre los \textit{kernels} más utilizados se encuentran:
 
 \begin{itemize}
-    \item \textbf{Kernel lineal}: Define una frontera de decisión lineal en el espacio de características original. Es el kernel más simple y el más eficiente desde el punto de vista computacional, lo que lo hace especialmente adecuado para \textit{datasets} de gran tamaño y para escenarios donde se prioriza la eficiencia.
+    \item \textbf{\textit{Kernel} lineal}: Define una frontera de decisión lineal en el espacio de características original. Es el \textit{kernel} más simple y el más eficiente desde el punto de vista computacional, lo que lo hace especialmente adecuado para \textit{datasets} de gran tamaño y para escenarios donde se prioriza la eficiencia.
     
-    \item \textbf{Kernel polinómico}: Permite modelar relaciones no lineales mediante funciones polinómicas de distinto grado. Aunque puede capturar interacciones más complejas entre las características, su coste computacional aumenta rápidamente con el grado del polinomio y el tamaño del \textit{dataset}.
+    \item \textbf{\textit{Kernel} polinómico}: Permite modelar relaciones no lineales mediante funciones polinómicas de distinto grado. Aunque puede capturar interacciones más complejas entre las características, su coste computacional aumenta rápidamente con el grado del polinomio y el tamaño del \textit{dataset}.
     
-    \item \textbf{Kernel radial (RBF)}: Proyecta los datos a un espacio de dimensión infinita, permitiendo separar patrones altamente no lineales. Si bien suele ofrecer un alto rendimiento predictivo, su entrenamiento e inferencia son significativamente más costosos, especialmente en conjuntos de datos de gran tamaño.
+    \item \textbf{\textit{Kernel} radial (RBF)}: Proyecta los datos a un espacio de dimensión infinita, permitiendo separar patrones altamente no lineales. Si bien suele ofrecer un alto rendimiento predictivo, su entrenamiento e inferencia son significativamente más costosos, especialmente en conjuntos de datos de gran tamaño.
 \end{itemize}
 
-En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante un \textbf{kernel lineal}, ya que ofrece un compromiso adecuado entre rendimiento y eficiencia computacional ~\cite{liblinear}. Los kernels no lineales, como el RBF, resultan poco escalables para los volúmenes de datos considerados y presentan un coste computacional elevado (el tiempo de entrenamiento escala al menos cuadráticamente con el número de muestras y puede ser impracticable con decenas de miles de muestras), lo que los hace menos compatibles con los principios de \textit{Green AI} ~\cite{nonlinear_more_complexity}.
+En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante un \textbf{\textit{kernel} lineal}, ya que ofrece un compromiso adecuado entre rendimiento y eficiencia computacional ~\cite{liblinear}. Los \textit{kernels} no lineales, como el RBF, resultan poco escalables para los volúmenes de datos considerados y presentan un coste computacional elevado (el tiempo de entrenamiento escala al menos cuadráticamente con el número de muestras y puede ser impracticable con decenas de miles de muestras), lo que los hace menos compatibles con los principios de \textit{Green AI} ~\cite{nonlinear_more_complexity}.
 
 \begin{table}[H]
     \centering
@@ -162,10 +162,10 @@ En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante
         \textbf{Hiperparámetro} & \textbf{Significado} \\
         \midrule
         \texttt{C} & Parámetro de regularización que controla el equilibrio entre margen y error de clasificación \\
-        \texttt{kernel} & Tipo de función kernel utilizada (por ejemplo, \textit{linear}, \textit{poly}, \textit{rbf}) \\
-        \texttt{degree} & Grado del polinomio (solo para kernel polinómico) \\
-        \texttt{gamma} & Coeficiente para kernels \textit{rbf}, \textit{poly} y \textit{sigmoid} \\
-        \texttt{coef0} & Término independiente en kernels \textit{poly} y \textit{sigmoid} \\
+        \texttt{kernel} & Tipo de función \textit{kernel} utilizada (por ejemplo, \textit{linear}, \textit{poly}, \textit{rbf}) \\
+        \texttt{degree} & Grado del polinomio (solo para \textit{kernel} polinómico) \\
+        \texttt{gamma} & Coeficiente para \textit{kernels} \textit{rbf}, \textit{poly} y \textit{sigmoid} \\
+        \texttt{coef0} & Término independiente en \textit{kernels} \textit{poly} y \textit{sigmoid} \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -222,7 +222,7 @@ Las \textbf{Convolutional Neural Networks} (CNN) son un tipo de red neuronal pro
 
 En el contexto de este trabajo, las CNN se emplean en su variante \textit{1D}, donde las convoluciones se aplican sobre el vector de características de cada flujo de red, tratado como una señal unidimensional. Este enfoque permite capturar relaciones locales entre características adyacentes, modelando interacciones de corto alcance entre variables sin necesidad de introducir arquitecturas excesivamente complejas.
 
-Desde el punto de vista computacional, el coste de una CNN depende principalmente del número de filtros, el tamaño del kernel y la profundidad de la red. Aunque las CNN suelen ser más eficientes que otras arquitecturas profundas al compartir pesos, un número elevado de filtros o capas puede incrementar significativamente el tiempo de entrenamiento y la latencia de inferencia.
+Desde el punto de vista computacional, el coste de una CNN depende principalmente del número de filtros, el tamaño del \textit{kernel} y la profundidad de la red. Aunque las CNN suelen ser más eficientes que otras arquitecturas profundas al compartir pesos, un número elevado de filtros o capas puede incrementar significativamente el tiempo de entrenamiento y la latencia de inferencia.
 
 \begin{table}[H]
     \centering
@@ -233,7 +233,7 @@ Desde el punto de vista computacional, el coste de una CNN depende principalment
         \textbf{Hiperparámetro} & \textbf{Significado} \\
         \midrule
         \texttt{n\_filters} & Número de filtros en las capas convolucionales \\
-        \texttt{kernel\_size} & Tamaño del kernel de convolución \\
+        \texttt{kernel\_size} & Tamaño del \textit{kernel} de convolución \\
         \texttt{dense\_units} & Número de neuronas en la capa densa final \\
         \texttt{time\_steps} & Número de pasos temporales considerados por la red \\
         \texttt{activation} & Función de activación utilizada en las capas de la red \\
@@ -251,12 +251,10 @@ Desde el punto de vista computacional, el coste de una CNN depende principalment
 %     \label{fig:cnn_1d}
 % \end{figure}
 
-En resumen, la selección de modelos de aprendizaje automático y profundo para la detección de intrusiones debe considerar no solo el rendimiento predictivo, sino también el coste computacional asociado.
-
 \section{Justificación del enfoque en la fase de inferencia}
 
 
-En el contexto de los Sistemas de Detección de Intrusiones (\textit{Intrusion Detection Systems}, IDS), resulta importante distinguir entre la \textbf{fase de entrenamiento} del modelo y la \textbf{fase de inferencia}. 
+En el contexto de los Sistemas de Detección de Intrusiones (IDS), resulta importante distinguir entre la \textbf{fase de entrenamiento} del modelo y la \textbf{fase de inferencia}. 
 
 Durante el entrenamiento, el modelo aprende patrones a partir de un conjunto de datos previamente etiquetado, ajustando sus parámetros internos con el objetivo de mejorar su capacidad de clasificación. Esta fase puede implicar un coste computacional elevado, especialmente en modelos complejos o con grandes volúmenes de datos, pero suele realizarse de forma puntual o con una frecuencia limitada.
 Por el contrario, la fase de inferencia corresponde al uso del modelo ya entrenado para clasificar nuevas muestras. En un IDS desplegado en un entorno real, esta fase se ejecuta de manera continua, analizando el tráfico de red entrante para identificar posibles comportamientos maliciosos. Por ello, aunque el entrenamiento pueda ser costoso, el coste asociado a la inferencia adquiere una relevancia especial, ya que se repite constantemente durante el funcionamiento del sistema.
@@ -267,7 +265,7 @@ Por eso mismo, \textbf{el coste asociado a la inferencia es el que determina la 
 
 \section{Métricas Utilizadas}
 
-No solo hemos comparado los modelos a través de su F1-Score y latencia, sino que también hemos realizado una evaluación global de su rendimiento en términos de latencia, throughput, uso de CPU y RAM. Para calcular las métricas de rendimiento, hemos usado los siguientes conceptos:
+No solo hemos comparado los modelos a través de su F1-Score y latencia, sino que también hemos realizado una evaluación global de su rendimiento en términos de latencia, \textit{throughput}, uso de CPU y RAM. Para calcular las métricas de rendimiento, hemos usado los siguientes conceptos:
 
 \begin{table}[H]
     \centering
@@ -288,7 +286,7 @@ No solo hemos comparado los modelos a través de su F1-Score y latencia, sino qu
         & Medida mediante \texttt{time.perf\_counter()} al procesar el set de test por lotes, dividido entre el número total de paquetes procesados. \\
         \hline
 
-        \textbf{Throughput (paq/s)} 
+        \textbf{\textit{Throughput} (paq/s)}
         & Caudal de procesamiento. Representa el volumen de tráfico, expresado en paquetes por segundo, que el modelo puede soportar sin cuellos de botella.
         & Calculado dividiendo el número total de paquetes del conjunto de test entre el tiempo físico total de inferencia, también denominado \textit{wall time}. \\
         \hline

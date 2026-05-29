@@ -54,7 +54,7 @@ El procedimiento que se siguió fue entrenar cada modelo nuevamente con la confi
 
 Es fundamental destacar que estos ataques se han configurado con un límite de perturbación extremadamente restrictivo \textbf{($\epsilon = 0.05$)}. Esto implica que el algoritmo de evasión solo ha modificado, como máximo, un 5\% el valor original de las características numéricas continuas, garantizando que el tráfico malicioso generado sea prácticamente indistinguible del tráfico original a nivel de red.
 
-Finalmente, los datos adversarios generados se introdujeron en la fase de inferencia de los distintos clasificadores para extraer sus respectivas métricas de rendimiento. El análisis se fundamentó en métricas estándar como el Accuracy, el F1-Score y el Recall, priorizando en todo momento la \textbf{evaluación sobre la clase maliciosa}. Esta decisión metodológica se basa en que el objetivo crítico del estudio es medir la degradación en la capacidad de detección de ataques del sistema.
+Finalmente, los datos adversarios generados se introdujeron en la fase de inferencia de los distintos clasificadores para extraer sus respectivas métricas de rendimiento. El análisis se fundamentó en métricas estándar como el \textit{Accuracy}, el F1-Score y el \textit{Recall}, priorizando en todo momento la \textbf{evaluación sobre la clase maliciosa}. Esta decisión metodológica se basa en que el objetivo crítico del estudio es medir la degradación en la capacidad de detección de ataques del sistema.
 
 \subsubsection{Resultados PGD}
 
@@ -81,7 +81,7 @@ Presentamos los resultados de la aplicación del ataque PGD sobre los modelos en
     \label{fig:PGD-RECALL-UNSW-NB15}
 \end{figure}
 
-Podemos concluir que, incluso con un límite de perturbación moderado de $\epsilon = 0.05$, el ataque PGD consigue degradar el rendimiento de los modelos respecto al test limpio. Esta caída se observa especialmente en la \textbf{accuracy} y en el \textbf{F1-score de la clase ataque}, mientras que el \textit{recall} se mantiene elevado en varios modelos.
+Podemos concluir que, incluso con un límite de perturbación moderado de $\epsilon = 0.05$, el ataque PGD consigue degradar el rendimiento de los modelos respecto al test limpio. Esta caída se observa especialmente en la \textbf{\textit{accuracy}} y en el \textbf{F1-score de la clase ataque}, mientras que el \textit{recall} se mantiene elevado en varios modelos.
 
 Este comportamiento indica que los modelos siguen detectando una proporción alta de ataques, pero pierden capacidad para clasificar correctamente el conjunto completo de muestras. En otras palabras, la perturbación afecta al equilibrio general del clasificador, aunque no siempre reduzca de forma drástica la detección de ataques.
 
@@ -114,11 +114,11 @@ Estos son los resultados de la aplicación del ataque FGSM:
     \label{fig:FGSM-RECALL-UNSW-NB15}
 \end{figure}
 
-En el caso del ataque FGSM también se observa una degradación clara del rendimiento respecto al test limpio. Esta caída aparece tanto en la \textbf{accuracy} como en el \textbf{F1-score de la clase ataque}, aunque el impacto varía según el modelo evaluado y según si la perturbación se genera a partir del MLP o de la CNN.
+En el caso del ataque FGSM también se observa una degradación clara del rendimiento respecto al test limpio. Esta caída aparece tanto en la \textbf{\textit{accuracy}} como en el \textbf{F1-score de la clase ataque}, aunque el impacto varía según el modelo evaluado y según si la perturbación se genera a partir del MLP o de la CNN.
 
 En términos de \textit{accuracy}, todos los modelos reducen su rendimiento respecto al escenario limpio. Esta caída indica que FGSM afecta a la capacidad global de clasificación, provocando un mayor número de errores sobre el conjunto de test. En algunos modelos, como MLP frente a FGSM-CNN o SVM frente a FGSM-MLP, la reducción es especialmente notable.
 
-Respecto al F1-score de la clase ataque, se aprecia que los modelos mantienen valores moderados en varios casos, pero siempre por debajo del rendimiento limpio. Esto indica que el ataque afecta al equilibrio entre precisión y recall de la clase ataque. En particular, algunos modelos como XGB, SVM o MLP muestran una mayor sensibilidad dependiendo del modelo utilizado para generar la perturbación.
+Respecto al F1-score de la clase ataque, se aprecia que los modelos mantienen valores moderados en varios casos, pero siempre por debajo del rendimiento limpio. Esto indica que el ataque afecta al equilibrio entre precisión y \textit{recall} de la clase ataque. En particular, algunos modelos como XGB, SVM o MLP muestran una mayor sensibilidad dependiendo del modelo utilizado para generar la perturbación.
 
 El \textit{recall} de la clase ataque muestra un comportamiento más desigual. Algunos modelos, como RF, CatBoost y CNN, mantienen una alta capacidad de detección de ataques incluso bajo perturbación FGSM. Sin embargo, otros modelos presentan caídas importantes, especialmente XGB, LGBM, SVM y MLP en determinados escenarios.
 
@@ -151,11 +151,11 @@ El \textit{recall} de la clase ataque muestra un comportamiento más desigual. A
     \label{fig:PGD-RECALL-IOT-23}
 \end{figure}
 
-En el \textit{dataset} IoT-23, para el ataque PGD con límite de perturbación $\epsilon = 0.05$, se observa una degradación notable del rendimiento respecto al test limpio, especialmente en términos de \textbf{accuracy} y \textbf{F1-score de la clase ataque}. Aunque los modelos presentan un rendimiento casi perfecto en el escenario limpio, las perturbaciones adversarias reducen de forma clara la capacidad global de clasificación.
+En el \textit{dataset} IoT-23, para el ataque PGD con límite de perturbación $\epsilon = 0.05$, se observa una degradación notable del rendimiento respecto al test limpio, especialmente en términos de \textbf{\textit{accuracy}} y \textbf{F1-score de la clase ataque}. Aunque los modelos presentan un rendimiento casi perfecto en el escenario limpio, las perturbaciones adversarias reducen de forma clara la capacidad global de clasificación.
 
 Sin embargo, el \textit{recall} de la clase ataque se mantiene muy elevado en prácticamente todos los modelos, incluso tras aplicar las perturbaciones PGD generadas sobre MLP y CNN. Esto indica que los modelos siguen detectando la mayoría de las muestras maliciosas, por lo que el ataque no provoca principalmente una pérdida de detección de ataques.
 
-La diferencia entre el alto \textit{recall} y la caída observada en accuracy y F1-score sugiere que el principal efecto del ataque es un aumento de falsos positivos. Es decir, los modelos tienden a clasificar más muestras normales como ataques, manteniendo una alta detección de tráfico malicioso, pero reduciendo su capacidad para distinguir correctamente entre tráfico benigno y malicioso.
+La diferencia entre el alto \textit{recall} y la caída observada en \textit{accuracy} y F1-score sugiere que el principal efecto del ataque es un aumento de falsos positivos. Es decir, los modelos tienden a clasificar más muestras normales como ataques, manteniendo una alta detección de tráfico malicioso, pero reduciendo su capacidad para distinguir correctamente entre tráfico benigno y malicioso.
 
 Además, se observa que las perturbaciones generadas sobre MLP y CNN presentan capacidad de transferencia hacia modelos clásicos, aunque con diferencias entre clasificadores. En particular, PGD-MLP provoca una caída importante en modelos como RF, XGB, LGBM, CatBoost, SVM y MLP, mientras que PGD-CNN afecta de forma muy acusada a XGB, LGBM y CNN, pero tiene menor impacto sobre CatBoost, SVM y MLP.
 
@@ -182,7 +182,7 @@ Además, se observa que las perturbaciones generadas sobre MLP y CNN presentan c
     \label{fig:FGSM-RECALL-IOT-23}
 \end{figure}
 
-Aquí observamos una degradación notable del rendimiento respecto al test limpio. Esta caída se aprecia principalmente en la \textbf{accuracy} y en el \textbf{F1-score de la clase ataque}.
+Aquí observamos una degradación notable del rendimiento respecto al test limpio. Esta caída se aprecia principalmente en la \textbf{\textit{accuracy}} y en el \textbf{F1-score de la clase ataque}.
 
 Respecto al F1-score de la clase ataque, se observa una reducción clara frente al escenario limpio. El caso más llamativo se produce en SVM y MLP bajo FGSM-MLP, donde el F1-score cae de forma muy pronunciada. En cambio, bajo FGSM-CNN, modelos como CatBoost, SVM y MLP mantienen valores considerablemente más altos, lo que evidencia que el efecto del ataque depende tanto del modelo atacado como del modelo usado para generar la perturbación.
 
@@ -217,15 +217,15 @@ El \textit{recall} de la clase ataque se mantiene prácticamente perfecto en la 
     \label{fig:PGD-RECALL-TON-IOT}
 \end{figure}
 
-En el \textit{dataset} TON-IoT, para el ataque PGD, se observa una degradación significativa del rendimiento respecto al test limpio, donde la mayoría de modelos presentan valores muy elevados de accuracy y F1-score, cercanos a 1. Sin embargo, tras aplicar las perturbaciones PGD, ambos indicadores descienden de forma clara en la mayoría de clasificadores.
+En el \textit{dataset} TON-IoT, para el ataque PGD, se observa una degradación significativa del rendimiento respecto al test limpio, donde la mayoría de modelos presentan valores muy elevados de \textit{accuracy} y F1-score, cercanos a 1. Sin embargo, tras aplicar las perturbaciones PGD, ambos indicadores descienden de forma clara en la mayoría de clasificadores.
 
-En términos de \textbf{accuracy}, los modelos más afectados son XGB, LGBM, CatBoost y MLP.
+En términos de \textbf{\textit{accuracy}}, los modelos más afectados son XGB, LGBM, CatBoost y MLP.
 
-Respecto al \textbf{F1-score}, la degradación es todavía más evidente. Modelos como LGBM, CatBoost y MLP sufren caídas pronunciadas, lo que indica que el ataque afecta de forma importante al equilibrio entre precisión y recall de la clase ataque.
+Respecto al \textbf{F1-score}, la degradación es todavía más evidente. Modelos como LGBM, CatBoost y MLP sufren caídas pronunciadas, lo que indica que el ataque afecta de forma importante al equilibrio entre precisión y \textit{recall} de la clase ataque.
 
 El \textit{recall} de la clase ataque presenta un comportamiento desigual. En algunos modelos, como XGB, MLP y CNN, se mantiene elevado bajo determinadas perturbaciones, lo que indica que siguen detectando gran parte de los ataques. Sin embargo, en otros casos se producen caídas importantes, especialmente en LGBM con PGD-MLP, CatBoost con PGD-MLP y SVM con PGD-CNN.
 
-En conjunto, los resultados muestran que PGD con $\epsilon = 0.05$ tiene un impacto relevante sobre TON-IoT. A diferencia de otros \textit{datasets} donde el recall se mantenía alto en casi todos los modelos, aquí el ataque también reduce la capacidad de detección de ataques en determinados clasificadores. Esto sugiere que TON-IoT presenta una mayor sensibilidad frente a perturbaciones adversarias, especialmente en modelos como LGBM, CatBoost, MLP y SVM dependiendo del modelo generador de la perturbación.
+En conjunto, los resultados muestran que PGD con $\epsilon = 0.05$ tiene un impacto relevante sobre TON-IoT. A diferencia de otros \textit{datasets} donde el \textit{recall} se mantenía alto en casi todos los modelos, aquí el ataque también reduce la capacidad de detección de ataques en determinados clasificadores. Esto sugiere que TON-IoT presenta una mayor sensibilidad frente a perturbaciones adversarias, especialmente en modelos como LGBM, CatBoost, MLP y SVM dependiendo del modelo generador de la perturbación.
 
 \subsubsection{Resultados FGSM}
 
@@ -250,13 +250,13 @@ En conjunto, los resultados muestran que PGD con $\epsilon = 0.05$ tiene un impa
     \label{fig:FGSM-RECALL-TON-IOT}
 \end{figure}
 
-Finalmente, para el ataque FGSM, en el escenario limpio, la mayoría de modelos presentan valores muy elevados de accuracy y F1-score, cercanos a 1. Sin embargo, tras aplicar las perturbaciones FGSM, ambos indicadores descienden de forma clara en prácticamente todos los clasificadores.
+Finalmente, para el ataque FGSM, en el escenario limpio, la mayoría de modelos presentan valores muy elevados de \textit{accuracy} y F1-score, cercanos a 1. Sin embargo, tras aplicar las perturbaciones FGSM, ambos indicadores descienden de forma clara en prácticamente todos los clasificadores.
 
-En términos de \textbf{accuracy}, la caída es especialmente acusada en XGB, CatBoost y CNN cuando las perturbaciones se generan sobre CNN. También se observa una degradación importante con FGSM-MLP, especialmente en XGB, LGBM, CatBoost y MLP.
+En términos de \textbf{\textit{accuracy}}, la caída es especialmente acusada en XGB, CatBoost y CNN cuando las perturbaciones se generan sobre CNN. También se observa una degradación importante con FGSM-MLP, especialmente en XGB, LGBM, CatBoost y MLP.
 
 Respecto al \textbf{F1-score de la clase ataque}, la degradación es muy notable en todos los modelos.
 
-El \textit{recall} de la clase ataque presenta un comportamiento desigual. Algunos modelos, como CNN, mantienen un recall muy elevado e incluso cercano a 1 bajo perturbación, lo que indica que siguen detectando la mayoría de ataques. Sin embargo, otros modelos sufren caídas importantes, como SVM y MLP.
+El \textit{recall} de la clase ataque presenta un comportamiento desigual. Algunos modelos, como CNN, mantienen un \textit{recall} muy elevado e incluso cercano a 1 bajo perturbación, lo que indica que siguen detectando la mayoría de ataques. Sin embargo, otros modelos sufren caídas importantes, como SVM y MLP.
 
 En resumen, hemos visto como un límite de perturbación de ataque pequeño, como 0.05, puede generar caídas bastante grandes en las métricas analizadas, siempre dependiendo del modelo y del \textit{dataset} perturbado que se aplique.
 
