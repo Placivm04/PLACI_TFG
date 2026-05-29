@@ -40,12 +40,12 @@
 \contentsline {chapter}{\numberline {5}Análisis de Modelos y Búsqueda de Hiperparámetros}{35}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Optimización de hiperparámetros estructurales}{36}{section.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.0.1}Random Forest}{36}{subsubsection.5.1.0.1}%
-\contentsline {subsubsection}{\numberline {5.1.0.2}XGBoost}{36}{subsubsection.5.1.0.2}%
+\contentsline {subsubsection}{\numberline {5.1.0.2}XGBoost}{37}{subsubsection.5.1.0.2}%
 \contentsline {subsubsection}{\numberline {5.1.0.3}LightGBM}{37}{subsubsection.5.1.0.3}%
 \contentsline {subsubsection}{\numberline {5.1.0.4}CatBoost}{37}{subsubsection.5.1.0.4}%
 \contentsline {subsubsection}{\numberline {5.1.0.5}Support Vector Machine (SVM)}{37}{subsubsection.5.1.0.5}%
 \contentsline {subsubsection}{\numberline {5.1.0.6}Multilayer Perceptron (MLP)}{37}{subsubsection.5.1.0.6}%
-\contentsline {subsubsection}{\numberline {5.1.0.7}Convolutional Neural Networks (CNN 1D)}{37}{subsubsection.5.1.0.7}%
+\contentsline {subsubsection}{\numberline {5.1.0.7}Convolutional Neural Networks (CNN 1D)}{38}{subsubsection.5.1.0.7}%
 \contentsline {section}{\numberline {5.2}Modelos entrenados con UNSW-NB15}{38}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Modelos entrenados con IOT-23}{41}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Modelos entrenados con ToN-IoT}{45}{section.5.4}%
@@ -95,17 +95,17 @@
 \contentsline {section}{\numberline {A.2}Modelos entrenados con IoT-23}{80}{section.7.2}%
 \contentsline {subsection}{\numberline {A.2.1}Random Forest}{80}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {A.2.2}XGBoost}{81}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}LightGBM}{83}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}CatBoost}{84}{subsection.7.2.4}%
-\contentsline {subsection}{\numberline {A.2.5}SVM}{85}{subsection.7.2.5}%
-\contentsline {subsection}{\numberline {A.2.6}MLP}{86}{subsection.7.2.6}%
-\contentsline {subsection}{\numberline {A.2.7}CNN-1D}{87}{subsection.7.2.7}%
-\contentsline {section}{\numberline {A.3}Modelos entrenados con TON-IoT}{88}{section.7.3}%
-\contentsline {subsection}{\numberline {A.3.1}Random Forest}{88}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}XGBoost}{89}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {A.3.3}LightGBM}{90}{subsection.7.3.3}%
-\contentsline {subsection}{\numberline {A.3.4}CatBoost}{91}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {A.2.3}LightGBM}{82}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}CatBoost}{83}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {A.2.5}SVM}{84}{subsection.7.2.5}%
+\contentsline {subsection}{\numberline {A.2.6}MLP}{85}{subsection.7.2.6}%
+\contentsline {subsection}{\numberline {A.2.7}CNN-1D}{86}{subsection.7.2.7}%
+\contentsline {section}{\numberline {A.3}Modelos entrenados con TON-IoT}{87}{section.7.3}%
+\contentsline {subsection}{\numberline {A.3.1}Random Forest}{87}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}XGBoost}{88}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}LightGBM}{89}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {A.3.4}CatBoost}{90}{subsection.7.3.4}%
 \contentsline {subsection}{\numberline {A.3.5}SVM}{92}{subsection.7.3.5}%
-\contentsline {subsection}{\numberline {A.3.6}MLP}{94}{subsection.7.3.6}%
-\contentsline {subsection}{\numberline {A.3.7}CNN-1D}{95}{subsection.7.3.7}%
+\contentsline {subsection}{\numberline {A.3.6}MLP}{93}{subsection.7.3.6}%
+\contentsline {subsection}{\numberline {A.3.7}CNN-1D}{94}{subsection.7.3.7}%
 \contentsline {chapter}{Bibliografía}{97}{chapter*.118}%
