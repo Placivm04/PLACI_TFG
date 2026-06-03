@@ -1,69 +1,91 @@
 ======================================================================
-UMA – ETSI Informática
+Trabajo Fin de Grado
 ======================================================================
 
-Gracias por usar mi plantilla para tu Trabajo Fin de Grado. Agradezco prfundamente la colaboración del Dr. Carlos Manuel Rossi Jiménez y el 
-Dr. David Bueno Vallejo. 
+Titulo:
+Análisis del rendimiento y consumo de modelos de IA para detección de
+intrusiones
 
-Si tienes cualquier comentario para mejorarla, o quieres hacerlo tú mism@, 
-puedes ponerte en contacto conmigo en mpascual@uma.es, o crear un pull 
-request en https://github.com/MarioPasc/UMA-TFG-ETSI-Templates 
+Autor:
+Placido Velasco Munoz
 
-El proyecto puede tardar bastante en compilar por primera vez, es normal. 
-Una vez se hagan varias compilaciones, la caché de Overleaf se llenará y
-cargará más rápido. 
+Titulacion:
+Grado en Ingenieria Informatica - Mencion en Computacion
 
-Por favor, **lee con detenimiento el resto de este fichero**, contiene información importante. 
+Universidad:
+Universidad de Malaga, ETSI Informatica
 
-NOTA: En octubre de 2025 overleaf redujo la duración de compilación del plan gratis. Si estás teniendo problemas para compilar el proyecto, porque tu TFG sea demasiado largo, ponte en contacto con tu tutor, es posible que tenga el plan premium de Overleaf, y, al crear un documento con el plan premium, y compartirlo contigo, tendrás acceso al tiempo de compilación del plan premium. 
-
-======================================================================
-Estructura de la memoria (Art. III.2 del Reglamento de TFG)
-======================================================================
-La memoria podrá elaborarse en castellano o en ingles, y contendrá obligatoriamente las siguientes partes:
-- Portada.
-- Resumen y palabras claves.
-    - Resumen del TFG: con una extensión entre 150 y 300 palabras, en castellano e inglés.
-    - Lista de entre 3 y 5 palabras clave (para catalogación bibliográfica), en castellano e inglés.
-- Cuerpo del TFG: parte principal de la memoria (extensión recomendada entre 30 y 50 páginas) con sus apartados en función de la modalidad, pero que incluirá como mínimo los siguientes capítulos: 
-    1. Introducción (incluyendo la motivación y objetivos del TFG, así como la estructura del resto de capítulos de la memoria).
-    2. Estudio del arte o tecnologías a utilizar (esta parte puede incluirse como una sección del capítulo de Introducción o como un capítulo independiente).
-    3. Metodología de trabajo empleada en el TFG (esta parte también puede incluirse como una sección del capítulo de Introducción o como un capítulo independiente).
-    4. Capítulos donde se estructure las fases del desarrollo, así como pruebas y resultados (si procede). 
-    5. Conclusiones y Líneas Futuras. En caso de redactarse la memoria en inglés, las conclusiones y líneas futuras deben redactarse también en castellano.
-- Bibliografía.
-- Apéndices: información complementaria que no tenga cabida en el cuerpo del TFG, tales como listados, descripciones detalladas, manuales de usuario y programador, etc. 
-- Contraportada.
-
-Fuente: https://www.uma.es/etsi-informatica/info/72589/tfg-memoria-y-defensa/
+Tutores:
+Dr. Rodrigo Roman Castro
+Dr. Francisco Jose Jaime Rodriguez
 
 ======================================================================
-Consideraciones para generar la portada correctamente
+Descripcion del proyecto
 ======================================================================
 
-Por favor, explora los ficheros de ejemplo adjuntos en examples/
+Este Trabajo Fin de Grado estudia el uso de modelos de inteligencia
+artificial y aprendizaje automatico en sistemas de deteccion de
+intrusiones (IDS). El objetivo principal es comparar distintos modelos no
+solo por su rendimiento predictivo, sino tambien por su coste
+computacional, teniendo en cuenta metricas como el uso de CPU, la latencia
+de inferencia y el consumo de memoria.
 
-1. ¿Tienes tutor y cotutor?: main.tex está ya listo para manejar este caso, dado que suele ser el más común. Sin embargo, tienes un ejemplo de cómo generar las portadas en examples/tutor_cotutor.tex
-2. ¿Tienes solo un tutor?: Accede a examples/tutor.tex, reemplaza en main.tex la sección correspondiente desde el inicio del fichero hasta la sección "Abstract" por el contenido de examples/tutor.tex de esa misma selección.
-3. ¿Tienes dos tutores?: Accede a examples/tutor_tutor.tex, reemplaza en main.tex la sección correspondiente desde el inicio del fichero hasta la sección "Abstract" por el contenido de examples/tutor_tutor.tex de esa misma selección.
-4. ¿Tienes un tutor y un colaborador externo?: Accede a examples/tutor_colaborador.tex, reemplaza en main.tex la sección correspondiente desde el inicio del fichero hasta la sección "Abstract" por el contenido de examples/tutor_colaborador.tex de esa misma selección.
+El trabajo parte del analisis de conjuntos de datos realistas y utilizados
+en investigacion de ciberseguridad. A partir de ellos se entrenan y evaluan
+modelos de distintas familias, incluyendo ensembles de arboles, SVM,
+perceptrones multicapa y redes convolucionales 1-D. Para mejorar la
+configuracion de los modelos se emplea Optuna, con especial interes en la
+busqueda de compromisos entre precision y eficiencia mediante optimizacion
+multiobjetivo y frontera de Pareto.
+
+Ademas del rendimiento en condiciones normales, el proyecto analiza la
+robustez de los modelos frente a ataques de evasion adversaria, como FGSM
+y PGD. Con ello se busca estudiar como se degrada el comportamiento de los
+modelos cuando reciben muestras modificadas para intentar evadir la
+deteccion.
 
 ======================================================================
-Modo Impresión / Encuadernar
+Palabras clave
 ======================================================================
-Para generar una versión de tu TFG que sea amigable con la encuadernación, simplemente tienes que modificar esta línea de tu main.tex:
 
-CAMBIA: \usepackage{template/sty_files/template-TFGenglish-uma}
-POR: \usepackage[encuadernar]{template/sty_files/template-TFGenglish-uma}
+- Sistemas de deteccion de intrusiones (IDS)
+- Aprendizaje automatico
+- Internet de las Cosas (IoT)
+- Ataques adversarios
+- Eficiencia computacional
+- Frontera de Pareto
 
 ======================================================================
-Esta plantilla no hubiera sido posible sin la colaboración constante 
-del Dr. Carlos Rossi y el Dr. David Bueno Vallejo. 
-
-Si encuentras alguna errata, o consideras algún frente de mejora, 
-recuerda que puedes mandar tus comentarios a:
-
-Mario Pascual González 
-Mail: <mpascual@uma.es>
-Página Personal: <https://mariopasc.github.io/>
+Estructura principal
 ======================================================================
+
+main.tex
+  Documento principal de la memoria.
+
+sections/Desarrollo/
+  Capitulos relacionados con la metodologia, configuracion de modelos,
+  optimizacion de hiperparametros, resultados y ataques de evasion.
+
+sections/Estudio_del_arte/
+  Revision de modelos, tecnicas y conjuntos de datos utilizados.
+
+sections/Conclusiones/
+  Agradecimientos, conclusiones y lineas futuras.
+
+sections/Referencias/references.bib
+  Bibliografia utilizada por la memoria.
+
+images/
+  Figuras, graficas y recursos visuales incluidos en el documento.
+
+template/
+  Plantilla LaTeX de la UMA empleada para portada, estilo y formato.
+
+======================================================================
+Notas
+======================================================================
+
+La memoria está redactada en castellano e incluye resumen y palabras clave
+en castellano e inglés. El objetivo del repositorio es conservar el código
+fuente LaTeX, las secciones de la memoria, las referencias y las imágenes
+necesarias para reproducir el documento final.
