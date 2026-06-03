@@ -40,7 +40,7 @@ Es decir, el veneno que fabricamos para matar a un modelo específico, suele ser
 El procedimiento aplicado es el siguiente:
 
 \begin{enumerate}
-    \item \textbf{Generación (\textit{White-box}):} Los modelos diferenciables (MLP y CNN-1D) actúan como modelos sustitutos (\textit{surrogate models}) para la generación algorítmica del nuevo conjunto de tráfico de red evadido.
+    \item \textbf{Generación (\textit{White-box}):} Los modelos diferenciables (MLP y CNN-1D) actúan como modelos generadores del nuevo conjunto de tráfico de red evadido.
     \item \textbf{Evaluación Cruzada (\textit{Black-box}):} El \textit{Dataset Adversario} se introduce directamente en la fase de inferencia de los clasificadores basados en árboles y SVM.
     \item \textbf{Cuantificación del Impacto:} Se mide la degradación de las métricas de rendimiento frente al estado basal.
 \end{enumerate}
@@ -268,7 +268,7 @@ En resumen, hemos visto como un límite de perturbación de ataque pequeño, com
 
 Los \textit{datasets} perturbados con PGD y FGSM se generaron inicialmente con un límite de perturbación de $\epsilon = 0.05$. Sin embargo, resulta relevante analizar cómo varía la robustez de los modelos a medida que se incrementa dicho límite. Para ello, se ha realizado un análisis adicional sobre los \textit{datasets}, evaluando \textbf{diferentes valores de $\epsilon$}: 0.01, 0.03, 0.05, 0.075, 0.1, 0.2 y 0.5. En cada caso, se ha calculado el F1-score asociado a la clase ataque, con el objetivo de estudiar la relación entre la magnitud de la perturbación y la degradación del rendimiento de los modelos.
 
-Con este análisis se pretende identificar el valor de $\epsilon$ a partir del cual cada modelo presenta una degradación significativa. Para ello, se ha tomado como referencia el umbral $F1 = 0.5$, ya que un valor inferior indica una pérdida importante en la capacidad del modelo para detectar correctamente la clase maliciosa. En las tablas siguientes, los valores resaltados en \textbf{negrita} indican el primer punto en el que cada modelo cae por debajo de dicho umbral.
+Con este análisis se pretende identificar el valor de $\epsilon$ a partir del cual cada modelo presenta una degradación significativa. Para ello, se ha tomado como referencia el umbral $F1 = 0.5$, ya que un valor inferior indica una pérdida importante en la capacidad del modelo para detectar correctamente la clase maliciosa. En las tablas siguientes, los valores resaltados en \underline{\textbf{negrita}} indican el primer punto en el que cada modelo cae por debajo de dicho umbral.
 
 \subsection{Resultados UNSW-NB15} 
 
@@ -287,7 +287,7 @@ Con este análisis se pretende identificar el valor de $\epsilon$ a partir del c
 0.010 & 0.7290 & 0.7208 & 0.6652 & 0.7136 & 0.6677 & 0.7111 & 0.7294 \\
 0.030 & 0.7071 & 0.7202 & 0.6420 & 0.7091 & 0.6219 & 0.6851 & 0.6848 \\
 0.050 & 0.7082 & 0.6841 & 0.6411 & 0.7191 & 0.5590 & 0.7071 & 0.6765 \\
-0.075 & 0.7094 & 0.6774 & 0.6250 & 0.7020 & \textbf{0.4503} & 0.7080 & 0.6710 \\
+0.075 & 0.7094 & 0.6774 & 0.6250 & 0.7020 & \underline{\textbf{0.4503}} & 0.7080 & 0.6710 \\
 0.100 & 0.7125 & 0.6840 & 0.6015 & 0.6889 & 0.4097 & 0.7090 & 0.6680 \\
 0.200 & 0.7062 & 0.6608 & 0.5387 & 0.7181 & 0.3791 & 0.7097 & 0.6759 \\
 0.500 & 0.7112 & 0.6626 & 0.5239 & 0.7383 & 0.3811 & 0.7085 & 0.6995 \\
@@ -307,7 +307,7 @@ Con este análisis se pretende identificar el valor de $\epsilon$ a partir del c
 \midrule
 0     & 0.8892 & 0.8876 & 0.8892 & 0.8873 & 0.7976 & 0.8401 & 0.8285 \\
 0.010 & 0.7255 & 0.7287 & 0.6826 & 0.6985 & 0.7431 & 0.7321 & 0.7156 \\
-0.030 & 0.7013 & 0.6789 & 0.6688 & 0.7076 & 0.7201 & \textbf{0.4889} & 0.7034 \\
+0.030 & 0.7013 & 0.6789 & 0.6688 & 0.7076 & 0.7201 & \underline{\textbf{0.4889}} & 0.7034 \\
 0.050 & 0.7067 & 0.5639 & 0.6706 & 0.6913 & 0.6822 & 0.4581 & 0.6882 \\
 0.075 & 0.7178 & 0.6979 & 0.6710 & 0.6299 & 0.6418 & 0.4983 & 0.6846 \\
 0.100 & 0.7194 & 0.6727 & 0.6745 & 0.6496 & 0.6396 & 0.5328 & 0.6847 \\
@@ -337,7 +337,7 @@ Con este análisis se pretende identificar el valor de $\epsilon$ a partir del c
 0.075 & 0.7093 & 0.7073 & 0.6508 & 0.6874 & 0.7105 & 0.7102 & 0.7103 \\
 0.100 & 0.7084 & 0.7000 & 0.6101 & 0.7091 & 0.7145 & 0.7102 & 0.7100 \\
 0.200 & 0.7089 & 0.6983 & 0.7188 & 0.7037 & 0.7102 & 0.7102 & 0.7083 \\
-0.500 & 0.7098 & 0.7087 & \textbf{0.4985} & 0.7102 & 0.7102 & 0.7102 & 0.7137 \\
+0.500 & 0.7098 & 0.7087 & \underline{\textbf{0.4985}} & 0.7102 & 0.7102 & 0.7102 & 0.7137 \\
 \bottomrule
 \end{tabular}%
 }
@@ -383,7 +383,7 @@ En el caso de UNSW-NB15, los resultados muestran una degradación moderada del F
 0     & 0.9996 & 0.9987 & 0.9998 & 1.0000 & 0.9324 & 0.9941 & 0.9941 \\
 0.010 & 0.6736 & 0.6092 & 0.5789 & 0.5784 & 0.9437 & 0.8052 & 0.9484 \\
 0.030 & 0.7356 & 0.5764 & 0.5790 & 0.5834 & 0.7617 & 0.5243 & 0.7623 \\
-0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & \textbf{0.2217} & \textbf{0.2314} & 0.6059 \\
+0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & \underline{\textbf{0.2217}} & \underline{\textbf{0.2314}} & 0.6059 \\
 0.075 & 0.7619 & 0.5766 & 0.5786 & 0.6182 & 0.2203 & 0.1808 & 0.5887 \\
 0.100 & 0.7793 & 0.5768 & 0.5789 & 0.6119 & 0.2197 & 0.1786 & 0.6225 \\
 0.200 & 0.5790 & 0.6088 & 0.6097 & 0.5916 & 0.2155 & 0.1782 & 0.5888 \\
@@ -430,7 +430,7 @@ En el caso de UNSW-NB15, los resultados muestran una degradación moderada del F
 0     & 0.9996 & 0.9987 & 0.9998 & 1.0000 & 0.9324 & 0.9941 & 0.9941 \\
 0.010 & 0.6736 & 0.6092 & 0.5789 & 0.5784 & 0.9437 & 0.8052 & 0.9484 \\
 0.030 & 0.7356 & 0.5764 & 0.5790 & 0.5834 & 0.7617 & 0.5243 & 0.7623 \\
-0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & \textbf{0.2217} & \textbf{0.2314} & 0.6059 \\
+0.050 & 0.7620 & 0.5771 & 0.5786 & 0.6219 & \underline{\textbf{0.2217}} & \underline{\textbf{0.2314}} & 0.6059 \\
 0.075 & 0.7619 & 0.5766 & 0.5786 & 0.6182 & 0.2203 & 0.1808 & 0.5887 \\
 0.100 & 0.7793 & 0.5768 & 0.5789 & 0.6119 & 0.2197 & 0.1786 & 0.6225 \\
 0.200 & 0.5790 & 0.6088 & 0.6097 & 0.5916 & 0.2155 & 0.1782 & 0.5888 \\
@@ -478,7 +478,7 @@ En IoT-23, la caída respecto al escenario limpio es mucho más acusada que en U
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
 0     & 0.9946 & 0.9927 & 0.9955 & 0.9949 & 0.8434 & 0.9423 & 0.9361 \\
-0.010 & 0.6799 & 0.5647 & 0.6577 & \textbf{0.3210} & \textbf{0.4029} & \textbf{0.3369} & 0.8454 \\
+0.010 & 0.6799 & 0.5647 & 0.6577 & \underline{\textbf{0.3210}} & \underline{\textbf{0.4029}} & \underline{\textbf{0.3369}} & 0.8454 \\
 0.030 & 0.6425 & 0.5620 & 0.6391 & 0.4003 & 0.3612 & 0.2857 & 0.6518 \\
 0.050 & 0.6690 & 0.5517 & 0.5496 & 0.4257 & 0.2852 & 0.2861 & 0.6237 \\
 0.075 & 0.6807 & 0.5510 & 0.6003 & 0.4358 & 0.2329 & 0.2867 & 0.6239 \\
@@ -500,8 +500,8 @@ En IoT-23, la caída respecto al escenario limpio es mucho más acusada que en U
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
 0     & 0.9946 & 0.9927 & 0.9955 & 0.9949 & 0.8434 & 0.9423 & 0.9361 \\
-0.010 & 0.5548 & 0.6436 & 0.8253 & \textbf{0.3025} & \textbf{0.3217} & \textbf{0.4965} & 0.7411 \\
-0.030 & \textbf{0.4435} & 0.6053 & 0.7713 & 0.3184 & 0.3209 & 0.4768 & 0.6186 \\
+0.010 & 0.5548 & 0.6436 & 0.8253 & \underline{\textbf{0.3025}} & \underline{\textbf{0.3217}} & \underline{\textbf{0.4965}} & 0.7411 \\
+0.030 & \underline{\textbf{0.4435}} & 0.6053 & 0.7713 & 0.3184 & 0.3209 & 0.4768 & 0.6186 \\
 0.050 & 0.4459 & 0.6052 & 0.7218 & 0.3238 & 0.3066 & 0.4412 & 0.5818 \\
 0.075 & 0.4469 & 0.6118 & 0.7506 & 0.3308 & 0.2954 & 0.4406 & 0.5817 \\
 0.100 & 0.4510 & 0.6099 & 0.7504 & 0.3363 & 0.2888 & 0.4637 & 0.5781 \\
@@ -524,13 +524,13 @@ En IoT-23, la caída respecto al escenario limpio es mucho más acusada que en U
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
 0     & 0.9946 & 0.9927 & 0.9955 & 0.9949 & 0.8434 & 0.9423 & 0.9361 \\
-0.010 & 0.7322 & \textbf{0.4618} & 0.6258 & \textbf{0.4997} & 0.7548 & \textbf{0.3946} & 0.9192 \\
+0.010 & 0.7322 & \underline{\textbf{0.4618}} & 0.6258 & \underline{\textbf{0.4997}} & 0.7548 & \underline{\textbf{0.3946}} & 0.9192 \\
 0.030 & 0.5675 & 0.4086 & 0.5527 & 0.2887 & 0.7922 & 0.4104 & 0.6605 \\
 0.050 & 0.5725 & 0.3994 & 0.5433 & 0.3501 & 0.7608 & 0.3850 & 0.6488 \\
 0.075 & 0.5221 & 0.3537 & 0.6107 & 0.3290 & 0.6546 & 0.3831 & 0.6317 \\
-0.100 & \textbf{0.4931} & 0.3531 & 0.5877 & 0.3367 & 0.5737 & 0.3830 & 0.6114 \\
-0.200 & 0.4590 & 0.3066 & 0.5526 & 0.2307 & \textbf{0.4415} & 0.3826 & \textbf{0.4588} \\
-0.500 & 0.3671 & 0.3278 & \textbf{0.4360} & 0.1261 & 0.3610 & 0.3826 & 0.0817 \\
+0.100 & \underline{\textbf{0.4931}} & 0.3531 & 0.5877 & 0.3367 & 0.5737 & 0.3830 & 0.6114 \\
+0.200 & 0.4590 & 0.3066 & 0.5526 & 0.2307 & \underline{\textbf{0.4415}} & 0.3826 & \underline{\textbf{0.4588}} \\
+0.500 & 0.3671 & 0.3278 & \underline{\textbf{0.4360}} & 0.1261 & 0.3610 & 0.3826 & 0.0817 \\
 \bottomrule
 \end{tabular}%
 }
@@ -547,13 +547,13 @@ En IoT-23, la caída respecto al escenario limpio es mucho más acusada que en U
 \textbf{Límite de perturbación} & \textbf{RF} & \textbf{XGB} & \textbf{LGBM} & \textbf{CatBoost} & \textbf{SVM} & \textbf{MLP} & \textbf{CNN} \\
 \midrule
 0     & 0.9946 & 0.9927 & 0.9955 & 0.9949 & 0.8434 & 0.9423 & 0.9361 \\
-0.010 & 0.5529 & 0.5838 & 0.7368 & \textbf{0.3758} & \textbf{0.3273} & 0.5400 & 0.7410 \\
-0.030 & 0.5078 & 0.6789 & 0.7228 & 0.3322 & 0.3208 & \textbf{0.4126} & 0.6080 \\
-0.050 & 0.5977 & \textbf{0.4666} & 0.6414 & 0.4006 & 0.4115 & 0.4366 & 0.5804 \\
-0.075 & \textbf{0.4611} & 0.4123 & 0.5110 & 0.3748 & 0.4057 & 0.4201 & 0.5501 \\
-0.100 & 0.5492 & 0.4199 & \textbf{0.4765} & 0.4390 & 0.4901 & 0.4025 & 0.5360 \\
+0.010 & 0.5529 & 0.5838 & 0.7368 & \underline{\textbf{0.3758}} & \underline{\textbf{0.3273}} & 0.5400 & 0.7410 \\
+0.030 & 0.5078 & 0.6789 & 0.7228 & 0.3322 & 0.3208 & \underline{\textbf{0.4126}} & 0.6080 \\
+0.050 & 0.5977 & \underline{\textbf{0.4666}} & 0.6414 & 0.4006 & 0.4115 & 0.4366 & 0.5804 \\
+0.075 & \underline{\textbf{0.4611}} & 0.4123 & 0.5110 & 0.3748 & 0.4057 & 0.4201 & 0.5501 \\
+0.100 & 0.5492 & 0.4199 & \underline{\textbf{0.4765}} & 0.4390 & 0.4901 & 0.4025 & 0.5360 \\
 0.200 & 0.4576 & 0.4317 & 0.4569 & 0.3485 & 0.4224 & 0.3734 & 0.5026 \\
-0.500 & 0.4910 & 0.3701 & 0.4295 & 0.4782 & 0.6064 & 0.3919 & \textbf{0.4413} \\ 
+0.500 & 0.4910 & 0.3701 & 0.4295 & 0.4782 & 0.6064 & 0.3919 & \underline{\textbf{0.4413}} \\ 
 \bottomrule
 \end{tabular}%
 }

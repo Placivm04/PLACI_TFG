@@ -20,6 +20,23 @@ __pycache__/
 .ipynb_checkpoints/
 
 # =========================
+# LaTeX build / auxiliares
+# =========================
+MEMORIA_TFG/build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# =========================
 # Editor / system
 # =========================
 .vscode/

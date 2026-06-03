@@ -266,7 +266,6 @@ En este caso, se han entrenado los mismos modelos que el apartado anterior, pero
 % AQUÍ IRÍA TODO EL DESARROLLO DE LOS MODELOS
 % \subsection{Comparativa Modelos con dataset IOT-23}
 
-Tras hacer una fase de \textit{benchmarking} con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
 La tabla de los mejores hiperparámetros obtenidos para cada modelo con el \textit{dataset} IOT-23 es la siguiente:
 
@@ -295,6 +294,8 @@ La tabla de los mejores hiperparámetros obtenidos para cada modelo con el \text
     \caption{Hiperparámetros ganadores de los modelos evaluados con IOT-23}
     \label{tab:iot_best_hyperparams}
 \end{table}
+
+Tras hacer una fase de \textit{benchmarking} con los mejores candidatos de los diferentes modelos, hemos obtenido los siguientes resultados:
 
 \begin{table}[H]
     \centering
@@ -411,7 +412,7 @@ Las matrices de confusión de cada modelo son las siguientes:
 
 \section{Modelos entrenados con ToN-IoT}
 
-Una de las sospechas de los resultados obtenidos con el \textit{dataset} IOT-23 es que en este \textit{dataset} la mayoría de muestras de ataque son de escaneos horizontales de puertos, lo que hace que el modelo pueda aprender a detectar ataques simplemente con la información de los puertos, sin necesidad de aprender patrones más complejos. Para comprobar esta hipótesis, se ha entrenado el mismo proceso de entrenamiento y \textit{benchmarking} con el \textit{dataset} ToN-IoT, que es un \textit{dataset} de IoT con una mayor variedad de ataques y características.
+Una de las sospechas de los resultados obtenidos con el \textit{dataset} IOT-23 es que en el \textit{dataset} la mayoría de muestras de ataque son de escaneos horizontales de puertos, lo que hace que el modelo pueda aprender a detectar ataques simplemente con la información de los puertos, sin necesidad de aprender patrones más complejos. Para comprobar esta hipótesis, se ha entrenado el mismo proceso de entrenamiento y \textit{benchmarking} con el \textit{dataset} ToN-IoT, que es un \textit{dataset} de IoT con una mayor variedad de ataques y características.
 
 % \subsection{Comparativa Modelos con dataset ToN-IoT}
 

@@ -405,6 +405,9 @@ INPUT ./template/logos/POS-uma-logo.png
 INPUT ./template/logos/POS-etsi-logo.png
 INPUT ./template/logos/POS-etsi-logo.png
 INPUT ./template/logos/POS-etsi-logo.png
+INPUT ./sections/Conclusiones/agradecimientos.tex
+INPUT ./sections/Conclusiones/agradecimientos.tex
+INPUT sections/Conclusiones/agradecimientos.tex
 INPUT build/main.toc
 INPUT build/main.toc
 INPUT build/main.toc
