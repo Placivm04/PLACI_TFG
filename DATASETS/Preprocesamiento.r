@@ -3,48 +3,6 @@ library(readr)
 
 # Vamos a analizar los CSV's de los datasets. Miraremos cuales son los ataques que identifica
 
-# ----------------------------
-# *** DATASET CIC-IDS-2017 ***
-# ----------------------------
-
-datos_lunes <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/CIC-IDS-2017/Monday-WorkingHours.pcap_ISCX.csv")
-datos_martes <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/CIC-IDS-2017/Tuesday-WorkingHours.pcap_ISCX.csv")
-datos_miercoles <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/CIC-IDS-2017/Wednesday-workingHours.pcap_ISCX.csv")
-datos_jueves_morning <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/CIC-IDS-2017/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv")
-datos_jueves_afternoon <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/CIC-IDS-2017/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv")
-datos_viernes_morning <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/CIC-IDS-2017/Friday-WorkingHours-Morning.pcap_ISCX.csv")
-datos_viernes_afternoon_DDos <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/CIC-IDS-2017/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv")
-datos_viernes_afternoon_PortScan <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/CIC-IDS-2017/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv")
-
-# VEMOS LAS ETIQUETAS Y EL NUMERO DE MUESTRAS
-
-table(datos_lunes$Label)
-table(datos_martes$Label)
-table(datos_miercoles$Label)
-table(datos_jueves_morning$Label)
-table(datos_jueves_afternoon$Label)
-table(datos_viernes_morning$Label)
-table(datos_viernes_afternoon_DDos$Label)
-table(datos_viernes_afternoon_PortScan$Label)
-
-todos <- bind_rows(
-  lunes = datos_lunes,
-  martes = datos_martes,
-  miercoles = datos_miercoles,
-  jueves_morning = datos_jueves_morning,
-  jueves_afternoon = datos_jueves_afternoon,
-  viernes_morning = datos_viernes_morning,
-  viernes_ddos = datos_viernes_afternoon_DDos,
-  viernes_portscan = datos_viernes_afternoon_PortScan,
-  .id = "dataset"
-)
-
-tabla_completa <- todos %>%
-  count(Label, name = "Total") %>%
-  arrange(desc(Total))
-
-tabla_completa
-
 # *** DATASET NUSW-NB_15 ****
 
 datos_test_NUSW <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/NUSW-NB15/UNSW_NB15_testing-set.csv")

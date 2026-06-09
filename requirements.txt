@@ -1,0 +1,32 @@
+# Jupyter environment
+jupyter
+notebook
+jupyterlab
+ipykernel
+ipython
+
+# Data processing
+numpy
+pandas
+polars
+pyarrow
+scipy
+
+# Machine learning
+scikit-learn
+optuna
+xgboost
+lightgbm
+catboost
+tensorflow
+
+# Adversarial robustness experiments
+adversarial-robustness-toolbox
+
+# Plotting and utilities
+matplotlib
+seaborn
+plotly
+psutil
+joblib
+tqdm

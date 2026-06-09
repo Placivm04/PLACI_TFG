@@ -1,0 +1,250 @@
+Este apéndice describe los pasos necesarios para obtener el código fuente del proyecto, preparar el entorno de ejecución y repetir los experimentos presentados en la memoria. La explicación está pensada para una persona que parte de cero y que únicamente dispone del repositorio del TFG.
+
+\section{Contenido del repositorio}
+
+El repositorio se organiza en tres bloques principales:
+
+\begin{itemize}
+    \item \texttt{MEMORIA\_TFG/}: contiene la memoria en \LaTeX, las figuras utilizadas y los ficheros bibliográficos.
+    \item \texttt{DATASETS/}: contiene el script de preprocesamiento en R y los conjuntos de datos reducidos empleados por las notebooks.
+    \item \texttt{CODIGO/}: contiene las notebooks de entrenamiento, comparación de modelos, evaluación de consumo en CPU, ataques adversarios y los modelos entrenados en formato \texttt{joblib}.
+\end{itemize}
+
+Dentro de \texttt{CODIGO/} se distinguen las siguientes carpetas:
+
+\begin{itemize}
+    \item \texttt{MODELOS IT/}: entrenamiento y comparación de modelos sobre UNSW-NB15.
+    \item \texttt{MODELOS IOT/}: entrenamiento y comparación de modelos sobre IoT-23.
+    \item \texttt{MODELOS TON\_IOT/}: entrenamiento y comparación de modelos sobre ToN-IoT.
+    \item \texttt{ATAQUES\_ADVERSARIOS/}: evaluación de robustez frente a ataques FGSM y PGD.
+    \item \texttt{entrenar\_propio\_pc/}: notebooks utilizadas para medir el comportamiento de los modelos ya entrenados en CPU.
+    \item \texttt{model/}: modelos finales guardados para cada \textit{dataset}.
+\end{itemize}
+
+\section{Requisitos previos}
+
+Para reproducir los resultados se recomienda utilizar un sistema Linux o macOS. También es posible ejecutar el proyecto en Windows, aunque en ese caso se recomienda hacerlo mediante WSL, ya que las rutas y comandos de este manual están escritos con sintaxis Unix.
+
+El equipo debe tener instalado:
+
+\begin{itemize}
+    \item Python 3.12 o una versión compatible de Python 3.
+    \item R, necesario únicamente si se desea repetir el preprocesamiento desde los datos originales.
+    \item IDEs como Visual Studio Code para editar y ejecutar el código.
+    \item Jupyter Notebook o JupyterLab para ejecutar las notebooks.
+\end{itemize}
+
+Algunos entrenamientos pueden ejecutarse en CPU, pero se recomienda disponer de GPU para reducir tiempos en los modelos neuronales y en las pruebas más costosas. Las mediciones de latencia y consumo dependen del hardware, por lo que al repetir los experimentos en otro equipo pueden variar los tiempos absolutos.
+
+\section{Obtención del código fuente}
+
+Clonar el repositorio desde GitHub:
+
+\begin{verbatim}
+git clone <URL_DEL_REPOSITORIO> PLACI_TFG
+cd PLACI_TFG
+\end{verbatim}
+
+Si el código se entrega como un archivo comprimido, basta con descomprimirlo y abrir una terminal en la carpeta raíz del proyecto. La carpeta raíz es la que contiene, entre otros, los directorios \texttt{CODIGO/}, \texttt{DATASETS/} y \texttt{MEMORIA\_TFG/}.
+
+\section{Preparación del entorno Python}
+
+El repositorio incluye un entorno virtual en \texttt{CODIGO/tfg\_env/}. Si se trabaja en el mismo sistema para el que fue creado, puede activarse directamente:
+
+\begin{verbatim}
+source CODIGO/tfg_env/bin/activate
+python --version
+\end{verbatim}
+
+En el entorno utilizado para esta memoria la versión de Python era \texttt{3.12.3}. Si el entorno incluido no funciona en otro equipo, se puede crear uno nuevo desde la raíz del repositorio:
+
+\begin{verbatim}
+python3 -m venv CODIGO/tfg_env
+source CODIGO/tfg_env/bin/activate
+pip install --upgrade pip
+\end{verbatim}
+
+A continuación se instalan las dependencias principales. La forma recomendada es usar el fichero \texttt{requirements.txt} incluido en la raíz del repositorio:
+
+\begin{verbatim}
+pip install -r requirements.txt
+\end{verbatim}
+
+Este comando instalará las librerías necesarias para ejecutar el código, como Optuna, TensorFlow, Scikit-learn, entre otras. Si se prefiere, también se pueden instalar manualmente las librerías listadas en la sección de Tecnologías utilizadas de la memoria.
+
+\section{Preparación de los datos}
+
+Las notebooks del proyecto trabajan con los datos reducidos situados en:
+
+\begin{itemize}
+    \item \texttt{DATASETS/dataSets\_Reducidos/nusw-nb15/datos\_train\_NUSW\_redux.csv}
+    \item \texttt{DATASETS/dataSets\_Reducidos/nusw-nb15/datos\_test\_NUSW\_redux.csv}
+    \item \texttt{DATASETS/dataSets\_Reducidos/iot-23/datos\_IOT\_23\_preparado.csv}
+    \item \texttt{DATASETS/dataSets\_Reducidos/ton\_iot/datos\_TON\_IoT\_redux.csv}
+\end{itemize}
+
+Si estos ficheros ya están presentes, no es necesario ejecutar el preprocesamiento en R. En ese caso se puede pasar directamente a la ejecución de las notebooks.
+
+Si se desea reproducir el proceso desde los datos originales, hay que colocar los ficheros originales en las rutas esperadas por \texttt{DATASETS/Preprocesamiento.r}. El script espera la siguiente estructura:
+
+\begin{itemize}
+    \item \texttt{DATASETS/NUSW-NB15/}
+    \item \texttt{DATASETS/dataSets\_Raw/TON\_IoT/}
+    \item \texttt{DATASETS/dataSets\_Raw/IOT-23/}
+\end{itemize}
+
+El script de R utiliza rutas absolutas del equipo de desarrollo. Si se ejecuta en otra máquina, deben sustituirse esas rutas por rutas relativas al repositorio o por la ubicación local equivalente. Una vez corregidas, se ejecuta:
+
+\begin{verbatim}
+Rscript DATASETS/Preprocesamiento.r
+\end{verbatim}
+
+Este paso genera los ficheros reducidos en \texttt{DATASETS/dataSets\_Reducidos/}. Para IoT-23, la notebook \texttt{CODIGO/MODELOS IOT/rf\_train\_iot.ipynb} también contiene celdas de preparación que construyen el fichero final \texttt{datos\_IOT\_23\_preparado.csv} a partir de las capturas reducidas.
+
+\section{Reproducción de los entrenamientos}
+
+Los experimentos de entrenamiento se organizan por \textit{dataset}. En cada carpeta hay una notebook por familia de modelos. El procedimiento general es:
+
+Es importante saber que en esta parte no se estableció una semilla común para todos los modelos, por lo que como Optuna realiza una búsqueda basada en optimización bayesiana, los resultados pueden variar ligeramente entre ejecuciones. Sin embargo, la tendencia general debería mantenerse. 
+
+Para cada notebook, el proceso es el siguiente:
+
+\begin{enumerate}
+    \item Abrir la notebook correspondiente.
+    \item Seleccionar el kernel \texttt{TFG IDS}.
+    \item Ejecutar las celdas en orden desde el principio hasta el final.
+    \item Revisar los ficheros \texttt{csv} generados con los resultados de Optuna y las gráficas de frontera de Pareto.
+    \item Ejecutar la notebook de comparación del \textit{dataset} para obtener las métricas finales agregadas.
+\end{enumerate}
+
+Para UNSW-NB15 se usan las notebooks de \texttt{CODIGO/MODELOS IT/}:
+
+\begin{itemize}
+    \item \texttt{RF\_train.ipynb}
+    \item \texttt{XGBoost\_train.ipynb}
+    \item \texttt{LightGBM\_train.ipynb}
+    \item \texttt{CatBoost\_train.ipynb}
+    \item \texttt{svm\_train.ipynb}
+    \item \texttt{mlp\_train.ipynb}
+    \item \texttt{cnn1d\_train.ipynb}
+    \item \texttt{lstm.train.ipynb}
+    \item \texttt{comparativaTodosModelos.ipynb}
+\end{itemize}
+
+Para IoT-23 se usan las notebooks de \texttt{CODIGO/MODELOS IOT/}:
+
+\begin{itemize}
+    \item \texttt{rf\_train\_iot.ipynb}
+    \item \texttt{xgboost\_iot.ipynb}
+    \item \texttt{lightgbm\_train\_iot.ipynb}
+    \item \texttt{catboost\_train\_iot.ipynb}
+    \item \texttt{svm\_iot\_train.ipynb}
+    \item \texttt{mlp\_iot\_train.ipynb}
+    \item \texttt{cnn\_iot\_train.ipynb}
+    \item \texttt{lstm\_iot\_train.ipynb}
+    \item \texttt{comparativaModelos.ipynb}
+\end{itemize}
+
+Para ToN-IoT se usan las notebooks de \texttt{CODIGO/MODELOS TON\_IOT/}:
+
+\begin{itemize}
+    \item \texttt{rf\_ton\_iot.ipynb}
+    \item \texttt{xgboost\_ton\_iot.ipynb}
+    \item \texttt{lightgbm\_ton\_iot.ipynb}
+    \item \texttt{catboost\_ton\_iot.ipynb}
+    \item \texttt{svm\_ton\_iot.ipynb}
+    \item \texttt{mlp\_ton\_iot.ipynb}
+    \item \texttt{cnn\_ton\_iot.ipynb}
+    \item \texttt{comparativaModelosTON.ipynb}
+\end{itemize}
+
+Las notebooks de entrenamiento realizan la búsqueda de hiperparámetros con Optuna, evalúan las combinaciones candidatas y guardan tablas de resultados en formato \texttt{csv}. Algunos ejemplos son:
+
+\begin{itemize}
+    \item \texttt{rf\_trials\_results\_cv.csv}
+    \item \texttt{xgboost\_iot23\_trials\_results\_cv.csv}
+    \item \texttt{catboost\_ton\_trials\_results\_cv.csv}
+\end{itemize}
+
+Los nombres exactos pueden variar ligeramente entre notebooks, pero se generan en la propia carpeta desde la que se ejecuta cada experimento.
+
+\section{Uso de modelos ya entrenados}
+
+Si no se desea repetir todo el entrenamiento, se pueden usar los modelos finales incluidos en \texttt{CODIGO/model/}. Las rutas son:
+
+\begin{itemize}
+    \item \texttt{CODIGO/model/unsw-nb15/}: modelos entrenados para UNSW-NB15.
+    \item \texttt{CODIGO/model/iot-23/}: modelos entrenados para IoT-23.
+    \item \texttt{CODIGO/model/ton-iot/}: modelos entrenados para ToN-IoT.
+\end{itemize}
+
+Cada carpeta contiene modelos guardados con nombres como \texttt{rf\_unsw.joblib}, \texttt{xgb\_iot23.joblib}, \texttt{lgbm\_ton\_iot.joblib}, \texttt{mlp\_iot23.joblib} o \texttt{cnn\_ton\_iot.joblib}. Estos ficheros permiten repetir las comparativas sin volver a entrenar.
+
+Para medir los modelos ya guardados en CPU se pueden ejecutar:
+
+\begin{itemize}
+    \item \texttt{CODIGO/entrenar\_propio\_pc/comparativa\_cpu\_unswnb15.ipynb}
+    \item \texttt{CODIGO/entrenar\_propio\_pc/comparativa\_cpu\_iot23.ipynb}
+    \item \texttt{CODIGO/entrenar\_propio\_pc/comparativa\_cpu\_toniot.ipynb}
+\end{itemize}
+
+Estas notebooks cargan los \texttt{joblib}, preparan los datos de test y calculan métricas como \textit{accuracy}, F1, latencia de inferencia y consumo de recursos. Esta es la vía más rápida para comprobar los resultados finales sin repetir la búsqueda completa de hiperparámetros.
+
+\section{Reproducción de los ataques adversarios}
+
+La evaluación de ataques de evasión se encuentra en \texttt{CODIGO/ATAQUES\_ADVERSARIOS/}. Para ejecutarla es necesario tener instaladas las dependencias de aprendizaje automático y la librería \texttt{adversarial-robustness-toolbox}.
+
+Las notebooks principales son:
+
+\begin{itemize}
+    \item \texttt{ataques-UNSW-NB15.ipynb}
+    \item \texttt{ataques\_IOT-23.ipynb}
+    \item \texttt{ataques\_TON-IOT.ipynb}
+\end{itemize}
+
+También existen versiones con prefijo \texttt{for\_ataques}, usadas como notebooks auxiliares para preparar y comprobar la carga de modelos antes de ejecutar las pruebas completas.
+
+El procedimiento recomendado es:
+
+\begin{enumerate}
+    \item Comprobar que los modelos entrenados existen en \texttt{CODIGO/model/}.
+    \item Abrir la notebook del \textit{dataset} que se quiere evaluar.
+    \item Ejecutar las celdas de carga de datos y modelos.
+    \item Ejecutar las celdas de generación de ejemplos adversarios FGSM y PGD.
+    \item Ejecutar las celdas de evaluación para comparar métricas limpias frente a métricas bajo ataque.
+\end{enumerate}
+
+Los ataques se generan principalmente sobre modelos neuronales y después se evalúa la degradación en distintos clasificadores. Las métricas que deben compararse con las recogidas en la memoria son \textit{accuracy}, F1 y \textit{recall}. Las figuras finales incluidas en la memoria se encuentran en:
+
+\begin{itemize}
+    \item \texttt{MEMORIA\_TFG/images/ATAQUES\_ADVERSARIOS/}
+    \item \texttt{MEMORIA\_TFG/images/ATAQUES\_ADVERSARIOS\_2/}
+\end{itemize}
+
+\section{Compilación de la memoria}
+
+Para compilar la memoria hay que situarse en \texttt{MEMORIA\_TFG/}. El documento principal es \texttt{main.tex}. La plantilla usa \texttt{fontspec}, por lo que debe compilarse con XeLaTeX o LuaLaTeX. Una secuencia habitual de compilación es:
+
+\begin{verbatim}
+cd MEMORIA_TFG
+xelatex main.tex
+bibtex main
+xelatex main.tex
+xelatex main.tex
+\end{verbatim}
+
+La plantilla utiliza recursos locales de \texttt{template/}, imágenes de \texttt{images/} y la bibliografía situada en \texttt{sections/Referencias/references.bib}. Si el compilador informa de referencias o citas pendientes, se debe repetir \texttt{xelatex main.tex}.
+
+\section{Comprobaciones finales}
+
+Para comprobar que la reproducción se ha realizado correctamente, se recomienda verificar:
+
+\begin{itemize}
+    \item Que las notebooks cargan los \texttt{csv} desde \texttt{DATASETS/dataSets\_Reducidos/} sin errores de ruta.
+    \item Que el kernel de Jupyter corresponde al entorno donde se instalaron las dependencias.
+    \item Que las notebooks de comparación muestran métricas de F1 y \textit{accuracy} similares a las tablas de la memoria.
+    \item Que los tiempos de inferencia tienen el mismo orden relativo entre modelos, aunque no coincidan exactamente con los de la memoria.
+    \item Que las notebooks de ataques muestran una degradación de prestaciones al aumentar la intensidad de FGSM o PGD.
+\end{itemize}
+
+Las diferencias pequeñas son normales debido a la aleatoriedad de algunos entrenamientos, a la versión concreta de las librerías y al hardware empleado. Si se desea reducir esa variabilidad, conviene mantener las semillas aleatorias fijadas en las notebooks y ejecutar todos los experimentos con las mismas versiones de Python y de las dependencias indicadas en este manual.

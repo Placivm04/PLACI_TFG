@@ -1,12 +1,18 @@
 \chapter{Análisis de Modelos y Búsqueda de Hiperparámetros}
 
-En este sección se presentan los resultados obtenidos tras la aplicación de Optuna para la optimización de hiperparámetros en los modelos entrenados con los \textit{datasets} mencionados en la sección anterior. Se ha seguido un enfoque de optimización multiobjetivo, buscando un equilibrio entre la precisión del modelo (medida a través del F1-Score) y su eficiencia (medida a través de la latencia de inferencia).
+En este capítulo se presentan los resultados experimentales obtenidos tras el entrenamiento, optimización y evaluación de los modelos considerados en este trabajo. Primero se describen los procedimientos seguidos para la optimización de hiperparámetros estructurales y posteriormente se muestran los resultados obtenidos para cada modelo entrenado con los \textit{datasets}. Se incluyen comparativas globales de rendimiento, curvas ROC y matrices de confusión para cada modelo para observar mejor la comparativa.
 
-El procedimiento seguido es el siguiente:
+\section{Metodología experimental}
+
+En esta sección se describe la metodología seguida para entrenar, optimizar y evaluar los modelos considerados en este trabajo. El objetivo, como hemos visto, no es únicamente comparar los modelos en términos de rendimiento predictivo, sino también analizar su eficiencia computacional durante la fase de inferencia, lo que define una \textbf{búsqueda multiobjetivo} entre precisión y eficiencia.
+
+\subsection{Flujo de trabajo experimental}
+
+Se ha seguido un flujo de trabajo común para todos los modelos y datasets:
 
 \begin{enumerate}
-    \item Para cada modelo, se ha definido un espacio de búsqueda de hiperparámetros específico, adaptado a las características de cada algoritmo.
-    \item Se ha utilizado validación cruzada estratificada para evaluar el rendimiento de cada configuración de hiperparámetros, asegurando una evaluación robusta y representativa del modelo.
+    \item Para cada modelo, se ha definido un espacio de búsqueda de hiperparámetros específico, adaptado a sus características.
+    \item Se ha utilizado validación cruzada para evaluar el rendimiento de cada configuración de hiperparámetros, asegurando una evaluación robusta y representativa del modelo.
     \item Se han optimizado simultáneamente dos objetivos: el F1-Score (para maximizar la precisión) y la latencia de inferencia (para minimizar el tiempo de respuesta).
     \item Se ha identificado la frontera de Pareto para cada modelo, lo que permite visualizar el compromiso entre precisión y eficiencia y seleccionar configuraciones que se ajusten a diferentes necesidades.
     \item Finalmente, se han evaluado los candidatos seleccionados de la frontera de Pareto en el conjunto de test para obtener una comparativa final de su rendimiento y latencia.
@@ -14,26 +20,52 @@ El procedimiento seguido es el siguiente:
 
 Para la evaluación final de los modelos seleccionados se utilizó un procedimiento de \textit{benchmarking} instrumentado. En primer lugar, el conjunto de test se dividió en bloques o paquetes de muestras, de forma que la inferencia no se realizó mediante una única llamada global al modelo, sino procesando secuencialmente dichos bloques. Esta decisión permitió monitorizar el proceso durante la predicción y obtener métricas adicionales de consumo, como el incremento de memoria RAM.
 
-% La latencia se calculó a partir del tiempo total necesario para procesar todos los bloques del conjunto de test, dividiendo dicho tiempo entre el número total de muestras evaluadas. Por tanto, la latencia reportada representa el tiempo medio de clasificación por muestra dentro de una ejecución monitorizada. De forma complementaria, el throughput se obtuvo dividiendo el número total de muestras entre el tiempo total de inferencia.
-
-% Este procedimiento permite evaluar no solo la velocidad de predicción del modelo, sino también su comportamiento en términos de uso de recursos durante la ejecución. No obstante, al incluir monitorización de memoria y procesamiento por bloques, las métricas temporales obtenidas reflejan el rendimiento del benchmark instrumentado y pueden diferir de una medición de inferencia pura realizada mediante una única llamada a \texttt{predict}, como veremos posteriormente.
+\subsection{Optimización con Optuna}
 
 Antes de presentar los resultados finales, es importante señalar que el proceso completo de selección de hiperparámetros se recoge en el Apéndice~\ref{apendice}. En dicho apéndice se incluyen las fronteras de Pareto y las tablas completas de candidatos evaluados para cada combinación de modelo y \textit{dataset}.
 
-De forma general, las fronteras de Pareto obtenidas muestran un comportamiento de saturación en gran parte de los modelos evaluados (forma exponencial), lo que indica que a partir de cierto punto, las mejoras en F1-Score se logran a costa de incrementos significativos en la latencia.
-No obstante, este patrón no aparece con la misma claridad en todos los modelos. En algunos casos, como SVM ~\ref{fig:pareto_svm} en UNSW-NB15, la frontera de Pareto no muestra una curva de saturación tan definida. En este caso, los puntos aparecen más agrupados y las diferencias de latencia entre configuraciones son muy pequeñas, por lo que no se aprecia una relación tan evidente entre el aumento del rendimiento y el coste temporal. Este comportamiento puede deberse a varios factores, como la propia naturaleza del modelo, la distribución de los datos del \textit{dataset}, el rango de hiperparámetros explorado por Optuna o la escasa variación de latencia entre candidatos.
+La optimización de hiperparámetros no se ha limitado a una selección manual de configuraciones, sino que se ha realizado de forma sistemática para cada combinación de modelo y \textit{dataset}. En total, se ha aplicado el proceso de búsqueda sobre siete familias de modelos y tres conjuntos de datos distintos, generando para cada caso una frontera de Pareto basada en los objetivos contrapuestos de maximizar el F1-Score y minimizar la latencia de inferencia. 
+
+Este enfoque permite poner en valor el compromiso central del trabajo: un modelo no se considera mejor únicamente por alcanzar una mayor puntuación predictiva, sino por ofrecer una relación adecuada entre calidad de detección y coste computacional. Por este motivo, tras la fase de búsqueda se evaluaron distintos candidatos de la frontera de Pareto en el conjunto de test, seleccionando finalmente aquellos que mantenían un F1-Score elevado sin introducir incrementos de latencia desproporcionados.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/PARETO_XGBOOST.png}
+        \caption{XGBoost}
+        \label{fig:pareto_xgboost_0}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/PARETO_SVM.png}
+        \caption{SVM}
+        \label{fig:pareto_svm_0}
+    \end{subfigure}
+
+    \caption{Fronteras de Pareto para XGBoost y SVM}
+    \label{fig:pareto_xgboost_svm}
+\end{figure}
+
+La Figura~\ref{fig:pareto_xgboost_svm}, imágenes recogidas del Apéndice~\ref{apendice}, muestra dos comportamientos representativos observados durante la optimización. En el caso de XGBoost, se aprecia una tendencia de saturación (curva exponencial): las primeras mejoras en F1-Score se obtienen con un coste temporal reducido, pero a partir de cierto punto las mejoras predictivas son cada vez menores frente al aumento de latencia. Este tipo de comportamiento aparece en la mayoría de los modelos analizados.
+
+Por el contrario, algunas gráficas, como la que vemos en la Figura ~\ref{fig:pareto_svm_0} muestran una frontera de Pareto menos marcada. Los puntos aparecen más agrupados y las diferencias de latencia entre configuraciones son muy pequeñas, por lo que no se observa una curva de saturación tan clara. En este caso, la elección del candidato depende en mayor medida del F1-Score, ya que el coste temporal apenas varía entre las configuraciones evaluadas.
+
+Esta comparación permite observar que el proceso de optimización no produce siempre el mismo tipo de frontera. En algunos modelos existe un compromiso evidente entre rendimiento y latencia, mientras que en otros la variación de coste computacional es tan reducida que la frontera resulta menos expresiva. Por ello, la selección final de candidatos se ha realizado mediante una observación conjunta de las métricas, y no aplicando una regla automática basada únicamente en el F1-Score máximo.
 
 La elección del \textbf{candidato ganador} se ha realizado mediante una observación conjunta de la frontera de Pareto. No se ha seleccionado siempre el candidato con mayor F1-score, sino aquel que ofrecía el mejor equilibrio entre F1-score y latencia.
 
 \section{Optimización de hiperparámetros estructurales}
 
-El ajuste de hiperparámetros se centra específicamente en aquellos que determinan la \textbf{estructura del modelo}. Los hiperparámetros estructurales influyen directamente en la complejidad computacional, el número de operaciones necesarias para generar una predicción y el tamaño final del modelo.
+El ajuste de hiperparámetros con Optuna se centra específicamente en aquellos que determinan la \textbf{estructura del modelo}. Los hiperparámetros estructurales influyen directamente en la complejidad computacional, el número de operaciones necesarias para generar una predicción y el tamaño final del modelo.
 
 A diferencia de otros hiperparámetros relacionados con el proceso de entrenamiento (como la tasa de aprendizaje o el optimizador), los \textbf{hiperparámetros estructurales determinan la arquitectura final del modelo} y, por tanto, pueden influir de forma directa o relevante en su coste en tiempo de ejecución una vez desplegado.
 
 A continuación, se describen los hiperparámetros estructurales más relevantes para cada uno de los modelos considerados en este trabajo.
 
-\subsubsection{Random Forest}
+\subsection{Random Forest}
 
 En el caso de Random Forest, el coste de inferencia depende principalmente de:
 
@@ -42,7 +74,7 @@ En el caso de Random Forest, el coste de inferencia depende principalmente de:
     \item \textbf{max\_depth}: profundidad máxima de cada árbol. Árboles más profundos implican más comparaciones por predicción.
 \end{itemize}
 
-\subsubsection{XGBoost}
+\subsection{XGBoost}
 
 En XGBoost, la inferencia consiste en recorrer secuencialmente todos los árboles entrenados y sumar sus contribuciones. Los hiperparámetros estructurales más relevantes son:
 
@@ -51,7 +83,7 @@ En XGBoost, la inferencia consiste en recorrer secuencialmente todos los árbole
     \item \textbf{max\_depth}: profundidad máxima de cada árbol.
 \end{itemize}
 
-\subsubsection{LightGBM}
+\subsection{LightGBM}
 
 En LightGBM, el coste de inferencia también está influenciado por:
 \begin{itemize}
@@ -60,7 +92,7 @@ En LightGBM, el coste de inferencia también está influenciado por:
     \item \textbf{num\_leaves}: número máximo de hojas por árbol, que afecta la complejidad del modelo y el número de comparaciones necesarias para cada predicción.
 \end{itemize}
 
-\subsubsection{CatBoost}
+\subsection{CatBoost}
 
 En CatBoost, los hiperparámetros estructurales que afectan el coste de inferencia son:
 
@@ -70,7 +102,7 @@ En CatBoost, los hiperparámetros estructurales que afectan el coste de inferenc
 \end{itemize}
 
 
-\subsubsection{Support Vector Machine (SVM)}
+\subsection{Support Vector Machine (SVM)}
 
 Para SVM, el coste de inferencia depende principalmente del tipo de \textit{kernel} utilizado. En este trabajo se prioriza el uso de:
 
@@ -78,7 +110,7 @@ Para SVM, el coste de inferencia depende principalmente del tipo de \textit{kern
     \item \textbf{C}: parámetro de regularización que puede influir en la complejidad del modelo, aunque su impacto en la inferencia es menor que el tipo de \textit{kernel}.
 \end{itemize}
 
-\subsubsection{Multilayer Perceptron (MLP)}
+\subsection{Multilayer Perceptron (MLP)}
 
 En redes MLP, el coste de inferencia está directamente relacionado con el número total de pesos del modelo. Los hiperparámetros estructurales clave son:
 
@@ -97,7 +129,7 @@ En redes MLP, el coste de inferencia está directamente relacionado con el núme
 % \end{itemize}
 
 
-\subsubsection{Convolutional Neural Networks (CNN 1D)}
+\subsection{Convolutional Neural Networks (CNN 1D)}
 
 En las CNN 1D utilizadas en este trabajo, los hiperparámetros estructurales más relevantes son:
 
@@ -114,7 +146,7 @@ En las CNN 1D utilizadas en este trabajo, los hiperparámetros estructurales má
 % AQUÍ IRÍA TODO EL DESARROLLO DE LOS MODELOS
 % \subsection{Comparativa Modelos con dataset UNSW-NB15}
 
-En esta sección se presetan los resultados obtenidos tras la optimización de hiperparámetros estructurales para cada modelo entrenado con el \textit{dataset} UNSW-NB15. Se muestra la configuración ganadora de cada modelo, seguida de una comparativa global de \textit{benchmarking}, además de la curva ROC y las matrices de confusión correspondientes a cada modelo.
+En esta sección se presentan los resultados obtenidos tras la optimización de hiperparámetros estructurales para cada modelo entrenado con el \textit{dataset} UNSW-NB15. Se muestra la configuración ganadora de cada modelo, seguida de una comparativa global de \textit{benchmarking}, además de la curva ROC y las matrices de confusión correspondientes a cada modelo.
 La combinación de hiperparámetros ganadores para cada modelo se muestra en la siguiente tabla:
 
 \begin{table}[H]
