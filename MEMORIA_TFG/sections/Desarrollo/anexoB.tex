@@ -31,7 +31,7 @@ El equipo debe tener instalado:
     \item Python 3.12 o una versión compatible de Python 3.
     \item R, necesario únicamente si se desea repetir el preprocesamiento desde los datos originales.
     \item IDEs como Visual Studio Code para editar y ejecutar el código.
-    \item Jupyter Notebook o JupyterLab para ejecutar las notebooks.
+    \item Jupyter Notebook, JupyterLab para ejecutar las notebooks o la extensión de Jupyter en Visual Studio Code.
 \end{itemize}
 
 Algunos entrenamientos pueden ejecutarse en CPU, pero se recomienda disponer de GPU para reducir tiempos en los modelos neuronales y en las pruebas más costosas. Las mediciones de latencia y consumo dependen del hardware, por lo que al repetir los experimentos en otro equipo pueden variar los tiempos absolutos.
@@ -41,8 +41,8 @@ Algunos entrenamientos pueden ejecutarse en CPU, pero se recomienda disponer de 
 Clonar el repositorio desde GitHub:
 
 \begin{verbatim}
-git clone <URL_DEL_REPOSITORIO> PLACI_TFG
-cd PLACI_TFG
+git clone <URL_DEL_REPOSITORIO> PROYECTO_TFG
+cd PROYECTO_TFG
 \end{verbatim}
 
 Si el código se entrega como un archivo comprimido, basta con descomprimirlo y abrir una terminal en la carpeta raíz del proyecto. La carpeta raíz es la que contiene, entre otros, los directorios \texttt{CODIGO/}, \texttt{DATASETS/} y \texttt{MEMORIA\_TFG/}.
@@ -103,7 +103,7 @@ Este paso genera los ficheros reducidos en \texttt{DATASETS/dataSets\_Reducidos/
 
 \section{Reproducción de los entrenamientos}
 
-Los experimentos de entrenamiento se organizan por \textit{dataset}. En cada carpeta hay una notebook por familia de modelos. El procedimiento general es:
+Los experimentos de entrenamiento se organizan por \textit{dataset}. En cada carpeta hay una notebook por familia de modelos.
 
 Es importante saber que en esta parte no se estableció una semilla común para todos los modelos, por lo que como Optuna realiza una búsqueda basada en optimización bayesiana, los resultados pueden variar ligeramente entre ejecuciones. Sin embargo, la tendencia general debería mantenerse. 
 
@@ -111,7 +111,6 @@ Para cada notebook, el proceso es el siguiente:
 
 \begin{enumerate}
     \item Abrir la notebook correspondiente.
-    \item Seleccionar el kernel \texttt{TFG IDS}.
     \item Ejecutar las celdas en orden desde el principio hasta el final.
     \item Revisar los ficheros \texttt{csv} generados con los resultados de Optuna y las gráficas de frontera de Pareto.
     \item Ejecutar la notebook de comparación del \textit{dataset} para obtener las métricas finales agregadas.
@@ -127,7 +126,6 @@ Para UNSW-NB15 se usan las notebooks de \texttt{CODIGO/MODELOS IT/}:
     \item \texttt{svm\_train.ipynb}
     \item \texttt{mlp\_train.ipynb}
     \item \texttt{cnn1d\_train.ipynb}
-    \item \texttt{lstm.train.ipynb}
     \item \texttt{comparativaTodosModelos.ipynb}
 \end{itemize}
 
@@ -141,7 +139,6 @@ Para IoT-23 se usan las notebooks de \texttt{CODIGO/MODELOS IOT/}:
     \item \texttt{svm\_iot\_train.ipynb}
     \item \texttt{mlp\_iot\_train.ipynb}
     \item \texttt{cnn\_iot\_train.ipynb}
-    \item \texttt{lstm\_iot\_train.ipynb}
     \item \texttt{comparativaModelos.ipynb}
 \end{itemize}
 
@@ -188,11 +185,13 @@ Para medir los modelos ya guardados en CPU se pueden ejecutar:
     \item \texttt{CODIGO/entrenar\_propio\_pc/comparativa\_cpu\_toniot.ipynb}
 \end{itemize}
 
-Estas notebooks cargan los \texttt{joblib}, preparan los datos de test y calculan métricas como \textit{accuracy}, F1, latencia de inferencia y consumo de recursos. Esta es la vía más rápida para comprobar los resultados finales sin repetir la búsqueda completa de hiperparámetros.
+Estas notebooks cargan los \texttt{joblib}, preparan los datos de test y calculan métricas como la latencia y el \textit{throughput} en CPU. Las métricas obtenidas pueden compararse con las tablas de la memoria, aunque es normal que los tiempos absolutos varíen debido a las diferencias de hardware.
 
 \section{Reproducción de los ataques adversarios}
 
 La evaluación de ataques de evasión se encuentra en \texttt{CODIGO/ATAQUES\_ADVERSARIOS/}. Para ejecutarla es necesario tener instaladas las dependencias de aprendizaje automático y la librería \texttt{adversarial-robustness-toolbox}.
+
+En esta parte sí se establecieron semillas fijas para los ataques, por lo que los resultados deberían ser más reproducibles.
 
 Las notebooks principales son:
 
@@ -201,8 +200,6 @@ Las notebooks principales son:
     \item \texttt{ataques\_IOT-23.ipynb}
     \item \texttt{ataques\_TON-IOT.ipynb}
 \end{itemize}
-
-También existen versiones con prefijo \texttt{for\_ataques}, usadas como notebooks auxiliares para preparar y comprobar la carga de modelos antes de ejecutar las pruebas completas.
 
 El procedimiento recomendado es:
 
@@ -214,37 +211,4 @@ El procedimiento recomendado es:
     \item Ejecutar las celdas de evaluación para comparar métricas limpias frente a métricas bajo ataque.
 \end{enumerate}
 
-Los ataques se generan principalmente sobre modelos neuronales y después se evalúa la degradación en distintos clasificadores. Las métricas que deben compararse con las recogidas en la memoria son \textit{accuracy}, F1 y \textit{recall}. Las figuras finales incluidas en la memoria se encuentran en:
-
-\begin{itemize}
-    \item \texttt{MEMORIA\_TFG/images/ATAQUES\_ADVERSARIOS/}
-    \item \texttt{MEMORIA\_TFG/images/ATAQUES\_ADVERSARIOS\_2/}
-\end{itemize}
-
-\section{Compilación de la memoria}
-
-Para compilar la memoria hay que situarse en \texttt{MEMORIA\_TFG/}. El documento principal es \texttt{main.tex}. La plantilla usa \texttt{fontspec}, por lo que debe compilarse con XeLaTeX o LuaLaTeX. Una secuencia habitual de compilación es:
-
-\begin{verbatim}
-cd MEMORIA_TFG
-xelatex main.tex
-bibtex main
-xelatex main.tex
-xelatex main.tex
-\end{verbatim}
-
-La plantilla utiliza recursos locales de \texttt{template/}, imágenes de \texttt{images/} y la bibliografía situada en \texttt{sections/Referencias/references.bib}. Si el compilador informa de referencias o citas pendientes, se debe repetir \texttt{xelatex main.tex}.
-
-\section{Comprobaciones finales}
-
-Para comprobar que la reproducción se ha realizado correctamente, se recomienda verificar:
-
-\begin{itemize}
-    \item Que las notebooks cargan los \texttt{csv} desde \texttt{DATASETS/dataSets\_Reducidos/} sin errores de ruta.
-    \item Que el kernel de Jupyter corresponde al entorno donde se instalaron las dependencias.
-    \item Que las notebooks de comparación muestran métricas de F1 y \textit{accuracy} similares a las tablas de la memoria.
-    \item Que los tiempos de inferencia tienen el mismo orden relativo entre modelos, aunque no coincidan exactamente con los de la memoria.
-    \item Que las notebooks de ataques muestran una degradación de prestaciones al aumentar la intensidad de FGSM o PGD.
-\end{itemize}
-
-Las diferencias pequeñas son normales debido a la aleatoriedad de algunos entrenamientos, a la versión concreta de las librerías y al hardware empleado. Si se desea reducir esa variabilidad, conviene mantener las semillas aleatorias fijadas en las notebooks y ejecutar todos los experimentos con las mismas versiones de Python y de las dependencias indicadas en este manual.
+Los notebooks \texttt{for\_ataques\_XXX} son los notebooks que hemos usado para probar diferentes límites de perturbación en los ataques y ver la degradación de las métricas con la modificación estos. El procedimiento para ejecutar estas notebooks es el mismo que el descrito anteriormente, pero con la particularidad de que en estas notebooks se pueden modificar los límites de perturbación.

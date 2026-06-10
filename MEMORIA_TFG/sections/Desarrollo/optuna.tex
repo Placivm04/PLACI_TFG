@@ -104,13 +104,6 @@ Otra de las ventajas de este framework es que nos permite establecer una \textbf
 
 En un problema multiobjetivo no existe necesariamente una única solución óptima, sino un conjunto de soluciones no dominadas que representan distintos compromisos entre los objetivos. Este conjunto se conoce como \textbf{conjunto Pareto-óptimo}, y su representación en el espacio de objetivos constituye la \textbf{frontera de Pareto}~\cite{deb2001multiobjective}.
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/OPTUNA.png}
-%     \caption{Visualización de la optimización con Optuna}
-%     \label{fig:optuna}
-% \end{figure}
-
 Para estructurar la búsqueda de hiperparámetros y garantizar una evaluación justa del compromiso entre rendimiento y tiempo de inferencia, en este proyecto se ha diseñado el flujo de trabajo descrito en el Algoritmo~\ref{alg:optuna_cv_multiobjetivo}.
 Aunque cada arquitectura tiene un espacio de hiperparámetros específico, la estrategia de evaluación se mantiene constante: cada configuración se evalúa mediante validación cruzada estratificada ~\cite{sklearn_stratifiedkfold} y se optimiza simultáneamente el rendimiento predictivo y el coste de inferencia.
 

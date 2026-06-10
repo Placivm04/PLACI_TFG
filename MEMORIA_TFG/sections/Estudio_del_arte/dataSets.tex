@@ -5,65 +5,6 @@ En particular, dado que este trabajo no se centra únicamente en la capacidad de
 
 Por este motivo, en este proyecto se han seleccionado \textit{datasets} ampliamente utilizados en la literatura científica, que cubren diferentes entornos y tipologías de ataque, y que ofrecen un equilibrio adecuado entre realismo, diversidad y viabilidad experimental. Esta elección permite evaluar de forma comparativa el comportamiento de distintos modelos de aprendizaje automático y profundo.
 
-% \subsection{CIC-IDS-2017 dataset}
-
-% \subsubsection{Motivación para el uso del dataset}
-
-% El conjunto de datos CIC-IDS-2017 ha sido seleccionado como uno de los datasets principales para la evaluación experimental de los modelos de detección de intrusiones propuestos en este trabajo. Publicado por el \emph{Canadian Institute for Cybersecurity (CIC)}, este dataset se ha consolidado como una referencia en la literatura reciente sobre sistemas de detección de intrusiones basados en técnicas de aprendizaje automático y aprendizaje profundo.
-
-% La elección de CIC-IDS-2017 se justifica, en primer lugar, por el elevado grado de realismo de los datos, ya que el tráfico fue generado en un entorno de red que simula el comportamiento de una infraestructura corporativa real.
-
-% Asimismo, el uso extensivo de CIC-IDS-2017 en trabajos previos permite comparar de forma directa los resultados obtenidos en este estudio con los de la literatura existente, reforzando la validez experimental de las conclusiones. A pesar de presentar limitaciones conocidas, como el desbalanceo entre clases o la presencia de ataques con muy baja frecuencia, estas características reflejan problemas habituales en entornos reales de ciberseguridad y constituyen un reto adicional para la evaluación de los modelos.
-
-% \subsubsection{Estructura del dataset}
-
-% El dataset CIC-IDS-2017 está organizado en varios archivos CSV, cada uno de los cuales corresponde a un día concreto de actividad en la red y a un conjunto específico de escenarios de ataque. Cada registro del dataset representa un flujo de red, descrito mediante un conjunto de características extraídas a nivel de flujo, lo que facilita su uso con modelos de aprendizaje automático aplicados a datos tabulares.
-
-% Entre las características incluidas se encuentran métricas relacionadas con la duración del flujo, el número y tamaño de los paquetes enviados y recibidos, estadísticas temporales, información sobre flags TCP y otros atributos derivados del comportamiento del tráfico. Además, el dataset incluye una etiqueta denominada \texttt{Label}, que identifica si el flujo corresponde a tráfico benigno o a un tipo concreto de ataque, permitiendo abordar tanto problemas de clasificación binaria como multiclase.
-
-% \subsubsection{Distribución de ataques}
-
-% La distribución de clases del dataset CIC-IDS-2017 se caracteriza por un fuerte desbalanceo entre el tráfico benigno y el tráfico malicioso, así como por una distribución heterogénea entre los distintos tipos de ataque. En la Tabla~\ref{tab:cicids2017-ataques} se presenta el número total de flujos correspondiente a cada clase, considerando el conjunto completo del dataset.
-
-% \begin{table}[htbp]
-%   \centering
-%   \caption{Distribución de clases y tipos de ataque en el dataset CIC-IDS-2017}
-%   \label{tab:cicids2017-ataques}
-%   \begin{tabular}{|l|r|}
-%     \hline
-%     \textbf{Clase / Tipo de tráfico} & \textbf{Número de flujos} \\
-%     \hline
-%     BENIGN & 2\,273\,097 \\
-%     \hline
-%     DoS Hulk & 231\,073 \\
-%     PortScan & 158\,930 \\
-%     DDoS & 128\,027 \\
-%     DoS GoldenEye & 10\,293 \\
-%     FTP-Patator & 7\,938 \\
-%     SSH-Patator & 5\,897 \\
-%     DoS slowloris & 5\,796 \\
-%     DoS Slowhttptest & 5\,499 \\
-%     Bot & 1\,966 \\
-%     Web Attack -- Brute Force & 1\,507 \\
-%     Web Attack -- XSS & 652 \\
-%     Infiltration & 36 \\
-%     Web Attack -- SQL Injection & 21 \\
-%     Heartbleed & 11 \\
-%     \hline
-%     \textbf{Total} & \textbf{2\,830\,743} \\
-%     \hline
-%   \end{tabular}
-% \end{table}
-
-% Como puede observarse, el tráfico benigno representa la mayor parte de los datos, mientras que los ataques se distribuyen de forma muy desigual entre las distintas categorías. Clases como \emph{DoS Hulk}, \emph{PortScan} y \emph{DDoS} concentran la mayor parte del tráfico malicioso, mientras que otros ataques aparecen de forma testimonial. Esta distribución refuerza la necesidad de aplicar estrategias específicas para el tratamiento del desbalanceo durante el proceso de entrenamiento y evaluación de los modelos de detección de intrusiones.
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{images/canadian_institute_cybersecurity.jpeg}
-%     \caption{Logo del Canadian Institute for Cybersecurity, entidad responsable de la publicación del dataset CIC-IDS-2017.}
-%     \label{fig:cicids-logo}
-% \end{figure}
-
 % ======================================================================
 
 \section{UNSW-NB15 \textit{DataSet}}
@@ -109,12 +50,6 @@ Cada registro representa un flujo de red y se describe mediante un conjunto de c
 
 Como puede observarse, aunque el tráfico benigno constituye una parte relevante del \textit{dataset}, una proporción significativa de los registros corresponde a tráfico malicioso, distribuido entre múltiples categorías de ataque. Destacan especialmente las clases \emph{Generic}, \emph{Exploits} y \emph{Fuzzers}, mientras que otras, como \emph{Worms} o \emph{Shellcode}, presentan una frecuencia mucho menor. Esta distribución refleja un escenario realista y resulta adecuada para evaluar el comportamiento de los modelos tanto en términos de detección general de intrusiones como de clasificación específica de ataques.
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{images/university_of_new_south_wales.jpeg}
-%     \caption{Logo de la University of New South Wales, entidad responsable de la publicación del dataset UNSW-NB15.}
-%     \label{fig:unsw-logo}
-% \end{figure}
 % ======================================================================
 
 \section{ToN\_IoT \textit{DataSet}}
@@ -196,13 +131,6 @@ La distribución de clases en los escenarios seleccionados de IoT-23 presenta un
 \end{table}
 
 Como puede observarse, el tráfico malicioso asociado a escaneos horizontales de puertos domina el conjunto de datos.
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{images/stratosphere_laboratory_CTU.png}
-%     \caption{Logo del Stratosphere Laboratory de la Czech Technical University, entidad responsable de la publicación del dataset IoT-23.}
-%     \label{fig:stratosphere-logo}
-% \end{figure}
 
 \section{Relación entre los \textit{datasets}}
 

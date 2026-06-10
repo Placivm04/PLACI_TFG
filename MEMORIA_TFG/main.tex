@@ -69,22 +69,7 @@
 \renewcommand{\abstractname}{Resumen}
 
 \begin{abstract}
-
-% En el ámbito de la ciberseguridad, los sistemas de detección de intrusiones (IDS) desempeñan un papel fundamental para la
-% identificación temprana de ataques y actividades maliciosas en redes informáticas. En los últimos años, el uso de técnicas de
-% inteligencia artificial (IA) y aprendizaje automático (Machine Learning) ha permitido mejorar significativamente la precisión
-% y la capacidad de adaptación de estos sistemas frente a amenazas cada vez más complejas y dinámicas. \\
-    
-% Sin embargo, gran parte de la investigación existente se ha centrado principalmente en mejorar la tasa de detección o reducir los
-% falsos positivos, sin considerar en profundidad el impacto computacional y energético que conllevan estos modelos. En entornos
-% donde el procesamiento debe realizarse en tiempo real (como redes corporativas, sistemas embebidos o infraestructuras
-% críticas) el consumo de recursos (CPU, memoria, GPU) y la latencia de inferencia se convierten en factores determinantes para
-% la viabilidad de la solución. \\
-
-% El proyecto se enfoca en el análisis, evaluación, selección de hiperparámetros y configuración de modelos de IA para comparar el rendimiento y eficiencia computacional de los distintos modelos aplicados a la detección de intrusiones.
-
-% Además, se hace un análisis posterior para ver como los mejores modelos reaccionan ante diferentes técnicas de evasión.
-
+  
 El proyecto se enfoca en el análisis, evaluación, selección de hiperparámetros y configuración de modelos de IA para comparar el rendimiento y eficacia computacional (CPU, latencia) de los distintos modelos aplicados a los sistemas de detección de intrusiones. 
 Se busca determinar qué modelos son más robustos, pero también eficientes desde el punto de vista computacional. \\
 
@@ -158,13 +143,11 @@ intrusion detection systems (IDS), cyberattacks, the Internet of Things (IoT), c
 
 \mainmatter
 %────────────────────── Cuerpo ─────────────────────────────────────────
-% https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants 
 
 \input{sections/Desarrollo/introduccion.tex}
 \input{sections/Estudio_del_arte/investigacion_modelos.tex}
 \input{sections/Desarrollo/optuna.tex}
 \input{sections/Estudio_del_arte/dataSets.tex}
-% \input{sections/Desarrollo/seleccion_de_hiperparametros.tex}
 \input{sections/Desarrollo/resultados.tex}
 \input{sections/Desarrollo/ataques_de_evasion.tex}
 \input{sections/Conclusiones/conclusiones_lineas_futuras.tex}
@@ -175,7 +158,7 @@ intrusion detection systems (IDS), cyberattacks, the Internet of Things (IoT), c
 \label{apendice}
 \input{sections/Desarrollo/anexo.tex}
 
-\umaappendix{Manual de instalación, configuración y ejecución}
+\umaappendix{Manual de instalación y uso}
 \label{apendice:manual}
 \input{sections/Desarrollo/anexoB.tex}
 

@@ -31,12 +31,6 @@ A diferencia de los métodos de \textit{boosting}, como XGBoost, los árboles qu
     \end{tabular}
 \end{table}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{images/random_forest.png}
-%     \caption{Esquema representativo del funcionamiento de Random Forest.}
-%     \label{fig:randomforest}
-% \end{figure}
 
 \subsection{Extreme Gradient Boosting (XGBoost)}
 
@@ -68,13 +62,6 @@ El proceso de entrenamiento es secuencial: cada nuevo árbol se entrena para cor
     \end{tabular}
 \end{table}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{images/xg_boost.png}
-%     \caption{Esquema representativo del funcionamiento de XGBoost.}
-%     \label{fig:xgboost}
-% \end{figure}
-
 \subsection{Light Gradient Boosting Machine (LightGBM)}
 \textbf{Light Gradient Boosting Machine} (LightGBM) es un algoritmo de aprendizaje supervisado basado en árboles de decisión que implementa una variante optimizada del \textit{gradient boosting}. A diferencia de otros métodos de \textit{boosting}, LightGBM utiliza un enfoque de crecimiento de árboles basado en hojas, lo que significa que en cada iteración se expande la hoja con el mayor error en lugar de expandir todos los nodos a un nivel determinado. Esta estrategia permite construir árboles más profundos y complejos sin aumentar significativamente el número de nodos, lo que mejora la capacidad de modelado y reduce el tiempo de entrenamiento ~\cite{lightgbm}.
 
@@ -97,12 +84,6 @@ El proceso de entrenamiento es secuencial: cada nuevo árbol se entrena para cor
     \end{tabular}
 \end{table}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{images/lightgbm.png}
-%     \caption{Esquema representativo del funcionamiento de LightGBM.}
-%     \label{fig:lightgbm}
-% \end{figure}
 
 \subsection{CatBoost}
 
@@ -130,12 +111,6 @@ Otro punto clave es que a diferencia de otros modelos como XGBoost o LightGBM, C
     \end{tabular}
 \end{table}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{images/catBoost.png}
-%     \caption{Esquema representativo del funcionamiento de CatBoost.}
-%     \label{fig:catboost}
-% \end{figure}
 
 \subsection{Support Vector Machine (SVM)}
 
@@ -170,12 +145,6 @@ En el contexto de este trabajo, el uso de SVM se plantea principalmente mediante
     \end{tabular}
 \end{table}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{images/SVM_margin.png}
-%     \caption{Ejemplo de separación óptima de clases mediante SVM y margen máximo.}
-%     \label{fig:svm_margin}
-% \end{figure}
 
 \section{Deep Learning}
 
@@ -209,13 +178,6 @@ Desde el punto de vista computacional, su coste está directamente relacionado c
     \end{tabular}
 \end{table}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{images/mlp.png}
-%     \caption{Proceso de retropropagación en una red neuronal MLP.}
-%     \label{fig:mlp_backpropagation}
-% \end{figure}
-
 \subsection{Convolutional Neural Networks (CNN)}
 
 Las \textbf{Convolutional Neural Networks} (CNN) son un tipo de red neuronal profunda diseñadas originalmente para el procesamiento de datos con estructura espacial, como imágenes o señales. Su principal característica es el uso de capas convolucionales, que aplican filtros locales sobre los datos de entrada para extraer patrones relevantes de forma jerárquica, reduciendo al mismo tiempo el número de parámetros respecto a redes completamente conectadas.
@@ -243,13 +205,6 @@ Desde el punto de vista computacional, el coste de una CNN depende principalment
         \bottomrule
     \end{tabular}
 \end{table}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{images/CNN_1D.jpg}
-%     \caption{Esquema representativo de una arquitectura CNN 1D aplicada a datos tabulares.}
-%     \label{fig:cnn_1d}
-% \end{figure}
 
 \section{Justificación del enfoque en la fase de inferencia}
 
