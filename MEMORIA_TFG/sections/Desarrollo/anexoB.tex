@@ -6,7 +6,7 @@ El repositorio se organiza en tres bloques principales:
 
 \begin{itemize}
     \item \texttt{MEMORIA\_TFG/}: contiene la memoria en \LaTeX, las figuras utilizadas y los ficheros bibliográficos.
-    \item \texttt{DATASETS/}: contiene el script de preprocesamiento en R y los conjuntos de datos reducidos empleados por las notebooks.
+    \item \texttt{DATASETS/}: contiene el script de preprocesamiento en R y los conjuntos de datos reducidos comprimidos empleados por los notebooks.
     \item \texttt{CODIGO/}: contiene las notebooks de entrenamiento, comparación de modelos, evaluación de consumo en CPU, ataques adversarios y los modelos entrenados en formato \texttt{joblib}.
 \end{itemize}
 
@@ -69,7 +69,15 @@ El comando de instalación leerá el fichero \texttt{requirements.txt} e instala
 
 \section{Preparación de los datos}
 
-Las notebooks del proyecto trabajan con los datos reducidos situados en:
+Las notebooks del proyecto trabajan con los datos reducidos comprimidos situados en:
+
+\texttt{DATASETS/dataSets\_Reducidos/}
+
+Para descomprimirlos, basta con ejecutar:
+
+\texttt{find . -name "*.csv.gz" -type f -exec gzip -d \{\} \textbackslash;}
+
+Obtendríamos los siguientes ficheros CSV listos para ser usados por las notebooks:
 
 \begin{itemize}
     \item \texttt{DATASETS/dataSets\_Reducidos/nusw-nb15/datos\_train\_NUSW\_redux.csv}
@@ -78,7 +86,7 @@ Las notebooks del proyecto trabajan con los datos reducidos situados en:
     \item \texttt{DATASETS/dataSets\_Reducidos/ton\_iot/datos\_TON\_IoT\_redux.csv}
 \end{itemize}
 
-Si estos ficheros ya están presentes, no es necesario ejecutar el preprocesamiento en R. En ese caso se puede pasar directamente a la ejecución de las notebooks.
+Como estos ficheros ya están presentes, no es necesario ejecutar el preprocesamiento en R. En ese caso se puede pasar directamente a la ejecución de las notebooks.
 
 Si se desea reproducir el proceso desde los datos originales, hay que colocar los ficheros originales (obtenidos desde las páginas web de los datasets) en las rutas esperadas por \texttt{DATASETS/Preprocesamiento.r}. 
 Las capturas necesarias vienen detalladas en la sección \ref{datasets}. Una vez corregidas las rutas absolutas, se ejecuta:

@@ -34,6 +34,7 @@ MEMORIA_TFG/build/
 # =========================
 .vscode/
 .env
+.venv
 .DS_Store
 Thumbs.db
 
