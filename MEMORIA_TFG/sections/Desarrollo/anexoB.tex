@@ -1,4 +1,4 @@
-Este apéndice describe los pasos necesarios para obtener el código fuente del proyecto, preparar el entorno de ejecución y repetir los experimentos presentados en la memoria. La explicación está pensada para una persona que parte de cero y que únicamente dispone del repositorio del TFG.
+Este apéndice describe los pasos necesarios para obtener el código fuente del proyecto, preparar el entorno de ejecución y repetir los experimentos presentados.
 
 \section{Contenido del repositorio}
 
@@ -13,9 +13,9 @@ El repositorio se organiza en tres bloques principales:
 Dentro de \texttt{CODIGO/} se distinguen las siguientes carpetas:
 
 \begin{itemize}
-    \item \texttt{MODELOS IT/}: entrenamiento y comparación de modelos sobre UNSW-NB15.
-    \item \texttt{MODELOS IOT/}: entrenamiento y comparación de modelos sobre IoT-23.
-    \item \texttt{MODELOS TON\_IOT/}: entrenamiento y comparación de modelos sobre ToN-IoT.
+    \item \texttt{MODELOS\_IT/}: entrenamiento y comparación de modelos sobre UNSW-NB15.
+    \item \texttt{MODELOS\_IOT/}: entrenamiento y comparación de modelos sobre IoT-23.
+    \item \texttt{MODELOS\_TON\_IOT/}: entrenamiento y comparación de modelos sobre ToN-IoT.
     \item \texttt{ATAQUES\_ADVERSARIOS/}: evaluación de robustez frente a ataques FGSM y PGD.
     \item \texttt{entrenar\_propio\_pc/}: notebooks utilizadas para medir el comportamiento de los modelos ya entrenados en CPU.
     \item \texttt{model/}: modelos finales guardados para cada \textit{dataset}.
@@ -41,7 +41,7 @@ Algunos entrenamientos pueden ejecutarse en CPU, pero se recomienda disponer de 
 Clonar el repositorio desde GitHub:
 
 \begin{verbatim}
-git clone <URL_DEL_REPOSITORIO> PROYECTO_TFG
+git clone https://github.com/Placivm04/PLACI_TFG.git PROYECTO_TFG
 cd PROYECTO_TFG
 \end{verbatim}
 
@@ -49,28 +49,23 @@ Si el código se entrega como un archivo comprimido, basta con descomprimirlo y 
 
 \section{Preparación del entorno Python}
 
-El repositorio incluye un entorno virtual en \texttt{CODIGO/tfg\_env/}. Si se trabaja en el mismo sistema para el que fue creado, puede activarse directamente:
-
-\begin{verbatim}
-source CODIGO/tfg_env/bin/activate
-python --version
-\end{verbatim}
-
-En el entorno utilizado para esta memoria la versión de Python era \texttt{3.12.3}. Si el entorno incluido no funciona en otro equipo, se puede crear uno nuevo desde la raíz del repositorio:
+Para reproducir los experimentos se recomienda crear un entorno virtual propio desde la raíz del repositorio e instalar en él las dependencias incluidas en \texttt{requirements.txt}. En el entorno utilizado para esta memoria la versión de Python era \texttt{3.12.3}.
 
 \begin{verbatim}
 python3 -m venv CODIGO/tfg_env
 source CODIGO/tfg_env/bin/activate
-pip install --upgrade pip
+python3 --version
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
 \end{verbatim}
 
-A continuación se instalan las dependencias principales. La forma recomendada es usar el fichero \texttt{requirements.txt} incluido en la raíz del repositorio:
+En sistemas Windows, la activación del entorno se realiza con:
 
 \begin{verbatim}
-pip install -r requirements.txt
+CODIGO\tfg_env\Scripts\activate
 \end{verbatim}
 
-Este comando instalará las librerías necesarias para ejecutar el código, como Optuna, TensorFlow, Scikit-learn, entre otras. Si se prefiere, también se pueden instalar manualmente las librerías listadas en la sección de Tecnologías utilizadas de la memoria.
+El comando de instalación leerá el fichero \texttt{requirements.txt} e instalará las librerías necesarias para ejecutar el código, como Optuna, TensorFlow, Scikit-learn, entre otras.
 
 \section{Preparación de los datos}
 
@@ -85,21 +80,14 @@ Las notebooks del proyecto trabajan con los datos reducidos situados en:
 
 Si estos ficheros ya están presentes, no es necesario ejecutar el preprocesamiento en R. En ese caso se puede pasar directamente a la ejecución de las notebooks.
 
-Si se desea reproducir el proceso desde los datos originales, hay que colocar los ficheros originales en las rutas esperadas por \texttt{DATASETS/Preprocesamiento.r}. El script espera la siguiente estructura:
-
-\begin{itemize}
-    \item \texttt{DATASETS/NUSW-NB15/}
-    \item \texttt{DATASETS/dataSets\_Raw/TON\_IoT/}
-    \item \texttt{DATASETS/dataSets\_Raw/IOT-23/}
-\end{itemize}
-
-El script de R utiliza rutas absolutas del equipo de desarrollo. Si se ejecuta en otra máquina, deben sustituirse esas rutas por rutas relativas al repositorio o por la ubicación local equivalente. Una vez corregidas, se ejecuta:
+Si se desea reproducir el proceso desde los datos originales, hay que colocar los ficheros originales (obtenidos desde las páginas web de los datasets) en las rutas esperadas por \texttt{DATASETS/Preprocesamiento.r}. 
+Las capturas necesarias vienen detalladas en la sección \ref{datasets}. Una vez corregidas las rutas absolutas, se ejecuta:
 
 \begin{verbatim}
 Rscript DATASETS/Preprocesamiento.r
 \end{verbatim}
 
-Este paso genera los ficheros reducidos en \texttt{DATASETS/dataSets\_Reducidos/}. Para IoT-23, la notebook \texttt{CODIGO/MODELOS IOT/rf\_train\_iot.ipynb} también contiene celdas de preparación que construyen el fichero final \texttt{datos\_IOT\_23\_preparado.csv} a partir de las capturas reducidas.
+Este paso genera los ficheros reducidos en \texttt{DATASETS/dataSets\_Reducidos/}. Para IoT-23, la notebook \texttt{CODIGO/MODELOS\_IOT/rf\_train\_iot.ipynb} también contiene celdas de preparación que construyen el fichero final \texttt{datos\_IOT\_23\_preparado.csv} a partir de las capturas reducidas.
 
 \section{Reproducción de los entrenamientos}
 
@@ -112,11 +100,11 @@ Para cada notebook, el proceso es el siguiente:
 \begin{enumerate}
     \item Abrir la notebook correspondiente.
     \item Ejecutar las celdas en orden desde el principio hasta el final.
-    \item Revisar los ficheros \texttt{csv} generados con los resultados de Optuna y las gráficas de frontera de Pareto.
+    \item Revisar los ficheros \texttt{CSV} generados con los resultados de Optuna y las gráficas de frontera de Pareto.
     \item Ejecutar la notebook de comparación del \textit{dataset} para obtener las métricas finales agregadas.
 \end{enumerate}
 
-Para UNSW-NB15 se usan las notebooks de \texttt{CODIGO/MODELOS IT/}:
+Para UNSW-NB15 se usan las notebooks de \texttt{CODIGO/MODELOS\_IT/}:
 
 \begin{itemize}
     \item \texttt{RF\_train.ipynb}
@@ -129,7 +117,7 @@ Para UNSW-NB15 se usan las notebooks de \texttt{CODIGO/MODELOS IT/}:
     \item \texttt{comparativaTodosModelos.ipynb}
 \end{itemize}
 
-Para IoT-23 se usan las notebooks de \texttt{CODIGO/MODELOS IOT/}:
+Para IoT-23 se usan las notebooks de \texttt{CODIGO/MODELOS\_IOT/}:
 
 \begin{itemize}
     \item \texttt{rf\_train\_iot.ipynb}
@@ -142,7 +130,7 @@ Para IoT-23 se usan las notebooks de \texttt{CODIGO/MODELOS IOT/}:
     \item \texttt{comparativaModelos.ipynb}
 \end{itemize}
 
-Para ToN-IoT se usan las notebooks de \texttt{CODIGO/MODELOS TON\_IOT/}:
+Para ToN-IoT se usan las notebooks de \texttt{CODIGO/MODELOS\_TON\_IOT/}:
 
 \begin{itemize}
     \item \texttt{rf\_ton\_iot.ipynb}
@@ -155,7 +143,7 @@ Para ToN-IoT se usan las notebooks de \texttt{CODIGO/MODELOS TON\_IOT/}:
     \item \texttt{comparativaModelosTON.ipynb}
 \end{itemize}
 
-Las notebooks de entrenamiento realizan la búsqueda de hiperparámetros con Optuna, evalúan las combinaciones candidatas y guardan tablas de resultados en formato \texttt{csv}. Algunos ejemplos son:
+Las notebooks de entrenamiento realizan la búsqueda de hiperparámetros con Optuna, evalúan las combinaciones candidatas y guardan tablas de resultados en formato \texttt{CSV}. Algunos ejemplos son:
 
 \begin{itemize}
     \item \texttt{rf\_trials\_results\_cv.csv}

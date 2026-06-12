@@ -329,6 +329,9 @@
   \renewcommand{\thesection}{\theuma@appendix.\arabic{section}}%
   \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}%
   \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}%
+  \renewcommand{\theHsection}{appendix.\theuma@appendix.\arabic{section}}%
+  \renewcommand{\theHsubsection}{appendix.\theuma@appendix.\arabic{section}.\arabic{subsection}}%
+  \renewcommand{\theHsubsubsection}{appendix.\theuma@appendix.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}%
   \titleformat{\section}{\normalfont\bfseries\color{UMAgray}\Large}{\thesection}{1em}{}%
   \cleardoublepage{%
     \raggedleft
