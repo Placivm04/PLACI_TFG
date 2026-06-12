@@ -2,10 +2,9 @@ Este apéndice describe los pasos necesarios para obtener el código fuente del 
 
 \section{Contenido del repositorio}
 
-El repositorio se organiza en tres bloques principales:
+El repositorio se organiza en dos bloques principales:
 
 \begin{itemize}
-    \item \texttt{MEMORIA\_TFG/}: contiene la memoria en \LaTeX, las figuras utilizadas y los ficheros bibliográficos.
     \item \texttt{DATASETS/}: contiene el script de preprocesamiento en R y los conjuntos de datos reducidos comprimidos empleados por los notebooks.
     \item \texttt{CODIGO/}: contiene las notebooks de entrenamiento, comparación de modelos, evaluación de consumo en CPU, ataques adversarios y los modelos entrenados en formato \texttt{joblib}.
 \end{itemize}
@@ -45,7 +44,7 @@ git clone https://github.com/Placivm04/PLACI_TFG.git PROYECTO_TFG
 cd PROYECTO_TFG
 \end{verbatim}
 
-Si el código se entrega como un archivo comprimido, basta con descomprimirlo y abrir una terminal en la carpeta raíz del proyecto. La carpeta raíz es la que contiene, entre otros, los directorios \texttt{CODIGO/}, \texttt{DATASETS/} y \texttt{MEMORIA\_TFG/}.
+Si el código se entrega como un archivo comprimido, basta con descomprimirlo y abrir una terminal en la carpeta raíz del proyecto
 
 \section{Preparación del entorno Python}
 
@@ -207,4 +206,4 @@ El procedimiento recomendado es:
     \item Ejecutar las celdas de evaluación para comparar métricas limpias frente a métricas bajo ataque.
 \end{enumerate}
 
-Los notebooks \texttt{for\_ataques\_XXX} son los notebooks que hemos usado para probar diferentes límites de perturbación en los ataques y ver la degradación de las métricas con la modificación estos. El procedimiento para ejecutar estas notebooks es el mismo que el descrito anteriormente, pero con la particularidad de que en estas notebooks se pueden modificar los límites de perturbación.
+Los notebooks \texttt{for\_ataques\_XXX} son los notebooks que hemos usado para probar diferentes límites de perturbación en los ataques y ver la degradación de las métricas con la modificación de estos. El procedimiento para ejecutar estas notebooks es el mismo que el descrito anteriormente, pero con la particularidad de que en estas notebooks se pueden modificar los límites de perturbación.
