@@ -3,10 +3,10 @@ library(readr)
 
 # Vamos a analizar los CSV's de los datasets. Miraremos cuales son los ataques que identifica
 
-# *** DATASET NUSW-NB_15 ****
+# *** DATASET UNSW-NB_15 ****
 
-datos_test_NUSW <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/NUSW-NB15/UNSW_NB15_testing-set.csv")
-datos_train_NUSW <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/NUSW-NB15/UNSW_NB15_training-set.csv")
+datos_test_NUSW <- read.csv("RUTA/AL/TEST/UNSW_NB15_testing-set.csv")
+datos_train_NUSW <- read.csv("RUTA/AL/TRAIN/UNSW_NB15_training-set.csv")
 
 unsw_todos <- bind_rows(
   train = datos_train_NUSW,
@@ -37,7 +37,7 @@ tabla_completa_unsw
 # *** DATASET TON_IoT ***
 # -----------------------
 
-datos_TON_IoT <- read.csv("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/TON_IoT/train_test_network.csv")
+datos_TON_IoT <- read.csv("RUTA/AL/TON_IoT/train_test_network.csv")
 
 # VEMOS LAS ETIQUETAS Y EL NUMERO DE MUESTRAS
 
@@ -62,7 +62,7 @@ tabla_completa_ton
 # *** DATASET IOT-23 ***
 # ----------------------
 
-datos_IOT_23_1_1 <- read_table("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/IOT-23/capture-1-1.labeled", 
+datos_IOT_23_1_1 <- read_table("RUTA/AL/IOT-23/capture-1-1.labeled", 
                     comment = "#", 
                     col_names = FALSE)
 
@@ -74,7 +74,7 @@ colnames(datos_IOT_23_1_1) <- c(
   "resp_ip_bytes", "tunnel_parents", "label", "detailed-label"
 )
 
-datos_IOT_23_3_1 <- read_table("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Raw/IOT-23/capture-3-1.labeled", 
+datos_IOT_23_3_1 <- read_table("RUTA/AL/IOT-23/capture-3-1.labeled", 
                                comment = "#", 
                                col_names = FALSE)
 
@@ -104,40 +104,7 @@ print(tabla_ataques_iot23)
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
 
-# VEAMOS AHORA LAS RELACIONES ENTRE LOS FEATURES DE CIC-IDS-2017 y UNSW-NB-15
-
-# Columnas para CIC-IDS-2017
-cols_cic <- c("Flow.Duration", "Fwd.IAT.Mean", "Bwd.IAT.Mean", 
-              "Total.Fwd.Packets", "Total.Backward.Packets", 
-              "Total.Length.of.Fwd.Packets", "Total.Length.of.Bwd.Packets", 
-              "Flow.Packets.s", "Fwd.Packet.Length.Mean", 
-              "Bwd.Packet.Length.Mean", "SYN.Flag.Count", 
-              "ACK.Flag.Count", "Label")
-
-datos_lunes_redux <- datos_lunes %>%
-  select(any_of(cols_cic))
-
-datos_martes_redux <- datos_martes %>%
-  select(any_of(cols_cic))
-
-datos_miercoles_redux <- datos_miercoles %>%
-  select(any_of(cols_cic))
-
-datos_jueves_morning_redux <- datos_jueves_morning %>%
-  select(any_of(cols_cic))
-
-datos_jueves_afternoon_redux <- datos_jueves_afternoon %>%
-  select(any_of(cols_cic))
-
-datos_viernes_morning_redux <- datos_viernes_morning %>%
-  select(any_of(cols_cic))
-
-datos_viernes_afternoon_DDos_redux <- datos_viernes_afternoon_DDos %>%
-  select(any_of(cols_cic))
-
-datos_viernes_afternoon_PortScan_redux <- datos_viernes_afternoon_PortScan %>%
-  select(any_of(cols_cic))
-
+# VEAMOS AHORA LAS RELACIONES ENTRE LOS FEATURES DE UNSW-NB-15
 
 # Columnas para UNSW-NB15
 cols_unsw <- c("dur", "sinpkt", "dinpkt", "spkts", "dpkts", 
@@ -167,7 +134,7 @@ datos_TON_IoT_redux <- datos_TON_IoT %>%
   select(any_of(cols_ton))
 
 write.csv(datos_TON_IoT_redux, 
-          file = file.path("/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Reducidos/ton_iot", "datos_TON_IoT_redux.csv"), 
+          file = file.path("RUTA/AL/TON_IoT", "datos_TON_IoT_redux.csv"), 
           row.names = FALSE)
 
 # Columnas para IoT-23
@@ -185,5 +152,5 @@ datos_IOT_23_1_1_redux <- datos_IOT_23_1_1_redux %>%
 datos_IOT_23_3_1_redux <- datos_IOT_23_3_1_redux %>%
   mutate(`detailed-label` = ifelse(`detailed-label` == "-", "Normal", `detailed-label`))
 
-write.csv(datos_IOT_23_1_1_redux, "/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Reducidos/iot-23/datos_IOT_23_1_1_redux.csv")
-write.csv(datos_IOT_23_3_1_redux, "/home/placi/Escritorio/TFG/PLACI_TFG/DATASETS/dataSets_Reducidos/iot-23/datos_IOT_23_3_1_redux.csv")
+write.csv(datos_IOT_23_1_1_redux, "RUTA/AL/IOT-23/datos_IOT_23_1_1_redux.csv")
+write.csv(datos_IOT_23_3_1_redux, "RUTA/AL/IOT-23/datos_IOT_23_3_1_redux.csv")
