@@ -52,8 +52,8 @@ Si el código se entrega como un archivo comprimido, basta con descomprimirlo y 
 Para reproducir los experimentos se recomienda crear un entorno virtual propio desde la raíz del repositorio e instalar en él las dependencias incluidas en \texttt{requirements.txt}. En el entorno utilizado para esta memoria la versión de Python era \texttt{3.12.3}.
 
 \begin{verbatim}
-python3 -m venv CODIGO/tfg_env
-source CODIGO/tfg_env/bin/activate
+python3 -m venv CODIGO/.venv
+source CODIGO/.venv/bin/activate
 python3 --version
 python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
@@ -62,7 +62,7 @@ python3 -m pip install -r requirements.txt
 En sistemas Windows, la activación del entorno se realiza con:
 
 \begin{verbatim}
-CODIGO\tfg_env\Scripts\activate
+CODIGO\.venv\Scripts\activate
 \end{verbatim}
 
 El comando de instalación leerá el fichero \texttt{requirements.txt} e instalará las librerías necesarias para ejecutar el código, como Optuna, TensorFlow, Scikit-learn, entre otras.
